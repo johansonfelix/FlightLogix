@@ -1,0 +1,11 @@
+
+ Index  Count  Time of first Occurrence    Time of last Occurrence     Exception SourceId ProbeId
+------+------+---------------------------+---------------------------+---------------------------
+     0      3    3/21/21 21:28:47:775 EDT    3/21/21 21:29:02:076 EDT java.lang.NoClassDefFoundError com.ibm.ws.injectionengine.InjectionProcessorManager.getAllDeclaredFields 249
+                                                                            - C:\Users\felix\Desktop\AirlineLogic\HelloWorld\target\liberty\wlp\usr\servers\sampleAppServer\logs\ffdc\ffdc_21.03.21_21.28.47.0.log
+     1      2    3/21/21 21:29:01:463 EDT    3/21/21 21:30:23:212 EDT java.lang.Exception com.ibm.ws.jaxrs20.server.component.JaxRsWebModuleInfoBuilder 292
+                                                                            - C:\Users\felix\Desktop\AirlineLogic\HelloWorld\target\liberty\wlp\usr\servers\sampleAppServer\logs\ffdc\ffdc_21.03.21_21.29.01.0.log
+                                                                            - C:\Users\felix\Desktop\AirlineLogic\HelloWorld\target\liberty\wlp\usr\servers\sampleAppServer\logs\ffdc\ffdc_21.03.21_21.30.23.0.log
+     2      6    3/21/21 21:30:54:574 EDT    3/21/21 21:33:42:383 EDT java.lang.NoClassDefFoundError org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor 177
+                                                                            - C:\Users\felix\Desktop\AirlineLogic\HelloWorld\target\liberty\wlp\usr\servers\sampleAppServer\logs\ffdc\ffdc_21.03.21_21.30.54.0.log
+------+------+---------------------------+---------------------------+---------------------------

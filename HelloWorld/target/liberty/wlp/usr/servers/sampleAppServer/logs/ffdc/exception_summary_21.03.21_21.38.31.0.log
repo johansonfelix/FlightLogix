@@ -1,0 +1,6 @@
+
+ Index  Count  Time of first Occurrence    Time of last Occurrence     Exception SourceId ProbeId
+------+------+---------------------------+---------------------------+---------------------------
+     0     10    3/21/21 21:38:31:873 EDT    3/21/21 21:38:32:198 EDT javax.management.InstanceNotFoundException com.ibm.ws.jmx.internal.DelayedMBeanActivator 104
+                                                                            - C:\Users\felix\Desktop\AirlineLogic\HelloWorld\target\liberty\wlp\usr\servers\sampleAppServer\logs\ffdc\ffdc_21.03.21_21.38.31.0.log
+------+------+---------------------------+---------------------------+---------------------------

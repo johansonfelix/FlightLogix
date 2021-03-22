@@ -1,0 +1,37 @@
+********************************************************************************
+product = Open Liberty 21.0.0.3 (wlp-1.0.50.cl210320210309-1101)
+wlp.install.dir = C:/Users/felix/Desktop/AirlineLogic/HelloWorld/target/liberty/wlp/
+java.home = C:\Program Files\Java\jdk1.8.0_281\jre
+java.version = 1.8.0_281
+java.runtime = Java(TM) SE Runtime Environment (1.8.0_281-b09)
+os = Windows 10 (10.0; amd64) (en_US)
+process = 16552@Johanson
+********************************************************************************
+[3/22/21 1:04:32:437 EDT] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0001I: The server AirlineLogicServer has been launched.
+[3/22/21 1:04:34:167 EDT] 00000017 com.ibm.ws.config.xml.internal.ServerXMLConfiguration        A CWWKG0093A: Processing configuration drop-ins resource: C:\Users\felix\Desktop\AirlineLogic\HelloWorld\target\liberty\wlp\usr\servers\AirlineLogicServer\configDropins\overrides\liberty-plugin-variable-config.xml
+[3/22/21 1:04:34:470 EDT] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           I CWWKE0002I: The kernel started after 2.465 seconds
+[3/22/21 1:04:34:531 EDT] 00000022 com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0007I: Feature update started.
+[3/22/21 1:04:34:807 EDT] 0000001a .apache.cxf.cxf.core.3.2:1.0.50.cl210320210309-1101(id=177)] I Aries Blueprint packages not available. So namespaces will not be registered
+[3/22/21 1:04:35:296 EDT] 00000018 com.ibm.ws.app.manager.internal.monitor.DropinMonitor        A CWWKZ0058I: Monitoring dropins for applications.
+[3/22/21 1:04:36:327 EDT] 0000002f com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application HelloWorld.
+[3/22/21 1:04:36:331 EDT] 0000002f bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The HelloWorld application is using the loose application definition at the C:\Users\felix\Desktop\AirlineLogic\HelloWorld\target\liberty\wlp\usr\servers\AirlineLogicServer\apps\HelloWorld.war.xml location.
+[3/22/21 1:04:37:679 EDT] 0000002f com.ibm.ws.session.WASSessionCore                            I SESN8501I: The session manager did not find a persistent storage location; HttpSession objects will be stored in the local application server's memory.
+[3/22/21 1:04:37:695 EDT] 0000002f com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Liberty Project.
+[3/22/21 1:04:37:698 EDT] 0000002f com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Liberty Project has been bound to default_host.
+[3/22/21 1:04:37:700 EDT] 0000002f com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://johanson:9080/
+[3/22/21 1:04:37:789 EDT] 00000029 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/
+[3/22/21 1:04:37:813 EDT] 00000029 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[3/22/21 1:04:37:883 EDT] 00000029 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0001I: Application HelloWorld started in 1.556 seconds.
+[3/22/21 1:04:37:917 EDT] 00000022 com.ibm.ws.tcpchannel.internal.TCPPort                       I CWWKO0219I: TCP Channel defaultHttpEndpoint has been started and is now listening for requests on host *  (IPv6) port 9080.
+[3/22/21 1:04:37:937 EDT] 00000022 com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0012I: The server installed the following features: [jaxrs-2.1, jaxrsClient-2.1, jsonp-1.1, servlet-4.0].
+[3/22/21 1:04:37:951 EDT] 00000022 com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0008I: Feature update completed in 3.481 seconds.
+[3/22/21 1:04:37:952 EDT] 00000022 com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0011I: The AirlineLogicServer server is ready to run a smarter planet. The AirlineLogicServer server started in 5.949 seconds.
+[3/22/21 1:04:38:938 EDT] 0000002b com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\AirlineLogic\HelloWorld\target\liberty\wlp\usr\servers\AirlineLogicServer\logs\state\plugin-cfg.xml.
+[3/22/21 1:04:42:228 EDT] 00000029 com.ibm.ws.webcontainer.extension                            W SRVE0190E: File not found: /system/config
+[3/22/21 1:04:42:228 EDT] 0000002f com.ibm.ws.webcontainer.extension                            W SRVE0190E: File not found: /health
+[3/22/21 1:04:42:228 EDT] 00000034 com.ibm.ws.webcontainer.extension                            W SRVE0190E: File not found: /system/properties
+[3/22/21 1:04:42:772 EDT] 00000031 com.ibm.ws.webcontainer.extension                            W SRVE0190E: File not found: /metrics
+[3/22/21 1:04:51:929 EDT] 0000002a .apache.cxf.cxf.core.3.2:1.0.50.cl210320210309-1101(id=177)] I Setting the server's publish address to be /api/
+[3/22/21 1:04:52:133 EDT] 0000002a com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [HelloWorld] [/] [com.example.HelloWorld.HelloApplication]: Initialization successful.
+[3/22/21 1:05:07:376 EDT] 00000024 com.ibm.ws.webcontainer.extension                            W SRVE0190E: File not found: /Test/HelloWorld
+[3/22/21 1:05:19:168 EDT] 00000030 com.ibm.ws.webcontainer.extension                            W SRVE0190E: File not found: /Test/HelloWorld

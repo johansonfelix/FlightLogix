@@ -1,0 +1,603 @@
+********************************************************************************
+product = Open Liberty 21.0.0.3 (wlp-1.0.50.cl210320210309-1101)
+wlp.install.dir = C:/Users/felix/Desktop/AirlineLogic/HelloWorld/target/liberty/wlp/
+java.home = C:\Program Files\Java\jdk1.8.0_281\jre
+java.version = 1.8.0_281
+java.runtime = Java(TM) SE Runtime Environment (1.8.0_281-b09)
+os = Windows 10 (10.0; amd64) (en_US)
+process = 9124@Johanson
+********************************************************************************
+[3/21/21 21:26:07:453 EDT] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0001I: The server sampleAppServer has been launched.
+[3/21/21 21:26:09:416 EDT] 00000018 com.ibm.ws.config.xml.internal.ServerXMLConfiguration        A CWWKG0093A: Processing configuration drop-ins resource: C:\Users\felix\Desktop\AirlineLogic\HelloWorld\target\liberty\wlp\usr\servers\sampleAppServer\configDropins\overrides\liberty-plugin-variable-config.xml
+[3/21/21 21:26:09:849 EDT] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           I CWWKE0002I: The kernel started after 2.784 seconds
+[3/21/21 21:26:09:909 EDT] 00000022 com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0007I: Feature update started.
+[3/21/21 21:26:10:935 EDT] 00000018 g.apache.cxf.cxf.core.3.2:1.0.50.cl210320210309-1101(id=87)] I Aries Blueprint packages not available. So namespaces will not be registered
+[3/21/21 21:26:11:551 EDT] 00000018 com.ibm.ws.app.manager.internal.monitor.DropinMonitor        A CWWKZ0058I: Monitoring dropins for applications.
+[3/21/21 21:26:12:897 EDT] 00000035 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application HelloWorld.
+[3/21/21 21:26:12:901 EDT] 00000035 bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The HelloWorld application is using the loose application definition at the C:\Users\felix\Desktop\AirlineLogic\HelloWorld\target\liberty\wlp\usr\servers\sampleAppServer\apps\HelloWorld.war.xml location.
+[3/21/21 21:26:14:092 EDT] 00000035 com.ibm.ws.session.WASSessionCore                            I SESN8501I: The session manager did not find a persistent storage location; HttpSession objects will be stored in the local application server's memory.
+[3/21/21 21:26:14:112 EDT] 00000035 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Liberty Project.
+[3/21/21 21:26:14:116 EDT] 00000035 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Liberty Project has been bound to default_host.
+[3/21/21 21:26:14:116 EDT] 00000035 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://johanson.mshome.net:9080/
+[3/21/21 21:26:14:216 EDT] 00000031 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/
+[3/21/21 21:26:14:240 EDT] 00000031 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[3/21/21 21:26:14:316 EDT] 00000031 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0001I: Application HelloWorld started in 1.419 seconds.
+[3/21/21 21:26:14:396 EDT] 00000022 com.ibm.ws.tcpchannel.internal.TCPPort                       I CWWKO0219I: TCP Channel defaultHttpEndpoint has been started and is now listening for requests on host *  (IPv6) port 9080.
+[3/21/21 21:26:14:520 EDT] 00000022 com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0012I: The server installed the following features: [jaxrs-2.1, jaxrsClient-2.1, jsonp-1.1, servlet-4.0].
+[3/21/21 21:26:14:524 EDT] 00000022 com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0008I: Feature update completed in 4.677 seconds.
+[3/21/21 21:26:14:524 EDT] 00000022 com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0011I: The sampleAppServer server is ready to run a smarter planet. The sampleAppServer server started in 7.460 seconds.
+[3/21/21 21:26:15:791 EDT] 00000023 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\AirlineLogic\HelloWorld\target\liberty\wlp\usr\servers\sampleAppServer\logs\state\plugin-cfg.xml.
+[3/21/21 21:27:04:218 EDT] 00000022 com.ibm.ws.webcontainer.extension                            W SRVE0190E: File not found: /system/config
+[3/21/21 21:27:04:218 EDT] 0000002e com.ibm.ws.webcontainer.extension                            W SRVE0190E: File not found: /health
+[3/21/21 21:27:04:218 EDT] 0000002d com.ibm.ws.webcontainer.extension                            W SRVE0190E: File not found: /system/properties
+[3/21/21 21:27:04:591 EDT] 00000024 com.ibm.ws.webcontainer.extension                            W SRVE0190E: File not found: /metrics
+[3/21/21 21:28:45:770 EDT] 00000026 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://johanson.mshome.net:9080/
+[3/21/21 21:28:45:818 EDT] 00000026 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application HelloWorld has stopped successfully.
+[3/21/21 21:28:45:834 EDT] 00000026 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application HelloWorld.
+[3/21/21 21:28:45:838 EDT] 00000026 bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The HelloWorld application is using the loose application definition at the C:\Users\felix\Desktop\AirlineLogic\HelloWorld\target\liberty\wlp\usr\servers\sampleAppServer\apps\HelloWorld.war.xml location.
+[3/21/21 21:28:46:076 EDT] 00000026 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Liberty Project.
+[3/21/21 21:28:46:080 EDT] 00000026 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Liberty Project has been bound to default_host.
+[3/21/21 21:28:46:080 EDT] 00000026 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://johanson.mshome.net:9080/
+[3/21/21 21:28:46:092 EDT] 00000026 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/
+[3/21/21 21:28:46:092 EDT] 00000026 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[3/21/21 21:28:46:096 EDT] 00000026 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application HelloWorld updated in 0.262 seconds.
+[3/21/21 21:28:47:258 EDT] 00000029 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\AirlineLogic\HelloWorld\target\liberty\wlp\usr\servers\sampleAppServer\logs\state\plugin-cfg.xml.
+[3/21/21 21:28:47:443 EDT] 0000003b com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://johanson.mshome.net:9080/
+[3/21/21 21:28:47:455 EDT] 0000003b com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application HelloWorld has stopped successfully.
+[3/21/21 21:28:47:467 EDT] 0000003b com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application HelloWorld.
+[3/21/21 21:28:47:467 EDT] 0000003b bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The HelloWorld application is using the loose application definition at the C:\Users\felix\Desktop\AirlineLogic\HelloWorld\target\liberty\wlp\usr\servers\sampleAppServer\apps\HelloWorld.war.xml location.
+[3/21/21 21:28:47:703 EDT] 0000003b com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Liberty Project.
+[3/21/21 21:28:47:703 EDT] 0000003b com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Liberty Project has been bound to default_host.
+[3/21/21 21:28:47:707 EDT] 0000003b com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://johanson.mshome.net:9080/
+[3/21/21 21:28:47:817 EDT] 00000047 com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: An FFDC Incident has been created: "java.lang.NoClassDefFoundError: Lorg/eclipse/microprofile/config/Config; com.ibm.ws.injectionengine.InjectionProcessorManager.getAllDeclaredFields 249" at ffdc_21.03.21_21.28.47.0.log
+[3/21/21 21:28:47:849 EDT] 00000047 com.ibm.ws.injectionengine.InjectionProcessorManager         W CWNEN0047W: Resource annotations on the fields of the io.openliberty.sample.config.ConfigResource class will be ignored. The annotations could not be obtained because of the exception : java.lang.NoClassDefFoundError: Lorg/eclipse/microprofile/config/Config;
+[3/21/21 21:28:47:913 EDT] 00000047 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/
+[3/21/21 21:28:47:913 EDT] 00000047 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[3/21/21 21:28:47:917 EDT] 00000047 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application HelloWorld updated in 0.450 seconds.
+[3/21/21 21:28:48:356 EDT] 0000002b com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\AirlineLogic\HelloWorld\target\liberty\wlp\usr\servers\sampleAppServer\logs\state\plugin-cfg.xml.
+[3/21/21 21:28:49:486 EDT] 0000003b com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\AirlineLogic\HelloWorld\target\liberty\wlp\usr\servers\sampleAppServer\logs\state\plugin-cfg.xml.
+[3/21/21 21:29:00:941 EDT] 00000045 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://johanson.mshome.net:9080/
+[3/21/21 21:29:00:961 EDT] 00000045 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application HelloWorld has stopped successfully.
+[3/21/21 21:29:00:991 EDT] 00000045 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application HelloWorld.
+[3/21/21 21:29:00:991 EDT] 00000045 bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The HelloWorld application is using the loose application definition at the C:\Users\felix\Desktop\AirlineLogic\HelloWorld\target\liberty\wlp\usr\servers\sampleAppServer\apps\HelloWorld.war.xml location.
+[3/21/21 21:29:02:017 EDT] 00000045 com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: An FFDC Incident has been created: "java.lang.Exception: Found duplicated servlet mapping url, system/*, with endpoint infos com.ibm.ws.jaxrs20.metadata.EndpointInfo@4a46b57b and com.ibm.ws.jaxrs20.metadata.EndpointInfo@8628257, throw exception to fail application starting. com.ibm.ws.jaxrs20.server.component.JaxRsWebModuleInfoBuilder 292" at ffdc_21.03.21_21.29.01.0.log
+[3/21/21 21:29:02:033 EDT] 00000045 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Liberty Project.
+[3/21/21 21:29:02:033 EDT] 00000045 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Liberty Project has been bound to default_host.
+[3/21/21 21:29:02:033 EDT] 00000045 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://johanson.mshome.net:9080/
+[3/21/21 21:29:02:064 EDT] 0000002e com.ibm.ws.injectionengine.InjectionProcessorManager         W CWNEN0047W: Resource annotations on the fields of the io.openliberty.sample.config.ConfigResource class will be ignored. The annotations could not be obtained because of the exception : java.lang.NoClassDefFoundError: Lorg/eclipse/microprofile/config/Config;
+[3/21/21 21:29:02:076 EDT] 0000002e com.ibm.ws.injectionengine.InjectionProcessorManager         W CWNEN0047W: Resource annotations on the fields of the sample.config.ConfigResource class will be ignored. The annotations could not be obtained because of the exception : java.lang.NoClassDefFoundError: Lorg/eclipse/microprofile/config/Config;
+[3/21/21 21:29:02:088 EDT] 0000002e com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/
+[3/21/21 21:29:02:088 EDT] 0000002e com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[3/21/21 21:29:02:100 EDT] 0000002e com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application HelloWorld updated in 1.105 seconds.
+[3/21/21 21:29:02:524 EDT] 00000041 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\AirlineLogic\HelloWorld\target\liberty\wlp\usr\servers\sampleAppServer\logs\state\plugin-cfg.xml.
+[3/21/21 21:29:03:149 EDT] 00000046 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\AirlineLogic\HelloWorld\target\liberty\wlp\usr\servers\sampleAppServer\logs\state\plugin-cfg.xml.
+[3/21/21 21:30:16:167 EDT] 00000035 com.ibm.ws.config.xml.internal.ConfigRefresher               A CWWKG0016I: Starting server configuration update.
+[3/21/21 21:30:16:171 EDT] 00000035 com.ibm.ws.config.xml.internal.ServerXMLConfiguration        A CWWKG0093A: Processing configuration drop-ins resource: C:\Users\felix\Desktop\AirlineLogic\HelloWorld\target\liberty\wlp\usr\servers\sampleAppServer\configDropins\overrides\liberty-plugin-variable-config.xml
+[3/21/21 21:30:16:275 EDT] 00000041 com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0007I: Feature update started.
+[3/21/21 21:30:16:367 EDT] 00000023 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://johanson.mshome.net:9080/
+[3/21/21 21:30:16:375 EDT] 00000023 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application HelloWorld has stopped successfully.
+[3/21/21 21:30:17:109 EDT] 0000004b com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\AirlineLogic\HelloWorld\target\liberty\wlp\usr\servers\sampleAppServer\logs\state\plugin-cfg.xml.
+[3/21/21 21:30:18:826 EDT] 0000004d com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\AirlineLogic\HelloWorld\target\liberty\wlp\usr\servers\sampleAppServer\logs\state\plugin-cfg.xml.
+[3/21/21 21:30:19:192 EDT] 00000041 com.ibm.ws.cache.ServerCache                                 I DYNA1001I: WebSphere Dynamic Cache instance named baseCache initialized successfully.
+[3/21/21 21:30:19:192 EDT] 00000041 com.ibm.ws.cache.ServerCache                                 I DYNA1071I: The cache provider default is being used.
+[3/21/21 21:30:19:196 EDT] 00000041 com.ibm.ws.cache.CacheServiceImpl                            I DYNA1056I: Dynamic Cache (object cache) initialized successfully.
+[3/21/21 21:30:19:248 EDT] 00000041 com.ibm.ws.security.ready.internal.SecurityReadyServiceImpl  I CWWKS0007I: The security service is starting...
+[3/21/21 21:30:19:304 EDT] 0000003f com.ibm.ws.security.token.ltpa.LTPAKeyInfoManager            I CWWKS4103I: Creating the LTPA keys. This may take a few seconds.
+[3/21/21 21:30:19:360 EDT] 00000041 ibm.ws.security.authentication.internal.jaas.JAASServiceImpl I CWWKS1123I: The collective authentication plugin with class name NullCollectiveAuthenticationPlugin has been activated. 
+[3/21/21 21:30:20:695 EDT] 0000003f com.ibm.ws.security.token.ltpa.LTPAKeyInfoManager            A CWWKS4104A: LTPA keys created in 1.391 seconds. LTPA key file: C:/Users/felix/Desktop/AirlineLogic/HelloWorld/target/liberty/wlp/usr/servers/sampleAppServer/resources/security/ltpa.keys
+[3/21/21 21:30:20:703 EDT] 0000003f com.ibm.ws.security.token.ltpa.internal.LTPAKeyCreateTask    I CWWKS4105I: LTPA configuration is ready after 1.412 seconds.
+[3/21/21 21:30:20:747 EDT] 00000050 com.ibm.ws.ssl.config.WSKeyStore                             I CWPKI0802I: Creating the SSL certificate. This may take a few seconds.
+[3/21/21 21:30:21:679 EDT] 00000041 om.ibm.ws.microprofile.metrics.monitor.MonitorMetricsHandler I CWPMI2003I: Monitoring metrics can be retrieved through mpMetrics.
+[3/21/21 21:30:22:528 EDT] 00000048 com.ibm.ws.config.xml.internal.ConfigRefresher               A CWWKG0017I: The server configuration was successfully updated in 6.362 seconds.
+[3/21/21 21:30:22:560 EDT] 0000004c com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application HelloWorld.
+[3/21/21 21:30:22:560 EDT] 0000004c bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The HelloWorld application is using the loose application definition at the C:\Users\felix\Desktop\AirlineLogic\HelloWorld\target\liberty\wlp\usr\servers\sampleAppServer\apps\HelloWorld.war.xml location.
+[3/21/21 21:30:22:640 EDT] 00000041 com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0012I: The server installed the following features: [cdi-2.0, distributedMap-1.0, jndi-1.0, json-1.0, monitor-1.0, mpConfig-1.4, mpHealth-2.2, mpMetrics-2.3, ssl-1.0].
+[3/21/21 21:30:22:640 EDT] 00000041 com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0008I: Feature update completed in 6.454 seconds.
+[3/21/21 21:30:22:916 EDT] 0000004b com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: PublicMicroProfileMetrics.
+[3/21/21 21:30:22:916 EDT] 0000004b com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module PublicMicroProfileMetrics has been bound to default_host.
+[3/21/21 21:30:22:916 EDT] 0000004b com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://johanson.mshome.net:9080/metrics/
+[3/21/21 21:30:23:004 EDT] 0000004b com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/metrics
+[3/21/21 21:30:23:004 EDT] 0000004b com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[3/21/21 21:30:23:040 EDT] 0000004b com.ibm.ws.cache.CacheServiceImpl                            I DYNA1056I: Dynamic Cache (object cache) initialized successfully.
+[3/21/21 21:30:23:176 EDT] 0000004d com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: health.
+[3/21/21 21:30:23:176 EDT] 0000004d com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module health has been bound to default_host.
+[3/21/21 21:30:23:180 EDT] 0000004d com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://johanson.mshome.net:9080/health/
+[3/21/21 21:30:23:252 EDT] 0000004b com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [com.ibm.ws.microprofile.metrics.public] [/metrics] [PublicMetricsRESTProxyServlet]: Initialization successful.
+[3/21/21 21:30:23:288 EDT] 00000049 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: ibm/api.
+[3/21/21 21:30:23:288 EDT] 00000049 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module ibm/api has been bound to default_host.
+[3/21/21 21:30:23:288 EDT] 00000049 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://johanson.mshome.net:9080/ibm/api/
+[3/21/21 21:30:23:292 EDT] 0000004d com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/health
+[3/21/21 21:30:23:296 EDT] 0000004d com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[3/21/21 21:30:23:336 EDT] 0000004d com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [com.ibm.ws.microprofile.health.2.0] [/health] [HealthCheckReadinessServlet]: Initialization successful.
+[3/21/21 21:30:23:336 EDT] 0000004d com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [com.ibm.ws.microprofile.health.2.0] [/health] [HealthCheckServlet]: Initialization successful.
+[3/21/21 21:30:23:336 EDT] 0000004d com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [com.ibm.ws.microprofile.health.2.0] [/health] [HealthCheckLivenessServlet]: Initialization successful.
+[3/21/21 21:30:23:344 EDT] 00000049 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/ibm/api
+[3/21/21 21:30:23:348 EDT] 00000049 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[3/21/21 21:30:23:642 EDT] 0000004c com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: An FFDC Incident has been created: "java.lang.Exception: Found duplicated servlet mapping url, system/*, with endpoint infos com.ibm.ws.jaxrs20.metadata.EndpointInfo@295117ff and com.ibm.ws.jaxrs20.metadata.EndpointInfo@7f3e83b8, throw exception to fail application starting. com.ibm.ws.jaxrs20.server.component.JaxRsWebModuleInfoBuilder 292" at ffdc_21.03.21_21.30.23.0.log
+[3/21/21 21:30:23:710 EDT] 0000004c org.jboss.weld.Version                                       I WELD-000900: 3.1.4 (Final)
+[3/21/21 21:30:24:386 EDT] 00000042 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\AirlineLogic\HelloWorld\target\liberty\wlp\usr\servers\sampleAppServer\logs\state\plugin-cfg.xml.
+[3/21/21 21:30:25:938 EDT] 0000004c com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Liberty Project.
+[3/21/21 21:30:25:942 EDT] 0000004c com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Liberty Project has been bound to default_host.
+[3/21/21 21:30:25:942 EDT] 0000004c com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://johanson.mshome.net:9080/
+[3/21/21 21:30:25:946 EDT] 00000045 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/
+[3/21/21 21:30:25:946 EDT] 00000045 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[3/21/21 21:30:25:982 EDT] 00000045 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application HelloWorld updated in 3.422 seconds.
+[3/21/21 21:30:26:570 EDT] 00000050 com.ibm.ws.ssl.config.WSKeyStore                             A CWPKI0803A: SSL certificate created in 5.819 seconds. SSL key file: C:/Users/felix/Desktop/AirlineLogic/HelloWorld/target/liberty/wlp/usr/servers/sampleAppServer/resources/security/key.p12
+[3/21/21 21:30:26:570 EDT] 00000050 com.ibm.ws.ssl.config.WSKeyStore                             I Successfully loaded default keystore: C:/Users/felix/Desktop/AirlineLogic/HelloWorld/target/liberty/wlp/usr/servers/sampleAppServer/resources/security/key.p12 of type: PKCS12
+[3/21/21 21:30:26:810 EDT] 00000048 com.ibm.ws.tcpchannel.internal.TCPPort                       I CWWKO0219I: TCP Channel defaultHttpEndpoint-ssl has been started and is now listening for requests on host *  (IPv6) port 9443.
+[3/21/21 21:30:27:057 EDT] 00000022 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\AirlineLogic\HelloWorld\target\liberty\wlp\usr\servers\sampleAppServer\logs\state\plugin-cfg.xml.
+[3/21/21 21:30:54:252 EDT] 0000004b g.apache.cxf.cxf.core.3.2:1.0.50.cl210320210309-1101(id=87)] I Setting the server's publish address to be /system/
+[3/21/21 21:30:54:384 EDT] 0000004b com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [HelloWorld] [/] [io.openliberty.sample.SampleApplication]: Initialization successful.
+[3/21/21 21:30:54:461 EDT] 0000004b cxf.rt.frontend.jaxrs.3.2:1.0.50.cl210320210309-1101(id=95)] W Both io.openliberty.sample.system.SystemResource#getProperties and sample.system.SystemResource#getProperties are equal candidates for handling the current request which can lead to unpredictable results
+[3/21/21 21:30:54:457 EDT] 00000022 cxf.rt.frontend.jaxrs.3.2:1.0.50.cl210320210309-1101(id=95)] W Both sample.config.ConfigResource#getAllConfig and io.openliberty.sample.config.ConfigResource#getAllConfig are equal candidates for handling the current request which can lead to unpredictable results
+[3/21/21 21:30:54:617 EDT] 0000004b g.apache.cxf.cxf.core.3.2:1.0.50.cl210320210309-1101(id=87)] W Interceptor for {http://HelloWorld.example.com/}HelloResource has thrown exception, unwinding now
+org.apache.cxf.interceptor.Fault: com/ibm/websphere/monitor/jmx/StatisticsMeter
+	at org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor.handleWriteException(JAXRSOutInterceptor.java:399)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor.serializeMessage(JAXRSOutInterceptor.java:178)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor.processResponse(JAXRSOutInterceptor.java:124)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor.handleMessage(JAXRSOutInterceptor.java:85)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:308)
+	at org.apache.cxf.interceptor.OutgoingChainInterceptor.handleMessage(OutgoingChainInterceptor.java:90)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:308)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:123)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:275)
+	at com.ibm.ws.jaxrs20.endpoint.AbstractJaxRsWebEndpoint.invoke(AbstractJaxRsWebEndpoint.java:137)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.handleRequest(IBMRestServlet.java:146)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.doGet(IBMRestServlet.java:112)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:686)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.service(IBMRestServlet.java:96)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1257)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:745)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:442)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1226)
+	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:5057)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:314)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:1006)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1146)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:427)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:386)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:566)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:500)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:360)
+	at com.ibm.ws.http.channel.internal.inbound.HttpICLReadCallback.complete(HttpICLReadCallback.java:70)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:958)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1047)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:238)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NoClassDefFoundError: com/ibm/websphere/monitor/jmx/StatisticsMeter
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.privateGetPublicMethods(Class.java:2902)
+	at java.lang.Class.privateGetPublicMethods(Class.java:2911)
+	at java.lang.Class.getMethods(Class.java:1615)
+	at com.sun.jmx.mbeanserver.MBeanIntrospector.getMethods(MBeanIntrospector.java:181)
+	at com.sun.jmx.mbeanserver.MBeanAnalyzer.initMaps(MBeanAnalyzer.java:128)
+	at com.sun.jmx.mbeanserver.MBeanAnalyzer.<init>(MBeanAnalyzer.java:118)
+	at com.sun.jmx.mbeanserver.MBeanAnalyzer.analyzer(MBeanAnalyzer.java:102)
+	at com.sun.jmx.mbeanserver.MXBeanIntrospector.getAnalyzer(MXBeanIntrospector.java:74)
+	at com.sun.jmx.mbeanserver.MBeanIntrospector.getPerInterface(MBeanIntrospector.java:192)
+	at com.sun.jmx.mbeanserver.MBeanSupport.<init>(MBeanSupport.java:138)
+	at com.sun.jmx.mbeanserver.MXBeanSupport.<init>(MXBeanSupport.java:66)
+	at com.sun.jmx.mbeanserver.Introspector.makeDynamicMBean(Introspector.java:202)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerObject(DefaultMBeanServerInterceptor.java:898)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:324)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:522)
+	at com.ibm.ws.kernel.boot.jmx.service.MBeanServerForwarderDelegate.registerMBean(MBeanServerForwarderDelegate.java:221)
+	at com.ibm.ws.jmx.internal.DelayedMBeanActivator.registerMBean(DelayedMBeanActivator.java:662)
+	at com.ibm.ws.kernel.boot.jmx.internal.PlatformMBeanServer.registerMBean(PlatformMBeanServer.java:435)
+	at com.ibm.websphere.monitor.meters.MeterCollection.MXBeanHelper(MeterCollection.java:121)
+	at com.ibm.websphere.monitor.meters.MeterCollection.put(MeterCollection.java:74)
+	at com.ibm.ws.jaxrs.monitor.JaxRsMonitorFilter.initJaxRsStats(JaxRsMonitorFilter.java:218)
+	at com.ibm.ws.jaxrs.monitor.JaxRsMonitorFilter.filter(JaxRsMonitorFilter.java:127)
+	at org.apache.cxf.jaxrs.utils.JAXRSUtils.runContainerResponseFilters(JAXRSUtils.java:1933)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor.serializeMessage(JAXRSOutInterceptor.java:176)
+	... 35 more
+Caused by: java.lang.ClassNotFoundException: com.ibm.websphere.monitor.jmx.StatisticsMeter cannot be found by com.ibm.websphere.appserver.api.jaxrs20_1.0.50.cl210320210309-1101
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:516)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:171)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 61 more
+
+[3/21/21 21:30:54:641 EDT] 0000004b g.apache.cxf.cxf.core.3.2:1.0.50.cl210320210309-1101(id=87)] W Could not create a secure Stax XMLInputFactory.  Found class com.sun.xml.internal.stream.XMLInputFactoryImpl.  Suggest Woodstox 4.2.0 or newer.
+[3/21/21 21:30:55:122 EDT] 00000022 com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: An FFDC Incident has been created: "java.lang.NoClassDefFoundError: com/ibm/websphere/monitor/jmx/StatisticsMeter org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor 177" at ffdc_21.03.21_21.30.54.0.log
+[3/21/21 21:30:55:126 EDT] 00000022 g.apache.cxf.cxf.core.3.2:1.0.50.cl210320210309-1101(id=87)] W Interceptor for {http://HelloWorld.example.com/}HelloResource has thrown exception, unwinding now
+org.apache.cxf.interceptor.Fault: com/ibm/websphere/monitor/jmx/StatisticsMeter
+	at org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor.handleWriteException(JAXRSOutInterceptor.java:399)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor.serializeMessage(JAXRSOutInterceptor.java:178)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor.processResponse(JAXRSOutInterceptor.java:124)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor.handleMessage(JAXRSOutInterceptor.java:85)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:308)
+	at org.apache.cxf.interceptor.OutgoingChainInterceptor.handleMessage(OutgoingChainInterceptor.java:90)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:308)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:123)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:275)
+	at com.ibm.ws.jaxrs20.endpoint.AbstractJaxRsWebEndpoint.invoke(AbstractJaxRsWebEndpoint.java:137)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.handleRequest(IBMRestServlet.java:146)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.doGet(IBMRestServlet.java:112)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:686)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.service(IBMRestServlet.java:96)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1257)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:745)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:442)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1226)
+	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:5057)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:314)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:1006)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1146)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:427)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:386)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:566)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:500)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:360)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:327)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:167)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:75)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:958)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1047)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:238)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NoClassDefFoundError: com/ibm/websphere/monitor/jmx/StatisticsMeter
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.privateGetPublicMethods(Class.java:2902)
+	at java.lang.Class.privateGetPublicMethods(Class.java:2911)
+	at java.lang.Class.getMethods(Class.java:1615)
+	at com.sun.jmx.mbeanserver.MBeanIntrospector.getMethods(MBeanIntrospector.java:181)
+	at com.sun.jmx.mbeanserver.MBeanAnalyzer.initMaps(MBeanAnalyzer.java:128)
+	at com.sun.jmx.mbeanserver.MBeanAnalyzer.<init>(MBeanAnalyzer.java:118)
+	at com.sun.jmx.mbeanserver.MBeanAnalyzer.analyzer(MBeanAnalyzer.java:102)
+	at com.sun.jmx.mbeanserver.MXBeanIntrospector.getAnalyzer(MXBeanIntrospector.java:74)
+	at com.sun.jmx.mbeanserver.MBeanIntrospector.getPerInterface(MBeanIntrospector.java:192)
+	at com.sun.jmx.mbeanserver.MBeanSupport.<init>(MBeanSupport.java:138)
+	at com.sun.jmx.mbeanserver.MXBeanSupport.<init>(MXBeanSupport.java:66)
+	at com.sun.jmx.mbeanserver.Introspector.makeDynamicMBean(Introspector.java:202)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerObject(DefaultMBeanServerInterceptor.java:898)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:324)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:522)
+	at com.ibm.ws.kernel.boot.jmx.service.MBeanServerForwarderDelegate.registerMBean(MBeanServerForwarderDelegate.java:221)
+	at com.ibm.ws.jmx.internal.DelayedMBeanActivator.registerMBean(DelayedMBeanActivator.java:662)
+	at com.ibm.ws.kernel.boot.jmx.internal.PlatformMBeanServer.registerMBean(PlatformMBeanServer.java:435)
+	at com.ibm.websphere.monitor.meters.MeterCollection.MXBeanHelper(MeterCollection.java:121)
+	at com.ibm.websphere.monitor.meters.MeterCollection.put(MeterCollection.java:74)
+	at com.ibm.ws.jaxrs.monitor.JaxRsMonitorFilter.initJaxRsStats(JaxRsMonitorFilter.java:218)
+	at com.ibm.ws.jaxrs.monitor.JaxRsMonitorFilter.filter(JaxRsMonitorFilter.java:127)
+	at org.apache.cxf.jaxrs.utils.JAXRSUtils.runContainerResponseFilters(JAXRSUtils.java:1933)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor.serializeMessage(JAXRSOutInterceptor.java:176)
+	... 37 more
+Caused by: java.lang.ClassNotFoundException: com.ibm.websphere.monitor.jmx.StatisticsMeter cannot be found by com.ibm.websphere.appserver.api.jaxrs20_1.0.50.cl210320210309-1101
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:516)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:171)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 63 more
+
+[3/21/21 21:31:25:130 EDT] 00000049 cxf.rt.frontend.jaxrs.3.2:1.0.50.cl210320210309-1101(id=95)] W Both io.openliberty.sample.system.SystemResource#getProperties and sample.system.SystemResource#getProperties are equal candidates for handling the current request which can lead to unpredictable results
+[3/21/21 21:31:25:138 EDT] 00000049 g.apache.cxf.cxf.core.3.2:1.0.50.cl210320210309-1101(id=87)] W Interceptor for {http://HelloWorld.example.com/}HelloResource has thrown exception, unwinding now
+org.apache.cxf.interceptor.Fault: com/ibm/websphere/monitor/jmx/StatisticsMeter
+	at org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor.handleWriteException(JAXRSOutInterceptor.java:399)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor.serializeMessage(JAXRSOutInterceptor.java:178)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor.processResponse(JAXRSOutInterceptor.java:124)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor.handleMessage(JAXRSOutInterceptor.java:85)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:308)
+	at org.apache.cxf.interceptor.OutgoingChainInterceptor.handleMessage(OutgoingChainInterceptor.java:90)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:308)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:123)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:275)
+	at com.ibm.ws.jaxrs20.endpoint.AbstractJaxRsWebEndpoint.invoke(AbstractJaxRsWebEndpoint.java:137)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.handleRequest(IBMRestServlet.java:146)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.doGet(IBMRestServlet.java:112)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:686)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.service(IBMRestServlet.java:96)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1257)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:745)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:442)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1226)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1010)
+	at com.ibm.ws.webcontainer.servlet.CacheServletWrapper.handleRequest(CacheServletWrapper.java:75)
+	at com.ibm.ws.webcontainer40.servlet.CacheServletWrapper40.handleRequest(CacheServletWrapper40.java:86)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:937)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1146)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:427)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:386)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:566)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:500)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:360)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:327)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:167)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:75)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:958)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1047)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:238)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NoClassDefFoundError: com/ibm/websphere/monitor/jmx/StatisticsMeter
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.privateGetPublicMethods(Class.java:2902)
+	at java.lang.Class.privateGetPublicMethods(Class.java:2911)
+	at java.lang.Class.getMethods(Class.java:1615)
+	at com.sun.jmx.mbeanserver.MBeanIntrospector.getMethods(MBeanIntrospector.java:181)
+	at com.sun.jmx.mbeanserver.MBeanAnalyzer.initMaps(MBeanAnalyzer.java:128)
+	at com.sun.jmx.mbeanserver.MBeanAnalyzer.<init>(MBeanAnalyzer.java:118)
+	at com.sun.jmx.mbeanserver.MBeanAnalyzer.analyzer(MBeanAnalyzer.java:102)
+	at com.sun.jmx.mbeanserver.MXBeanIntrospector.getAnalyzer(MXBeanIntrospector.java:74)
+	at com.sun.jmx.mbeanserver.MBeanIntrospector.getPerInterface(MBeanIntrospector.java:192)
+	at com.sun.jmx.mbeanserver.MBeanSupport.<init>(MBeanSupport.java:138)
+	at com.sun.jmx.mbeanserver.MXBeanSupport.<init>(MXBeanSupport.java:66)
+	at com.sun.jmx.mbeanserver.Introspector.makeDynamicMBean(Introspector.java:202)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerObject(DefaultMBeanServerInterceptor.java:898)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:324)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:522)
+	at com.ibm.ws.kernel.boot.jmx.service.MBeanServerForwarderDelegate.registerMBean(MBeanServerForwarderDelegate.java:221)
+	at com.ibm.ws.jmx.internal.DelayedMBeanActivator.registerMBean(DelayedMBeanActivator.java:662)
+	at com.ibm.ws.kernel.boot.jmx.internal.PlatformMBeanServer.registerMBean(PlatformMBeanServer.java:435)
+	at com.ibm.websphere.monitor.meters.MeterCollection.MXBeanHelper(MeterCollection.java:121)
+	at com.ibm.websphere.monitor.meters.MeterCollection.put(MeterCollection.java:74)
+	at com.ibm.ws.jaxrs.monitor.JaxRsMonitorFilter.initJaxRsStats(JaxRsMonitorFilter.java:218)
+	at com.ibm.ws.jaxrs.monitor.JaxRsMonitorFilter.filter(JaxRsMonitorFilter.java:127)
+	at org.apache.cxf.jaxrs.utils.JAXRSUtils.runContainerResponseFilters(JAXRSUtils.java:1933)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor.serializeMessage(JAXRSOutInterceptor.java:176)
+	... 38 more
+Caused by: java.lang.ClassNotFoundException: com.ibm.websphere.monitor.jmx.StatisticsMeter cannot be found by com.ibm.websphere.appserver.api.jaxrs20_1.0.50.cl210320210309-1101
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:516)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:171)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 64 more
+
+[3/21/21 21:31:25:849 EDT] 00000047 com.ibm.ws.webcontainer.extension                            W SRVE0190E: File not found: /favicon.ico
+[3/21/21 21:32:48:525 EDT] 0000004b g.apache.cxf.cxf.core.3.2:1.0.50.cl210320210309-1101(id=87)] I Setting the server's publish address to be /api/
+[3/21/21 21:32:48:533 EDT] 0000004b com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [HelloWorld] [/] [com.example.HelloWorld.HelloApplication]: Initialization successful.
+[3/21/21 21:33:34:643 EDT] 00000045 cxf.rt.frontend.jaxrs.3.2:1.0.50.cl210320210309-1101(id=95)] W Both io.openliberty.sample.system.SystemResource#getProperties and sample.system.SystemResource#getProperties are equal candidates for handling the current request which can lead to unpredictable results
+[3/21/21 21:33:34:643 EDT] 00000062 cxf.rt.frontend.jaxrs.3.2:1.0.50.cl210320210309-1101(id=95)] W Both sample.config.ConfigResource#getAllConfig and io.openliberty.sample.config.ConfigResource#getAllConfig are equal candidates for handling the current request which can lead to unpredictable results
+[3/21/21 21:33:34:651 EDT] 00000045 g.apache.cxf.cxf.core.3.2:1.0.50.cl210320210309-1101(id=87)] W Interceptor for {http://HelloWorld.example.com/}HelloResource has thrown exception, unwinding now
+org.apache.cxf.interceptor.Fault: com/ibm/websphere/monitor/jmx/StatisticsMeter
+	at org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor.handleWriteException(JAXRSOutInterceptor.java:399)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor.serializeMessage(JAXRSOutInterceptor.java:178)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor.processResponse(JAXRSOutInterceptor.java:124)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor.handleMessage(JAXRSOutInterceptor.java:85)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:308)
+	at org.apache.cxf.interceptor.OutgoingChainInterceptor.handleMessage(OutgoingChainInterceptor.java:90)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:308)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:123)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:275)
+	at com.ibm.ws.jaxrs20.endpoint.AbstractJaxRsWebEndpoint.invoke(AbstractJaxRsWebEndpoint.java:137)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.handleRequest(IBMRestServlet.java:146)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.doGet(IBMRestServlet.java:112)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:686)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.service(IBMRestServlet.java:96)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1257)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:745)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:442)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1226)
+	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:5057)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:314)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:1006)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1146)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:427)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:386)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:566)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:500)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:360)
+	at com.ibm.ws.http.channel.internal.inbound.HttpICLReadCallback.complete(HttpICLReadCallback.java:70)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:958)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1047)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:238)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NoClassDefFoundError: com/ibm/websphere/monitor/jmx/StatisticsMeter
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.privateGetPublicMethods(Class.java:2902)
+	at java.lang.Class.privateGetPublicMethods(Class.java:2911)
+	at java.lang.Class.getMethods(Class.java:1615)
+	at com.sun.jmx.mbeanserver.MBeanIntrospector.getMethods(MBeanIntrospector.java:181)
+	at com.sun.jmx.mbeanserver.MBeanAnalyzer.initMaps(MBeanAnalyzer.java:128)
+	at com.sun.jmx.mbeanserver.MBeanAnalyzer.<init>(MBeanAnalyzer.java:118)
+	at com.sun.jmx.mbeanserver.MBeanAnalyzer.analyzer(MBeanAnalyzer.java:102)
+	at com.sun.jmx.mbeanserver.MXBeanIntrospector.getAnalyzer(MXBeanIntrospector.java:74)
+	at com.sun.jmx.mbeanserver.MBeanIntrospector.getPerInterface(MBeanIntrospector.java:192)
+	at com.sun.jmx.mbeanserver.MBeanSupport.<init>(MBeanSupport.java:138)
+	at com.sun.jmx.mbeanserver.MXBeanSupport.<init>(MXBeanSupport.java:66)
+	at com.sun.jmx.mbeanserver.Introspector.makeDynamicMBean(Introspector.java:202)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerObject(DefaultMBeanServerInterceptor.java:898)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:324)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:522)
+	at com.ibm.ws.kernel.boot.jmx.service.MBeanServerForwarderDelegate.registerMBean(MBeanServerForwarderDelegate.java:221)
+	at com.ibm.ws.jmx.internal.DelayedMBeanActivator.registerMBean(DelayedMBeanActivator.java:662)
+	at com.ibm.ws.kernel.boot.jmx.internal.PlatformMBeanServer.registerMBean(PlatformMBeanServer.java:435)
+	at com.ibm.websphere.monitor.meters.MeterCollection.MXBeanHelper(MeterCollection.java:121)
+	at com.ibm.websphere.monitor.meters.MeterCollection.put(MeterCollection.java:74)
+	at com.ibm.ws.jaxrs.monitor.JaxRsMonitorFilter.initJaxRsStats(JaxRsMonitorFilter.java:218)
+	at com.ibm.ws.jaxrs.monitor.JaxRsMonitorFilter.filter(JaxRsMonitorFilter.java:127)
+	at org.apache.cxf.jaxrs.utils.JAXRSUtils.runContainerResponseFilters(JAXRSUtils.java:1933)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor.serializeMessage(JAXRSOutInterceptor.java:176)
+	... 35 more
+Caused by: java.lang.ClassNotFoundException: com.ibm.websphere.monitor.jmx.StatisticsMeter cannot be found by com.ibm.websphere.appserver.api.jaxrs20_1.0.50.cl210320210309-1101
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:516)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:171)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 61 more
+
+[3/21/21 21:33:34:651 EDT] 00000062 g.apache.cxf.cxf.core.3.2:1.0.50.cl210320210309-1101(id=87)] W Interceptor for {http://HelloWorld.example.com/}HelloResource has thrown exception, unwinding now
+org.apache.cxf.interceptor.Fault: com/ibm/websphere/monitor/jmx/StatisticsMeter
+	at org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor.handleWriteException(JAXRSOutInterceptor.java:399)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor.serializeMessage(JAXRSOutInterceptor.java:178)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor.processResponse(JAXRSOutInterceptor.java:124)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor.handleMessage(JAXRSOutInterceptor.java:85)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:308)
+	at org.apache.cxf.interceptor.OutgoingChainInterceptor.handleMessage(OutgoingChainInterceptor.java:90)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:308)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:123)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:275)
+	at com.ibm.ws.jaxrs20.endpoint.AbstractJaxRsWebEndpoint.invoke(AbstractJaxRsWebEndpoint.java:137)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.handleRequest(IBMRestServlet.java:146)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.doGet(IBMRestServlet.java:112)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:686)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.service(IBMRestServlet.java:96)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1257)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:745)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:442)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1226)
+	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:5057)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:314)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:1006)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1146)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:427)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:386)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:566)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:500)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:360)
+	at com.ibm.ws.http.channel.internal.inbound.HttpICLReadCallback.complete(HttpICLReadCallback.java:70)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:958)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1047)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:238)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NoClassDefFoundError: com/ibm/websphere/monitor/jmx/StatisticsMeter
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.privateGetPublicMethods(Class.java:2902)
+	at java.lang.Class.privateGetPublicMethods(Class.java:2911)
+	at java.lang.Class.getMethods(Class.java:1615)
+	at com.sun.jmx.mbeanserver.MBeanIntrospector.getMethods(MBeanIntrospector.java:181)
+	at com.sun.jmx.mbeanserver.MBeanAnalyzer.initMaps(MBeanAnalyzer.java:128)
+	at com.sun.jmx.mbeanserver.MBeanAnalyzer.<init>(MBeanAnalyzer.java:118)
+	at com.sun.jmx.mbeanserver.MBeanAnalyzer.analyzer(MBeanAnalyzer.java:102)
+	at com.sun.jmx.mbeanserver.MXBeanIntrospector.getAnalyzer(MXBeanIntrospector.java:74)
+	at com.sun.jmx.mbeanserver.MBeanIntrospector.getPerInterface(MBeanIntrospector.java:192)
+	at com.sun.jmx.mbeanserver.MBeanSupport.<init>(MBeanSupport.java:138)
+	at com.sun.jmx.mbeanserver.MXBeanSupport.<init>(MXBeanSupport.java:66)
+	at com.sun.jmx.mbeanserver.Introspector.makeDynamicMBean(Introspector.java:202)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerObject(DefaultMBeanServerInterceptor.java:898)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:324)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:522)
+	at com.ibm.ws.kernel.boot.jmx.service.MBeanServerForwarderDelegate.registerMBean(MBeanServerForwarderDelegate.java:221)
+	at com.ibm.ws.jmx.internal.DelayedMBeanActivator.registerMBean(DelayedMBeanActivator.java:662)
+	at com.ibm.ws.kernel.boot.jmx.internal.PlatformMBeanServer.registerMBean(PlatformMBeanServer.java:435)
+	at com.ibm.websphere.monitor.meters.MeterCollection.MXBeanHelper(MeterCollection.java:121)
+	at com.ibm.websphere.monitor.meters.MeterCollection.put(MeterCollection.java:74)
+	at com.ibm.ws.jaxrs.monitor.JaxRsMonitorFilter.initJaxRsStats(JaxRsMonitorFilter.java:218)
+	at com.ibm.ws.jaxrs.monitor.JaxRsMonitorFilter.filter(JaxRsMonitorFilter.java:127)
+	at org.apache.cxf.jaxrs.utils.JAXRSUtils.runContainerResponseFilters(JAXRSUtils.java:1933)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor.serializeMessage(JAXRSOutInterceptor.java:176)
+	... 35 more
+Caused by: java.lang.ClassNotFoundException: com.ibm.websphere.monitor.jmx.StatisticsMeter cannot be found by com.ibm.websphere.appserver.api.jaxrs20_1.0.50.cl210320210309-1101
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:516)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:171)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 61 more
+
+[3/21/21 21:33:42:383 EDT] 00000023 g.apache.cxf.cxf.core.3.2:1.0.50.cl210320210309-1101(id=87)] W Interceptor for {http://HelloWorld.example.com/}HelloResource has thrown exception, unwinding now
+org.apache.cxf.interceptor.Fault: com/ibm/websphere/monitor/jmx/StatisticsMeter
+	at org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor.handleWriteException(JAXRSOutInterceptor.java:399)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor.serializeMessage(JAXRSOutInterceptor.java:178)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor.processResponse(JAXRSOutInterceptor.java:124)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor.handleMessage(JAXRSOutInterceptor.java:85)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:308)
+	at org.apache.cxf.interceptor.OutgoingChainInterceptor.handleMessage(OutgoingChainInterceptor.java:90)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:308)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:123)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:275)
+	at com.ibm.ws.jaxrs20.endpoint.AbstractJaxRsWebEndpoint.invoke(AbstractJaxRsWebEndpoint.java:137)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.handleRequest(IBMRestServlet.java:146)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.doGet(IBMRestServlet.java:112)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:686)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.service(IBMRestServlet.java:96)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1257)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:745)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:442)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1226)
+	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:5057)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:314)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:1006)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1146)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:427)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:386)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:566)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:500)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:360)
+	at com.ibm.ws.http.channel.internal.inbound.HttpICLReadCallback.complete(HttpICLReadCallback.java:70)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:958)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1047)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:238)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NoClassDefFoundError: com/ibm/websphere/monitor/jmx/StatisticsMeter
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.privateGetPublicMethods(Class.java:2902)
+	at java.lang.Class.privateGetPublicMethods(Class.java:2911)
+	at java.lang.Class.getMethods(Class.java:1615)
+	at com.sun.jmx.mbeanserver.MBeanIntrospector.getMethods(MBeanIntrospector.java:181)
+	at com.sun.jmx.mbeanserver.MBeanAnalyzer.initMaps(MBeanAnalyzer.java:128)
+	at com.sun.jmx.mbeanserver.MBeanAnalyzer.<init>(MBeanAnalyzer.java:118)
+	at com.sun.jmx.mbeanserver.MBeanAnalyzer.analyzer(MBeanAnalyzer.java:102)
+	at com.sun.jmx.mbeanserver.MXBeanIntrospector.getAnalyzer(MXBeanIntrospector.java:74)
+	at com.sun.jmx.mbeanserver.MBeanIntrospector.getPerInterface(MBeanIntrospector.java:192)
+	at com.sun.jmx.mbeanserver.MBeanSupport.<init>(MBeanSupport.java:138)
+	at com.sun.jmx.mbeanserver.MXBeanSupport.<init>(MXBeanSupport.java:66)
+	at com.sun.jmx.mbeanserver.Introspector.makeDynamicMBean(Introspector.java:202)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerObject(DefaultMBeanServerInterceptor.java:898)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:324)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:522)
+	at com.ibm.ws.kernel.boot.jmx.service.MBeanServerForwarderDelegate.registerMBean(MBeanServerForwarderDelegate.java:221)
+	at com.ibm.ws.jmx.internal.DelayedMBeanActivator.registerMBean(DelayedMBeanActivator.java:662)
+	at com.ibm.ws.kernel.boot.jmx.internal.PlatformMBeanServer.registerMBean(PlatformMBeanServer.java:435)
+	at com.ibm.websphere.monitor.meters.MeterCollection.MXBeanHelper(MeterCollection.java:121)
+	at com.ibm.websphere.monitor.meters.MeterCollection.put(MeterCollection.java:74)
+	at com.ibm.ws.jaxrs.monitor.JaxRsMonitorFilter.initJaxRsStats(JaxRsMonitorFilter.java:218)
+	at com.ibm.ws.jaxrs.monitor.JaxRsMonitorFilter.filter(JaxRsMonitorFilter.java:127)
+	at org.apache.cxf.jaxrs.utils.JAXRSUtils.runContainerResponseFilters(JAXRSUtils.java:1933)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor.serializeMessage(JAXRSOutInterceptor.java:176)
+	... 35 more
+Caused by: java.lang.ClassNotFoundException: com.ibm.websphere.monitor.jmx.StatisticsMeter cannot be found by com.ibm.websphere.appserver.api.jaxrs20_1.0.50.cl210320210309-1101
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:516)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:171)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 61 more
+
+[3/21/21 21:37:47:926 EDT] 00000013 com.ibm.ws.kernel.launch.internal.ServerCommandListener      A CWWKE0055I: Server shutdown requested on Sunday, March 21, 2021 at 9:37 PM. The server sampleAppServer is shutting down.
+[3/21/21 21:37:47:934 EDT] 0000008e com.ibm.ws.runtime.update.internal.RuntimeUpdateManagerImpl  A CWWKE1100I: Waiting for up to 30 seconds for the server to quiesce.
+[3/21/21 21:37:47:946 EDT] 00000080 com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0220I: TCP Channel defaultHttpEndpoint-ssl has stopped listening for requests on host *  (IPv6) port 9443.
+[3/21/21 21:37:47:950 EDT] 00000080 com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0220I: TCP Channel defaultHttpEndpoint has stopped listening for requests on host *  (IPv6) port 9080.
+[3/21/21 21:37:47:950 EDT] 00000080 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://johanson.mshome.net:9080/metrics/
+[3/21/21 21:37:47:950 EDT] 00000080 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://johanson.mshome.net:9080/health/
+[3/21/21 21:37:47:950 EDT] 00000080 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://johanson.mshome.net:9080/
+[3/21/21 21:37:47:950 EDT] 00000080 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://johanson.mshome.net:9080/ibm/api/
+[3/21/21 21:37:48:950 EDT] 0000008e com.ibm.ws.runtime.update.internal.RuntimeUpdateManagerImpl  I CWWKE1101I: Server quiesce complete.
+[3/21/21 21:37:49:034 EDT] 00000089 com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [HelloWorld] [/] [io.openliberty.sample.SampleApplication]: Destroy successful.
+[3/21/21 21:37:49:034 EDT] 00000089 com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [HelloWorld] [/] [com.example.HelloWorld.HelloApplication]: Destroy successful.
+[3/21/21 21:37:49:058 EDT] 00000089 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application HelloWorld has stopped successfully.
+[3/21/21 21:37:49:078 EDT] 0000008e com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [com.ibm.ws.microprofile.metrics.public] [/metrics] [PublicMetricsRESTProxyServlet]: Destroy successful.
+[3/21/21 21:37:49:086 EDT] 0000008e com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [com.ibm.ws.microprofile.health.2.0] [/health] [HealthCheckReadinessServlet]: Destroy successful.
+[3/21/21 21:37:49:086 EDT] 0000008e com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [com.ibm.ws.microprofile.health.2.0] [/health] [HealthCheckLivenessServlet]: Destroy successful.
+[3/21/21 21:37:49:090 EDT] 0000008e com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [com.ibm.ws.microprofile.health.2.0] [/health] [HealthCheckServlet]: Destroy successful.
+[3/21/21 21:37:49:314 EDT] 0000008e om.ibm.ws.microprofile.metrics.monitor.MonitorMetricsHandler I CWPMI2004I: All monitoring metrics were unregistered from mpMetrics.
+[3/21/21 21:37:49:494 EDT] 0000008e com.ibm.ws.security.ready.internal.SecurityReadyServiceImpl  I CWWKS0009I: The security service has stopped.
+[3/21/21 21:37:49:522 EDT] 0000008e ibm.ws.security.authentication.internal.jaas.JAASServiceImpl I CWWKS1124I: The collective authentication plugin with class name NullCollectiveAuthenticationPlugin has been deactivated. 
+[3/21/21 21:37:50:058 EDT] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0036I: The server sampleAppServer stopped after 11 minutes, 42.994 seconds.
