@@ -2,6 +2,10 @@
 
   <featureManager>
     <feature>jaxrs-2.1</feature>
+    <feature>jsonp-1.1</feature>
+    <feature>cdi-2.0</feature>
+    <feature>jpa-2.2</feature>
+    <feature>jdbc-4.2</feature>
   </featureManager>
 
   <applicationManager autoExpand="true" />
@@ -16,4 +20,16 @@
   <keyStore id="defaultKeyStore" password="OpenLiberty" />
 
   <webApplication location="HelloWorld.war" contextRoot="${app.context.root}"/>
+
+  <library id="jdbcLib">
+    <fileset dir="${shared.resource.dir}" includes="mysql-connector-java-8.0.23.jar"/>
+  </library>
+
+  <dataSource jndiName="jdbc/myDB">
+    <jdbcDriver libraryRef="jdbcLib" />
+    <properties serverName="localhost" portNumber="3306"
+                databaseName="db1"
+                user="root"
+                password="password"/>
+  </dataSource>
 </server>

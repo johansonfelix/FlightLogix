@@ -66,6 +66,11 @@
             <version>2.3.1</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-api</artifactId>
+            <version>8.0.0</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -77,7 +82,7 @@
                 <artifactId>liberty-maven-plugin</artifactId>
                 <version>${version.liberty-maven-plugin}</version>
                 <configuration>
-                    <serverName>AirlineLogicServer</serverName>
+                    <serverName>FlightLogixServer</serverName>
                 </configuration>
             </plugin>
             <!-- Plugin to run functional tests -->
@@ -93,6 +98,28 @@
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
+
+
+            <plugin>
+                <groupId>io.openliberty.tools</groupId>
+                <artifactId>liberty-maven-plugin</artifactId>
+                <version>3.3.1</version>
+                <configuration>
+                    <copyDependencies>
+                        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+                        <location>${project.build.directory}/liberty/wlp/usr/shared/resources</location>
+                        <dependency>
+                            <groupId>mysql</groupId>
+                            <artifactId>mysql-connector-java</artifactId>
+                            <version>8.0.23</version>
+
+
+                        </dependency>
+
+                    </copyDependencies>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
 </project>

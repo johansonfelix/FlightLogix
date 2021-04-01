@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <liberty-plugin-config>
-    <installDirectory>C:\Users\felix\Desktop\AirlineLogic\HelloWorld\target\liberty\wlp</installDirectory>
-    <serverDirectory>C:\Users\felix\Desktop\AirlineLogic\HelloWorld\target\liberty\wlp\usr\servers\AirlineLogicServer</serverDirectory>
-    <userDirectory>C:\Users\felix\Desktop\AirlineLogic\HelloWorld\target\liberty\wlp\usr</userDirectory>
-    <serverOutputDirectory>C:\Users\felix\Desktop\AirlineLogic\HelloWorld\target\liberty\wlp\usr\servers\AirlineLogicServer</serverOutputDirectory>
-    <serverName>AirlineLogicServer</serverName>
-    <configDirectory>C:\Users\felix\Desktop\AirlineLogic\HelloWorld\src\main\liberty\config</configDirectory>
-    <configFile>C:\Users\felix\Desktop\AirlineLogic\HelloWorld\src\main\liberty\config\server.xml</configFile>
+    <installDirectory>C:\Users\felix\Desktop\FlightLogix\HelloWorld\target\liberty\wlp</installDirectory>
+    <serverDirectory>C:\Users\felix\Desktop\FlightLogix\HelloWorld\target\liberty\wlp\usr\servers\FlightLogixServer</serverDirectory>
+    <userDirectory>C:\Users\felix\Desktop\FlightLogix\HelloWorld\target\liberty\wlp\usr</userDirectory>
+    <serverOutputDirectory>C:\Users\felix\Desktop\FlightLogix\HelloWorld\target\liberty\wlp\usr\servers\FlightLogixServer</serverOutputDirectory>
+    <serverName>FlightLogixServer</serverName>
+    <configDirectory>C:\Users\felix\Desktop\FlightLogix\HelloWorld\src\main\liberty\config</configDirectory>
+    <configFile>C:\Users\felix\Desktop\FlightLogix\HelloWorld\src\main\liberty\config\server.xml</configFile>
     <appsDirectory>apps</appsDirectory>
     <looseApplication>true</looseApplication>
     <stripVersion>false</stripVersion>
@@ -19,8 +19,9 @@
         <type>zip</type>
     </assemblyArtifact>
     <assemblyArchive>C:\Users\felix\.m2\repository\io\openliberty\openliberty-kernel\21.0.0.3\openliberty-kernel-21.0.0.3.zip</assemblyArchive>
-    <assemblyInstallDirectory>C:\Users\felix\Desktop\AirlineLogic\HelloWorld\target\liberty</assemblyInstallDirectory>
+    <assemblyInstallDirectory>C:\Users\felix\Desktop\FlightLogix\HelloWorld\target\liberty</assemblyInstallDirectory>
     <refresh>false</refresh>
-    <installAppsConfigDropins>C:\Users\felix\Desktop\AirlineLogic\HelloWorld\target\liberty\wlp\usr\servers\AirlineLogicServer\configDropins\defaults\install_apps_configuration_1491924271.xml</installAppsConfigDropins>
+    <installAppsConfigDropins>C:\Users\felix\Desktop\FlightLogix\HelloWorld\target\liberty\wlp\usr\servers\FlightLogixServer\configDropins\defaults\install_apps_configuration_1491924271.xml</installAppsConfigDropins>
     <projectType>war</projectType>
+    <projectCompileDependency>jakarta.platform:jakarta.jakartaee-api:8.0.0</projectCompileDependency>
 </liberty-plugin-config>

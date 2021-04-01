@@ -1,2 +1,4 @@
 com\example\HelloWorld\HelloApplication.class
 com\example\HelloWorld\HelloResource.class
+com\example\HelloWorld\UserDao.class
+com\example\HelloWorld\User.class
