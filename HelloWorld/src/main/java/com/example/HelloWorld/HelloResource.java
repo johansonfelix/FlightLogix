@@ -2,7 +2,6 @@ package com.example.HelloWorld;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
-import javax.persistence.EntityManager;
 import javax.transaction.Transactional;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -18,19 +17,26 @@ public class HelloResource {
 
     @GET
     @Produces("text/plain")
-    public String hello() {
+    public String helloWorld() {
 
-        if (userDao.readAllUsers().size()==0)
-            return "DB empty but Hello World still!";
-        else
-            return "Hello, " + userDao.findUser("johanson").get(0).getName();
+       return "Hello, World";
     }
 
+    @GET
+    @Path("{name}")
+    @Produces("text/plain")
+    public String helloName(@PathParam("name") String name) {
+
+        if (userDao.findUser(name).size()==0)
+            return "Name not in DB but Hello World still!";
+        else
+            return "Hello, " + userDao.findUser(name).get(0).getName();
+    }
     @Transactional
     @GET
     @Path("/create/{name}")
     @Produces("text/plain")
-    public String hello(@PathParam("name") String name) {
+    public String helloCreate(@PathParam("name") String name) {
         userDao.createUser(new User(name));
         return "Hello, " + userDao.findUser(name).get(0).getName();
     }
