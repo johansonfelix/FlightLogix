@@ -71,6 +71,12 @@
             <artifactId>jakarta.jakartaee-api</artifactId>
             <version>8.0.0</version>
         </dependency>
+        <!-- Used in HELPERS for hashing-->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>30.1.1-jre</version>
+        </dependency>
     </dependencies>
 
     <build>
