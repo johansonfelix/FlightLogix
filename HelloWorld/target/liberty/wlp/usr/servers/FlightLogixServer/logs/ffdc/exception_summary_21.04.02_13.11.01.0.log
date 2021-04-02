@@ -1,0 +1,10 @@
+
+ Index  Count  Time of first Occurrence    Time of last Occurrence     Exception SourceId ProbeId
+------+------+---------------------------+---------------------------+---------------------------
+     0      1   02/04/21 13:11:01:539 EDT   02/04/21 13:11:01:539 EDT java.io.FileNotFoundException com.ibm.ws.kernel.feature.internal.subsystem.KernelFeatureDefinitionImpl 165
+
+     1      1   02/04/21 13:11:01:540 EDT   02/04/21 13:11:01:540 EDT java.io.FileNotFoundException com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator generateXML
+
+     2      1   02/04/21 13:11:01:555 EDT   02/04/21 13:11:01:555 EDT java.lang.NoClassDefFoundError com.ibm.ws.runtime.update-1.0.50.cl210320210309-1101 log
+                                                                            - /Users/kor/IdeaProjects/FlightLogix/HelloWorld/target/liberty/wlp/usr/servers/FlightLogixServer/logs/ffdc/ffdc_21.04.02_13.11.01.2.log
+------+------+---------------------------+---------------------------+---------------------------
