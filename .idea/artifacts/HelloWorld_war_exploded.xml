@@ -18,7 +18,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/HelloWorld/target/HelloWorld/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/FlightLogix/target/HelloWorld/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="HelloWorld/web/Web" />
     </root>
