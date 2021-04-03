@@ -10,8 +10,9 @@ import java.io.Serializable;
 @NamedQuery(name="User.findUser", query="SELECT e from User e WHERE e.userID = :userID")
 public class User implements Serializable {
 
-    @GeneratedValue(strategy = GenerationType.AUTO)
+
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "userID")
     private String userID;
 

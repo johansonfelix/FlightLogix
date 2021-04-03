@@ -24,11 +24,19 @@
     <fileset dir="${shared.resource.dir}" includes="mysql-connector-java-8.0.23.jar"/>
   </library>
 
-  <dataSource jndiName="jdbc/myDB">
+<!--  <dataSource jndiName="jdbc/myDB">
     <jdbcDriver libraryRef="jdbcLib" />
     <properties serverName="soen.mysql.database.azure.com" portNumber="3306"
                 databaseName="db"
                 user="username@soen"
                 password="Cheese123"/>
+  </dataSource>-->
+
+  <dataSource jndiName="jdbc/myDB">
+    <jdbcDriver libraryRef="jdbcLib" />
+    <properties serverName="localhost" portNumber="3306"
+                databaseName="db1"
+                user="root"
+                password="password"/>
   </dataSource>
 </server>
