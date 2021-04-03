@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><!--HTTP server plugin config file for FlightLogixServer generated on 2021.04.02 at 13:32:54 EDT-->
-<Config ASDisableNagle="false" AcceptAllContent="false" AppServerPortPreference="HostHeader" ChunkedResponse="false" ConfigHash="-1633058037" FIPSEnable="false" IISDisableNagle="false" IISPluginPriority="High" IgnoreDNSFailures="false" RefreshInterval="60" ResponseChunkSize="64" SSLConsolidate="false" TrustedProxyEnable="false" VHostMatchingCompat="false">
+<?xml version="1.0" encoding="UTF-8"?><!--HTTP server plugin config file for FlightLogixServer generated on 2021.04.02 at 21:44:08 EDT-->
+<Config ASDisableNagle="false" AcceptAllContent="false" AppServerPortPreference="HostHeader" ChunkedResponse="false" ConfigHash="-628525820" FIPSEnable="false" IISDisableNagle="false" IISPluginPriority="High" IgnoreDNSFailures="false" RefreshInterval="60" ResponseChunkSize="64" SSLConsolidate="false" TrustedProxyEnable="false" VHostMatchingCompat="false">
    <Log LogLevel="Error" Name="/opt/IBM/WebSphere/Plugins/logs/webserver1/http_plugin.log"/>
    <Property Name="ESIEnable" Value="true"/>
    <Property Name="ESIMaxCacheSize" Value="1024"/>
@@ -16,9 +16,9 @@
       <VirtualHost Name="*:443"/>
    </VirtualHostGroup>
    <ServerCluster CloneSeparatorChange="false" GetDWLMTable="false" IgnoreAffinityRequests="true" LoadBalance="Round Robin" Name="FlightLogixServer_default_node_Cluster" PostBufferSize="0" PostSizeLimit="-1" RemoveSpecialHeaders="true" RetryInterval="60" ServerIOTimeoutRetry="-1">
-      <Server CloneID="e1a58eb2-75e5-4820-a5d2-2c3279e8ec47" ConnectTimeout="5" ExtendedHandshake="false" LoadBalanceWeight="20" MaxConnections="-1" Name="default_node_FlightLogixServer" ServerIOTimeout="900" WaitForContinue="false">
-         <Transport Hostname="andrews-mbp" Port="8080" Protocol="http"/>
-         <Transport Hostname="andrews-mbp" Port="8081" Protocol="https">
+      <Server CloneID="35a58072-932a-4dfa-917b-e43f17cc73c5" ConnectTimeout="5" ExtendedHandshake="false" LoadBalanceWeight="20" MaxConnections="-1" Name="default_node_FlightLogixServer" ServerIOTimeout="900" WaitForContinue="false">
+         <Transport Hostname="johanson" Port="8080" Protocol="http"/>
+         <Transport Hostname="johanson" Port="8081" Protocol="https">
             <Property Name="keyring" Value="/opt/IBM/WebSphere/Plugins/config/webserver1/plugin-key.kdb"/>
             <Property Name="stashfile" Value="/opt/IBM/WebSphere/Plugins/config/webserver1/plugin-key.sth"/>
          </Transport>
@@ -28,7 +28,7 @@
       </PrimaryServers>
    </ServerCluster>
    <UriGroup Name="default_host_FlightLogixServer_default_node_Cluster_URIs">
-      <Uri AffinityCookie="JSESSIONID" AffinityURLIdentifier="jsessionid" Name="/*"/>
+      <Uri AffinityCookie="JSESSIONID" AffinityURLIdentifier="jsessionid" Name="/FlightLogix/*"/>
    </UriGroup>
    <Route ServerCluster="FlightLogixServer_default_node_Cluster" UriGroup="default_host_FlightLogixServer_default_node_Cluster_URIs" VirtualHostGroup="default_host"/>
 </Config>

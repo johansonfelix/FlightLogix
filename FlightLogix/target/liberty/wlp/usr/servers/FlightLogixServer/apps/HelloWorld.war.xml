@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<archive>
-    <dir sourceOnDisk="/Users/kor/IdeaProjects/FlightLogix/HelloWorld/src/main/webapp" targetInArchive="/"/>
-    <dir sourceOnDisk="/Users/kor/IdeaProjects/FlightLogix/HelloWorld/target/classes" targetInArchive="/WEB-INF/classes"/>
-    <file sourceOnDisk="/Users/kor/.m2/repository/jakarta/platform/jakarta.jakartaee-api/8.0.0/jakarta.jakartaee-api-8.0.0.jar" targetInArchive="/WEB-INF/lib/jakarta.jakartaee-api-8.0.0.jar"/>
-    <file sourceOnDisk="/Users/kor/IdeaProjects/FlightLogix/HelloWorld/target/tmp/META-INF/MANIFEST.MF" targetInArchive="/META-INF/MANIFEST.MF"/>
-</archive>

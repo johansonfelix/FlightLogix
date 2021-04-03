@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="FlightLogix:war">
+    <output-path>$PROJECT_DIR$/FlightLogix/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>FlightLogix</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="FlightLogix.war">
+      <element id="artifact" artifact-name="FlightLogix:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,35 +1,48 @@
-<server description="Sample Open Liberty server">
+<server description="Sample Liberty server">
 
   <featureManager>
-    <feature>jaxrs-2.1</feature>
-    <feature>jsonp-1.1</feature>
+    <feature>jaxrs-2.1</feature><!--
+    <feature>jsonp-1.1</feature>-->
     <feature>cdi-2.0</feature>
     <feature>jpa-2.2</feature>
     <feature>jdbc-4.2</feature>
+    <!--<feature>jaxb-2.2</feature>
+    <feature>jsonb-1.0</feature>
+    <feature>json-1.0</feature>q-->
+
   </featureManager>
 
-  <applicationManager autoExpand="true" />
+  <variable name="default.http.port" defaultValue="5050"/>
+  <variable name="default.https.port" defaultValue="5051"/>
 
-  <mpMetrics authentication="false" />
+  <httpEndpoint httpPort="${default.http.port}" httpsPort="${default.https.port}"
+                id="defaultHttpEndpoint" host="*" />
 
-  <variable name="default.http.port" defaultValue="9080"/>
-  <variable name="default.https.port" defaultValue="9443"/>
-  <variable name="app.context.root" defaultValue="/"/>
+  <application location="backendServices.war" type="war" context-root="/">
+  </application>
 
-  <httpEndpoint host="*" httpPort="${default.http.port}" httpsPort="${default.https.port}" id="defaultHttpEndpoint"/>
-  <keyStore id="defaultKeyStore" password="OpenLiberty" />
-
-  <webApplication location="FlightLogix.war" contextRoot="${app.context.root}"/>
+  <!-- Derby Library Configuration -->
+  <!--
+    <library id="derbyJDBCLib">
+        <file name="${shared.resource.dir}/derby-10.14.2.0.jar" />
+    </library>
+  -->
 
   <library id="jdbcLib">
     <fileset dir="${shared.resource.dir}" includes="mysql-connector-java-8.0.23.jar"/>
   </library>
 
+
+
+  <!-- Datasource Configuration -->
+  <!-- tag::data-source[] -->
   <dataSource jndiName="jdbc/myDB">
     <jdbcDriver libraryRef="jdbcLib" />
-    <properties serverName="soen.mysql.database.azure.com" portNumber="3306"
-                databaseName="db"
-                user="username@soen"
-                password="Cheese123"/>
+    <properties serverName="localhost" portNumber="3306"
+                databaseName="db1"
+                user="root"
+                password="password"/>
   </dataSource>
+
+
 </server>

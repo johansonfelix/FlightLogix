@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/FlightLogix.iml" filepath="$PROJECT_DIR$/.idea/FlightLogix.iml" />
-      <module fileurl="file://$PROJECT_DIR$/FlightLogix/HelloWorld.iml" filepath="$PROJECT_DIR$/FlightLogix/HelloWorld.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FlightLogix/FlightLogix.iml" filepath="$PROJECT_DIR$/FlightLogix/FlightLogix.iml" />
     </modules>
   </component>
 </project>
