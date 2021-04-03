@@ -1,6 +1,6 @@
 package com.FlightLogix.Service.User;
 
-import com.FlightLogix.Core.User.Customer;
+
 import com.FlightLogix.Core.User.User;
 import com.FlightLogix.Persistence.User.UserDAO;
 

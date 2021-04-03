@@ -1,8 +1,12 @@
 package com.FlightLogix.Core.User;
 
 
+import com.FlightLogix.Helpers.Helpers;
+
 import javax.persistence.*;
 import java.io.Serializable;
+
+
 
 @Entity
 @Table(name = "user")
@@ -10,9 +14,8 @@ import java.io.Serializable;
 @NamedQuery(name="User.findUser", query="SELECT e from User e WHERE e.userID = :userID")
 public class User implements Serializable {
 
-
-    @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id
     @Column(name = "userID")
     private String userID;
 
@@ -41,6 +44,10 @@ public class User implements Serializable {
 
     }
 
+    @PrePersist
+    public void ensureId() {
+        userID = "CU"+ Helpers.randomNumber();
+    }
     public String getId() {
         return userID;
     }
@@ -78,7 +85,7 @@ public class User implements Serializable {
     }
 
     public void setHashedPassword(String hashedPassword) {
-        this.hashedPassword = hashedPassword;
+        this.hashedPassword = Helpers.stringToHash(hashedPassword);
     }
 
 
