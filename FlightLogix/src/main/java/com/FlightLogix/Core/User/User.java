@@ -1,7 +1,7 @@
 package com.FlightLogix.Core.User;
 
 
-import com.FlightLogix.Helpers.Helpers;
+import com.FlightLogix.Core.Helpers.Helpers;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -32,8 +32,8 @@ public class User implements Serializable {
     private String hashedPassword;
 
 
-    public User(String userID,String firstName,String lastName,String email, String hashedPassword){
-        this.userID = userID;
+    public User(String firstName,String lastName,String email, String hashedPassword){
+
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;

@@ -36,6 +36,7 @@ public class BookingDAO {
         return em.createNamedQuery("Booking.findAll", Booking.class).getResultList();
     }
 
+    //MODIFY - FIND ALL BOOKINGS FOR A PARTICULAR CUSTOMER
     public List<Booking> findBooking(String bookingID) {
         return em.createNamedQuery("Booking.findBooking", Booking.class)
                 .setParameter("bookingID", bookingID).getResultList();

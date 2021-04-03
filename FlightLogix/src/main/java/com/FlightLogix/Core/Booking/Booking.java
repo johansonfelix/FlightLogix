@@ -3,6 +3,7 @@ package com.FlightLogix.Core.Booking;
 
 import com.FlightLogix.Core.Flight.Flight;
 import com.FlightLogix.Core.User.User;
+import com.FlightLogix.Core.Helpers.Helpers;
 
 import javax.persistence.*;
 
@@ -12,6 +13,7 @@ import javax.persistence.*;
 @NamedQuery(name="Booking.findBooking", query="SELECT E from Booking e WHERE e.bookingID = :bookingID")
 public class Booking {
 
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
     private String bookingID;
 
@@ -27,8 +29,8 @@ public class Booking {
     @JoinColumn
     private Flight flight;
 
-    public Booking(String id, User user, Payment payment, Flight flight) {
-        this.bookingID = id;
+    public Booking(User user, Payment payment, Flight flight) {
+
         this.user = user;
         this.payment = payment;
         this.flight = flight;
@@ -38,6 +40,10 @@ public class Booking {
 
     }
 
+    @PrePersist
+    public void ensureId() {
+        bookingID = Helpers.randomAlphaNumricString(6);
+    }
     public String getId() {
         return bookingID;
     }

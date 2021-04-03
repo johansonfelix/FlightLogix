@@ -3,11 +3,19 @@ package com.FlightLogix.Core.Booking;
 import com.FlightLogix.Core.Flight.Price;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.sql.Date;
 
 
 @Entity
 public class Payment extends Price {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    String id;
+
     public Payment() {
 
     }

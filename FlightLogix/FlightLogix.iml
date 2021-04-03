@@ -21,7 +21,7 @@
         <datasource-mapping>
           <factory-entry name="FlightLogix" value="2c90a116-843c-47c8-b286-572947328f6b" />
           <factory-entry name="HelloWorld" value="2c90a116-843c-47c8-b286-572947328f6b" />
-          <factory-entry name="jpa-unit" />
+          <factory-entry name="jpa-unit" value="12bc4472-d79c-42cb-8d0e-6fdf0ff436e0" />
         </datasource-mapping>
         <naming-strategy-map />
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />

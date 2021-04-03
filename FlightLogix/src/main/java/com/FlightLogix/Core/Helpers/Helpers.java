@@ -1,9 +1,10 @@
-package com.FlightLogix.Helpers;
+package com.FlightLogix.Core.Helpers;
 
 import com.google.common.hash.Hashing;
 
 import java.nio.charset.StandardCharsets;
 import java.security.SecureRandom;
+import java.util.Random;
 
 public class Helpers {
     public static String stringToHash(String string){
@@ -20,5 +21,14 @@ public class Helpers {
 
         return String.format("%06d", number);
 
+    }
+
+    public static String randomAlphaNumricString(int len){
+        String chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        Random rnd = new Random();
+        StringBuilder sb = new StringBuilder(len);
+        for (int i = 0; i < len; i++)
+            sb.append(chars.charAt(rnd.nextInt(chars.length())));
+        return sb.toString();
     }
 }

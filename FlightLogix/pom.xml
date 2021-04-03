@@ -78,15 +78,7 @@
     <build>
         <finalName>${project.artifactId}</finalName>
         <plugins>
-            <!--&lt;!&ndash; Enable liberty-maven plugin &ndash;&gt;
-            <plugin>
-                <groupId>io.openliberty.tools</groupId>
-                <artifactId>liberty-maven-plugin</artifactId>
-                <version>${version.liberty-maven-plugin}</version>
-                <configuration>
-                    <serverName>FlightLogixServer</serverName>
-                </configuration>
-            </plugin>-->
+
             <!-- Plugin to run functional tests -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -115,7 +107,6 @@
                             <artifactId>mysql-connector-java</artifactId>
                             <version>8.0.23</version>
                         </dependency>
-
                     </copyDependencies>
                 </configuration>
             </plugin>

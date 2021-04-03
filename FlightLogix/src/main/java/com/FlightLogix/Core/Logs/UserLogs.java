@@ -12,7 +12,7 @@ public class UserLogs {
     @JoinColumn(name = "userID")
     private User user;
 
-    private String operation;
+    private String operation;  //CREATED, LOGIN, LOGOUT
     private Timestamp timestamp;
 
     public User getUser() {

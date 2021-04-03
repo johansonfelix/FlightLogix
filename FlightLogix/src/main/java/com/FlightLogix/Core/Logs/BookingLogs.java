@@ -19,7 +19,7 @@ public class BookingLogs {
     @JoinColumn(name = "userID")
     private User user;
 
-    private String operation;
+    private String operation; //CREATED, MODIFIED, DELETED
     private Timestamp timestamp;
 
     public BookingLogs(Booking booking, User user, String operation, Timestamp timestamp) {
