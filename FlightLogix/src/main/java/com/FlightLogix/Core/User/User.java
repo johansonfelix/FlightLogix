@@ -32,13 +32,13 @@ public class User implements Serializable {
     @Column(name = "role")
     private Role role;
 
-
     public User(String firstName,String lastName,String email, String hashedPassword){
 
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.hashedPassword = hashedPassword;
+
     }
 
     public User() {

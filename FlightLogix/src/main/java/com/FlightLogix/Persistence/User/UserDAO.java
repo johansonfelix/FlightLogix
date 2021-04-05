@@ -41,6 +41,9 @@ public class UserDAO {
         }
         return users.get(0);
     }
+    public List<User> findAllCustomers(){
+        return em.createQuery("SELECT e FROM User WHERE e.role='CUSTOMER'", User.class).getResultList();
+    }
 
     public List<User> findAll(){
         return em.createQuery("SELECT e from User e", User.class).getResultList();
