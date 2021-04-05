@@ -41,4 +41,13 @@ public class UserDAO {
                 .setParameter("userID", userID).getResultList();
     }
 
+    public User findUserByEmail(String email){
+        List<User> users = em.createQuery("SELECT e FROM User WHERE e.email= :email", User.class).setParameter("email", email).setMaxResults(1).getResultList();
+
+        if(users.isEmpty()){
+            return null;
+        }
+        return users.get(0);
+    }
+
 }
