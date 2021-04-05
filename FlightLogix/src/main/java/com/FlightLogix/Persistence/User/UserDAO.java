@@ -5,6 +5,7 @@ import com.FlightLogix.Core.User.User;
 
 import javax.enterprise.context.RequestScoped;
 import javax.persistence.EntityManager;
+import javax.persistence.NamedQuery;
 import javax.persistence.PersistenceContext;
 import java.util.List;
 
@@ -20,7 +21,7 @@ public class UserDAO {
         em.persist(user);
     }
 
-    public User readUser(String userId) {
+    public User findUser(String userId) {
         return em.find(User.class, userId);
     }
 
@@ -32,13 +33,17 @@ public class UserDAO {
         em.remove(user);
     }
 
-    public List<User> readAllUsers() {
-        return em.createNamedQuery("User.findAll", User.class).getResultList();
+    public User findUserByEmail(String email){
+        List<User> users = em.createQuery("SELECT e FROM User WHERE e.email= :email", User.class).setParameter("email", email).setMaxResults(1).getResultList();
+
+        if(users.isEmpty()){
+            return null;
+        }
+        return users.get(0);
     }
 
-    public List<User> findUser(String userID) {
-        return em.createNamedQuery("User.findUser", User.class)
-                .setParameter("userID", userID).getResultList();
+    public List<User> findAll(){
+        return em.createQuery("SELECT e from User e", User.class).getResultList();
     }
 
 }

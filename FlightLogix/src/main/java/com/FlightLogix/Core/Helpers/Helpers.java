@@ -17,7 +17,7 @@ public class Helpers {
     public static String randomNumber(){
         SecureRandom random = new SecureRandom();
 
-        int number = random.nextInt(999999);
+        int number = random.nextInt(9999999);
 
         return String.format("%06d", number);
 
@@ -30,5 +30,10 @@ public class Helpers {
         for (int i = 0; i < len; i++)
             sb.append(chars.charAt(rnd.nextInt(chars.length())));
         return sb.toString();
+    }
+
+    public static boolean checkPassword(String plainTextPassword, String hashedPassword){
+
+        return (hashedPassword.equals(stringToHash(plainTextPassword)));
     }
 }

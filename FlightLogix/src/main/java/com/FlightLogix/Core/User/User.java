@@ -6,12 +6,9 @@ import com.FlightLogix.Core.Helpers.Helpers;
 import javax.persistence.*;
 import java.io.Serializable;
 
-
-
 @Entity
 @Table(name = "user")
-@NamedQuery(name="User.findAll", query="SELECT e from User e")
-@NamedQuery(name="User.findUser", query="SELECT e from User e WHERE e.userID = :userID")
+
 public class User implements Serializable {
 
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -31,6 +28,10 @@ public class User implements Serializable {
     @Column(name = "hashedPassword")
     private String hashedPassword;
 
+    @Enumerated(EnumType.STRING)
+    @Column(name = "role")
+    private Role role;
+
 
     public User(String firstName,String lastName,String email, String hashedPassword){
 
@@ -46,7 +47,7 @@ public class User implements Serializable {
 
     @PrePersist
     public void ensureId() {
-        userID = "CU"+ Helpers.randomNumber();
+        userID = Helpers.randomNumber();
     }
     public String getId() {
         return userID;
@@ -88,5 +89,19 @@ public class User implements Serializable {
         this.hashedPassword = Helpers.stringToHash(hashedPassword);
     }
 
+    public String getUserID() {
+        return userID;
+    }
 
+    public void setUserID(String userID) {
+        this.userID = userID;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
 }

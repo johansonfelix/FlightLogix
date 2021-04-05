@@ -1,6 +1,5 @@
 C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Persistence\Booking\PaymentDAO.java
 C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Persistence\Flight\PriceDAO.java
-C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Helpers\Helpers.java
 C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Persistence\Flight\LocationDAO.java
 C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Persistence\Flight\LegDAO.java
 C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Core\Flight\Price.java
@@ -23,5 +22,6 @@ C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Cor
 C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Persistence\Flight\FlightDAO.java
 C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Core\Booking\Booking.java
 C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Core\Logs\BookingLogs.java
+C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Core\Helpers\Helpers.java
 C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Core\Booking\Payment.java
 C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Core\Flight\Flight.java
