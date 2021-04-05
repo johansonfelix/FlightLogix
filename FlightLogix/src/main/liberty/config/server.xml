@@ -5,6 +5,7 @@
     <feature>jsonp-1.1</feature>
     <feature>cdi-2.0</feature>
     <feature>jpa-2.2</feature>
+    <feature>transportSecurity-1.0</feature>
   </featureManager>
 
   <applicationManager autoExpand="true" />
@@ -15,11 +16,11 @@
   <variable name="default.https.port" defaultValue="9443"/>
   <variable name="app.context.root" defaultValue="/"/>
 
-  <httpEndpoint host="*" httpPort="${default.http.port}" httpsPort="${default.https.port}" id="defaultHttpEndpoint"/>
-  <keyStore id="defaultKeyStore" password="OpenLiberty" />
+  <httpEndpoint host="*" httpsPort="${default.https.port}" httpPort="${default.http.port}" id="defaultHttpEndpoint"/>
+  <!--<keyStore id="defaultKeyStore" password="OpenLiberty" />-->
 
   <webApplication location="FlightLogix.war" contextRoot="${app.context.root}"/>
-
+  <keyStore id="defaultKeyStore" password="PASSWORD" />
 
 
   <library id="jdbcLib">

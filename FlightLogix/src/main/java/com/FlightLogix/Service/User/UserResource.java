@@ -1,14 +1,14 @@
 package com.FlightLogix.Service.User;
 
-
 import com.FlightLogix.Core.User.User;
 import com.FlightLogix.Persistence.User.UserDAO;
-
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.transaction.Transactional;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.UriInfo;
+import java.net.URI;
 
 @RequestScoped
 @Path("/user")
@@ -31,7 +31,8 @@ public class UserResource {
     @Path("/getUser/{id}")
     @Consumes(MediaType.TEXT_PLAIN)
     public User registerUser(@PathParam("id") String userID){
-        return users.readUser(userID);
+
+        return users.findUser(userID);
 
     }
 
