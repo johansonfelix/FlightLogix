@@ -19,7 +19,7 @@ public class FlightDAO {
         em.persist(Flight);
     }
 
-    public Flight readFlight(String flightID) {
+    public Flight findFlight(String flightID) {
         return em.find(Flight.class, flightID);
     }
 
@@ -31,12 +31,9 @@ public class FlightDAO {
         em.remove(flight);
     }
 
-    public List<Flight> readAllFlights() {
+    public List<Flight> findAllFlights() {
         return em.createNamedQuery("Flight.findAll", Flight.class).getResultList();
     }
 
-    public List<Flight> findFlight(String FlightID) {
-        return em.createNamedQuery("Flight.findFlight", Flight.class)
-                .setParameter("flightID", FlightID).getResultList();
-    }
+
 }
