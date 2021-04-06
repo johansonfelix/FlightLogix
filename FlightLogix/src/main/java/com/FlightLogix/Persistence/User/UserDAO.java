@@ -34,7 +34,7 @@ public class UserDAO {
     }
 
     public User findUserByEmail(String email){
-        List<User> users = em.createQuery("SELECT e FROM User WHERE e.email= :email", User.class).setParameter("email", email).setMaxResults(1).getResultList();
+        List<User> users = em.createQuery("SELECT e FROM User e WHERE e.email= :email", User.class).setParameter("email", email).setMaxResults(1).getResultList();
 
         if(users.isEmpty()){
             return null;
@@ -42,7 +42,7 @@ public class UserDAO {
         return users.get(0);
     }
     public List<User> findAllCustomers(){
-        return em.createQuery("SELECT e FROM User WHERE e.role='CUSTOMER'", User.class).getResultList();
+        return em.createQuery("SELECT e FROM User e WHERE e.role='CUSTOMER'", User.class).getResultList();
     }
 
     public List<User> findAll(){

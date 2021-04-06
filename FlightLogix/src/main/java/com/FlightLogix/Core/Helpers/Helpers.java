@@ -33,7 +33,6 @@ public class Helpers {
     }
 
     public static boolean checkPassword(String plainTextPassword, String hashedPassword){
-
         return (hashedPassword.equals(stringToHash(plainTextPassword)));
     }
 }

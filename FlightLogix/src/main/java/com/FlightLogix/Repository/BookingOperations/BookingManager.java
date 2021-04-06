@@ -1,10 +1,13 @@
-package com.FlightLogix.Repository;
+package com.FlightLogix.Repository.BookingOperations;
 
 import com.FlightLogix.Core.Booking.Booking;
 import com.FlightLogix.Persistence.Booking.BookingDAO;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
+
+@ApplicationScoped
 public class BookingManager {
     private static BookingManager bookingManager = new BookingManager();
 
@@ -17,6 +20,8 @@ public class BookingManager {
     private BookingManager(){
 
     }
+
+
     public static BookingManager getInstance(){
         return bookingManager;
     }
