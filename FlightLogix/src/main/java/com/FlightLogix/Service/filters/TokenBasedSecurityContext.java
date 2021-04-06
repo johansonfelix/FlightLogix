@@ -9,8 +9,8 @@ import java.security.Principal;
 
 public class TokenBasedSecurityContext implements SecurityContext {
 
-    private AuthenticatedUser authenticatedUser;
-    private TokenDetails tokenDetails;
+    private final AuthenticatedUser authenticatedUser;
+    private final TokenDetails tokenDetails;
     private final boolean secure;
 
     public TokenBasedSecurityContext(AuthenticatedUser authenticatedUser, TokenDetails tokenDetails, boolean secure) {

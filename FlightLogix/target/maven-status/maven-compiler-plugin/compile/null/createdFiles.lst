@@ -6,12 +6,10 @@ com\FlightLogix\Service\filters\AuthenticationFilter.class
 com\FlightLogix\Service\filters\AuthorizationFilter.class
 com\FlightLogix\Repository\BookingOperations\BookingManager.class
 com\FlightLogix\Repository\BookingOperations\FlightManager$ResponseCode.class
-com\FlightLogix\Service\ExceptionMapper\AuthenticationExceptionMapper.class
 com\FlightLogix\Repository\AuthenticationOperations\UsernamePasswordValidator.class
 com\FlightLogix\Repository\Exceptions\AccessDeniedException.class
 com\FlightLogix\Repository\Exceptions\InvalidAuthenticationTokenException.class
 com\FlightLogix\Repository\Utils\ResponseCode.class
-com\FlightLogix\Service\ExceptionMapper\AccessDeniedExceptionMapper.class
 com\FlightLogix\Service\filters\TokenBasedSecurityContext.class
 com\FlightLogix\Core\Exception\ApiErrorDetails.class
 com\FlightLogix\Core\User\Role.class

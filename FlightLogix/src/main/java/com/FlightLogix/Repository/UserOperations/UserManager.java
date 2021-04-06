@@ -22,14 +22,14 @@ public class UserManager {
     UserDAO userDAO;
 
 
-    public String register(@NotNull User user){
+    public void register(@NotNull User user){
         User foundUser = userDAO.findUserByEmail(user.getEmail());
 
         if(foundUser != null){
-            throw new RegistrationException("User already exists");
+            throw new RegistrationException(ResponseCode.EMAIL_ALREADY_EXISTS.toString());
         }
         userDAO.createUser(user);
-        return ResponseCode.SUCCESS.toString();
+
     }
 
     public List<User> findAllCustomers(){

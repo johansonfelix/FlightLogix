@@ -1,4 +1,4 @@
-package com.FlightLogix.Service;
+package com.FlightLogix.Service.Application;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;

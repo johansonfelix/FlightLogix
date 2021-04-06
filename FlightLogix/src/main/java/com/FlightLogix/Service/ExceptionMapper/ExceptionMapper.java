@@ -10,7 +10,7 @@ import javax.ws.rs.core.UriInfo;
 import javax.ws.rs.ext.Provider;
 
 @Provider
-public class ExceptionMapper implements javax.ws.rs.ext.ExceptionMapper<RuntimeException>{
+public class ExceptionMapper implements javax.ws.rs.ext.ExceptionMapper<RuntimeException> {
 
 
     @Context

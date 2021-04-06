@@ -4,6 +4,7 @@ import com.FlightLogix.Core.Security.AuthenticatedUser;
 import com.FlightLogix.Core.Security.TokenDetails;
 import com.FlightLogix.Core.User.User;
 import com.FlightLogix.Persistence.User.UserDAO;
+import com.FlightLogix.Repository.AuthenticationOperations.LoginManager;
 import com.FlightLogix.Repository.AuthenticationOperations.TokenService;
 
 import javax.annotation.Priority;
@@ -28,6 +29,9 @@ public class AuthenticationFilter implements ContainerRequestFilter {
 
     @Inject
     private TokenService tokenService;
+
+    @Inject
+    private LoginManager loginManager;
 
 
     @Override

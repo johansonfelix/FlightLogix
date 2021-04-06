@@ -3,8 +3,6 @@ package com.FlightLogix.Service.apis;
 import com.FlightLogix.Core.Security.AuthenticationToken;
 import com.FlightLogix.Core.Security.Credentials;
 import com.FlightLogix.Repository.AuthenticationOperations.LoginManager;
-import com.FlightLogix.Repository.Utils.ResponseCode;
-
 import javax.annotation.security.PermitAll;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
@@ -36,5 +34,4 @@ public class LoginResource {
     }
 
 
-    //Refresh token method
 }
