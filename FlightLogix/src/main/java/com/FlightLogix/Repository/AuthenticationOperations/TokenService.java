@@ -15,7 +15,6 @@ import java.util.Date;
 @ApplicationScoped
 public class TokenService {
 
-
     @Inject
     TokenParser tokenParser;
     //Potentially remove expiration or extend expiration time/
