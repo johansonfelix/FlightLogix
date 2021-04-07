@@ -28,7 +28,7 @@ public class LoginResource {
     @PermitAll
     public Response authenticate(Credentials credentials) {
         String token = loginManager.logIn(credentials.getEmail(), credentials.getPassword());
-        System.out.println(token);
+
         AuthenticationToken authenticationToken = new AuthenticationToken(token);
         return Response.ok(authenticationToken).build();
     }

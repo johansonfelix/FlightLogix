@@ -1,9 +1,13 @@
 package com.FlightLogix.Service.apis;
 
+
 import javax.enterprise.context.RequestScoped;
+import javax.ws.rs.Path;
 
 @RequestScoped
-public class BookingResource {
+public class AdminResource {
 
-    //all booking operations
+    //viewAllCustomers
+
+
 }

@@ -3,6 +3,7 @@ package com.FlightLogix.Service.apis;
 
 
 import com.FlightLogix.Core.User.User;
+import com.FlightLogix.Core.User.UserRegistration;
 import com.FlightLogix.Repository.UserOperations.UserManager;
 import javax.annotation.security.PermitAll;
 import javax.enterprise.context.RequestScoped;
@@ -28,7 +29,7 @@ public class RegistrationResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     @PermitAll
-    public Response register (User user){
+    public Response register (UserRegistration user){
 
         userManager.register(user);
 

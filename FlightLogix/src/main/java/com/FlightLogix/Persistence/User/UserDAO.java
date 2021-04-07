@@ -1,11 +1,12 @@
 package com.FlightLogix.Persistence.User;
 
+import com.FlightLogix.Core.User.Role;
 import com.FlightLogix.Core.User.User;
+import com.FlightLogix.Core.User.UserRegistration;
 
 
 import javax.enterprise.context.RequestScoped;
 import javax.persistence.EntityManager;
-import javax.persistence.NamedQuery;
 import javax.persistence.PersistenceContext;
 import java.util.List;
 
@@ -16,9 +17,10 @@ public class UserDAO {
     @PersistenceContext(name = "jpa-unit")
     private EntityManager em;
 
-    public void createUser(User user) {
-
-        em.persist(user);
+    public void createUser(UserRegistration user) {
+        User u = new User(user.getFirstName(), user.getLastName(), user.getEmail(), user.getPassword());
+        u.setRole(Role.CUSTOMER);
+        em.persist(u);
     }
 
     public User findUser(String userId) {

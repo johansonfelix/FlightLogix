@@ -32,12 +32,12 @@ public class User implements Serializable {
     @Column(name = "role")
     private Role role;
 
-    public User(String firstName,String lastName,String email, String hashedPassword){
+    public User(String firstName,String lastName,String email, String password){
 
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-        this.hashedPassword = hashedPassword;
+        this.hashedPassword = Helpers.stringToHash(password);
 
     }
 
@@ -86,7 +86,7 @@ public class User implements Serializable {
     }
 
     public void setHashedPassword(String hashedPassword) {
-        this.hashedPassword = Helpers.stringToHash(hashedPassword);
+        this.hashedPassword = hashedPassword;
     }
 
     public String getUserID() {
@@ -102,6 +102,6 @@ public class User implements Serializable {
     }
 
     public void setRole(Role role) {
-        this.role = role;
+        this.role = Role.CUSTOMER;
     }
 }

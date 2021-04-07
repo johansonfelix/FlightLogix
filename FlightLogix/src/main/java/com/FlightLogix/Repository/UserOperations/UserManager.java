@@ -1,6 +1,7 @@
 package com.FlightLogix.Repository.UserOperations;
 
 import com.FlightLogix.Core.User.User;
+import com.FlightLogix.Core.User.UserRegistration;
 import com.FlightLogix.Persistence.User.UserDAO;
 import com.FlightLogix.Repository.Exceptions.RegistrationException;
 import com.FlightLogix.Repository.Utils.ResponseCode;
@@ -22,7 +23,7 @@ public class UserManager {
     UserDAO userDAO;
 
 
-    public void register(@NotNull User user){
+    public void register(@NotNull UserRegistration user){
         User foundUser = userDAO.findUserByEmail(user.getEmail());
 
         if(foundUser != null){
