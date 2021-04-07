@@ -251,7 +251,7 @@ public class AmadeusAPICaller {
         requestParams.put("originLocationCode", search.getOriginLocationCode());
         requestParams.put("destinationLocationCode", search.getDestinationLocationCode());
         requestParams.put("departureDate", search.getDepartureDate());
-        if (search.getReturnDate() != null)
+        if (search.getReturnDate()!=null)
             requestParams.put("returnDate", search.getReturnDate());
         requestParams.put("adults", Integer.toString(search.getNumAdults()));
         requestParams.put("max", Integer.toString(search.getMaxResults()));
