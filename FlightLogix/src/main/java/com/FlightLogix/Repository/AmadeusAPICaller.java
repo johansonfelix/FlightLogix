@@ -120,15 +120,6 @@ public class AmadeusAPICaller {
         return str;
 
     }
-    private JSONArray getJSONArray(JSONObject jsonObject){
-        Iterator x = jsonObject.keys();
-        JSONArray jsonArray = new JSONArray();
-        while (x.hasNext()){
-            String key = (String) x.next();
-            jsonArray.put(jsonObject.get(key));
-        }
-        return jsonArray;
-    }
     private Timestamp stringToTimestamp(String timeString){
         /* TO DO */
         return Timestamp.valueOf(timeString);
@@ -137,12 +128,12 @@ public class AmadeusAPICaller {
     private Itinerary parseItinerary(JSONArray itineraries){
         Itinerary itinerary = new Itinerary();
         if(itineraries.length() > 0){
-            Segment outbound = parseSegment(getJSONArray(itineraries.getJSONObject(0)));
+            Segment outbound = parseSegment((itineraries.getJSONArray(0)));
             itinerary.setOutbound(outbound);
             if(itineraries.length() == 1){
             }
             else if(itineraries.length() == 2){
-                Segment inbound = parseSegment(getJSONArray(itineraries.getJSONObject(1)));
+                Segment inbound = parseSegment(itineraries.getJSONArray(1));
                 itinerary.setInbound(inbound);
             }
         }
@@ -199,12 +190,12 @@ public class AmadeusAPICaller {
     private ArrayList<Flight> parseFlights(String jsonFlightListString) {
         System.out.println("flights->"+jsonFlightListString);
         ArrayList<Flight> flightObjects = new ArrayList<>();
-        JSONArray flights = getJSONArray(new JSONObject(jsonFlightListString).getJSONObject("data"));
+        JSONArray flights = new JSONArray("data");
         for (int i = 0; i < flights.length(); i++) {
             Flight flightObject = new Flight();
             JSONObject flight = (JSONObject) flights.get(i);
             String flightID = null;
-            JSONArray itineraries = getJSONArray(flight.getJSONObject("itineraries"));
+            JSONArray itineraries = (flight.getJSONArray("itineraries"));
             Itinerary itinerary = parseItinerary(itineraries);
             flightObject.setItinerary(itinerary);
             Flight.FLIGHT_TYPE flightType = parseFlightType(itineraries);
