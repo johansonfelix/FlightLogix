@@ -1,0 +1,6 @@
+
+ Index  Count  Time of first Occurrence    Time of last Occurrence     Exception SourceId ProbeId
+------+------+---------------------------+---------------------------+---------------------------
+     0      1    07/04/21 0:45:56:300 EDT    07/04/21 0:45:56:300 EDT java.lang.IllegalArgumentException com.ibm.ws.uow.UOWManagerImpl.runUnderCurrentUOW 1130
+                                                                            - /Users/kor/IdeaProjects/FlightLogix/FlightLogix/target/liberty/wlp/usr/servers/defaultServer/logs/ffdc/ffdc_21.04.07_00.45.56.0.log
+------+------+---------------------------+---------------------------+---------------------------
