@@ -13,10 +13,14 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.logging.Logger;
 
 public class AmadeusAPICaller {
     private static AmadeusAPICaller amadeusAPICaller = new AmadeusAPICaller();
-
+    private static Logger logger;
+    {
+        logger = Logger.getLogger(AmadeusAPICaller.class.getName());
+    }
     private  URL tokenGenerationURL, flightSearchURL;
     private String authToken;
     public enum ResponseCode{
@@ -34,6 +38,7 @@ public class AmadeusAPICaller {
             e.printStackTrace();
         }
     }
+
     private String encode(Map<String,String> params){
         Iterator it = params.entrySet().iterator();
         String encodedString = "?";
