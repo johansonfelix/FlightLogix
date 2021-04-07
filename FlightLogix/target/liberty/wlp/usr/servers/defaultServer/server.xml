@@ -1,0 +1,47 @@
+<server description="Sample Open Liberty server">
+
+  <featureManager>
+    <feature>jaxrs-2.1</feature>
+    <feature>jsonp-1.1</feature>
+    <feature>cdi-2.0</feature>
+    <feature>jpa-2.2</feature>
+    <feature>transportSecurity-1.0</feature>
+
+  </featureManager>
+
+  <applicationManager autoExpand="true" />
+
+  <mpMetrics authentication="false" />
+
+  <variable name="default.http.port" defaultValue="9080"/>
+  <variable name="default.https.port" defaultValue="9443"/>
+  <variable name="app.context.root" defaultValue="/"/>
+
+  <httpEndpoint host="*" httpsPort="${default.https.port}" httpPort="${default.http.port}" id="defaultHttpEndpoint"/>
+  <!--<keyStore id="defaultKeyStore" password="OpenLiberty" />-->
+
+  <webApplication location="FlightLogix.war" contextRoot="${app.context.root}"/>
+  <keyStore id="defaultKeyStore" password="PASSWORD" />
+  <ssl id="defaultSSLConfig" keyStoreRef="defaultKeyStore" trustDefaultCerts="true"/>
+
+
+  <library id="jdbcLib">
+    <fileset dir="${shared.resource.dir}" includes="mysql-connector-java-8.0.23.jar"/>
+  </library>
+
+<!--  <dataSource jndiName="jdbc/myDB">
+    <jdbcDriver libraryRef="jdbcLib" />
+    <properties serverName="soen.mysql.database.azure.com" portNumber="3306"
+                databaseName="db"
+                user="username@soen"
+                password="Cheese123"/>
+  </dataSource>-->
+
+  <dataSource jndiName="jdbc/myDB">
+    <jdbcDriver libraryRef="jdbcLib" />
+    <properties serverName="localhost" portNumber="3306"
+                databaseName="db1"
+                user="root"
+                password="password"/>
+  </dataSource>
+</server>
