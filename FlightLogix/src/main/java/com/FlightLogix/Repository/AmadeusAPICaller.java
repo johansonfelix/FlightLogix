@@ -233,7 +233,7 @@ public class AmadeusAPICaller {
         JSONObject entireJson = new JSONObject(data);
         FlightData flightData = new FlightData();
         flightData.setFlights(parseFlights(entireJson.getJSONArray("data")));
-        flightData.setCarrierNames(parseCarriers(entireJson.getJSONObject("dictionaries"));
+        flightData.setCarrierNames(parseCarriers(entireJson.getJSONObject("dictionaries")));
         return flightData;
     }
     public String search(Search search){
