@@ -5,6 +5,7 @@ import com.FlightLogix.Core.Flight.*;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import javax.enterprise.context.ApplicationScoped;
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -18,6 +19,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.logging.Logger;
 
+@ApplicationScoped
 public class AmadeusAPICaller {
     private static AmadeusAPICaller amadeusAPICaller = new AmadeusAPICaller();
     private static Logger logger;
@@ -127,6 +129,8 @@ public class AmadeusAPICaller {
     }
     private Itinerary parseItinerary(JSONArray itineraries){
         Itinerary itinerary = new Itinerary();
+        JSONObject json = new JSONObject(itineraries.getJSONObject(0));
+        JSONArray segments = json.getJSONArray("segments");
         if(itineraries.length() > 0){
             Segment outbound = parseSegment((itineraries.getJSONArray(0)));
             itinerary.setOutbound(outbound);
@@ -143,6 +147,7 @@ public class AmadeusAPICaller {
         }
         return null;
     }
+
     private Flight.FLIGHT_TYPE parseFlightType(JSONArray itineraries){
         if(itineraries.length() > 0){
             if(itineraries.length() == 1){
@@ -190,7 +195,8 @@ public class AmadeusAPICaller {
     private ArrayList<Flight> parseFlights(String jsonFlightListString) {
         System.out.println("flights->"+jsonFlightListString);
         ArrayList<Flight> flightObjects = new ArrayList<>();
-        JSONArray flights = new JSONArray("data");
+        JSONObject json = new JSONObject(jsonFlightListString);
+        JSONArray flights = json.getJSONArray("data");
         for (int i = 0; i < flights.length(); i++) {
             Flight flightObject = new Flight();
             JSONObject flight = (JSONObject) flights.get(i);
