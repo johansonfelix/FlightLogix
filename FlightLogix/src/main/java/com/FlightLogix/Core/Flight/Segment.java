@@ -33,6 +33,13 @@ public class Segment {
         this.legs = legs;
     }
 
+    public void createEmptyList(){
+        legs = new ArrayList<Leg>();
+    }
+    public void addLeg(Leg leg){
+        legs.add(leg);
+    }
+
 
 
 

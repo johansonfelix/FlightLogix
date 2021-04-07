@@ -17,9 +17,12 @@ public class Leg {
     @JoinColumn
     private Location to;
 
-    public Leg(Location from, Location to){
+    private String carrierCode;
+
+    public Leg(Location from, Location to, String carrierCode){
         this.from = from;
         this.to = to;
+        this.carrierCode = carrierCode;
     }
 
     public Leg() {
@@ -40,6 +43,13 @@ public class Leg {
 
     public void setTo(Location to) {
         this.to = to;
+    }
+
+    public String getCarrierCode(){
+        return this.carrierCode;
+    }
+    public void setCarrierCode(String carrierCode){
+        this.carrierCode = carrierCode;
     }
 
 
