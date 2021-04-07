@@ -1,5 +1,6 @@
 package com.FlightLogix.Service.apis;
 
+import com.FlightLogix.Core.Booking.FlightData;
 import com.FlightLogix.Core.Booking.Search;
 import com.FlightLogix.Core.Flight.Flight;
 import com.FlightLogix.Repository.AmadeusAPICaller;
@@ -32,9 +33,9 @@ public class BookingResource {
     public Response bookingSearch(Search search){
 
         System.out.println("Hello from bookingSearch");
-        ArrayList<Flight> flights = apiCaller.getFlightList(search);
+        FlightData data = apiCaller.getParsedData(search);
 
-        return Response.ok(flights).build();
+        return Response.ok(data).build();
 
     }
 

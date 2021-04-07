@@ -1,5 +1,6 @@
 package com.FlightLogix.Repository;
 
+import com.FlightLogix.Core.Booking.FlightData;
 import com.FlightLogix.Core.Booking.Search;
 import com.FlightLogix.Core.Flight.*;
 import org.json.JSONArray;
@@ -124,7 +125,7 @@ public class AmadeusAPICaller {
     }
     private Timestamp stringToTimestamp(String timeString){
         /* TO DO */
-        return Timestamp.valueOf(timeString);
+        return Timestamp.valueOf("1999-12-31 11:59:59");
 
     }
     private Itinerary parseItinerary(JSONArray itineraries){
@@ -144,7 +145,7 @@ public class AmadeusAPICaller {
             System.out.println("No itinerary for flight. Aborting.");
             System.exit(0);
         }
-        return null;
+        return itinerary;
     }
 
     private Flight.FLIGHT_TYPE parseFlightType(JSONArray itineraries){
@@ -175,6 +176,7 @@ public class AmadeusAPICaller {
         for(int i = 0; i < segmentJson.length(); i++){
             legs.add(parseLeg((JSONObject) segmentJson.get(i)));
         }
+        segment.setLegs(legs);
         return segment;
     }
     private Leg parseLeg(JSONObject legJson){
@@ -187,15 +189,18 @@ public class AmadeusAPICaller {
     private Location parseLocation(JSONObject locationJson){
         Location location = new Location();
         location.setTime(stringToTimestamp(locationJson.getString("at")));
-        location.setTerminal(locationJson.getString("terminal"));
+        if(locationJson.has("terminal")) {
+            location.setTerminal(locationJson.getString("terminal"));
+        }
+        else{
+            location.setTerminal("NONE");
+        }
         location.setIatacode(locationJson.getString("iataCode"));
         return location;
     }
-    private ArrayList<Flight> parseFlights(String jsonFlightListString) {
-        System.out.println("flights->"+jsonFlightListString);
+    private ArrayList<Flight> parseFlights(JSONArray flights) {
+        System.out.println("flights->"+flights.toString());
         ArrayList<Flight> flightObjects = new ArrayList<>();
-        JSONObject json = new JSONObject(jsonFlightListString);
-        JSONArray flights = json.getJSONArray("data");
         for (int i = 0; i < flights.length(); i++) {
             Flight flightObject = new Flight();
             JSONObject flight = (JSONObject) flights.get(i);
@@ -205,13 +210,33 @@ public class AmadeusAPICaller {
             flightObject.setItinerary(itinerary);
             Flight.FLIGHT_TYPE flightType = parseFlightType(itineraries);
             flightObject.setFlightType(flightType);
-            Price price = parsePrice(flight);
+            Price price = parsePrice(flight.getJSONObject("price"));
             flightObject.setPrice(price);
             flightObjects.add(flightObject);
         }
         return flightObjects;
     }
-    public ArrayList<Flight> getFlightList(Search search){
+    public HashMap<String, String> parseCarriers(JSONObject dictionaries){
+        HashMap<String,String> carrierCodes = new HashMap<>();
+        JSONObject carriers = dictionaries.getJSONObject("carriers");
+        Iterator<String> keys = carriers.keys();
+        while(keys.hasNext()){
+            String key = keys.next();
+            String value = carriers.getString(key);
+            carrierCodes.put(key,value);
+        }
+        return carrierCodes;
+    }
+    public FlightData getParsedData(Search search){
+        ArrayList<String> json = new ArrayList<>();
+        String data = search(search);
+        JSONObject entireJson = new JSONObject(data);
+        FlightData flightData = new FlightData();
+        flightData.setFlights(parseFlights(entireJson.getJSONArray("data")));
+        flightData.setCarrierNames(parseCarriers(entireJson.getJSONObject("dictionaries"));
+        return flightData;
+    }
+    public String search(Search search){
         Map<String, String> requestParams = new HashMap<>();
         requestParams.put("originLocationCode", search.getOriginLocationCode());
         requestParams.put("destinationLocationCode", search.getDestinationLocationCode());
@@ -238,16 +263,14 @@ public class AmadeusAPICaller {
 
             try {
                 conn.setRequestProperty("Authorization", "Bearer "+authToken);
-                return parseFlights(getResponseBody(conn));
+                return (getResponseBody(conn));
             } catch (IOException e) {
                 e.printStackTrace();
             }
 
         }
         return null;
-
     }
-
     public static AmadeusAPICaller getInstance(){
         return amadeusAPICaller;
     }
