@@ -1,4 +1,5 @@
 C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Persistence\Flight\PriceDAO.java
+C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Core\User\UserRegistration.java
 C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Persistence\Flight\LocationDAO.java
 C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Persistence\Flight\LegDAO.java
 C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Core\Flight\Price.java
@@ -20,6 +21,7 @@ C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Rep
 C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Service\apis\LogoutResource.java
 C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Service\Application\FlightLogixApplicatioon.java
 C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Core\Security\Credentials.java
+C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Core\Booking\Search.java
 C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Core\Booking\Booking.java
 C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Core\Flight\Flight.java
 C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Service\filters\AuthorizationFilter.java
@@ -37,6 +39,7 @@ C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Ser
 C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Persistence\Logs\UserLogsDAO.java
 C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Persistence\Flight\ItineraryDAO.java
 C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Core\Security\TokenDetails.java
+C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Repository\AmadeusAPICaller.java
 C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Repository\Exceptions\AuthenticationTokenRefreshmentException.java
 C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Service\filters\VerificationFilter.java
 C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Service\filters\InvalidateToken.java

@@ -1,11 +1,14 @@
 package com.FlightLogix.Repository;
 
+import com.FlightLogix.Core.Booking.Search;
 import com.FlightLogix.Core.Flight.*;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.*;
 import java.nio.charset.StandardCharsets;
 import java.sql.Timestamp;
@@ -33,6 +36,7 @@ public class AmadeusAPICaller {
             flightSearchURL = new URL("https://test.api.amadeus.com/v2/shopping/flight-offers");
             tokenGenerationURL = new URL("https://test.api.amadeus.com/v1/security/oauth2/token");
             authToken = getAccessToken();
+            System.out.println("TOKEN->"+authToken);
 
         } catch (MalformedURLException e) {
             e.printStackTrace();
@@ -41,7 +45,7 @@ public class AmadeusAPICaller {
 
     private String encode(Map<String,String> params){
         Iterator it = params.entrySet().iterator();
-        String encodedString = "?";
+        String encodedString = "";
         while (it.hasNext()) {
             Map.Entry pair = (Map.Entry)it.next();
             encodedString += pair.getKey() + "=" + pair.getValue();
@@ -49,6 +53,7 @@ public class AmadeusAPICaller {
                 encodedString += "&";
             }
         }
+        System.out.println("ENCODINGSTRING->"+encodedString);
         return encodedString;
     }
     private AmadeusAPICaller(){
@@ -60,6 +65,7 @@ public class AmadeusAPICaller {
         requestParams.put("client_secret", "CJ5mRqbZ6TrxsjJm");
         requestParams.put("grant_type", "client_credentials");
         String encodingString = encode(requestParams);
+
         HttpURLConnection conn= null;
         try {
             conn = (HttpURLConnection) tokenGenerationURL.openConnection();
@@ -83,12 +89,36 @@ public class AmadeusAPICaller {
                 e.printStackTrace();
             }
             try {
-                return conn.getResponseMessage();
+                String json = getResponseBody(conn);
+                JSONObject jsonObject = new JSONObject(json);
+                return jsonObject.getString("access_token");
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
         return ResponseCode.UNKNOWN_ERROR.toString();
+    }
+
+    private String getResponseBody(HttpURLConnection conn) throws IOException {
+        BufferedReader br = null;
+        String str = "";
+        if (conn.getResponseCode() == 200) {
+            br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+            String strCurrentLine;
+            while ((strCurrentLine = br.readLine()) != null) {
+                System.out.println(strCurrentLine);
+                str+=strCurrentLine;
+            }
+        } else {
+            br = new BufferedReader(new InputStreamReader(conn.getErrorStream()));
+            String strCurrentLine;
+            while ((strCurrentLine = br.readLine()) != null) {
+                System.out.println(strCurrentLine);
+            }
+        }
+
+        return str;
+
     }
     private JSONArray getJSONArray(JSONObject jsonObject){
         Iterator x = jsonObject.keys();
@@ -167,6 +197,7 @@ public class AmadeusAPICaller {
         return location;
     }
     private ArrayList<Flight> parseFlights(String jsonFlightListString) {
+        System.out.println("flights->"+jsonFlightListString);
         ArrayList<Flight> flightObjects = new ArrayList<>();
         JSONArray flights = getJSONArray(new JSONObject(jsonFlightListString).getJSONObject("data"));
         for (int i = 0; i < flights.length(); i++) {
@@ -184,19 +215,20 @@ public class AmadeusAPICaller {
         }
         return flightObjects;
     }
-    public ArrayList<Flight> getFlightList(String originLocationCode, String destinationLocationCode, String departureDate, String returnDate,int numAdults, int maxResults){
+    public ArrayList<Flight> getFlightList(Search search){
         Map<String, String> requestParams = new HashMap<>();
-        requestParams.put("originLocationCode", originLocationCode);
-        requestParams.put("destinationLocationCode", destinationLocationCode);
-        requestParams.put("departureDate", departureDate);
-        requestParams.put("returnDate", returnDate);
-        requestParams.put("adults", Integer.toString(numAdults));
-        requestParams.put("max", Integer.toString(maxResults));
+        requestParams.put("originLocationCode", search.getOriginLocationCode());
+        requestParams.put("destinationLocationCode", search.getDestinationLocationCode());
+        requestParams.put("departureDate", search.getDepartureDate());
+        requestParams.put("returnDate", search.getReturnDate());
+        requestParams.put("adults", Integer.toString(search.getNumAdults()));
+        requestParams.put("max", Integer.toString(search.getMaxResults()));
         String encodedString = encode(requestParams);
 
+        //Add Custom  Exception
         HttpURLConnection conn= null;
         try {
-            conn = (HttpURLConnection) (new URL(flightSearchURL.toString() + encodedString)).openConnection();
+            conn = (HttpURLConnection) (new URL(flightSearchURL.toString()+"?" + encodedString)).openConnection();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -209,7 +241,8 @@ public class AmadeusAPICaller {
             }
 
             try {
-                return parseFlights(conn.getResponseMessage());
+                conn.setRequestProperty("Authorization", "Bearer "+authToken);
+                return parseFlights(getResponseBody(conn));
             } catch (IOException e) {
                 e.printStackTrace();
             }
