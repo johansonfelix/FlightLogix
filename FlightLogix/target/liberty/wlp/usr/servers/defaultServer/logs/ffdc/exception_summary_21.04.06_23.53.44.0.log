@@ -1,0 +1,25 @@
+
+ Index  Count  Time of first Occurrence    Time of last Occurrence     Exception SourceId ProbeId
+------+------+---------------------------+---------------------------+---------------------------
+     0     21     4/6/21 23:53:44:233 EDT      4/7/21 0:31:32:089 EDT java.lang.Exception com.ibm.ws.jaxrs20.server.component.JaxRsWebModuleInfoBuilder 292
+                                                                            - C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_21.04.06_23.53.44.0.log
+                                                                            - C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_21.04.06_23.54.08.0.log
+                                                                            - C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_21.04.06_23.56.54.0.log
+                                                                            - C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_21.04.06_23.57.25.0.log
+                                                                            - C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_21.04.07_00.03.38.0.log
+                                                                            - C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_21.04.07_00.04.22.0.log
+                                                                            - C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_21.04.07_00.07.35.0.log
+                                                                            - C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_21.04.07_00.08.27.0.log
+                                                                            - C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_21.04.07_00.09.22.0.log
+                                                                            - C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_21.04.07_00.09.30.0.log
+     1      9     4/6/21 23:54:18:314 EDT      4/7/21 0:25:37:108 EDT org.json.JSONException com.ibm.ws.uow.UOWManagerImpl.runUnderCurrentUOW 1130
+                                                                            - C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_21.04.06_23.54.18.0.log
+                                                                            - C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_21.04.07_00.04.33.0.log
+                                                                            - C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_21.04.07_00.11.56.0.log
+                                                                            - C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_21.04.07_00.20.28.0.log
+                                                                            - C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_21.04.07_00.23.52.0.log
+     2      1      4/7/21 0:26:43:214 EDT      4/7/21 0:26:43:214 EDT org.jboss.weld.exceptions.DeploymentException com.ibm.ws.container.service.state.internal.ApplicationStateManager 54
+                                                                            - C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_21.04.07_00.26.43.0.log
+     3      1      4/7/21 0:26:43:306 EDT      4/7/21 0:26:43:306 EDT com.ibm.ws.container.service.state.StateChangeException com.ibm.ws.app.manager.module.internal.SimpleDeployedAppInfoBase 548
+                                                                            - C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_21.04.07_00.26.43.1.log
+------+------+---------------------------+---------------------------+---------------------------

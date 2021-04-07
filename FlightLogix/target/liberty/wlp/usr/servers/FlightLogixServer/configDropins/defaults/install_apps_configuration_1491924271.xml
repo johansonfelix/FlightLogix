@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<server>
+    <webApplication id="FlightLogix" location="FlightLogix.war" name="FlightLogix"/>
+</server>
