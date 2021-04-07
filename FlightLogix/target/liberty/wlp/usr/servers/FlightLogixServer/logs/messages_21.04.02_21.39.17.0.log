@@ -1,0 +1,765 @@
+********************************************************************************
+product = Open Liberty 21.0.0.3 (wlp-1.0.50.cl210320210309-1101)
+wlp.install.dir = C:/Users/felix/Desktop/FlightLogix/FlightLogix/target/liberty/wlp/
+java.home = C:\Program Files\Java\jdk1.8.0_281\jre
+java.version = 1.8.0_281
+java.runtime = Java(TM) SE Runtime Environment (1.8.0_281-b09)
+os = Windows 10 (10.0; amd64) (en_029)
+process = 16816@Johanson
+********************************************************************************
+[4/2/21 20:54:13:089 EDT] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0001I: The server FlightLogixServer has been launched.
+[4/2/21 20:54:14:916 EDT] 00000017 com.ibm.ws.config.xml.internal.ServerXMLConfiguration        A CWWKG0093A: Processing configuration drop-ins resource: C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\FlightLogixServer\configDropins\overrides\liberty-plugin-variable-config.xml
+[4/2/21 20:54:15:254 EDT] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           I CWWKE0002I: The kernel started after 2.58 seconds
+[4/2/21 20:54:15:313 EDT] 00000022 com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0007I: Feature update started.
+[4/2/21 20:54:15:888 EDT] 00000018 .apache.cxf.cxf.core.3.2:1.0.50.cl210320210309-1101(id=135)] I Aries Blueprint packages not available. So namespaces will not be registered
+[4/2/21 20:54:16:528 EDT] 00000018 com.ibm.ws.app.manager.internal.monitor.DropinMonitor        A CWWKZ0058I: Monitoring dropins for applications.
+[4/2/21 20:54:19:531 EDT] 0000002b com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application FlightLogix.
+[4/2/21 20:54:19:533 EDT] 0000002b bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The FlightLogix application is using the loose application definition at the C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\FlightLogixServer\apps\FlightLogix.war.xml location.
+[4/2/21 20:54:22:345 EDT] 0000002b com.ibm.ws.jca.cm.ConnectorService                           I J2CA8050I: An authentication alias should be used instead of defining a user name and password on dataSource[default-0].
+[4/2/21 20:54:22:978 EDT] 0000002b com.ibm.ws.recoverylog.spi.RecoveryDirectorImpl              I CWRLS0010I: Performing recovery processing for local WebSphere server (FlightLogixServer).
+[4/2/21 20:54:23:495 EDT] 0000002b com.ibm.ws.recoverylog.spi.RecoveryDirectorImpl              I CWRLS0012I: All persistent services have been directed to perform recovery processing for this WebSphere server (FlightLogixServer).
+[4/2/21 20:54:23:500 EDT] 0000003b com.ibm.tx.jta.impl.RecoveryManager                          I WTRN0135I: Transaction service recovering no transactions.
+[4/2/21 20:54:26:005 EDT] 0000002b com.ibm.ws.session.WASSessionCore                            I SESN8501I: The session manager did not find a persistent storage location; HttpSession objects will be stored in the local application server's memory.
+[4/2/21 20:54:26:099 EDT] 0000002b org.jboss.weld.Version                                       I WELD-000900: 3.1.4 (Final)
+[4/2/21 20:54:29:691 EDT] 0000002b com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: An FFDC Incident has been created: "org.jboss.weld.exceptions.DeploymentException: WELD-001408: Unsatisfied dependencies for type EntityManager with qualifiers @Default
+  at injection point [BackedAnnotatedField] @Inject @PersistenceContext private com.FlightLogix.Persistence.User.UserDAO.em
+  at com.FlightLogix.Persistence.User.UserDAO.em(UserDAO.java:0)
+ com.ibm.ws.container.service.state.internal.ApplicationStateManager 54" at ffdc_21.04.02_20.54.29.0.log
+[4/2/21 20:54:29:993 EDT] 0000002b com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: An FFDC Incident has been created: "com.ibm.ws.container.service.state.StateChangeException: org.jboss.weld.exceptions.DeploymentException: WELD-001408: Unsatisfied dependencies for type EntityManager with qualifiers @Default
+  at injection point [BackedAnnotatedField] @Inject @PersistenceContext private com.FlightLogix.Persistence.User.UserDAO.em
+  at com.FlightLogix.Persistence.User.UserDAO.em(UserDAO.java:0)
+ com.ibm.ws.app.manager.module.internal.SimpleDeployedAppInfoBase 548" at ffdc_21.04.02_20.54.29.1.log
+[4/2/21 20:54:30:077 EDT] 0000002b com.ibm.ws.app.manager.AppMessageHelper                      E CWWKZ0002E: An exception occurred while starting the application FlightLogix. The exception message was: com.ibm.ws.container.service.state.StateChangeException: org.jboss.weld.exceptions.DeploymentException: WELD-001408: Unsatisfied dependencies for type EntityManager with qualifiers @Default
+  at injection point [BackedAnnotatedField] @Inject @PersistenceContext private com.FlightLogix.Persistence.User.UserDAO.em
+  at com.FlightLogix.Persistence.User.UserDAO.em(UserDAO.java:0)
+
+[4/2/21 20:54:30:134 EDT] 00000022 com.ibm.ws.tcpchannel.internal.TCPPort                       I CWWKO0219I: TCP Channel defaultHttpEndpoint has been started and is now listening for requests on host *  (IPv6) port 8080.
+[4/2/21 20:54:30:149 EDT] 00000022 com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0012I: The server installed the following features: [cdi-2.0, jaxb-2.2, jaxrs-2.1, jaxrsClient-2.1, jdbc-4.2, jndi-1.0, jpa-2.2, jpaContainer-2.2, json-1.0, jsonb-1.0, jsonp-1.1, servlet-4.0].
+[4/2/21 20:54:30:150 EDT] 00000022 com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0008I: Feature update completed in 14.892 seconds.
+[4/2/21 20:54:30:151 EDT] 00000022 com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0011I: The FlightLogixServer server is ready to run a smarter planet. The FlightLogixServer server started in 17.477 seconds.
+[4/2/21 20:54:31:419 EDT] 00000030 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\FlightLogixServer\logs\state\plugin-cfg.xml.
+[4/2/21 20:54:34:780 EDT] 00000022 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application FlightLogix.
+[4/2/21 20:54:34:780 EDT] 00000022 bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The FlightLogix application is using the loose application definition at the C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\FlightLogixServer\apps\FlightLogix.war.xml location.
+[4/2/21 20:54:37:166 EDT] 00000022 com.ibm.ws.app.manager.AppMessageHelper                      E CWWKZ0004E: An exception occurred while starting the application FlightLogix. The exception message was: com.ibm.ws.container.service.state.StateChangeException: org.jboss.weld.exceptions.DeploymentException: WELD-001408: Unsatisfied dependencies for type EntityManager with qualifiers @Default
+  at injection point [BackedAnnotatedField] @Inject @PersistenceContext private com.FlightLogix.Persistence.User.UserDAO.em
+  at com.FlightLogix.Persistence.User.UserDAO.em(UserDAO.java:0)
+
+[4/2/21 20:55:08:116 EDT] 00000045 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application FlightLogix.
+[4/2/21 20:55:08:117 EDT] 00000045 bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The FlightLogix application is using the loose application definition at the C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\FlightLogixServer\apps\FlightLogix.war.xml location.
+[4/2/21 20:55:09:489 EDT] 00000045 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Liberty Project.
+[4/2/21 20:55:09:489 EDT] 00000045 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Liberty Project has been bound to default_host.
+[4/2/21 20:55:09:492 EDT] 00000045 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://johanson:8080/
+[4/2/21 20:55:09:520 EDT] 00000025 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/
+[4/2/21 20:55:09:535 EDT] 00000025 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[4/2/21 20:55:09:610 EDT] 00000025 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application FlightLogix updated in 1.494 seconds.
+[4/2/21 20:55:10:232 EDT] 00000030 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\FlightLogixServer\logs\state\plugin-cfg.xml.
+[4/2/21 20:55:25:079 EDT] 00000023 .apache.cxf.cxf.core.3.2:1.0.50.cl210320210309-1101(id=135)] I Setting the server's publish address to be /app/
+[4/2/21 20:55:25:164 EDT] 00000023 com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [FlightLogix] [/] [com.FlightLogix.Service.FlightLogixApplicatioon]: Initialization successful.
+[4/2/21 20:55:31:479 EDT] 00000025 xf.rt.frontend.jaxrs.3.2:1.0.50.cl210320210309-1101(id=143)] W javax.ws.rs.ClientErrorException: HTTP 405 Method Not Allowed
+	at org.apache.cxf.jaxrs.utils.SpecExceptions.toHttpException(SpecExceptions.java:118)
+	at org.apache.cxf.jaxrs.utils.ExceptionUtils.toHttpException(ExceptionUtils.java:168)
+	at org.apache.cxf.jaxrs.utils.JAXRSUtils.findTargetMethod(JAXRSUtils.java:556)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor.processRequest(JAXRSInInterceptor.java:239)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor.handleMessage(JAXRSInInterceptor.java:90)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:308)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:123)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:275)
+	at com.ibm.ws.jaxrs20.endpoint.AbstractJaxRsWebEndpoint.invoke(AbstractJaxRsWebEndpoint.java:137)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.handleRequest(IBMRestServlet.java:146)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.doGet(IBMRestServlet.java:112)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:686)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.service(IBMRestServlet.java:96)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1257)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:745)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:442)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1226)
+	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:5057)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:314)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:1006)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1146)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:427)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:386)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:566)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:500)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:360)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:327)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:167)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:75)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:958)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1047)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:238)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+[4/2/21 20:56:24:754 EDT] 00000042 com.ibm.ws.webcontainer.util.ApplicationErrorUtils           E SRVE0777E: Exception thrown by application class 'org.eclipse.persistence.jaxb.JAXBContext$TypeMappingInfoInput.createContextState:1,176'
+java.lang.VerifyError: Bad type on operand stack
+Exception Details:
+  Location:
+    org/eclipse/persistence/jaxb/compiler/Generator.generateSchemaFiles(Ljavax/xml/bind/SchemaOutputResolver;Ljava/util/Map;)Ljava/util/Map; @90: invokevirtual
+  Reason:
+    Type 'org/eclipse/persistence/internal/oxm/schema/SchemaModelProject' (current frame, stack[0]) is not assignable to 'org/eclipse/persistence/core/sessions/CoreProject'
+  Current Frame:
+    bci: @90
+    flags: { }
+    locals: { 'org/eclipse/persistence/jaxb/compiler/Generator', 'javax/xml/bind/SchemaOutputResolver', 'java/util/Map', 'org/eclipse/persistence/internal/oxm/schema/SchemaModelProject', 'org/eclipse/persistence/oxm/XMLContext', 'org/eclipse/persistence/oxm/XMLMarshaller' }
+    stack: { 'org/eclipse/persistence/internal/oxm/schema/SchemaModelProject', 'java/lang/Class' }
+  Bytecode:
+    0x0000000: 2a2c 2ab4 002c b700 c22a b400 312a b400
+    0x0000010: 2cb6 0093 2ab4 002c b600 972a b400 2cb6
+    0x0000020: 009a 2ab4 002c b600 9d2a b400 2cb6 00a0
+    0x0000030: 2ab4 002c b600 8d2b b601 3abb 00c6 59b7
+    0x0000040: 00c8 4ebb 00c9 592d c000 cbb7 00cd 3a04
+    0x0000050: 1904 b600 d03a 052d 12d4 b600 d6c0 00dc
+    0x0000060: 3a06 2ab4 0031 b600 ba3a 0719 07b9 00de
+    0x0000070: 0100 3a09 a700 5f19 09b9 00e4 0100 c000
+    0x0000080: d43a 0819 08b6 0102 3a0a 190a 1301 0613
+    0x0000090: 0108 b601 0a19 0619 0ab9 0110 0200 1908
+    0x00000a0: b601 3d99 000d 1908 b601 403a 0ba7 0013
+    0x00000b0: 2b19 08b6 0144 1908 b600 fab6 0147 3a0b
+    0x00000c0: 1905 1908 190b b601 4da7 000a 3a0a 190a
+    0x00000d0: b601 5019 09b9 011f 0100 9aff 9d2a b400
+    0x00000e0: 31b6 0122 b0                           
+  Exception Handler Table:
+    bci [131, 201] => handler: 204
+  Stackmap Table:
+    full_frame(@119,{Object[#1],Object[#328],Object[#81],Object[#215],Object[#201],Object[#282],Object[#220],Object[#223],Top,Object[#229]},{})
+    full_frame(@176,{Object[#1],Object[#328],Object[#81],Object[#215],Object[#201],Object[#282],Object[#220],Object[#223],Object[#212],Object[#229],Object[#267]},{})
+    append_frame(@192,Object[#347])
+    full_frame(@204,{Object[#1],Object[#328],Object[#81],Object[#215],Object[#201],Object[#282],Object[#220],Object[#223],Object[#212],Object[#229]},{Object[#337]})
+    full_frame(@211,{Object[#1],Object[#328],Object[#81],Object[#215],Object[#201],Object[#282],Object[#220],Object[#223],Top,Object[#229]},{})
+
+	at org.eclipse.persistence.jaxb.JAXBContext$TypeMappingInfoInput.createContextState(JAXBContext.java:1176)
+	at org.eclipse.persistence.jaxb.JAXBContext.<init>(JAXBContext.java:205)
+	at org.eclipse.persistence.jaxb.JAXBContextFactory.createContext(JAXBContextFactory.java:167)
+	at org.eclipse.persistence.jaxb.JAXBContextFactory.createContext(JAXBContextFactory.java:154)
+	at org.eclipse.persistence.jaxb.JAXBContextFactory.createContext(JAXBContextFactory.java:114)
+	at org.eclipse.persistence.jaxb.JAXBContextFactory.createContext(JAXBContextFactory.java:104)
+	at org.eclipse.persistence.jaxb.rs.MOXyJsonProvider.getJAXBContext(MOXyJsonProvider.java:335)
+	at org.eclipse.persistence.jaxb.rs.MOXyJsonProvider.getJAXBContext(MOXyJsonProvider.java:355)
+	at org.eclipse.persistence.jaxb.rs.MOXyJsonProvider.isReadable(MOXyJsonProvider.java:483)
+	at org.apache.cxf.jaxrs.provider.ProviderFactory.isReadable(ProviderFactory.java:1104)
+	at org.apache.cxf.jaxrs.provider.ProviderFactory.createMessageBodyReader(ProviderFactory.java:672)
+	at org.apache.cxf.jaxrs.provider.ProviderFactory.createMessageBodyReaderInterceptor(ProviderFactory.java:573)
+	at org.apache.cxf.jaxrs.utils.JAXRSUtils.readFromMessageBody(JAXRSUtils.java:1444)
+	at org.apache.cxf.jaxrs.utils.JAXRSUtils.processRequestBodyParameter(JAXRSUtils.java:972)
+	at org.apache.cxf.jaxrs.utils.JAXRSUtils.processParameters(JAXRSUtils.java:908)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor.processRequest(JAXRSInInterceptor.java:282)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor.handleMessage(JAXRSInInterceptor.java:90)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:308)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:123)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:275)
+	at com.ibm.ws.jaxrs20.endpoint.AbstractJaxRsWebEndpoint.invoke(AbstractJaxRsWebEndpoint.java:137)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.handleRequest(IBMRestServlet.java:146)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.doPost(IBMRestServlet.java:104)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.service(IBMRestServlet.java:96)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1257)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:745)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:442)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1226)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1010)
+	at com.ibm.ws.webcontainer.servlet.CacheServletWrapper.handleRequest(CacheServletWrapper.java:75)
+	at com.ibm.ws.webcontainer40.servlet.CacheServletWrapper40.handleRequest(CacheServletWrapper40.java:86)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:937)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1146)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:427)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:386)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:566)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:500)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:360)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:327)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:167)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:75)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:958)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1047)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:238)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+[4/2/21 20:56:58:102 EDT] 0000005f com.ibm.ws.webcontainer.util.ApplicationErrorUtils           E SRVE0777E: Exception thrown by application class 'org.eclipse.persistence.jaxb.JAXBContext$TypeMappingInfoInput.createContextState:1,176'
+java.lang.VerifyError: Bad type on operand stack
+Exception Details:
+  Location:
+    org/eclipse/persistence/jaxb/compiler/Generator.generateSchemaFiles(Ljavax/xml/bind/SchemaOutputResolver;Ljava/util/Map;)Ljava/util/Map; @90: invokevirtual
+  Reason:
+    Type 'org/eclipse/persistence/internal/oxm/schema/SchemaModelProject' (current frame, stack[0]) is not assignable to 'org/eclipse/persistence/core/sessions/CoreProject'
+  Current Frame:
+    bci: @90
+    flags: { }
+    locals: { 'org/eclipse/persistence/jaxb/compiler/Generator', 'javax/xml/bind/SchemaOutputResolver', 'java/util/Map', 'org/eclipse/persistence/internal/oxm/schema/SchemaModelProject', 'org/eclipse/persistence/oxm/XMLContext', 'org/eclipse/persistence/oxm/XMLMarshaller' }
+    stack: { 'org/eclipse/persistence/internal/oxm/schema/SchemaModelProject', 'java/lang/Class' }
+  Bytecode:
+    0x0000000: 2a2c 2ab4 002c b700 c22a b400 312a b400
+    0x0000010: 2cb6 0093 2ab4 002c b600 972a b400 2cb6
+    0x0000020: 009a 2ab4 002c b600 9d2a b400 2cb6 00a0
+    0x0000030: 2ab4 002c b600 8d2b b601 3abb 00c6 59b7
+    0x0000040: 00c8 4ebb 00c9 592d c000 cbb7 00cd 3a04
+    0x0000050: 1904 b600 d03a 052d 12d4 b600 d6c0 00dc
+    0x0000060: 3a06 2ab4 0031 b600 ba3a 0719 07b9 00de
+    0x0000070: 0100 3a09 a700 5f19 09b9 00e4 0100 c000
+    0x0000080: d43a 0819 08b6 0102 3a0a 190a 1301 0613
+    0x0000090: 0108 b601 0a19 0619 0ab9 0110 0200 1908
+    0x00000a0: b601 3d99 000d 1908 b601 403a 0ba7 0013
+    0x00000b0: 2b19 08b6 0144 1908 b600 fab6 0147 3a0b
+    0x00000c0: 1905 1908 190b b601 4da7 000a 3a0a 190a
+    0x00000d0: b601 5019 09b9 011f 0100 9aff 9d2a b400
+    0x00000e0: 31b6 0122 b0                           
+  Exception Handler Table:
+    bci [131, 201] => handler: 204
+  Stackmap Table:
+    full_frame(@119,{Object[#1],Object[#328],Object[#81],Object[#215],Object[#201],Object[#282],Object[#220],Object[#223],Top,Object[#229]},{})
+    full_frame(@176,{Object[#1],Object[#328],Object[#81],Object[#215],Object[#201],Object[#282],Object[#220],Object[#223],Object[#212],Object[#229],Object[#267]},{})
+    append_frame(@192,Object[#347])
+    full_frame(@204,{Object[#1],Object[#328],Object[#81],Object[#215],Object[#201],Object[#282],Object[#220],Object[#223],Object[#212],Object[#229]},{Object[#337]})
+    full_frame(@211,{Object[#1],Object[#328],Object[#81],Object[#215],Object[#201],Object[#282],Object[#220],Object[#223],Top,Object[#229]},{})
+
+	at org.eclipse.persistence.jaxb.JAXBContext$TypeMappingInfoInput.createContextState(JAXBContext.java:1176)
+	at org.eclipse.persistence.jaxb.JAXBContext.<init>(JAXBContext.java:205)
+	at org.eclipse.persistence.jaxb.JAXBContextFactory.createContext(JAXBContextFactory.java:167)
+	at org.eclipse.persistence.jaxb.JAXBContextFactory.createContext(JAXBContextFactory.java:154)
+	at org.eclipse.persistence.jaxb.JAXBContextFactory.createContext(JAXBContextFactory.java:114)
+	at org.eclipse.persistence.jaxb.JAXBContextFactory.createContext(JAXBContextFactory.java:104)
+	at org.eclipse.persistence.jaxb.rs.MOXyJsonProvider.getJAXBContext(MOXyJsonProvider.java:335)
+	at org.eclipse.persistence.jaxb.rs.MOXyJsonProvider.getJAXBContext(MOXyJsonProvider.java:355)
+	at org.eclipse.persistence.jaxb.rs.MOXyJsonProvider.isReadable(MOXyJsonProvider.java:483)
+	at org.apache.cxf.jaxrs.provider.ProviderFactory.isReadable(ProviderFactory.java:1104)
+	at org.apache.cxf.jaxrs.provider.ProviderFactory.createMessageBodyReader(ProviderFactory.java:672)
+	at org.apache.cxf.jaxrs.provider.ProviderFactory.createMessageBodyReaderInterceptor(ProviderFactory.java:573)
+	at org.apache.cxf.jaxrs.utils.JAXRSUtils.readFromMessageBody(JAXRSUtils.java:1444)
+	at org.apache.cxf.jaxrs.utils.JAXRSUtils.processRequestBodyParameter(JAXRSUtils.java:972)
+	at org.apache.cxf.jaxrs.utils.JAXRSUtils.processParameters(JAXRSUtils.java:908)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor.processRequest(JAXRSInInterceptor.java:282)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor.handleMessage(JAXRSInInterceptor.java:90)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:308)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:123)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:275)
+	at com.ibm.ws.jaxrs20.endpoint.AbstractJaxRsWebEndpoint.invoke(AbstractJaxRsWebEndpoint.java:137)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.handleRequest(IBMRestServlet.java:146)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.doPost(IBMRestServlet.java:104)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.service(IBMRestServlet.java:96)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1257)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:745)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:442)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1226)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1010)
+	at com.ibm.ws.webcontainer.servlet.CacheServletWrapper.handleRequest(CacheServletWrapper.java:75)
+	at com.ibm.ws.webcontainer40.servlet.CacheServletWrapper40.handleRequest(CacheServletWrapper40.java:86)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:937)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1146)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:427)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:386)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:566)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:500)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:360)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:327)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:167)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:75)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:958)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1047)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:238)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+[4/2/21 20:57:02:727 EDT] 00000058 com.ibm.ws.webcontainer.util.ApplicationErrorUtils           E SRVE0777E: Exception thrown by application class 'org.eclipse.persistence.jaxb.JAXBContext$TypeMappingInfoInput.createContextState:1,176'
+java.lang.VerifyError: Bad type on operand stack
+Exception Details:
+  Location:
+    org/eclipse/persistence/jaxb/compiler/Generator.generateSchemaFiles(Ljavax/xml/bind/SchemaOutputResolver;Ljava/util/Map;)Ljava/util/Map; @90: invokevirtual
+  Reason:
+    Type 'org/eclipse/persistence/internal/oxm/schema/SchemaModelProject' (current frame, stack[0]) is not assignable to 'org/eclipse/persistence/core/sessions/CoreProject'
+  Current Frame:
+    bci: @90
+    flags: { }
+    locals: { 'org/eclipse/persistence/jaxb/compiler/Generator', 'javax/xml/bind/SchemaOutputResolver', 'java/util/Map', 'org/eclipse/persistence/internal/oxm/schema/SchemaModelProject', 'org/eclipse/persistence/oxm/XMLContext', 'org/eclipse/persistence/oxm/XMLMarshaller' }
+    stack: { 'org/eclipse/persistence/internal/oxm/schema/SchemaModelProject', 'java/lang/Class' }
+  Bytecode:
+    0x0000000: 2a2c 2ab4 002c b700 c22a b400 312a b400
+    0x0000010: 2cb6 0093 2ab4 002c b600 972a b400 2cb6
+    0x0000020: 009a 2ab4 002c b600 9d2a b400 2cb6 00a0
+    0x0000030: 2ab4 002c b600 8d2b b601 3abb 00c6 59b7
+    0x0000040: 00c8 4ebb 00c9 592d c000 cbb7 00cd 3a04
+    0x0000050: 1904 b600 d03a 052d 12d4 b600 d6c0 00dc
+    0x0000060: 3a06 2ab4 0031 b600 ba3a 0719 07b9 00de
+    0x0000070: 0100 3a09 a700 5f19 09b9 00e4 0100 c000
+    0x0000080: d43a 0819 08b6 0102 3a0a 190a 1301 0613
+    0x0000090: 0108 b601 0a19 0619 0ab9 0110 0200 1908
+    0x00000a0: b601 3d99 000d 1908 b601 403a 0ba7 0013
+    0x00000b0: 2b19 08b6 0144 1908 b600 fab6 0147 3a0b
+    0x00000c0: 1905 1908 190b b601 4da7 000a 3a0a 190a
+    0x00000d0: b601 5019 09b9 011f 0100 9aff 9d2a b400
+    0x00000e0: 31b6 0122 b0                           
+  Exception Handler Table:
+    bci [131, 201] => handler: 204
+  Stackmap Table:
+    full_frame(@119,{Object[#1],Object[#328],Object[#81],Object[#215],Object[#201],Object[#282],Object[#220],Object[#223],Top,Object[#229]},{})
+    full_frame(@176,{Object[#1],Object[#328],Object[#81],Object[#215],Object[#201],Object[#282],Object[#220],Object[#223],Object[#212],Object[#229],Object[#267]},{})
+    append_frame(@192,Object[#347])
+    full_frame(@204,{Object[#1],Object[#328],Object[#81],Object[#215],Object[#201],Object[#282],Object[#220],Object[#223],Object[#212],Object[#229]},{Object[#337]})
+    full_frame(@211,{Object[#1],Object[#328],Object[#81],Object[#215],Object[#201],Object[#282],Object[#220],Object[#223],Top,Object[#229]},{})
+
+	at org.eclipse.persistence.jaxb.JAXBContext$TypeMappingInfoInput.createContextState(JAXBContext.java:1176)
+	at org.eclipse.persistence.jaxb.JAXBContext.<init>(JAXBContext.java:205)
+	at org.eclipse.persistence.jaxb.JAXBContextFactory.createContext(JAXBContextFactory.java:167)
+	at org.eclipse.persistence.jaxb.JAXBContextFactory.createContext(JAXBContextFactory.java:154)
+	at org.eclipse.persistence.jaxb.JAXBContextFactory.createContext(JAXBContextFactory.java:114)
+	at org.eclipse.persistence.jaxb.JAXBContextFactory.createContext(JAXBContextFactory.java:104)
+	at org.eclipse.persistence.jaxb.rs.MOXyJsonProvider.getJAXBContext(MOXyJsonProvider.java:335)
+	at org.eclipse.persistence.jaxb.rs.MOXyJsonProvider.getJAXBContext(MOXyJsonProvider.java:355)
+	at org.eclipse.persistence.jaxb.rs.MOXyJsonProvider.isReadable(MOXyJsonProvider.java:483)
+	at org.apache.cxf.jaxrs.provider.ProviderFactory.isReadable(ProviderFactory.java:1104)
+	at org.apache.cxf.jaxrs.provider.ProviderFactory.createMessageBodyReader(ProviderFactory.java:672)
+	at org.apache.cxf.jaxrs.provider.ProviderFactory.createMessageBodyReaderInterceptor(ProviderFactory.java:573)
+	at org.apache.cxf.jaxrs.utils.JAXRSUtils.readFromMessageBody(JAXRSUtils.java:1444)
+	at org.apache.cxf.jaxrs.utils.JAXRSUtils.processRequestBodyParameter(JAXRSUtils.java:972)
+	at org.apache.cxf.jaxrs.utils.JAXRSUtils.processParameters(JAXRSUtils.java:908)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor.processRequest(JAXRSInInterceptor.java:282)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor.handleMessage(JAXRSInInterceptor.java:90)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:308)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:123)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:275)
+	at com.ibm.ws.jaxrs20.endpoint.AbstractJaxRsWebEndpoint.invoke(AbstractJaxRsWebEndpoint.java:137)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.handleRequest(IBMRestServlet.java:146)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.doPost(IBMRestServlet.java:104)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.service(IBMRestServlet.java:96)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1257)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:745)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:442)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1226)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1010)
+	at com.ibm.ws.webcontainer.servlet.CacheServletWrapper.handleRequest(CacheServletWrapper.java:75)
+	at com.ibm.ws.webcontainer40.servlet.CacheServletWrapper40.handleRequest(CacheServletWrapper40.java:86)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:937)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1146)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:427)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:386)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:566)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:500)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:360)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:327)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:167)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:75)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:958)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1047)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:238)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+[4/2/21 20:57:07:791 EDT] 00000029 xf.rt.frontend.jaxrs.3.2:1.0.50.cl210320210309-1101(id=143)] W javax.ws.rs.ClientErrorException: HTTP 415 Unsupported Media Type
+	at org.apache.cxf.jaxrs.utils.SpecExceptions.toHttpException(SpecExceptions.java:118)
+	at org.apache.cxf.jaxrs.utils.ExceptionUtils.toHttpException(ExceptionUtils.java:168)
+	at org.apache.cxf.jaxrs.utils.JAXRSUtils.findTargetMethod(JAXRSUtils.java:556)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor.processRequest(JAXRSInInterceptor.java:239)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor.handleMessage(JAXRSInInterceptor.java:90)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:308)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:123)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:275)
+	at com.ibm.ws.jaxrs20.endpoint.AbstractJaxRsWebEndpoint.invoke(AbstractJaxRsWebEndpoint.java:137)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.handleRequest(IBMRestServlet.java:146)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.doPost(IBMRestServlet.java:104)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.service(IBMRestServlet.java:96)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1257)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:745)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:442)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1226)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1010)
+	at com.ibm.ws.webcontainer.servlet.CacheServletWrapper.handleRequest(CacheServletWrapper.java:75)
+	at com.ibm.ws.webcontainer40.servlet.CacheServletWrapper40.handleRequest(CacheServletWrapper40.java:86)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:937)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1146)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:427)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:386)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:566)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:500)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:360)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:327)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:167)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:75)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:958)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1047)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:238)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+[4/2/21 20:57:12:292 EDT] 00000025 com.ibm.ws.webcontainer.util.ApplicationErrorUtils           E SRVE0777E: Exception thrown by application class 'org.eclipse.persistence.jaxb.JAXBContext$TypeMappingInfoInput.createContextState:1,176'
+java.lang.VerifyError: Bad type on operand stack
+Exception Details:
+  Location:
+    org/eclipse/persistence/jaxb/compiler/Generator.generateSchemaFiles(Ljavax/xml/bind/SchemaOutputResolver;Ljava/util/Map;)Ljava/util/Map; @90: invokevirtual
+  Reason:
+    Type 'org/eclipse/persistence/internal/oxm/schema/SchemaModelProject' (current frame, stack[0]) is not assignable to 'org/eclipse/persistence/core/sessions/CoreProject'
+  Current Frame:
+    bci: @90
+    flags: { }
+    locals: { 'org/eclipse/persistence/jaxb/compiler/Generator', 'javax/xml/bind/SchemaOutputResolver', 'java/util/Map', 'org/eclipse/persistence/internal/oxm/schema/SchemaModelProject', 'org/eclipse/persistence/oxm/XMLContext', 'org/eclipse/persistence/oxm/XMLMarshaller' }
+    stack: { 'org/eclipse/persistence/internal/oxm/schema/SchemaModelProject', 'java/lang/Class' }
+  Bytecode:
+    0x0000000: 2a2c 2ab4 002c b700 c22a b400 312a b400
+    0x0000010: 2cb6 0093 2ab4 002c b600 972a b400 2cb6
+    0x0000020: 009a 2ab4 002c b600 9d2a b400 2cb6 00a0
+    0x0000030: 2ab4 002c b600 8d2b b601 3abb 00c6 59b7
+    0x0000040: 00c8 4ebb 00c9 592d c000 cbb7 00cd 3a04
+    0x0000050: 1904 b600 d03a 052d 12d4 b600 d6c0 00dc
+    0x0000060: 3a06 2ab4 0031 b600 ba3a 0719 07b9 00de
+    0x0000070: 0100 3a09 a700 5f19 09b9 00e4 0100 c000
+    0x0000080: d43a 0819 08b6 0102 3a0a 190a 1301 0613
+    0x0000090: 0108 b601 0a19 0619 0ab9 0110 0200 1908
+    0x00000a0: b601 3d99 000d 1908 b601 403a 0ba7 0013
+    0x00000b0: 2b19 08b6 0144 1908 b600 fab6 0147 3a0b
+    0x00000c0: 1905 1908 190b b601 4da7 000a 3a0a 190a
+    0x00000d0: b601 5019 09b9 011f 0100 9aff 9d2a b400
+    0x00000e0: 31b6 0122 b0                           
+  Exception Handler Table:
+    bci [131, 201] => handler: 204
+  Stackmap Table:
+    full_frame(@119,{Object[#1],Object[#328],Object[#81],Object[#215],Object[#201],Object[#282],Object[#220],Object[#223],Top,Object[#229]},{})
+    full_frame(@176,{Object[#1],Object[#328],Object[#81],Object[#215],Object[#201],Object[#282],Object[#220],Object[#223],Object[#212],Object[#229],Object[#267]},{})
+    append_frame(@192,Object[#347])
+    full_frame(@204,{Object[#1],Object[#328],Object[#81],Object[#215],Object[#201],Object[#282],Object[#220],Object[#223],Object[#212],Object[#229]},{Object[#337]})
+    full_frame(@211,{Object[#1],Object[#328],Object[#81],Object[#215],Object[#201],Object[#282],Object[#220],Object[#223],Top,Object[#229]},{})
+
+	at org.eclipse.persistence.jaxb.JAXBContext$TypeMappingInfoInput.createContextState(JAXBContext.java:1176)
+	at org.eclipse.persistence.jaxb.JAXBContext.<init>(JAXBContext.java:205)
+	at org.eclipse.persistence.jaxb.JAXBContextFactory.createContext(JAXBContextFactory.java:167)
+	at org.eclipse.persistence.jaxb.JAXBContextFactory.createContext(JAXBContextFactory.java:154)
+	at org.eclipse.persistence.jaxb.JAXBContextFactory.createContext(JAXBContextFactory.java:114)
+	at org.eclipse.persistence.jaxb.JAXBContextFactory.createContext(JAXBContextFactory.java:104)
+	at org.eclipse.persistence.jaxb.rs.MOXyJsonProvider.getJAXBContext(MOXyJsonProvider.java:335)
+	at org.eclipse.persistence.jaxb.rs.MOXyJsonProvider.getJAXBContext(MOXyJsonProvider.java:355)
+	at org.eclipse.persistence.jaxb.rs.MOXyJsonProvider.isReadable(MOXyJsonProvider.java:483)
+	at org.apache.cxf.jaxrs.provider.ProviderFactory.isReadable(ProviderFactory.java:1104)
+	at org.apache.cxf.jaxrs.provider.ProviderFactory.createMessageBodyReader(ProviderFactory.java:672)
+	at org.apache.cxf.jaxrs.provider.ProviderFactory.createMessageBodyReaderInterceptor(ProviderFactory.java:573)
+	at org.apache.cxf.jaxrs.utils.JAXRSUtils.readFromMessageBody(JAXRSUtils.java:1444)
+	at org.apache.cxf.jaxrs.utils.JAXRSUtils.processRequestBodyParameter(JAXRSUtils.java:972)
+	at org.apache.cxf.jaxrs.utils.JAXRSUtils.processParameters(JAXRSUtils.java:908)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor.processRequest(JAXRSInInterceptor.java:282)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor.handleMessage(JAXRSInInterceptor.java:90)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:308)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:123)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:275)
+	at com.ibm.ws.jaxrs20.endpoint.AbstractJaxRsWebEndpoint.invoke(AbstractJaxRsWebEndpoint.java:137)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.handleRequest(IBMRestServlet.java:146)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.doPost(IBMRestServlet.java:104)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.service(IBMRestServlet.java:96)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1257)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:745)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:442)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1226)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1010)
+	at com.ibm.ws.webcontainer.servlet.CacheServletWrapper.handleRequest(CacheServletWrapper.java:75)
+	at com.ibm.ws.webcontainer40.servlet.CacheServletWrapper40.handleRequest(CacheServletWrapper40.java:86)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:937)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1146)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:427)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:386)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:566)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:500)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:360)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:327)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:167)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:75)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:958)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1047)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:238)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+[4/2/21 20:57:16:159 EDT] 00000055 org.apache.cxf.jaxrs.utils.JAXRSUtils                        E No message body reader has been found for class com.FlightLogix.Core.User.User, ContentType: application/octet-stream
+[4/2/21 20:57:16:160 EDT] 00000055 xf.rt.frontend.jaxrs.3.2:1.0.50.cl210320210309-1101(id=143)] W javax.ws.rs.WebApplicationException: HTTP 415 Unsupported Media Type
+	at org.apache.cxf.jaxrs.utils.JAXRSUtils.readFromMessageBody(JAXRSUtils.java:1475)
+	at org.apache.cxf.jaxrs.utils.JAXRSUtils.processRequestBodyParameter(JAXRSUtils.java:972)
+	at org.apache.cxf.jaxrs.utils.JAXRSUtils.processParameters(JAXRSUtils.java:908)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor.processRequest(JAXRSInInterceptor.java:282)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor.handleMessage(JAXRSInInterceptor.java:90)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:308)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:123)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:275)
+	at com.ibm.ws.jaxrs20.endpoint.AbstractJaxRsWebEndpoint.invoke(AbstractJaxRsWebEndpoint.java:137)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.handleRequest(IBMRestServlet.java:146)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.doPost(IBMRestServlet.java:104)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.service(IBMRestServlet.java:96)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1257)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:745)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:442)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1226)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1010)
+	at com.ibm.ws.webcontainer.servlet.CacheServletWrapper.handleRequest(CacheServletWrapper.java:75)
+	at com.ibm.ws.webcontainer40.servlet.CacheServletWrapper40.handleRequest(CacheServletWrapper40.java:86)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:937)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1146)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:427)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:386)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:566)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:500)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:360)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:327)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:167)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:75)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:958)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1047)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:238)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+[4/2/21 20:57:17:491 EDT] 0000005f org.apache.cxf.jaxrs.utils.JAXRSUtils                        E No message body reader has been found for class com.FlightLogix.Core.User.User, ContentType: application/octet-stream
+[4/2/21 20:57:17:492 EDT] 0000005f xf.rt.frontend.jaxrs.3.2:1.0.50.cl210320210309-1101(id=143)] W javax.ws.rs.WebApplicationException: HTTP 415 Unsupported Media Type
+	at org.apache.cxf.jaxrs.utils.JAXRSUtils.readFromMessageBody(JAXRSUtils.java:1475)
+	at org.apache.cxf.jaxrs.utils.JAXRSUtils.processRequestBodyParameter(JAXRSUtils.java:972)
+	at org.apache.cxf.jaxrs.utils.JAXRSUtils.processParameters(JAXRSUtils.java:908)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor.processRequest(JAXRSInInterceptor.java:282)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor.handleMessage(JAXRSInInterceptor.java:90)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:308)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:123)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:275)
+	at com.ibm.ws.jaxrs20.endpoint.AbstractJaxRsWebEndpoint.invoke(AbstractJaxRsWebEndpoint.java:137)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.handleRequest(IBMRestServlet.java:146)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.doPost(IBMRestServlet.java:104)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.service(IBMRestServlet.java:96)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1257)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:745)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:442)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1226)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1010)
+	at com.ibm.ws.webcontainer.servlet.CacheServletWrapper.handleRequest(CacheServletWrapper.java:75)
+	at com.ibm.ws.webcontainer40.servlet.CacheServletWrapper40.handleRequest(CacheServletWrapper40.java:86)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:937)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1146)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:427)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:386)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:566)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:500)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:360)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:327)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:167)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:75)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:958)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1047)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:238)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+[4/2/21 20:57:21:192 EDT] 00000053 com.ibm.ws.webcontainer.util.ApplicationErrorUtils           E SRVE0777E: Exception thrown by application class 'org.eclipse.persistence.jaxb.JAXBContext$TypeMappingInfoInput.createContextState:1,176'
+java.lang.VerifyError: Bad type on operand stack
+Exception Details:
+  Location:
+    org/eclipse/persistence/jaxb/compiler/Generator.generateSchemaFiles(Ljavax/xml/bind/SchemaOutputResolver;Ljava/util/Map;)Ljava/util/Map; @90: invokevirtual
+  Reason:
+    Type 'org/eclipse/persistence/internal/oxm/schema/SchemaModelProject' (current frame, stack[0]) is not assignable to 'org/eclipse/persistence/core/sessions/CoreProject'
+  Current Frame:
+    bci: @90
+    flags: { }
+    locals: { 'org/eclipse/persistence/jaxb/compiler/Generator', 'javax/xml/bind/SchemaOutputResolver', 'java/util/Map', 'org/eclipse/persistence/internal/oxm/schema/SchemaModelProject', 'org/eclipse/persistence/oxm/XMLContext', 'org/eclipse/persistence/oxm/XMLMarshaller' }
+    stack: { 'org/eclipse/persistence/internal/oxm/schema/SchemaModelProject', 'java/lang/Class' }
+  Bytecode:
+    0x0000000: 2a2c 2ab4 002c b700 c22a b400 312a b400
+    0x0000010: 2cb6 0093 2ab4 002c b600 972a b400 2cb6
+    0x0000020: 009a 2ab4 002c b600 9d2a b400 2cb6 00a0
+    0x0000030: 2ab4 002c b600 8d2b b601 3abb 00c6 59b7
+    0x0000040: 00c8 4ebb 00c9 592d c000 cbb7 00cd 3a04
+    0x0000050: 1904 b600 d03a 052d 12d4 b600 d6c0 00dc
+    0x0000060: 3a06 2ab4 0031 b600 ba3a 0719 07b9 00de
+    0x0000070: 0100 3a09 a700 5f19 09b9 00e4 0100 c000
+    0x0000080: d43a 0819 08b6 0102 3a0a 190a 1301 0613
+    0x0000090: 0108 b601 0a19 0619 0ab9 0110 0200 1908
+    0x00000a0: b601 3d99 000d 1908 b601 403a 0ba7 0013
+    0x00000b0: 2b19 08b6 0144 1908 b600 fab6 0147 3a0b
+    0x00000c0: 1905 1908 190b b601 4da7 000a 3a0a 190a
+    0x00000d0: b601 5019 09b9 011f 0100 9aff 9d2a b400
+    0x00000e0: 31b6 0122 b0                           
+  Exception Handler Table:
+    bci [131, 201] => handler: 204
+  Stackmap Table:
+    full_frame(@119,{Object[#1],Object[#328],Object[#81],Object[#215],Object[#201],Object[#282],Object[#220],Object[#223],Top,Object[#229]},{})
+    full_frame(@176,{Object[#1],Object[#328],Object[#81],Object[#215],Object[#201],Object[#282],Object[#220],Object[#223],Object[#212],Object[#229],Object[#267]},{})
+    append_frame(@192,Object[#347])
+    full_frame(@204,{Object[#1],Object[#328],Object[#81],Object[#215],Object[#201],Object[#282],Object[#220],Object[#223],Object[#212],Object[#229]},{Object[#337]})
+    full_frame(@211,{Object[#1],Object[#328],Object[#81],Object[#215],Object[#201],Object[#282],Object[#220],Object[#223],Top,Object[#229]},{})
+
+	at org.eclipse.persistence.jaxb.JAXBContext$TypeMappingInfoInput.createContextState(JAXBContext.java:1176)
+	at org.eclipse.persistence.jaxb.JAXBContext.<init>(JAXBContext.java:205)
+	at org.eclipse.persistence.jaxb.JAXBContextFactory.createContext(JAXBContextFactory.java:167)
+	at org.eclipse.persistence.jaxb.JAXBContextFactory.createContext(JAXBContextFactory.java:154)
+	at org.eclipse.persistence.jaxb.JAXBContextFactory.createContext(JAXBContextFactory.java:114)
+	at org.eclipse.persistence.jaxb.JAXBContextFactory.createContext(JAXBContextFactory.java:104)
+	at org.eclipse.persistence.jaxb.rs.MOXyJsonProvider.getJAXBContext(MOXyJsonProvider.java:335)
+	at org.eclipse.persistence.jaxb.rs.MOXyJsonProvider.getJAXBContext(MOXyJsonProvider.java:355)
+	at org.eclipse.persistence.jaxb.rs.MOXyJsonProvider.isReadable(MOXyJsonProvider.java:483)
+	at org.apache.cxf.jaxrs.provider.ProviderFactory.isReadable(ProviderFactory.java:1104)
+	at org.apache.cxf.jaxrs.provider.ProviderFactory.createMessageBodyReader(ProviderFactory.java:672)
+	at org.apache.cxf.jaxrs.provider.ProviderFactory.createMessageBodyReaderInterceptor(ProviderFactory.java:573)
+	at org.apache.cxf.jaxrs.utils.JAXRSUtils.readFromMessageBody(JAXRSUtils.java:1444)
+	at org.apache.cxf.jaxrs.utils.JAXRSUtils.processRequestBodyParameter(JAXRSUtils.java:972)
+	at org.apache.cxf.jaxrs.utils.JAXRSUtils.processParameters(JAXRSUtils.java:908)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor.processRequest(JAXRSInInterceptor.java:282)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor.handleMessage(JAXRSInInterceptor.java:90)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:308)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:123)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:275)
+	at com.ibm.ws.jaxrs20.endpoint.AbstractJaxRsWebEndpoint.invoke(AbstractJaxRsWebEndpoint.java:137)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.handleRequest(IBMRestServlet.java:146)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.doPost(IBMRestServlet.java:104)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.service(IBMRestServlet.java:96)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1257)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:745)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:442)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1226)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1010)
+	at com.ibm.ws.webcontainer.servlet.CacheServletWrapper.handleRequest(CacheServletWrapper.java:75)
+	at com.ibm.ws.webcontainer40.servlet.CacheServletWrapper40.handleRequest(CacheServletWrapper40.java:86)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:937)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1146)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:427)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:386)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:566)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:500)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:360)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:327)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:167)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:75)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:958)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1047)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:238)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+[4/2/21 20:58:49:710 EDT] 00000062 com.ibm.ws.webcontainer.util.ApplicationErrorUtils           E SRVE0777E: Exception thrown by application class 'org.eclipse.persistence.jaxb.JAXBContext$TypeMappingInfoInput.createContextState:1,176'
+java.lang.VerifyError: Bad type on operand stack
+Exception Details:
+  Location:
+    org/eclipse/persistence/jaxb/compiler/Generator.generateSchemaFiles(Ljavax/xml/bind/SchemaOutputResolver;Ljava/util/Map;)Ljava/util/Map; @90: invokevirtual
+  Reason:
+    Type 'org/eclipse/persistence/internal/oxm/schema/SchemaModelProject' (current frame, stack[0]) is not assignable to 'org/eclipse/persistence/core/sessions/CoreProject'
+  Current Frame:
+    bci: @90
+    flags: { }
+    locals: { 'org/eclipse/persistence/jaxb/compiler/Generator', 'javax/xml/bind/SchemaOutputResolver', 'java/util/Map', 'org/eclipse/persistence/internal/oxm/schema/SchemaModelProject', 'org/eclipse/persistence/oxm/XMLContext', 'org/eclipse/persistence/oxm/XMLMarshaller' }
+    stack: { 'org/eclipse/persistence/internal/oxm/schema/SchemaModelProject', 'java/lang/Class' }
+  Bytecode:
+    0x0000000: 2a2c 2ab4 002c b700 c22a b400 312a b400
+    0x0000010: 2cb6 0093 2ab4 002c b600 972a b400 2cb6
+    0x0000020: 009a 2ab4 002c b600 9d2a b400 2cb6 00a0
+    0x0000030: 2ab4 002c b600 8d2b b601 3abb 00c6 59b7
+    0x0000040: 00c8 4ebb 00c9 592d c000 cbb7 00cd 3a04
+    0x0000050: 1904 b600 d03a 052d 12d4 b600 d6c0 00dc
+    0x0000060: 3a06 2ab4 0031 b600 ba3a 0719 07b9 00de
+    0x0000070: 0100 3a09 a700 5f19 09b9 00e4 0100 c000
+    0x0000080: d43a 0819 08b6 0102 3a0a 190a 1301 0613
+    0x0000090: 0108 b601 0a19 0619 0ab9 0110 0200 1908
+    0x00000a0: b601 3d99 000d 1908 b601 403a 0ba7 0013
+    0x00000b0: 2b19 08b6 0144 1908 b600 fab6 0147 3a0b
+    0x00000c0: 1905 1908 190b b601 4da7 000a 3a0a 190a
+    0x00000d0: b601 5019 09b9 011f 0100 9aff 9d2a b400
+    0x00000e0: 31b6 0122 b0                           
+  Exception Handler Table:
+    bci [131, 201] => handler: 204
+  Stackmap Table:
+    full_frame(@119,{Object[#1],Object[#328],Object[#81],Object[#215],Object[#201],Object[#282],Object[#220],Object[#223],Top,Object[#229]},{})
+    full_frame(@176,{Object[#1],Object[#328],Object[#81],Object[#215],Object[#201],Object[#282],Object[#220],Object[#223],Object[#212],Object[#229],Object[#267]},{})
+    append_frame(@192,Object[#347])
+    full_frame(@204,{Object[#1],Object[#328],Object[#81],Object[#215],Object[#201],Object[#282],Object[#220],Object[#223],Object[#212],Object[#229]},{Object[#337]})
+    full_frame(@211,{Object[#1],Object[#328],Object[#81],Object[#215],Object[#201],Object[#282],Object[#220],Object[#223],Top,Object[#229]},{})
+
+	at org.eclipse.persistence.jaxb.JAXBContext$TypeMappingInfoInput.createContextState(JAXBContext.java:1176)
+	at org.eclipse.persistence.jaxb.JAXBContext.<init>(JAXBContext.java:205)
+	at org.eclipse.persistence.jaxb.JAXBContextFactory.createContext(JAXBContextFactory.java:167)
+	at org.eclipse.persistence.jaxb.JAXBContextFactory.createContext(JAXBContextFactory.java:154)
+	at org.eclipse.persistence.jaxb.JAXBContextFactory.createContext(JAXBContextFactory.java:114)
+	at org.eclipse.persistence.jaxb.JAXBContextFactory.createContext(JAXBContextFactory.java:104)
+	at org.eclipse.persistence.jaxb.rs.MOXyJsonProvider.getJAXBContext(MOXyJsonProvider.java:335)
+	at org.eclipse.persistence.jaxb.rs.MOXyJsonProvider.getJAXBContext(MOXyJsonProvider.java:355)
+	at org.eclipse.persistence.jaxb.rs.MOXyJsonProvider.isReadable(MOXyJsonProvider.java:483)
+	at org.apache.cxf.jaxrs.provider.ProviderFactory.isReadable(ProviderFactory.java:1104)
+	at org.apache.cxf.jaxrs.provider.ProviderFactory.createMessageBodyReader(ProviderFactory.java:672)
+	at org.apache.cxf.jaxrs.provider.ProviderFactory.createMessageBodyReaderInterceptor(ProviderFactory.java:573)
+	at org.apache.cxf.jaxrs.utils.JAXRSUtils.readFromMessageBody(JAXRSUtils.java:1444)
+	at org.apache.cxf.jaxrs.utils.JAXRSUtils.processRequestBodyParameter(JAXRSUtils.java:972)
+	at org.apache.cxf.jaxrs.utils.JAXRSUtils.processParameters(JAXRSUtils.java:908)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor.processRequest(JAXRSInInterceptor.java:282)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor.handleMessage(JAXRSInInterceptor.java:90)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:308)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:123)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:275)
+	at com.ibm.ws.jaxrs20.endpoint.AbstractJaxRsWebEndpoint.invoke(AbstractJaxRsWebEndpoint.java:137)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.handleRequest(IBMRestServlet.java:146)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.doPost(IBMRestServlet.java:104)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.service(IBMRestServlet.java:96)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1257)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:745)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:442)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1226)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1010)
+	at com.ibm.ws.webcontainer.servlet.CacheServletWrapper.handleRequest(CacheServletWrapper.java:75)
+	at com.ibm.ws.webcontainer40.servlet.CacheServletWrapper40.handleRequest(CacheServletWrapper40.java:86)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:937)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1146)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:427)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:386)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:566)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:500)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:360)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:327)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:167)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:75)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:958)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1047)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:238)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+[4/2/21 20:59:00:638 EDT] 00000013 com.ibm.ws.kernel.launch.internal.ServerCommandListener      A CWWKE0055I: Server shutdown requested on Friday, April 2, 2021 at 8:59 PM. The server FlightLogixServer is shutting down.
+[4/2/21 20:59:00:650 EDT] 00000069 com.ibm.ws.runtime.update.internal.RuntimeUpdateManagerImpl  A CWWKE1100I: Waiting for up to 30 seconds for the server to quiesce.
+[4/2/21 20:59:00:664 EDT] 0000003f com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0220I: TCP Channel defaultHttpEndpoint has stopped listening for requests on host *  (IPv6) port 8080.
+[4/2/21 20:59:00:666 EDT] 0000003f com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://johanson:8080/
+[4/2/21 20:59:00:687 EDT] 00000069 com.ibm.ws.runtime.update.internal.RuntimeUpdateManagerImpl  I CWWKE1101I: Server quiesce complete.
+[4/2/21 20:59:00:823 EDT] 00000053 com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [FlightLogix] [/] [com.FlightLogix.Service.FlightLogixApplicatioon]: Destroy successful.
+[4/2/21 20:59:00:849 EDT] 00000053 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application FlightLogix has stopped successfully.
+[4/2/21 20:59:00:978 EDT] 00000069 com.ibm.tx.jta.impl.FailureScopeController                   A WTRN0105I: The transaction service has shutdown successfully with no transactions requiring recovery.
+[4/2/21 20:59:01:960 EDT] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0036I: The server FlightLogixServer stopped after 4 minutes, 49.286 seconds.

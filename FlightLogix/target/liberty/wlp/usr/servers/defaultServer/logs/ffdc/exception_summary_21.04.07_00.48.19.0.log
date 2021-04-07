@@ -1,0 +1,6 @@
+
+ Index  Count  Time of first Occurrence    Time of last Occurrence     Exception SourceId ProbeId
+------+------+---------------------------+---------------------------+---------------------------
+     0      1      4/7/21 0:48:18:608 EDT      4/7/21 0:48:18:608 EDT java.lang.Exception com.ibm.ws.jaxrs20.server.component.JaxRsWebModuleInfoBuilder 292
+                                                                            - C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_21.04.07_00.48.18.0.log
+------+------+---------------------------+---------------------------+---------------------------

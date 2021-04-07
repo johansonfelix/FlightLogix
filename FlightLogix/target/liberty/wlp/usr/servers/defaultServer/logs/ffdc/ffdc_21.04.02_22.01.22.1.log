@@ -1,0 +1,492 @@
+------Start of DE processing------ = [4/2/21 22:01:22:353 EDT]
+Exception = java.sql.SQLException
+Source = com.ibm.ws.rsadapter.jdbc.WSJdbcObject.closeChildWrappers
+probeid = 554
+Stack Dump = java.sql.SQLException: No operations allowed after statement closed.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:82)
+	at com.mysql.cj.jdbc.StatementImpl.getMoreResults(StatementImpl.java:1604)
+	at com.mysql.cj.jdbc.StatementImpl.getMoreResults(StatementImpl.java:1523)
+	at com.mysql.cj.jdbc.StatementWrapper.getMoreResults(StatementWrapper.java:247)
+	at com.ibm.ws.rsadapter.jdbc.WSJdbcPreparedStatement.closeWrapper(WSJdbcPreparedStatement.java:306)
+	at com.ibm.ws.rsadapter.jdbc.WSJdbcObject.close(WSJdbcObject.java:152)
+	at com.ibm.ws.rsadapter.jdbc.WSJdbcObject.close(WSJdbcObject.java:110)
+	at com.ibm.ws.rsadapter.jdbc.WSJdbcObject.closeChildWrappers(WSJdbcObject.java:193)
+	at com.ibm.ws.rsadapter.jdbc.WSJdbcObject.close(WSJdbcObject.java:150)
+	at com.ibm.ws.rsadapter.jdbc.WSJdbcObject.close(WSJdbcObject.java:110)
+	at com.ibm.ws.rsadapter.impl.WSRdbManagedConnectionImpl.closeHandles(WSRdbManagedConnectionImpl.java:3534)
+	at com.ibm.ws.rsadapter.impl.WSRdbManagedConnectionImpl.processConnectionErrorOccurredEvent(WSRdbManagedConnectionImpl.java:1717)
+	at com.ibm.ws.rsadapter.impl.WSRdbManagedConnectionImpl.processConnectionErrorOccurredEvent(WSRdbManagedConnectionImpl.java:1640)
+	at com.ibm.ws.rsadapter.impl.WSRdbManagedConnectionImpl.connectionErrorOccurred(WSRdbManagedConnectionImpl.java:623)
+	at com.mysql.cj.jdbc.MysqlPooledConnection.callConnectionEventListeners(MysqlPooledConnection.java:194)
+	at com.mysql.cj.jdbc.WrapperBase.checkAndFireConnectionError(WrapperBase.java:60)
+	at com.mysql.cj.jdbc.PreparedStatementWrapper.executeQuery(PreparedStatementWrapper.java:585)
+	at com.ibm.ws.rsadapter.jdbc.WSJdbcPreparedStatement.executeQuery(WSJdbcPreparedStatement.java:480)
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeSelect(DatabaseAccessor.java:1015)
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.basicExecuteCall(DatabaseAccessor.java:651)
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeCall(DatabaseAccessor.java:567)
+	at org.eclipse.persistence.internal.sessions.AbstractSession.basicExecuteCall(AbstractSession.java:2099)
+	at org.eclipse.persistence.sessions.server.ServerSession.executeCall(ServerSession.java:603)
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.executeCall(DatasourceCallQueryMechanism.java:277)
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.executeCall(DatasourceCallQueryMechanism.java:263)
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.executeSelectCall(DatasourceCallQueryMechanism.java:334)
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.executeSelect(DatasourceCallQueryMechanism.java:316)
+	at org.eclipse.persistence.queries.DataReadQuery.executeNonCursor(DataReadQuery.java:199)
+	at org.eclipse.persistence.queries.DataReadQuery.executeDatabaseQuery(DataReadQuery.java:154)
+	at org.eclipse.persistence.queries.DatabaseQuery.execute(DatabaseQuery.java:911)
+	at org.eclipse.persistence.queries.DataReadQuery.execute(DataReadQuery.java:139)
+	at org.eclipse.persistence.internal.sessions.AbstractSession.internalExecuteQuery(AbstractSession.java:3356)
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1898)
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1880)
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1830)
+	at org.eclipse.persistence.platform.database.MySQLPlatform.checkTableExists(MySQLPlatform.java:848)
+	at org.eclipse.persistence.tools.schemaframework.SchemaManager.checkTableExists(SchemaManager.java:467)
+	at org.eclipse.persistence.tools.schemaframework.SchemaManager.checkTableExists(SchemaManager.java:480)
+	at org.eclipse.persistence.tools.schemaframework.TableCreator.createTables(TableCreator.java:169)
+	at org.eclipse.persistence.tools.schemaframework.TableCreator.createTables(TableCreator.java:151)
+	at org.eclipse.persistence.tools.schemaframework.TableCreator.createTables(TableCreator.java:143)
+	at org.eclipse.persistence.tools.schemaframework.SchemaManager.createDefaultTables(SchemaManager.java:1030)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryProvider.generateDefaultTables(EntityManagerFactoryProvider.java:110)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.writeDDLToDatabase(EntityManagerSetupImpl.java:4467)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.writeDDL(EntityManagerSetupImpl.java:4395)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.writeDDL(EntityManagerSetupImpl.java:4295)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.deploy(EntityManagerSetupImpl.java:819)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.getAbstractSession(EntityManagerFactoryDelegate.java:222)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.createEntityManagerImpl(EntityManagerFactoryDelegate.java:330)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryImpl.createEntityManagerImpl(EntityManagerFactoryImpl.java:350)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryImpl.createEntityManager(EntityManagerFactoryImpl.java:331)
+	at com.ibm.ws.jpa.container.v22.internal.JPA22Runtime.createEntityManagerInstance(JPA22Runtime.java:110)
+	at com.ibm.ws.jpa.management.JPAEMPool.getEntityManager(JPAEMPool.java:155)
+	at com.ibm.ws.jpa.management.JPATxEntityManager.getEMInvocationInfo(JPATxEntityManager.java:254)
+	at com.ibm.ws.jpa.management.JPATxEntityManager.getEMInvocationInfo(JPATxEntityManager.java:164)
+	at com.ibm.ws.jpa.management.JPAEntityManager.persist(JPAEntityManager.java:149)
+	at com.FlightLogix.Persistence.User.UserDAO.createUser(UserDAO.java:19)
+	at com.FlightLogix.Persistence.User.UserDAO$Proxy$_$$_WeldClientProxy.createUser(Unknown Source)
+	at com.FlightLogix.Service.User.UserResource.registerUser(UserResource.java:25)
+	at com.FlightLogix.Service.User.UserResource$Proxy$_$$_WeldSubclass.registerUser$$super(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor549.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.jboss.weld.interceptor.proxy.TerminalAroundInvokeInvocationContext.proceedInternal(TerminalAroundInvokeInvocationContext.java:51)
+	at org.jboss.weld.interceptor.proxy.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:78)
+	at com.ibm.tx.jta.cdi.interceptors.TransactionalInterceptor$1.run(TransactionalInterceptor.java:137)
+	at com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl.runUnderCurrentUOW(EmbeddableUOWManagerImpl.java:1077)
+	at com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl.runUnderNewUOW(EmbeddableUOWManagerImpl.java:1040)
+	at com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl.runUnderUOW(EmbeddableUOWManagerImpl.java:1013)
+	at com.ibm.tx.jta.cdi.interceptors.TransactionalInterceptor.runUnderUOWManagingEnablement(TransactionalInterceptor.java:151)
+	at com.ibm.tx.jta.cdi.interceptors.Required.required(Required.java:40)
+	at sun.reflect.GeneratedMethodAccessor522.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.jboss.weld.interceptor.reader.SimpleInterceptorInvocation$SimpleMethodInvocation.invoke(SimpleInterceptorInvocation.java:73)
+	at org.jboss.weld.interceptor.proxy.InterceptorMethodHandler.executeAroundInvoke(InterceptorMethodHandler.java:84)
+	at org.jboss.weld.interceptor.proxy.InterceptorMethodHandler.executeInterception(InterceptorMethodHandler.java:72)
+	at org.jboss.weld.interceptor.proxy.InterceptorMethodHandler.invoke(InterceptorMethodHandler.java:56)
+	at org.jboss.weld.bean.proxy.CombinedInterceptorAndDecoratorStackMethodHandler.invoke(CombinedInterceptorAndDecoratorStackMethodHandler.java:79)
+	at org.jboss.weld.bean.proxy.CombinedInterceptorAndDecoratorStackMethodHandler.invoke(CombinedInterceptorAndDecoratorStackMethodHandler.java:68)
+	at com.FlightLogix.Service.User.UserResource$Proxy$_$$_WeldSubclass.registerUser(Unknown Source)
+	at com.FlightLogix.Service.User.UserResource$Proxy$_$$_WeldClientProxy.registerUser(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor548.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.ibm.ws.jaxrs20.cdi.component.JaxRsFactoryImplicitBeanCDICustomizer.serviceInvoke(JaxRsFactoryImplicitBeanCDICustomizer.java:342)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.performInvocation(LibertyJaxRsServerFactoryBean.java:641)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.performInvocation(LibertyJaxRsInvoker.java:160)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:101)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.invoke(LibertyJaxRsInvoker.java:273)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:205)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.invoke(LibertyJaxRsInvoker.java:444)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:111)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor$1.run(ServiceInvokerInterceptor.java:59)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor.handleMessage(ServiceInvokerInterceptor.java:96)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:308)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:123)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:275)
+	at com.ibm.ws.jaxrs20.endpoint.AbstractJaxRsWebEndpoint.invoke(AbstractJaxRsWebEndpoint.java:137)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.handleRequest(IBMRestServlet.java:146)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.doPost(IBMRestServlet.java:104)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.service(IBMRestServlet.java:96)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1257)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:745)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:442)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1226)
+	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:5057)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:314)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:1006)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1146)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:427)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:386)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:566)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:500)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:360)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:327)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:167)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:75)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:958)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1047)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:238)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.mysql.cj.exceptions.StatementIsClosedException: No operations allowed after statement closed.
+	at sun.reflect.GeneratedConstructorAccessor1195.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:85)
+	at com.mysql.cj.jdbc.StatementImpl.checkClosed(StatementImpl.java:338)
+	at com.mysql.cj.jdbc.StatementImpl.getMoreResults(StatementImpl.java:1528)
+	... 123 more
+
+Dump of callerThis
+Object type = com.ibm.ws.rsadapter.jdbc.v41.WSJdbc41Connection
+  strings[0] = "_______________________________________________________________________"
+  strings[1] = ""
+  strings[2] = "    First Failure Data Capture information for"
+  strings[3] = "          com.ibm.ws.rsadapter.jdbc.v41.WSJdbc41Connection@799f661f"
+  strings[4] = "_______________________________________________________________________"
+  strings[5] = ""
+  strings[6] = "com.ibm.ws.rsadapter.jdbc.v41.WSJdbc41Connection@799f661f
+"
+  strings[7] = "Transaction Manager global transaction status is"
+  strings[8] = "  STATUS ACTIVE (0)
+"
+  strings[9] = "Underlying Connection: com.mysql.cj.jdbc.ConnectionWrapper@214f1388"
+  strings[10] = "  com.mysql.cj.jdbc.ConnectionWrapper@214f1388
+"
+  strings[11] = "Key Object:"
+  strings[12] = "  [B@2cac7464
+"
+  strings[13] = "Connection Manager:"
+  strings[14] = "  [ConnectionManager]@702206c0
+JNDI Name <jdbc/myDB>
+shareable <true>
+
+"
+  strings[15] = "ConnectionManager supports lazy association?"
+  strings[16] = "  true
+"
+  strings[17] = "ConnectionManager supports lazy enlistment?"
+  strings[18] = "  true
+"
+  strings[19] = "Handle is reserved? false
+"
+  strings[20] = "AutoCommit value tracked by handle: true
+"
+  strings[21] = "Thread id:"
+  strings[22] = "  null
+"
+  strings[23] = "Wrapper State: "
+  strings[24] = "  CLOSED
+"
+  strings[25] = "Parent wrapper:"
+  strings[26] = "  null
+"
+  strings[27] = "Child wrapper:
+"
+  strings[28] = "  null"
+  strings[29] = "# of Child Wrappers 0
+"
+  strings[30] = "Child wrappers:
+"
+  strings[31] = ""
+  strings[32] = ""
+  strings[33] = "ConnectionRequestInfo:"
+  strings[34] = "  null
+"
+  strings[35] = "_______________________________________________________________________"
+  strings[36] = ""
+  strings[37] = "    First Failure Data Capture information for"
+  strings[38] = "          com.ibm.ws.rsadapter.impl.WSManagedConnectionFactoryImpl@728f3945"
+  strings[39] = "_______________________________________________________________________"
+  strings[40] = ""
+  strings[41] = "com.ibm.ws.rsadapter.DSConfig@2b85b7cf"
+  strings[42] = "[beginTranForResultSetScrollingAPIs, true, beginTranForVendorAPIs, true, commitOrRollbackOnCleanup, null, connectionSharing, MatchOriginalRequest, isolationLevel, -1, jndiName, jdbc/myDB, enableConnectionCasting, false, queryTimeout, null, statementCacheSize, 10, supplementalJDBCTrace, null, syncQueryTimeoutWithTransactionTimeout, false, transactional, true]"
+  strings[43] = "{serverName=soen.mysql.database.azure.com, password=******, databaseName=db, user=username@soen, portNumber=3306}"
+  strings[44] = "Vendor implementation class:"
+  strings[45] = "  class com.mysql.cj.jdbc.MysqlConnectionPoolDataSource
+"
+  strings[46] = "Type:"
+  strings[47] = "  interface javax.sql.ConnectionPoolDataSource
+"
+  strings[48] = "Underlying DataSource or Driver Object: com.mysql.cj.jdbc.MysqlConnectionPoolDataSource@64c5f98f"
+  strings[49] = "  com.mysql.cj.jdbc.MysqlConnectionPoolDataSource@64c5f98f
+"
+  strings[50] = "Instance id:"
+  strings[51] = "  2
+"
+  strings[52] = "Log Writer:"
+  strings[53] = "  null
+"
+  strings[54] = "Counter of fatal connection errors on ManagedConnections created by this MCF:"
+  strings[55] = "  1
+"
+  strings[56] = "_______________________________________________________________________"
+  strings[57] = ""
+  strings[58] = "    First Failure Data Capture information for"
+  strings[59] = "          com.ibm.ws.rsadapter.impl.WSRdbManagedConnectionImpl@9de523"
+  strings[60] = "_______________________________________________________________________"
+  strings[61] = ""
+  strings[62] = "ONE PHASE ENABLED
+"
+  strings[63] = "Connection sharing: "
+  strings[64] = "  MatchOriginalRequest
+"
+  strings[65] = "Transaction State:"
+  strings[66] = "  LOCAL_TRANSACTION_ACTIVE
+"
+  strings[67] = "Key:"
+  strings[68] = "  [B@2cac7464
+"
+  strings[69] = "Log Writer:"
+  strings[70] = "  null
+"
+  strings[71] = "Subject:"
+  strings[72] = "  null
+"
+  strings[73] = "ManagedConnection:"
+  strings[74] = "  WSRdbManagedConnectionImpl@9de523
+"
+  strings[75] = "Counter of fatal connection errors for the ManagedConnectionFactory as of the most recent getConnection on this ManagedConnection:"
+  strings[76] = "  0
+"
+  strings[77] = "Default AutoCommit:"
+  strings[78] = "  true
+"
+  strings[79] = "Current AutoCommit:"
+  strings[80] = "  false
+"
+  strings[81] = "Current Isolation:"
+  strings[82] = "  READ COMMITTED (2)
+"
+  strings[83] = "Isolation level has changed? :"
+  strings[84] = "  false
+"
+  strings[85] = "Support isolation level switching: "
+  strings[86] = "  false
+"
+  strings[87] = "The gssCredential is: 
+"
+  strings[88] = "null
+"
+  strings[89] = "The gssName is: 
+"
+  strings[90] = "null
+"
+  strings[91] = "Catalog, IsReadOnly, TypeMap, Schema, ShardingKey, SuperShardingKey, or NetworkTimeout has changed? :"
+  strings[92] = "  false
+"
+  strings[93] = "Default Holdability:"
+  strings[94] = "  DEFAULT CURSOR HOLDABILITY VALUE (0)
+"
+  strings[95] = "Current Holdability:"
+  strings[96] = "  DEFAULT CURSOR HOLDABILITY VALUE (0)
+"
+  strings[97] = "Holdability value has changed? :"
+  strings[98] = "  false
+"
+  strings[99] = "Thread ID:"
+  strings[100] = "  null
+"
+  strings[101] = "Lazily enlisted in the current transaction? :"
+  strings[102] = "  true
+"
+  strings[103] = "Underlying Connection Object: com.mysql.cj.jdbc.ConnectionWrapper@214f1388"
+  strings[104] = "  com.mysql.cj.jdbc.ConnectionWrapper@214f1388
+"
+  strings[105] = "Underlying PooledConnection Object: com.mysql.cj.jdbc.MysqlPooledConnection@4b1f7d1"
+  strings[106] = "  com.mysql.cj.jdbc.MysqlPooledConnection@4b1f7d1
+"
+  strings[107] = "SQLJ Default Context: null"
+  strings[108] = "  null
+"
+  strings[109] = "Fatal connection error was detected? :"
+  strings[110] = "  true
+"
+  strings[111] = "Currently cleaning up handles? :"
+  strings[112] = "  true
+"
+  strings[113] = "Last ConnectionEvent sent for this ManagedConnection:
+"
+  strings[114] = "  com.ibm.ws.rsadapter.impl.WSConnectionEvent@fffb313"
+  strings[115] = "  Connection Handle: com.ibm.ws.rsadapter.jdbc.v41.WSJdbc41Connection@94256ec"
+  strings[116] = "  Event ID: CONNECTION CLOSED (1)"
+  strings[117] = "  Exception: null"
+  strings[118] = ""
+  strings[119] = "Connection Event Listeners:
+"
+  strings[120] = "  com.ibm.ejs.j2c.ConnectionEventListener@4280dfca"
+  strings[121] = ""
+  strings[122] = "Maximum Handle List Size: 15
+"
+  strings[123] = "Handle Count: 1
+"
+  strings[124] = "Handles:
+"
+  strings[125] = "  null"
+  strings[126] = "  null"
+  strings[127] = "  null"
+  strings[128] = "  null"
+  strings[129] = "  null"
+  strings[130] = "  null"
+  strings[131] = "  null"
+  strings[132] = "  null"
+  strings[133] = "  null"
+  strings[134] = "  null"
+  strings[135] = "  null"
+  strings[136] = "  null"
+  strings[137] = "  null"
+  strings[138] = "  null"
+  strings[139] = "  null"
+  strings[140] = ""
+  strings[141] = "State Manager:"
+  strings[142] = "  com.ibm.ws.rsadapter.impl.WSStateManager@4984b734
+"
+  strings[143] = "_______________________________________________________________________"
+  strings[144] = ""
+  strings[145] = "    First Failure Data Capture information for"
+  strings[146] = "          com.ibm.ws.rsadapter.impl.WSRdbOnePhaseXaResourceImpl@64c5d3de"
+  strings[147] = "_______________________________________________________________________"
+  strings[148] = ""
+  strings[149] = "Connection:"
+  strings[150] = "  com.mysql.cj.jdbc.ConnectionWrapper@214f1388
+"
+  strings[151] = "ManagedConnection:"
+  strings[152] = "  WSRdbManagedConnectionImpl@9de523
+"
+  strings[153] = "_______________________________________________________________________"
+  strings[154] = ""
+  strings[155] = "    First Failure Data Capture information for"
+  strings[156] = "          com.ibm.ws.rsadapter.impl.WSRdbSpiLocalTransactionImpl@814f565"
+  strings[157] = "_______________________________________________________________________"
+  strings[158] = ""
+  strings[159] = "Connection:"
+  strings[160] = "  com.mysql.cj.jdbc.ConnectionWrapper@214f1388
+"
+  strings[161] = "ManagedConnection:"
+  strings[162] = "  WSRdbManagedConnectionImpl@9de523
+"
+  strings[163] = "Statement Cache:"
+    
+com.ibm.ws.rsadapter.impl.CacheMap@3ca06659
+Number of entries:   10
+Maximum entries:     10
+Number of buckets:   13
+Maximum bucket size: 5
+Number of discards:  28
+
+BUCKET SIZE PREV NEXT
+  000  000  013  013
+  001  001  011  008
+                      65322ccf PSTMT: SELECT SEQ_COUNT FROM SEQUENCE WHERE SEQ_NAME = "? 1003 1007 0 0 0
+  002  000  013  013
+  003  000  013  013
+  004  000  013  013
+  005  000  013  013
+  006  001  013  007
+                      2f234894 PSTMT: CREATE TABLE LOCATION (ID VARCHAR(255) NOT NULL, IATACODE VARCHAR(255), TERMINAL VARCHAR(255), TIME DATETIME, PRIMARY KEY (ID)) 1003 1007 0 0 0
+  007  001  006  010
+                      b33fc8 PSTMT: ALTER TABLE BOOKINGLOGS ADD CONSTRAINT FK_BOOKINGLOGS_userID FOREIGN KEY (userID) REFERENCES user (userID) 1003 1007 0 0 0
+  008  001  001  014
+                      3f9e1329 PSTMT: INSERT INTO user (userID, email, firstName, hashedPassword, lastName) VALUES (?, ?, ?, ?, ?) 1003 1007 0 0 0
+  009  003  010  011
+                      4bbe1441 PSTMT: CREATE TABLE BOOKINGLOGS (OPERATION VARCHAR(255), TIMESTAMP DATETIME, bookingID VARCHAR(255) NOT NULL, userID VARCHAR(255), PRIMARY KEY (bookingID)) 1003 1007 0 0 0
+                      7e6c924a PSTMT: ALTER TABLE flight ADD CONSTRAINT FK_flight_PRICE_ID FOREIGN KEY (PRICE_ID) REFERENCES PRICE (ID) 1003 1007 0 0 0
+                      6738bf30 PSTMT: SHOW TABLES LIKE 'SEQUENCE' 1003 1007 0 0 0
+  010  001  007  009
+                      28f0ffa5 PSTMT: SELECT * FROM SEQUENCE WHERE SEQ_NAME = 'SEQ_GEN' 1003 1007 0 0 0
+  011  002  009  001
+                      1357fae6 PSTMT: ALTER TABLE ITINERARY ADD CONSTRAINT FK_ITINERARY_INBOUND_ID FOREIGN KEY (INBOUND_ID) REFERENCES SEGMENT (ID) 1003 1007 0 0 0
+                      933d404 PSTMT: UPDATE SEQUENCE SET SEQ_COUNT = SEQ_COUNT + ? WHERE SEQ_NAME = ? 1003 1007 0 0 0
+  012  000  013  013
+  013  LRU       006
+  014  MRU  008
+
+"
+  strings[165] = "_______________________________________________________________________"
+  strings[166] = ""
+  strings[167] = "    First Failure Data Capture information for"
+  strings[168] = "          com.ibm.ws.rsadapter.impl.WSConnectionRequestInfoImpl@2bd02b2d"
+  strings[169] = "_______________________________________________________________________"
+  strings[170] = ""
+  changable CRI = ""
+  strings[172] = "  true
+"
+  strings[173] = "User Name:"
+  strings[174] = "  null
+"
+  strings[175] = "Password:"
+  strings[176] = "  null
+"
+  strings[177] = "Isolation Level:"
+  strings[178] = "  READ COMMITTED (2)
+"
+  strings[179] = "Catalog:"
+  strings[180] = "  null
+"
+  strings[181] = "Schema:"
+  strings[182] = "  null
+"
+  strings[183] = "Sharding key:"
+  strings[184] = "  null
+"
+  strings[185] = "Super Sharding key:"
+  strings[186] = "  null
+"
+  strings[187] = "Is Read Only?"
+  strings[188] = "  null
+"
+  strings[189] = "Type Map:"
+  strings[190] = "  null
+"
+  strings[191] = "Cursor Holdability:"
+  strings[192] = "  DEFAULT CURSOR HOLDABILITY VALUE (0)
+"
+  strings[193] = "Config ID: 2
+"
+  strings[194] = "Hash Code:"
+  strings[195] = "  2
+"
+  strings[196] = "Support isolation switching on connection:"
+  strings[197] = "  false
+"
+  gssName = "
+"
+  strings[199] = "null
+"
+  gssCredential = "
+"
+  strings[201] = "null
+"
+  strings[202] = "_______________________________________________________________________"
+  strings[203] = ""
+  strings[204] = "    First Failure Data Capture information for"
+  strings[205] = "          com.ibm.ws.rsadapter.impl.WSManagedConnectionFactoryImpl@728f3945"
+  strings[206] = "_______________________________________________________________________"
+  strings[207] = ""
+  strings[208] = "com.ibm.ws.rsadapter.DSConfig@2b85b7cf"
+  strings[209] = "[beginTranForResultSetScrollingAPIs, true, beginTranForVendorAPIs, true, commitOrRollbackOnCleanup, null, connectionSharing, MatchOriginalRequest, isolationLevel, -1, jndiName, jdbc/myDB, enableConnectionCasting, false, queryTimeout, null, statementCacheSize, 10, supplementalJDBCTrace, null, syncQueryTimeoutWithTransactionTimeout, false, transactional, true]"
+  strings[210] = "{serverName=soen.mysql.database.azure.com, password=******, databaseName=db, user=username@soen, portNumber=3306}"
+  strings[211] = "Vendor implementation class:"
+  strings[212] = "  class com.mysql.cj.jdbc.MysqlConnectionPoolDataSource
+"
+  strings[213] = "Type:"
+  strings[214] = "  interface javax.sql.ConnectionPoolDataSource
+"
+  strings[215] = "Underlying DataSource or Driver Object: com.mysql.cj.jdbc.MysqlConnectionPoolDataSource@64c5f98f"
+  strings[216] = "  com.mysql.cj.jdbc.MysqlConnectionPoolDataSource@64c5f98f
+"
+  strings[217] = "Instance id:"
+  strings[218] = "  2
+"
+  strings[219] = "Log Writer:"
+  strings[220] = "  null
+"
+  strings[221] = "Counter of fatal connection errors on ManagedConnections created by this MCF:"
+  strings[222] = "  1
+"
+
