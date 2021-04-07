@@ -14,6 +14,7 @@ import java.io.InputStreamReader;
 import java.net.*;
 import java.nio.charset.StandardCharsets;
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -124,9 +125,8 @@ public class AmadeusAPICaller {
 
     }
     private Timestamp stringToTimestamp(String timeString){
-        /* TO DO */
-        return Timestamp.valueOf("1999-12-31 11:59:59");
-
+        LocalDateTime timeStamp = LocalDateTime.parse(timeString);
+        return Timestamp.valueOf(timeStamp);
     }
     private Itinerary parseItinerary(JSONArray itineraries){
         Itinerary itinerary = new Itinerary();
@@ -233,7 +233,7 @@ public class AmadeusAPICaller {
         JSONObject entireJson = new JSONObject(data);
         FlightData flightData = new FlightData();
         flightData.setFlights(parseFlights(entireJson.getJSONArray("data")));
-        flightData.setCarrierNames(parseCarriers(entireJson.getJSONObject("dictionaries"));
+        flightData.setCarrierNames(parseCarriers(entireJson.getJSONObject("dictionaries")));
         return flightData;
     }
     public String search(Search search){
