@@ -129,15 +129,14 @@ public class AmadeusAPICaller {
     }
     private Itinerary parseItinerary(JSONArray itineraries){
         Itinerary itinerary = new Itinerary();
-        JSONObject json = new JSONObject(itineraries.getJSONObject(0));
-        JSONArray segments = json.getJSONArray("segments");
+
         if(itineraries.length() > 0){
-            Segment outbound = parseSegment((itineraries.getJSONArray(0)));
+            Segment outbound = parseSegment(((JSONObject)itineraries.get(0)).getJSONArray("segments"));
             itinerary.setOutbound(outbound);
             if(itineraries.length() == 1){
             }
             else if(itineraries.length() == 2){
-                Segment inbound = parseSegment(itineraries.getJSONArray(1));
+                Segment inbound = parseSegment(((JSONObject)itineraries.get(1)).getJSONArray("segments"));
                 itinerary.setInbound(inbound);
             }
         }
