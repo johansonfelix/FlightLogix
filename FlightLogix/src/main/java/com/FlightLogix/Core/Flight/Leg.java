@@ -9,12 +9,12 @@ public class Leg {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private String id;
 
-    @OneToOne(fetch = FetchType.EAGER)
-    @JoinColumn
+    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    /*@JoinColumn*/
     private Location from;
 
-    @OneToOne(fetch = FetchType.EAGER)
-    @JoinColumn
+    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    /*@JoinColumn*/
     private Location to;
 
     private String carrierCode;

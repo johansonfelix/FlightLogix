@@ -60,7 +60,7 @@ public class AmadeusAPICaller {
                 encodedString += "&";
             }
         }
-        System.out.println("ENCODINGSTRING->" + encodedString);
+
         return encodedString;
     }
 
@@ -115,14 +115,14 @@ public class AmadeusAPICaller {
             br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
             String strCurrentLine;
             while ((strCurrentLine = br.readLine()) != null) {
-                System.out.println(strCurrentLine);
+
                 str += strCurrentLine;
             }
         } else {
             br = new BufferedReader(new InputStreamReader(conn.getErrorStream()));
             String strCurrentLine;
             while ((strCurrentLine = br.readLine()) != null) {
-                System.out.println(strCurrentLine);
+                str += strCurrentLine;
             }
         }
 
@@ -206,7 +206,7 @@ public class AmadeusAPICaller {
     }
 
     private ArrayList<Flight> parseFlights(JSONArray flights) {
-        System.out.println("flights->" + flights.toString());
+
         ArrayList<Flight> flightObjects = new ArrayList<>();
         for (int i = 0; i < flights.length(); i++) {
             Flight flightObject = new Flight();

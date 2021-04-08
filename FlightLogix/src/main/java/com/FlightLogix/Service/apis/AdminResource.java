@@ -1,13 +1,97 @@
 package com.FlightLogix.Service.apis;
 
 
+import com.FlightLogix.Core.Booking.Booking;
+import com.FlightLogix.Repository.BookingOperations.BookingManager;
+
+import javax.annotation.security.RolesAllowed;
 import javax.enterprise.context.RequestScoped;
-import javax.ws.rs.Path;
+import javax.inject.Inject;
+import javax.transaction.Transactional;
+import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+import java.util.List;
 
 @RequestScoped
+@Path("admin")
 public class AdminResource {
 
-    //viewAllCustomers
+
+    @Inject
+    BookingManager bookingManager;
+
+
+    @GET
+    @Path("allbookings")
+    @RolesAllowed({"ADMIN"})
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getAllBookings(){
+
+        List<Booking> bookings = bookingManager.getAllBookings();
+
+        return Response.ok(bookings).build();
+
+
+    }
+    @Transactional
+    @POST
+    @Path("create")
+    @RolesAllowed({"ADMIN"})
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response createBooking(Booking booking) {
+
+        bookingManager.createBooking(booking);
+
+        return Response.ok(Response.Status.CREATED).build();
+
+    }
+
+    @GET
+    @Path("get/{bookingID}")
+    @RolesAllowed({"ADMIN"})
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getBooking(@PathParam("bookingID") String bookingID) {
+        Booking booking = bookingManager.getBooking(bookingID);
+        return Response.ok(booking).build();
+    }
+
+    @GET
+    @Path("getAll")
+    @RolesAllowed({"ADMIN"})
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getAllCustomerBookings(String email) {
+        List<Booking> bookings = bookingManager.getCustomerBookings(email);
+        return Response.ok(bookings).build();
+    }
+
+
+    @Transactional
+    @PUT
+    @Path("update")
+    @RolesAllowed({"ADMIN"})
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getAllCustomerBookings(Booking booking) {
+        bookingManager.modifyBooking(booking.getId(), booking);
+        return Response.ok(Response.Status.OK).build();
+    }
+
+    @Transactional
+    @DELETE
+    @Path("cancel")
+    @RolesAllowed({"ADMIN"})
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response cancelBooking(String bookingID) {
+        bookingManager.deleteBooking(bookingID);
+        return Response.status(Response.Status.OK).build();
+    }
+
 
 
 }

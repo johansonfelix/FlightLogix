@@ -13,7 +13,7 @@ public class Segment {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private String id;
 
-    @OneToMany(fetch = FetchType.EAGER)
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn
     private List<Leg> legs; // the way to destination
 

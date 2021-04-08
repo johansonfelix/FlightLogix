@@ -12,19 +12,19 @@ public class Flight {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private String flightID;
 
+
     public enum FLIGHT_TYPE{
         ONE_WAY,
         ROUND_TRIP
     }
 
+    @Enumerated(EnumType.STRING)
     private FLIGHT_TYPE flightType;
 
-    @OneToOne(fetch = FetchType.EAGER)
-    @JoinColumn
+    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private Itinerary itinerary;
 
-    @OneToOne(fetch = FetchType.EAGER)
-    @JoinColumn
+    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private Price price;
 
     public Flight(){ }

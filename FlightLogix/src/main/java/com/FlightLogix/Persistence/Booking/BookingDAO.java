@@ -15,8 +15,8 @@ public class BookingDAO {
     private EntityManager em;
 
     public void createBooking(Booking booking) {
-        em.persist(booking.getPayment());
-        em.persist(booking.getFlight());
+        /*em.persist(booking.getPayment());*/
+
         em.persist(booking);
     }
 
@@ -33,6 +33,11 @@ public class BookingDAO {
     }
 
     public List<Booking> findAllBookings() {
-        return em.createNamedQuery("Booking.findAll", Booking.class).getResultList();
+        return em.createQuery("SELECT e from Booking e", Booking.class).getResultList();
+
+    }
+
+    public List<Booking> findAllCustomerBookings(String email) {
+        return em.createQuery("SELECT e from Booking e WHERE e.user.email=:email", Booking.class).setParameter("email", email).setMaxResults(1).getResultList();
     }
 }

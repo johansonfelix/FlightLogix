@@ -17,16 +17,14 @@ public class Booking {
     @Id
     private String bookingID;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @OneToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     @JoinColumn
     private User user;
 
-    @OneToOne(fetch = FetchType.EAGER)
-    @JoinColumn
+    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private Payment payment;
 
-    @OneToOne(fetch = FetchType.EAGER)
-    @JoinColumn
+    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private Flight flight;
 
     public Booking(User user, Payment payment, Flight flight) {
@@ -51,6 +49,15 @@ public class Booking {
     public void setId(String id) {
         this.bookingID = id;
     }
+
+    public String getBookingID() {
+        return bookingID;
+    }
+
+    public void setBookingID(String bookingID) {
+        this.bookingID = bookingID;
+    }
+
 
     public User getUser() {
         return user;

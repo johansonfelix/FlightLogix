@@ -10,12 +10,10 @@ public class Itinerary {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private String id;
 
-    @OneToOne(fetch = FetchType.EAGER)
-    @JoinColumn
+    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private Segment outbound; // To dest
 
-    @OneToOne(fetch = FetchType.EAGER)
-    @JoinColumn
+    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private Segment inbound; // Back to origin
 
     public Itinerary(Segment outbound, Segment inbound){
