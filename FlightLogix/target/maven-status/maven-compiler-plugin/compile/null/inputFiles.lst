@@ -8,6 +8,7 @@
 /Users/kor/IdeaProjects/FlightLogix/FlightLogix/src/main/java/com/FlightLogix/Core/Security/TokenDetails.java
 /Users/kor/IdeaProjects/FlightLogix/FlightLogix/src/main/java/com/FlightLogix/Persistence/Logs/UserLogsDAO.java
 /Users/kor/IdeaProjects/FlightLogix/FlightLogix/src/main/java/com/FlightLogix/Repository/Exceptions/AuthenticationException.java
+/Users/kor/IdeaProjects/FlightLogix/FlightLogix/src/main/java/com/FlightLogix/Core/Booking/FlightData.java
 /Users/kor/IdeaProjects/FlightLogix/FlightLogix/src/main/java/com/FlightLogix/Repository/Utils/ResponseCode.java
 /Users/kor/IdeaProjects/FlightLogix/FlightLogix/src/main/java/com/FlightLogix/Core/Flight/Location.java
 /Users/kor/IdeaProjects/FlightLogix/FlightLogix/src/main/java/com/FlightLogix/Service/filters/VerificationFilter.java
