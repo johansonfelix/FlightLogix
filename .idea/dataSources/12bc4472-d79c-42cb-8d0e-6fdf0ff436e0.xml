@@ -922,28 +922,28 @@ SELECT|sys.sys_config
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="295" parent="283" name="USER_userID">
+    <column id="295" parent="283" name="FLIGHT_FLIGHTID">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="296" parent="283" name="FLIGHT_FLIGHTID">
+    <column id="296" parent="283" name="PAYMENT_ID">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="297" parent="283" name="PAYMENT_ID">
+    <column id="297" parent="283" name="USER_userID">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <index id="298" parent="283" name="FK_booking_USER_userID">
-      <ColNames>USER_userID</ColNames>
-      <Type>btree</Type>
-    </index>
-    <index id="299" parent="283" name="FK_booking_FLIGHT_FLIGHTID">
+    <index id="298" parent="283" name="FK_booking_FLIGHT_FLIGHTID">
       <ColNames>FLIGHT_FLIGHTID</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="300" parent="283" name="FK_booking_PAYMENT_ID">
+    <index id="299" parent="283" name="FK_booking_PAYMENT_ID">
       <ColNames>PAYMENT_ID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="300" parent="283" name="FK_booking_USER_userID">
+      <ColNames>USER_userID</ColNames>
       <Type>btree</Type>
     </index>
     <key id="301" parent="283" name="PRIMARY">
@@ -951,20 +951,20 @@ SELECT|sys.sys_config
       <ColNames>BOOKINGID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="302" parent="283" name="FK_booking_USER_userID">
-      <ColNames>USER_userID</ColNames>
-      <RefTableName>user</RefTableName>
-      <RefColNames>userID</RefColNames>
-    </foreign-key>
-    <foreign-key id="303" parent="283" name="FK_booking_FLIGHT_FLIGHTID">
+    <foreign-key id="302" parent="283" name="FK_booking_FLIGHT_FLIGHTID">
       <ColNames>FLIGHT_FLIGHTID</ColNames>
       <RefTableName>flight</RefTableName>
       <RefColNames>FLIGHTID</RefColNames>
     </foreign-key>
-    <foreign-key id="304" parent="283" name="FK_booking_PAYMENT_ID">
+    <foreign-key id="303" parent="283" name="FK_booking_PAYMENT_ID">
       <ColNames>PAYMENT_ID</ColNames>
       <RefTableName>price</RefTableName>
       <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="304" parent="283" name="FK_booking_USER_userID">
+      <ColNames>USER_userID</ColNames>
+      <RefTableName>user</RefTableName>
+      <RefColNames>userID</RefColNames>
     </foreign-key>
     <column id="305" parent="284" name="OPERATION">
       <Position>1</Position>
@@ -1009,7 +1009,7 @@ SELECT|sys.sys_config
     </column>
     <column id="314" parent="285" name="FLIGHTTYPE">
       <Position>2</Position>
-      <DataType>int|0s</DataType>
+      <DataType>varchar(255)|0s</DataType>
     </column>
     <column id="315" parent="285" name="ITINERARY_ID">
       <Position>3</Position>
@@ -1083,179 +1083,183 @@ SELECT|sys.sys_config
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="331" parent="287" name="FROM_ID">
+    <column id="331" parent="287" name="CARRIERCODE">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="332" parent="287" name="TO_ID">
+    <column id="332" parent="287" name="FROM_ID">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="333" parent="287" name="LEGS_ID">
+    <column id="333" parent="287" name="TO_ID">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <index id="334" parent="287" name="FK_LEG_FROM_ID">
+    <column id="334" parent="287" name="LEGS_ID">
+      <Position>5</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <index id="335" parent="287" name="FK_LEG_FROM_ID">
       <ColNames>FROM_ID</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="335" parent="287" name="FK_LEG_TO_ID">
+    <index id="336" parent="287" name="FK_LEG_TO_ID">
       <ColNames>TO_ID</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="336" parent="287" name="FK_LEG_LEGS_ID">
+    <index id="337" parent="287" name="FK_LEG_LEGS_ID">
       <ColNames>LEGS_ID</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="337" parent="287" name="PRIMARY">
+    <key id="338" parent="287" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="338" parent="287" name="FK_LEG_FROM_ID">
+    <foreign-key id="339" parent="287" name="FK_LEG_FROM_ID">
       <ColNames>FROM_ID</ColNames>
       <RefTableName>location</RefTableName>
       <RefColNames>ID</RefColNames>
     </foreign-key>
-    <foreign-key id="339" parent="287" name="FK_LEG_TO_ID">
+    <foreign-key id="340" parent="287" name="FK_LEG_TO_ID">
       <ColNames>TO_ID</ColNames>
       <RefTableName>location</RefTableName>
       <RefColNames>ID</RefColNames>
     </foreign-key>
-    <foreign-key id="340" parent="287" name="FK_LEG_LEGS_ID">
+    <foreign-key id="341" parent="287" name="FK_LEG_LEGS_ID">
       <ColNames>LEGS_ID</ColNames>
       <RefTableName>segment</RefTableName>
       <RefColNames>ID</RefColNames>
     </foreign-key>
-    <column id="341" parent="288" name="ID">
+    <column id="342" parent="288" name="ID">
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="342" parent="288" name="IATACODE">
+    <column id="343" parent="288" name="IATACODE">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="343" parent="288" name="TERMINAL">
+    <column id="344" parent="288" name="TERMINAL">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="344" parent="288" name="TIME">
+    <column id="345" parent="288" name="TIME">
       <Position>4</Position>
       <DataType>datetime|0s</DataType>
     </column>
-    <key id="345" parent="288" name="PRIMARY">
+    <key id="346" parent="288" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="346" parent="289" name="ID">
+    <column id="347" parent="289" name="ID">
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="347" parent="289" name="DTYPE">
+    <column id="348" parent="289" name="DTYPE">
       <Position>2</Position>
       <DataType>varchar(31)|0s</DataType>
     </column>
-    <column id="348" parent="289" name="BASE">
+    <column id="349" parent="289" name="BASE">
       <Position>3</Position>
       <DataType>double|0s</DataType>
     </column>
-    <column id="349" parent="289" name="CURRENCY">
+    <column id="350" parent="289" name="CURRENCY">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="350" parent="289" name="TOTAL">
+    <column id="351" parent="289" name="TOTAL">
       <Position>5</Position>
       <DataType>double|0s</DataType>
     </column>
-    <column id="351" parent="289" name="PAYMENTDATE">
+    <column id="352" parent="289" name="PAYMENTDATE">
       <Position>6</Position>
       <DataType>date|0s</DataType>
     </column>
-    <column id="352" parent="289" name="PAYMENTMETHOD">
+    <column id="353" parent="289" name="PAYMENTMETHOD">
       <Position>7</Position>
       <DataType>int|0s</DataType>
     </column>
-    <key id="353" parent="289" name="PRIMARY">
+    <key id="354" parent="289" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="354" parent="290" name="ID">
+    <column id="355" parent="290" name="ID">
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="355" parent="290" name="PRIMARY">
+    <key id="356" parent="290" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="356" parent="291" name="SEQ_NAME">
+    <column id="357" parent="291" name="SEQ_NAME">
       <Position>1</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="357" parent="291" name="SEQ_COUNT">
+    <column id="358" parent="291" name="SEQ_COUNT">
       <Position>2</Position>
       <DataType>decimal(38)|0s</DataType>
     </column>
-    <key id="358" parent="291" name="PRIMARY">
+    <key id="359" parent="291" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>SEQ_NAME</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="359" parent="292" name="userID">
+    <column id="360" parent="292" name="userID">
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="360" parent="292" name="email">
+    <column id="361" parent="292" name="email">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="361" parent="292" name="firstName">
+    <column id="362" parent="292" name="firstName">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="362" parent="292" name="hashedPassword">
+    <column id="363" parent="292" name="hashedPassword">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="363" parent="292" name="lastName">
+    <column id="364" parent="292" name="lastName">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="364" parent="292" name="role">
+    <column id="365" parent="292" name="role">
       <Position>6</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <key id="365" parent="292" name="PRIMARY">
+    <key id="366" parent="292" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>userID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="366" parent="293" name="OPERATION">
+    <column id="367" parent="293" name="OPERATION">
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="367" parent="293" name="TIMESTAMP">
+    <column id="368" parent="293" name="TIMESTAMP">
       <Position>2</Position>
       <DataType>datetime|0s</DataType>
     </column>
-    <column id="368" parent="293" name="userID">
+    <column id="369" parent="293" name="userID">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="369" parent="293" name="PRIMARY">
+    <key id="370" parent="293" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>userID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="370" parent="293" name="FK_USERLOGS_userID">
+    <foreign-key id="371" parent="293" name="FK_USERLOGS_userID">
       <ColNames>userID</ColNames>
       <RefTableName>user</RefTableName>
       <RefColNames>userID</RefColNames>
