@@ -2,10 +2,7 @@ package com.FlightLogix.Core.Booking;
 
 import com.FlightLogix.Core.Flight.Price;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Date;
 
 
@@ -20,11 +17,12 @@ public class Payment extends Price {
 
     }
 
+
     public enum PAYMENT_METHOD{
         PAYPAL
     }
-
     private Date paymentDate;
+    @Enumerated(EnumType.STRING)
     private PAYMENT_METHOD paymentMethod;
 
     public Payment(Price price, Date paymentDate, PAYMENT_METHOD paymentMethod) {

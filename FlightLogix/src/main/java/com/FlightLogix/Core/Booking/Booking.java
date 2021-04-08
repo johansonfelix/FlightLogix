@@ -17,8 +17,8 @@ public class Booking {
     @Id
     private String bookingID;
 
-    @OneToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
-    @JoinColumn
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn()
     private User user;
 
     @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
@@ -57,7 +57,6 @@ public class Booking {
     public void setBookingID(String bookingID) {
         this.bookingID = bookingID;
     }
-
 
     public User getUser() {
         return user;

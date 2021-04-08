@@ -24,7 +24,7 @@ public class UsernamePasswordValidator {
            throw new AuthenticationException(ResponseCode.INVALID_CREDENTIALS.toString());
         }
 
-        //invalid password
+
         if(!Helpers.checkPassword(password, user.getHashedPassword())){
            throw new AuthenticationException(ResponseCode.INVALID_CREDENTIALS.toString());
         }

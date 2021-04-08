@@ -80,18 +80,17 @@ public class BookingResource {
     @RolesAllowed({"CUSTOMER"})
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getAllCustomerBookings(Booking booking) {
-        bookingManager.modifyBooking(booking.getId(), booking);
+    public Response modify(Booking booking) {
+        bookingManager.modifyBooking(booking);
         return Response.ok(Response.Status.OK).build();
     }
 
     @Transactional
     @DELETE
-    @Path("cancel")
+    @Path("cancel/{bookingID}")
     @RolesAllowed({"CUSTOMER"})
-    @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response cancelBooking(String bookingID) {
+    public Response cancelBooking(@PathParam("bookingID") String bookingID) {
         bookingManager.deleteBooking(bookingID);
         return Response.status(Response.Status.OK).build();
     }

@@ -12,7 +12,6 @@ import java.util.List;
 
 @ApplicationScoped
 public class BookingManager {
-/*    private static BookingManager bookingManager = new BookingManager();*/
 
     @Inject
     BookingDAO bookingDAO;
@@ -22,15 +21,7 @@ public class BookingManager {
         SUCCESS,
         BOOKING_DOES_NOT_EXIST
     }
-  /*  private BookingManager(){
 
-    }*/
-
-
-    /*public static BookingManager getInstance(){
-        return bookingManager;
-    }
-*/
     public String createBooking(Booking booking){
         User user = userDAO.findUserByEmail(booking.getUser().getEmail());
         booking.setUser(user);
@@ -38,6 +29,7 @@ public class BookingManager {
         return ResponseCode.SUCCESS.toString();
     }
     public String deleteBooking(String bookingId){
+
         Booking bookingToDelete = bookingDAO.findBooking(bookingId);
         if(bookingToDelete == null){
             throw new RuntimeException(ResponseCode.BOOKING_DOES_NOT_EXIST.toString());
@@ -45,7 +37,7 @@ public class BookingManager {
         bookingDAO.deleteBooking(bookingToDelete);
         return ResponseCode.SUCCESS.toString();
     }
-    public String modifyBooking(String bookingId, Booking newBooking){
+    public String modifyBooking(Booking newBooking){
         bookingDAO.updateBooking(newBooking);
         return ResponseCode.SUCCESS.toString();
     }

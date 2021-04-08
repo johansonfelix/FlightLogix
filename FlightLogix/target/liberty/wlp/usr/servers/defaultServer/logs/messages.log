@@ -80,3 +80,1298 @@ process = 29944@Andrews-MBP
 [07/04/21 22:02:53:586 EDT] 00000107 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application FlightLogix has stopped successfully.
 [07/04/21 22:02:53:649 EDT] 0000010a com.ibm.tx.jta.impl.FailureScopeController                   A WTRN0105I: The transaction service has shutdown successfully with no transactions requiring recovery.
 [07/04/21 22:02:54:028 EDT] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0036I: The server defaultServer stopped after 2 hours, 2 minutes, 14.231 seconds.
+[4/7/21 22:16:21:876 EDT] 000005d5 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://johanson:8080/
+[4/7/21 22:16:21:880 EDT] 000005d5 com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [FlightLogix] [/] [com.FlightLogix.Service.FlightLogixApplicatioon]: Destroy successful.
+[4/7/21 22:16:21:894 EDT] 000005d5 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application FlightLogix has stopped successfully.
+[4/7/21 22:16:21:910 EDT] 000005d5 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application FlightLogix.
+[4/7/21 22:16:21:911 EDT] 000005d5 bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The FlightLogix application is using the loose application definition at the C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\apps\FlightLogix.war.xml location.
+[4/7/21 22:16:23:079 EDT] 000005d3 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:16:24:168 EDT] 000005d5 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Liberty Project.
+[4/7/21 22:16:24:168 EDT] 000005d5 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Liberty Project has been bound to default_host.
+[4/7/21 22:16:24:168 EDT] 000005d5 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://johanson:8080/
+[4/7/21 22:16:24:175 EDT] 00000530 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/
+[4/7/21 22:16:24:176 EDT] 00000530 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[4/7/21 22:16:24:181 EDT] 00000530 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application FlightLogix updated in 2.271 seconds.
+[4/7/21 22:16:25:245 EDT] 000005d5 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:16:36:510 EDT] 000005d2 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://johanson:8080/
+[4/7/21 22:16:36:522 EDT] 000005d2 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application FlightLogix has stopped successfully.
+[4/7/21 22:16:36:538 EDT] 000005d2 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application FlightLogix.
+[4/7/21 22:16:36:539 EDT] 000005d2 bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The FlightLogix application is using the loose application definition at the C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\apps\FlightLogix.war.xml location.
+[4/7/21 22:16:37:736 EDT] 00000529 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:16:38:834 EDT] 000005d2 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Liberty Project.
+[4/7/21 22:16:38:834 EDT] 000005d2 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Liberty Project has been bound to default_host.
+[4/7/21 22:16:38:834 EDT] 000005d2 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://johanson:8080/
+[4/7/21 22:16:38:836 EDT] 000005d5 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/
+[4/7/21 22:16:38:837 EDT] 000005d5 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[4/7/21 22:16:38:842 EDT] 000005d5 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application FlightLogix updated in 2.304 seconds.
+[4/7/21 22:16:39:690 EDT] 000004b6 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:17:44:682 EDT] 000005df .jaxrs20.cdi.component.JaxRsFactoryImplicitBeanCDICustomizer W CWWKW1002W: The CDI scope of JAXRS Provider AuthenticationFilter is javax.enterprise.context.Dependent. Liberty gets the provider instance from CDI.
+[4/7/21 22:17:44:683 EDT] 000005df .jaxrs20.cdi.component.JaxRsFactoryImplicitBeanCDICustomizer W CWWKW1002W: The CDI scope of JAXRS Provider AuthorizationFilter is javax.enterprise.context.Dependent. Liberty gets the provider instance from CDI.
+[4/7/21 22:17:44:687 EDT] 000005df .apache.cxf.cxf.core.3.2:1.0.50.cl210320210309-1101(id=139)] I Setting the server's publish address to be /app/
+[4/7/21 22:17:44:695 EDT] 000005df com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [FlightLogix] [/] [com.FlightLogix.Service.FlightLogixApplicatioon]: Initialization successful.
+[4/7/21 22:17:45:852 EDT] 000005df eclipselink                                                  I CWWJP9990I: [eclipselink] EclipseLink, version: Eclipse Persistence Services - 2.7.8.v20201217-ecdf3c32c4
+[4/7/21 22:17:46:947 EDT] 000005df SystemOut                                                    O TOKEN->dq1EhEbGGI2aQt0iYSZUtsmpKGg7
+[4/7/21 22:17:47:022 EDT] 000005df eclipselink                                                  W CWWJP9991W: Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.7.8.v20201217-ecdf3c32c4): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: Unknown column 't1.email' in 'field list'
+Error Code: 1054
+Call: SELECT t1.BOOKINGID AS a1, t1.FLIGHT_FLIGHTID AS a2, t1.PAYMENT_ID AS a3, t1.email AS a4 FROM user t0, booking t1 WHERE ((t0.email = ?) AND (t0.userID = t1.email)) LIMIT ?, ?
+	bind => [3 parameters bound]
+Query: ReadAllQuery(referenceClass=Booking sql="SELECT t1.BOOKINGID AS a1, t1.FLIGHT_FLIGHTID AS a2, t1.PAYMENT_ID AS a3, t1.email AS a4 FROM user t0, booking t1 WHERE ((t0.email = ?) AND (t0.userID = t1.email)) LIMIT ?, ?")
+[4/7/21 22:20:06:431 EDT] 000005d3 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://johanson:8080/
+[4/7/21 22:20:06:433 EDT] 000005d3 com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [FlightLogix] [/] [com.FlightLogix.Service.FlightLogixApplicatioon]: Destroy successful.
+[4/7/21 22:20:06:444 EDT] 000005d3 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application FlightLogix has stopped successfully.
+[4/7/21 22:20:06:455 EDT] 000005d3 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application FlightLogix.
+[4/7/21 22:20:06:456 EDT] 000005d3 bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The FlightLogix application is using the loose application definition at the C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\apps\FlightLogix.war.xml location.
+[4/7/21 22:20:07:336 EDT] 00000611 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:20:08:552 EDT] 000005d3 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Liberty Project.
+[4/7/21 22:20:08:552 EDT] 000005d3 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Liberty Project has been bound to default_host.
+[4/7/21 22:20:08:552 EDT] 000005d3 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://johanson:8080/
+[4/7/21 22:20:08:555 EDT] 000005fe com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/
+[4/7/21 22:20:08:556 EDT] 000005fe com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[4/7/21 22:20:08:560 EDT] 000005fe com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application FlightLogix updated in 2.105 seconds.
+[4/7/21 22:20:09:309 EDT] 000005df com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:20:38:733 EDT] 000005ea com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://johanson:8080/
+[4/7/21 22:20:38:744 EDT] 000005ea com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application FlightLogix has stopped successfully.
+[4/7/21 22:20:38:760 EDT] 000005ea com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application FlightLogix.
+[4/7/21 22:20:38:761 EDT] 000005ea bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The FlightLogix application is using the loose application definition at the C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\apps\FlightLogix.war.xml location.
+[4/7/21 22:20:39:578 EDT] 0000060c com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:20:40:833 EDT] 000005ea com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Liberty Project.
+[4/7/21 22:20:40:833 EDT] 000005ea com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Liberty Project has been bound to default_host.
+[4/7/21 22:20:40:833 EDT] 000005ea com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://johanson:8080/
+[4/7/21 22:20:40:836 EDT] 000005d3 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/
+[4/7/21 22:20:40:837 EDT] 000005d3 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[4/7/21 22:20:40:842 EDT] 000005d3 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application FlightLogix updated in 2.081 seconds.
+[4/7/21 22:20:41:643 EDT] 000004b6 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:20:46:553 EDT] 0000061a .jaxrs20.cdi.component.JaxRsFactoryImplicitBeanCDICustomizer W CWWKW1002W: The CDI scope of JAXRS Provider AuthorizationFilter is javax.enterprise.context.Dependent. Liberty gets the provider instance from CDI.
+[4/7/21 22:20:46:554 EDT] 0000061a .jaxrs20.cdi.component.JaxRsFactoryImplicitBeanCDICustomizer W CWWKW1002W: The CDI scope of JAXRS Provider AuthenticationFilter is javax.enterprise.context.Dependent. Liberty gets the provider instance from CDI.
+[4/7/21 22:20:46:561 EDT] 0000061a .apache.cxf.cxf.core.3.2:1.0.50.cl210320210309-1101(id=139)] I Setting the server's publish address to be /app/
+[4/7/21 22:20:46:570 EDT] 0000061a com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [FlightLogix] [/] [com.FlightLogix.Service.FlightLogixApplicatioon]: Initialization successful.
+[4/7/21 22:20:48:005 EDT] 0000061a eclipselink                                                  I CWWJP9990I: [eclipselink] EclipseLink, version: Eclipse Persistence Services - 2.7.8.v20201217-ecdf3c32c4
+[4/7/21 22:20:49:000 EDT] 0000061a SystemOut                                                    O TOKEN->NrTPrqcd96sC9wAy4GTJ2n1Yq35i
+[4/7/21 22:20:49:017 EDT] 0000061a eclipselink                                                  W CWWJP9991W: Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.7.8.v20201217-ecdf3c32c4): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: Unknown column 'email' in 'field list'
+Error Code: 1054
+Call: SELECT BOOKINGID AS a1, FLIGHT_FLIGHTID AS a2, PAYMENT_ID AS a3, email AS a4 FROM booking WHERE (email = ?) LIMIT ?, ?
+	bind => [3 parameters bound]
+Query: ReadAllQuery(referenceClass=Booking sql="SELECT BOOKINGID AS a1, FLIGHT_FLIGHTID AS a2, PAYMENT_ID AS a3, email AS a4 FROM booking WHERE (email = ?) LIMIT ?, ?")
+[4/7/21 22:21:14:197 EDT] 00000619 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://johanson:8080/
+[4/7/21 22:21:14:200 EDT] 00000619 com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [FlightLogix] [/] [com.FlightLogix.Service.FlightLogixApplicatioon]: Destroy successful.
+[4/7/21 22:21:14:210 EDT] 00000619 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application FlightLogix has stopped successfully.
+[4/7/21 22:21:14:227 EDT] 00000619 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application FlightLogix.
+[4/7/21 22:21:14:228 EDT] 00000619 bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The FlightLogix application is using the loose application definition at the C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\apps\FlightLogix.war.xml location.
+[4/7/21 22:21:14:995 EDT] 0000060c com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:21:16:462 EDT] 00000619 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Liberty Project.
+[4/7/21 22:21:16:463 EDT] 00000619 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Liberty Project has been bound to default_host.
+[4/7/21 22:21:16:463 EDT] 00000619 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://johanson:8080/
+[4/7/21 22:21:16:468 EDT] 000005df com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/
+[4/7/21 22:21:16:469 EDT] 000005df com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[4/7/21 22:21:16:478 EDT] 000005df com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application FlightLogix updated in 2.251 seconds.
+[4/7/21 22:21:17:609 EDT] 00000619 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:21:19:590 EDT] 000005f4 .jaxrs20.cdi.component.JaxRsFactoryImplicitBeanCDICustomizer W CWWKW1002W: The CDI scope of JAXRS Provider AuthorizationFilter is javax.enterprise.context.Dependent. Liberty gets the provider instance from CDI.
+[4/7/21 22:21:19:591 EDT] 000005f4 .jaxrs20.cdi.component.JaxRsFactoryImplicitBeanCDICustomizer W CWWKW1002W: The CDI scope of JAXRS Provider AuthenticationFilter is javax.enterprise.context.Dependent. Liberty gets the provider instance from CDI.
+[4/7/21 22:21:19:597 EDT] 000005f4 .apache.cxf.cxf.core.3.2:1.0.50.cl210320210309-1101(id=139)] I Setting the server's publish address to be /app/
+[4/7/21 22:21:19:604 EDT] 000005f4 com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [FlightLogix] [/] [com.FlightLogix.Service.FlightLogixApplicatioon]: Initialization successful.
+[4/7/21 22:21:20:541 EDT] 000005f4 eclipselink                                                  I CWWJP9990I: [eclipselink] EclipseLink, version: Eclipse Persistence Services - 2.7.8.v20201217-ecdf3c32c4
+[4/7/21 22:21:21:439 EDT] 000005f4 SystemOut                                                    O TOKEN->mlTt475SZ2ovJWLvXQMkMyJURwPJ
+[4/7/21 22:21:21:456 EDT] 000005f4 eclipselink                                                  W CWWJP9991W: Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.7.8.v20201217-ecdf3c32c4): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: Unknown column 't1.userID' in 'field list'
+Error Code: 1054
+Call: SELECT t1.BOOKINGID AS a1, t1.FLIGHT_FLIGHTID AS a2, t1.PAYMENT_ID AS a3, t1.userID AS a4 FROM user t0, booking t1 WHERE ((t0.email = ?) AND (t0.userID = t1.userID)) LIMIT ?, ?
+	bind => [3 parameters bound]
+Query: ReadAllQuery(referenceClass=Booking sql="SELECT t1.BOOKINGID AS a1, t1.FLIGHT_FLIGHTID AS a2, t1.PAYMENT_ID AS a3, t1.userID AS a4 FROM user t0, booking t1 WHERE ((t0.email = ?) AND (t0.userID = t1.userID)) LIMIT ?, ?")
+[4/7/21 22:21:45:022 EDT] 000005f4 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://johanson:8080/
+[4/7/21 22:21:45:023 EDT] 000005f4 com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [FlightLogix] [/] [com.FlightLogix.Service.FlightLogixApplicatioon]: Destroy successful.
+[4/7/21 22:21:45:035 EDT] 000005f4 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application FlightLogix has stopped successfully.
+[4/7/21 22:21:45:050 EDT] 000005f4 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application FlightLogix.
+[4/7/21 22:21:45:050 EDT] 000005f4 bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The FlightLogix application is using the loose application definition at the C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\apps\FlightLogix.war.xml location.
+[4/7/21 22:21:45:965 EDT] 000005f5 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:21:47:172 EDT] 000005f4 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Liberty Project.
+[4/7/21 22:21:47:172 EDT] 000005f4 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Liberty Project has been bound to default_host.
+[4/7/21 22:21:47:172 EDT] 000005f4 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://johanson:8080/
+[4/7/21 22:21:47:175 EDT] 000005d3 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/
+[4/7/21 22:21:47:175 EDT] 000005d3 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[4/7/21 22:21:47:180 EDT] 000005d3 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application FlightLogix updated in 2.129 seconds.
+[4/7/21 22:21:47:896 EDT] 000005fc com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:21:50:646 EDT] 000005df .jaxrs20.cdi.component.JaxRsFactoryImplicitBeanCDICustomizer W CWWKW1002W: The CDI scope of JAXRS Provider AuthorizationFilter is javax.enterprise.context.Dependent. Liberty gets the provider instance from CDI.
+[4/7/21 22:21:50:647 EDT] 000005df .jaxrs20.cdi.component.JaxRsFactoryImplicitBeanCDICustomizer W CWWKW1002W: The CDI scope of JAXRS Provider AuthenticationFilter is javax.enterprise.context.Dependent. Liberty gets the provider instance from CDI.
+[4/7/21 22:21:50:649 EDT] 000005df .apache.cxf.cxf.core.3.2:1.0.50.cl210320210309-1101(id=139)] I Setting the server's publish address to be /app/
+[4/7/21 22:21:50:657 EDT] 000005df com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [FlightLogix] [/] [com.FlightLogix.Service.FlightLogixApplicatioon]: Initialization successful.
+[4/7/21 22:21:51:444 EDT] 000005df eclipselink                                                  I CWWJP9990I: [eclipselink] EclipseLink, version: Eclipse Persistence Services - 2.7.8.v20201217-ecdf3c32c4
+[4/7/21 22:21:52:329 EDT] 000005df SystemOut                                                    O TOKEN->Rd8frKyp9KpAphzEyO7vvjsOHcn9
+[4/7/21 22:23:42:008 EDT] 0000063b com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://johanson:8080/
+[4/7/21 22:23:42:010 EDT] 0000063b com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [FlightLogix] [/] [com.FlightLogix.Service.FlightLogixApplicatioon]: Destroy successful.
+[4/7/21 22:23:42:022 EDT] 0000063b com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application FlightLogix has stopped successfully.
+[4/7/21 22:23:42:032 EDT] 0000063b com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application FlightLogix.
+[4/7/21 22:23:42:032 EDT] 0000063b bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The FlightLogix application is using the loose application definition at the C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\apps\FlightLogix.war.xml location.
+[4/7/21 22:23:42:694 EDT] 0000063d com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:23:43:625 EDT] 0000063b com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Liberty Project.
+[4/7/21 22:23:43:625 EDT] 0000063b com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Liberty Project has been bound to default_host.
+[4/7/21 22:23:43:625 EDT] 0000063b com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://johanson:8080/
+[4/7/21 22:23:43:628 EDT] 0000063e com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/
+[4/7/21 22:23:43:628 EDT] 0000063e com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[4/7/21 22:23:43:633 EDT] 0000063e com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application FlightLogix updated in 1.601 seconds.
+[4/7/21 22:23:44:300 EDT] 0000063d com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:23:52:608 EDT] 0000063d com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://johanson:8080/
+[4/7/21 22:23:52:654 EDT] 0000063d com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application FlightLogix has stopped successfully.
+[4/7/21 22:23:52:688 EDT] 0000063d com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application FlightLogix.
+[4/7/21 22:23:52:689 EDT] 0000063d bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The FlightLogix application is using the loose application definition at the C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\apps\FlightLogix.war.xml location.
+[4/7/21 22:23:53:842 EDT] 00000600 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:23:55:523 EDT] 0000063d com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Liberty Project.
+[4/7/21 22:23:55:523 EDT] 0000063d com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Liberty Project has been bound to default_host.
+[4/7/21 22:23:55:523 EDT] 0000063d com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://johanson:8080/
+[4/7/21 22:23:55:526 EDT] 000005ea com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/
+[4/7/21 22:23:55:526 EDT] 000005ea com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[4/7/21 22:23:55:530 EDT] 000005ea com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application FlightLogix updated in 2.842 seconds.
+[4/7/21 22:23:56:343 EDT] 0000063d com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:24:14:288 EDT] 00000633 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://johanson:8080/
+[4/7/21 22:24:14:298 EDT] 00000633 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application FlightLogix has stopped successfully.
+[4/7/21 22:24:14:310 EDT] 00000633 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application FlightLogix.
+[4/7/21 22:24:14:310 EDT] 00000633 bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The FlightLogix application is using the loose application definition at the C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\apps\FlightLogix.war.xml location.
+[4/7/21 22:24:15:326 EDT] 0000060c com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:24:16:006 EDT] 00000633 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Liberty Project.
+[4/7/21 22:24:16:007 EDT] 00000633 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Liberty Project has been bound to default_host.
+[4/7/21 22:24:16:007 EDT] 00000633 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://johanson:8080/
+[4/7/21 22:24:16:009 EDT] 000005f5 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/
+[4/7/21 22:24:16:009 EDT] 000005f5 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[4/7/21 22:24:16:014 EDT] 000005f5 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application FlightLogix updated in 1.704 seconds.
+[4/7/21 22:24:16:660 EDT] 00000645 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:24:21:820 EDT] 00000646 .jaxrs20.cdi.component.JaxRsFactoryImplicitBeanCDICustomizer W CWWKW1002W: The CDI scope of JAXRS Provider AuthenticationFilter is javax.enterprise.context.Dependent. Liberty gets the provider instance from CDI.
+[4/7/21 22:24:21:821 EDT] 00000646 .jaxrs20.cdi.component.JaxRsFactoryImplicitBeanCDICustomizer W CWWKW1002W: The CDI scope of JAXRS Provider AuthorizationFilter is javax.enterprise.context.Dependent. Liberty gets the provider instance from CDI.
+[4/7/21 22:24:21:824 EDT] 00000646 .apache.cxf.cxf.core.3.2:1.0.50.cl210320210309-1101(id=139)] I Setting the server's publish address to be /app/
+[4/7/21 22:24:21:828 EDT] 00000646 com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [FlightLogix] [/] [com.FlightLogix.Service.FlightLogixApplicatioon]: Initialization successful.
+[4/7/21 22:24:22:563 EDT] 00000646 eclipselink                                                  I CWWJP9990I: [eclipselink] EclipseLink, version: Eclipse Persistence Services - 2.7.8.v20201217-ecdf3c32c4
+[4/7/21 22:24:23:548 EDT] 00000646 SystemOut                                                    O TOKEN->aYHcibaECVWnYlHfM7kvKSrfPOTs
+[4/7/21 22:24:46:796 EDT] 00000628 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://johanson:8080/
+[4/7/21 22:24:46:798 EDT] 00000628 com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [FlightLogix] [/] [com.FlightLogix.Service.FlightLogixApplicatioon]: Destroy successful.
+[4/7/21 22:24:46:807 EDT] 00000628 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application FlightLogix has stopped successfully.
+[4/7/21 22:24:46:816 EDT] 00000628 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application FlightLogix.
+[4/7/21 22:24:46:816 EDT] 00000628 bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The FlightLogix application is using the loose application definition at the C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\apps\FlightLogix.war.xml location.
+[4/7/21 22:24:47:536 EDT] 00000633 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:24:48:509 EDT] 00000628 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Liberty Project.
+[4/7/21 22:24:48:510 EDT] 00000628 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Liberty Project has been bound to default_host.
+[4/7/21 22:24:48:510 EDT] 00000628 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://johanson:8080/
+[4/7/21 22:24:48:512 EDT] 00000640 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/
+[4/7/21 22:24:48:513 EDT] 00000640 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[4/7/21 22:24:48:517 EDT] 00000640 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application FlightLogix updated in 1.701 seconds.
+[4/7/21 22:24:49:254 EDT] 00000649 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:27:09:727 EDT] 00000673 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://johanson:8080/
+[4/7/21 22:27:09:736 EDT] 00000673 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application FlightLogix has stopped successfully.
+[4/7/21 22:27:09:747 EDT] 00000673 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application FlightLogix.
+[4/7/21 22:27:09:747 EDT] 00000673 bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The FlightLogix application is using the loose application definition at the C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\apps\FlightLogix.war.xml location.
+[4/7/21 22:27:10:720 EDT] 0000066b com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:27:11:953 EDT] 00000673 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Liberty Project.
+[4/7/21 22:27:11:953 EDT] 00000673 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Liberty Project has been bound to default_host.
+[4/7/21 22:27:11:953 EDT] 00000673 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://johanson:8080/
+[4/7/21 22:27:11:957 EDT] 00000647 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/
+[4/7/21 22:27:11:957 EDT] 00000647 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[4/7/21 22:27:11:962 EDT] 00000647 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application FlightLogix updated in 2.215 seconds.
+[4/7/21 22:27:12:754 EDT] 000004ca com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:27:37:743 EDT] 00000600 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://johanson:8080/
+[4/7/21 22:27:37:773 EDT] 00000600 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application FlightLogix has stopped successfully.
+[4/7/21 22:27:37:795 EDT] 00000600 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application FlightLogix.
+[4/7/21 22:27:37:795 EDT] 00000600 bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The FlightLogix application is using the loose application definition at the C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\apps\FlightLogix.war.xml location.
+[4/7/21 22:27:39:052 EDT] 00000628 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:27:40:058 EDT] 00000600 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Liberty Project.
+[4/7/21 22:27:40:058 EDT] 00000600 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Liberty Project has been bound to default_host.
+[4/7/21 22:27:40:058 EDT] 00000600 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://johanson:8080/
+[4/7/21 22:27:40:061 EDT] 0000065e com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/
+[4/7/21 22:27:40:061 EDT] 0000065e com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[4/7/21 22:27:40:067 EDT] 0000065e com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application FlightLogix updated in 2.271 seconds.
+[4/7/21 22:27:40:804 EDT] 0000063a com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:27:45:780 EDT] 0000065c .jaxrs20.cdi.component.JaxRsFactoryImplicitBeanCDICustomizer W CWWKW1002W: The CDI scope of JAXRS Provider AuthorizationFilter is javax.enterprise.context.Dependent. Liberty gets the provider instance from CDI.
+[4/7/21 22:27:45:780 EDT] 0000065c .jaxrs20.cdi.component.JaxRsFactoryImplicitBeanCDICustomizer W CWWKW1002W: The CDI scope of JAXRS Provider AuthenticationFilter is javax.enterprise.context.Dependent. Liberty gets the provider instance from CDI.
+[4/7/21 22:27:45:784 EDT] 0000065c .apache.cxf.cxf.core.3.2:1.0.50.cl210320210309-1101(id=139)] I Setting the server's publish address to be /app/
+[4/7/21 22:27:45:793 EDT] 0000065c com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [FlightLogix] [/] [com.FlightLogix.Service.FlightLogixApplicatioon]: Initialization successful.
+[4/7/21 22:27:46:623 EDT] 0000065c eclipselink                                                  I CWWJP9990I: [eclipselink] EclipseLink, version: Eclipse Persistence Services - 2.7.8.v20201217-ecdf3c32c4
+[4/7/21 22:27:49:414 EDT] 0000065c SystemOut                                                    O TOKEN->U81lYSzwMWS2drZk4otKJAbLYeVS
+[4/7/21 22:28:43:752 EDT] 00000628 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://johanson:8080/
+[4/7/21 22:28:43:753 EDT] 00000628 com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [FlightLogix] [/] [com.FlightLogix.Service.FlightLogixApplicatioon]: Destroy successful.
+[4/7/21 22:28:43:762 EDT] 00000628 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application FlightLogix has stopped successfully.
+[4/7/21 22:28:43:772 EDT] 00000628 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application FlightLogix.
+[4/7/21 22:28:43:772 EDT] 00000628 bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The FlightLogix application is using the loose application definition at the C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\apps\FlightLogix.war.xml location.
+[4/7/21 22:28:44:637 EDT] 00000600 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:28:45:892 EDT] 00000628 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Liberty Project.
+[4/7/21 22:28:45:893 EDT] 00000628 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Liberty Project has been bound to default_host.
+[4/7/21 22:28:45:893 EDT] 00000628 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://johanson:8080/
+[4/7/21 22:28:45:895 EDT] 000004b6 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/
+[4/7/21 22:28:45:896 EDT] 000004b6 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[4/7/21 22:28:45:900 EDT] 000004b6 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application FlightLogix updated in 2.128 seconds.
+[4/7/21 22:28:46:617 EDT] 0000067a com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:28:54:096 EDT] 00000663 .jaxrs20.cdi.component.JaxRsFactoryImplicitBeanCDICustomizer W CWWKW1002W: The CDI scope of JAXRS Provider AuthenticationFilter is javax.enterprise.context.Dependent. Liberty gets the provider instance from CDI.
+[4/7/21 22:28:54:097 EDT] 00000663 .jaxrs20.cdi.component.JaxRsFactoryImplicitBeanCDICustomizer W CWWKW1002W: The CDI scope of JAXRS Provider AuthorizationFilter is javax.enterprise.context.Dependent. Liberty gets the provider instance from CDI.
+[4/7/21 22:28:54:101 EDT] 00000663 .apache.cxf.cxf.core.3.2:1.0.50.cl210320210309-1101(id=139)] I Setting the server's publish address to be /app/
+[4/7/21 22:28:54:106 EDT] 00000663 com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [FlightLogix] [/] [com.FlightLogix.Service.FlightLogixApplicatioon]: Initialization successful.
+[4/7/21 22:28:54:840 EDT] 00000663 eclipselink                                                  I CWWJP9990I: [eclipselink] EclipseLink, version: Eclipse Persistence Services - 2.7.8.v20201217-ecdf3c32c4
+[4/7/21 22:28:55:722 EDT] 00000663 SystemOut                                                    O TOKEN->OKQn4T5wIy6AiKGMTCgdG3GHWAfC
+[4/7/21 22:29:20:260 EDT] 00000628 eclipselink                                                  W CWWJP9991W: Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.7.8.v20201217-ecdf3c32c4): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: Table 'db1.segment' doesn't exist
+Error Code: 1146
+Call: INSERT INTO SEGMENT (ID) VALUES (?)
+	bind => [1 parameter bound]
+Query: InsertObjectQuery(com.FlightLogix.Core.Flight.Segment@4febdb9b)
+[4/7/21 22:29:20:261 EDT] 00000628 com.ibm.tx.jta.impl.RegisteredSyncs                          E WTRN0074E: Exception caught from before_completion synchronization operation: javax.persistence.PersistenceException: Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.7.8.v20201217-ecdf3c32c4): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: Table 'db1.segment' doesn't exist
+Error Code: 1146
+Call: INSERT INTO SEGMENT (ID) VALUES (?)
+	bind => [1 parameter bound]
+Query: InsertObjectQuery(com.FlightLogix.Core.Flight.Segment@4febdb9b)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl$1.handleException(EntityManagerSetupImpl.java:787)
+	at org.eclipse.persistence.transaction.AbstractSynchronizationListener.handleException(AbstractSynchronizationListener.java:277)
+	at org.eclipse.persistence.transaction.AbstractSynchronizationListener.beforeCompletion(AbstractSynchronizationListener.java:172)
+	at org.eclipse.persistence.transaction.JTASynchronizationListener.beforeCompletion(JTASynchronizationListener.java:70)
+	at com.ibm.tx.jta.impl.RegisteredSyncs.coreDistributeBefore(RegisteredSyncs.java:247)
+	at com.ibm.tx.jta.impl.RegisteredSyncs.distributeBefore(RegisteredSyncs.java:148)
+	at com.ibm.tx.jta.impl.TransactionImpl.prePrepare(TransactionImpl.java:1402)
+	at com.ibm.tx.jta.impl.TransactionImpl.stage1CommitProcessing(TransactionImpl.java:793)
+	at com.ibm.tx.jta.impl.TransactionImpl.processCommit(TransactionImpl.java:768)
+	at com.ibm.tx.jta.impl.TransactionImpl.commit(TransactionImpl.java:711)
+	at com.ibm.tx.jta.impl.TranManagerImpl.commit(TranManagerImpl.java:165)
+	at com.ibm.tx.jta.impl.TranManagerSet.commit(TranManagerSet.java:113)
+	at com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl.uowCommit(EmbeddableUOWManagerImpl.java:834)
+	at com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl.uowEnd(EmbeddableUOWManagerImpl.java:812)
+	at com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl.runUnderNewUOW(EmbeddableUOWManagerImpl.java:1043)
+	at com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl.runUnderUOW(EmbeddableUOWManagerImpl.java:1013)
+	at com.ibm.tx.jta.cdi.interceptors.TransactionalInterceptor.runUnderUOWManagingEnablement(TransactionalInterceptor.java:151)
+	at com.ibm.tx.jta.cdi.interceptors.Required.required(Required.java:40)
+	at sun.reflect.GeneratedMethodAccessor550.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.jboss.weld.interceptor.reader.SimpleInterceptorInvocation$SimpleMethodInvocation.invoke(SimpleInterceptorInvocation.java:73)
+	at org.jboss.weld.interceptor.proxy.InterceptorMethodHandler.executeAroundInvoke(InterceptorMethodHandler.java:84)
+	at org.jboss.weld.interceptor.proxy.InterceptorMethodHandler.executeInterception(InterceptorMethodHandler.java:72)
+	at org.jboss.weld.interceptor.proxy.InterceptorMethodHandler.invoke(InterceptorMethodHandler.java:56)
+	at org.jboss.weld.bean.proxy.CombinedInterceptorAndDecoratorStackMethodHandler.invoke(CombinedInterceptorAndDecoratorStackMethodHandler.java:79)
+	at org.jboss.weld.bean.proxy.CombinedInterceptorAndDecoratorStackMethodHandler.invoke(CombinedInterceptorAndDecoratorStackMethodHandler.java:68)
+	at com.FlightLogix.Service.apis.BookingResource$Proxy$_$$_WeldSubclass.createBooking(Unknown Source)
+	at com.FlightLogix.Service.apis.BookingResource$Proxy$_$$_WeldClientProxy.createBooking(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor1302.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.ibm.ws.jaxrs20.cdi.component.JaxRsFactoryImplicitBeanCDICustomizer.serviceInvoke(JaxRsFactoryImplicitBeanCDICustomizer.java:342)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.performInvocation(LibertyJaxRsServerFactoryBean.java:641)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.performInvocation(LibertyJaxRsInvoker.java:160)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:101)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.invoke(LibertyJaxRsInvoker.java:273)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:205)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.invoke(LibertyJaxRsInvoker.java:444)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:111)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor$1.run(ServiceInvokerInterceptor.java:59)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor.handleMessage(ServiceInvokerInterceptor.java:96)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:308)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:123)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:275)
+	at com.ibm.ws.jaxrs20.endpoint.AbstractJaxRsWebEndpoint.invoke(AbstractJaxRsWebEndpoint.java:137)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.handleRequest(IBMRestServlet.java:146)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.doPost(IBMRestServlet.java:104)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.service(IBMRestServlet.java:96)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1257)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:745)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:442)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1226)
+	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:5057)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:314)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:1006)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1146)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:427)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:386)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:566)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:500)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:360)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:327)
+	at com.ibm.ws.channel.ssl.internal.SSLConnectionLink.determineNextChannel(SSLConnectionLink.java:1100)
+	at com.ibm.ws.channel.ssl.internal.SSLConnectionLink.readyInboundPostHandshake(SSLConnectionLink.java:757)
+	at com.ibm.ws.channel.ssl.internal.SSLConnectionLink$MyHandshakeCompletedCallback.complete(SSLConnectionLink.java:427)
+	at com.ibm.ws.channel.ssl.internal.SSLUtils.handleHandshake(SSLUtils.java:954)
+	at com.ibm.ws.channel.ssl.internal.SSLHandshakeIOCallback.complete(SSLHandshakeIOCallback.java:85)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:958)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1047)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:238)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.7.8.v20201217-ecdf3c32c4): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: Table 'db1.segment' doesn't exist
+Error Code: 1146
+Call: INSERT INTO SEGMENT (ID) VALUES (?)
+	bind => [1 parameter bound]
+Query: InsertObjectQuery(com.FlightLogix.Core.Flight.Segment@4febdb9b)
+	at org.eclipse.persistence.exceptions.DatabaseException.sqlException(DatabaseException.java:333)
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeDirectNoSelect(DatabaseAccessor.java:908)
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeNoSelect(DatabaseAccessor.java:970)
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.basicExecuteCall(DatabaseAccessor.java:640)
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeCall(DatabaseAccessor.java:567)
+	at org.eclipse.persistence.internal.sessions.AbstractSession.basicExecuteCall(AbstractSession.java:2099)
+	at org.eclipse.persistence.sessions.server.ClientSession.executeCall(ClientSession.java:313)
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.executeCall(DatasourceCallQueryMechanism.java:277)
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.executeCall(DatasourceCallQueryMechanism.java:263)
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.insertObject(DatasourceCallQueryMechanism.java:413)
+	at org.eclipse.persistence.internal.queries.StatementQueryMechanism.insertObject(StatementQueryMechanism.java:167)
+	at org.eclipse.persistence.internal.queries.StatementQueryMechanism.insertObject(StatementQueryMechanism.java:182)
+	at org.eclipse.persistence.internal.queries.DatabaseQueryMechanism.insertObjectForWrite(DatabaseQueryMechanism.java:504)
+	at org.eclipse.persistence.queries.InsertObjectQuery.executeCommit(InsertObjectQuery.java:82)
+	at org.eclipse.persistence.queries.InsertObjectQuery.executeCommitWithChangeSet(InsertObjectQuery.java:92)
+	at org.eclipse.persistence.internal.queries.DatabaseQueryMechanism.executeWriteWithChangeSet(DatabaseQueryMechanism.java:316)
+	at org.eclipse.persistence.queries.WriteObjectQuery.executeDatabaseQuery(WriteObjectQuery.java:60)
+	at org.eclipse.persistence.queries.DatabaseQuery.execute(DatabaseQuery.java:911)
+	at org.eclipse.persistence.queries.DatabaseQuery.executeInUnitOfWork(DatabaseQuery.java:810)
+	at org.eclipse.persistence.queries.ObjectLevelModifyQuery.executeInUnitOfWorkObjectLevelModifyQuery(ObjectLevelModifyQuery.java:110)
+	at org.eclipse.persistence.queries.ObjectLevelModifyQuery.executeInUnitOfWork(ObjectLevelModifyQuery.java:87)
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.internalExecuteQuery(UnitOfWorkImpl.java:2983)
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1898)
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1880)
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1830)
+	at org.eclipse.persistence.internal.sessions.CommitManager.commitNewObjectsForClassWithChangeSet(CommitManager.java:229)
+	at org.eclipse.persistence.internal.sessions.CommitManager.commitAllObjectsForClassWithChangeSet(CommitManager.java:196)
+	at org.eclipse.persistence.internal.sessions.CommitManager.commitAllObjectsWithChangeSet(CommitManager.java:141)
+	at org.eclipse.persistence.internal.sessions.AbstractSession.writeAllObjectsWithChangeSet(AbstractSession.java:4398)
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.commitToDatabase(UnitOfWorkImpl.java:1495)
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.commitToDatabaseWithChangeSet(UnitOfWorkImpl.java:1585)
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.issueSQLbeforeCompletion(UnitOfWorkImpl.java:3260)
+	at org.eclipse.persistence.internal.sessions.RepeatableWriteUnitOfWork.issueSQLbeforeCompletion(RepeatableWriteUnitOfWork.java:357)
+	at org.eclipse.persistence.transaction.AbstractSynchronizationListener.beforeCompletion(AbstractSynchronizationListener.java:160)
+	... 73 more
+Caused by: java.sql.SQLSyntaxErrorException: Table 'db1.segment' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1092)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1040)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1347)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1025)
+	at com.mysql.cj.jdbc.PreparedStatementWrapper.executeUpdate(PreparedStatementWrapper.java:595)
+	at com.ibm.ws.rsadapter.jdbc.WSJdbcPreparedStatement.executeUpdate(WSJdbcPreparedStatement.java:525)
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeDirectNoSelect(DatabaseAccessor.java:898)
+	... 105 more
+
+[4/7/21 22:29:20:306 EDT] 00000628 .apache.cxf.cxf.core.3.2:1.0.50.cl210320210309-1101(id=139)] W Application {http://apis.Service.FlightLogix.com/}BookingResource has thrown exception, unwinding now
+org.apache.cxf.interceptor.Fault
+	at org.apache.cxf.service.invoker.AbstractInvoker.createFault(AbstractInvoker.java:167)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:133)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.invoke(LibertyJaxRsInvoker.java:273)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:205)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.invoke(LibertyJaxRsInvoker.java:444)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:111)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor$1.run(ServiceInvokerInterceptor.java:59)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor.handleMessage(ServiceInvokerInterceptor.java:96)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:308)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:123)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:275)
+	at com.ibm.ws.jaxrs20.endpoint.AbstractJaxRsWebEndpoint.invoke(AbstractJaxRsWebEndpoint.java:137)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.handleRequest(IBMRestServlet.java:146)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.doPost(IBMRestServlet.java:104)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.service(IBMRestServlet.java:96)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1257)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:745)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:442)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1226)
+	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:5057)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:314)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:1006)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1146)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:427)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:386)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:566)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:500)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:360)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:327)
+	at com.ibm.ws.channel.ssl.internal.SSLConnectionLink.determineNextChannel(SSLConnectionLink.java:1100)
+	at com.ibm.ws.channel.ssl.internal.SSLConnectionLink.readyInboundPostHandshake(SSLConnectionLink.java:757)
+	at com.ibm.ws.channel.ssl.internal.SSLConnectionLink$MyHandshakeCompletedCallback.complete(SSLConnectionLink.java:427)
+	at com.ibm.ws.channel.ssl.internal.SSLUtils.handleHandshake(SSLUtils.java:954)
+	at com.ibm.ws.channel.ssl.internal.SSLHandshakeIOCallback.complete(SSLHandshakeIOCallback.java:85)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:958)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1047)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:238)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.transaction.RollbackException
+	at com.ibm.tx.jta.impl.TransactionImpl.stage3CommitProcessing(TransactionImpl.java:980)
+	at com.ibm.tx.jta.impl.TransactionImpl.processCommit(TransactionImpl.java:778)
+	at com.ibm.tx.jta.impl.TransactionImpl.commit(TransactionImpl.java:711)
+	at com.ibm.tx.jta.impl.TranManagerImpl.commit(TranManagerImpl.java:165)
+	at com.ibm.tx.jta.impl.TranManagerSet.commit(TranManagerSet.java:113)
+	at com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl.uowCommit(EmbeddableUOWManagerImpl.java:834)
+	at com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl.uowEnd(EmbeddableUOWManagerImpl.java:812)
+	at com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl.runUnderNewUOW(EmbeddableUOWManagerImpl.java:1043)
+	at com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl.runUnderUOW(EmbeddableUOWManagerImpl.java:1013)
+	at com.ibm.tx.jta.cdi.interceptors.TransactionalInterceptor.runUnderUOWManagingEnablement(TransactionalInterceptor.java:151)
+	at com.ibm.tx.jta.cdi.interceptors.Required.required(Required.java:40)
+	at sun.reflect.GeneratedMethodAccessor550.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.jboss.weld.interceptor.reader.SimpleInterceptorInvocation$SimpleMethodInvocation.invoke(SimpleInterceptorInvocation.java:73)
+	at org.jboss.weld.interceptor.proxy.InterceptorMethodHandler.executeAroundInvoke(InterceptorMethodHandler.java:84)
+	at org.jboss.weld.interceptor.proxy.InterceptorMethodHandler.executeInterception(InterceptorMethodHandler.java:72)
+	at org.jboss.weld.interceptor.proxy.InterceptorMethodHandler.invoke(InterceptorMethodHandler.java:56)
+	at org.jboss.weld.bean.proxy.CombinedInterceptorAndDecoratorStackMethodHandler.invoke(CombinedInterceptorAndDecoratorStackMethodHandler.java:79)
+	at org.jboss.weld.bean.proxy.CombinedInterceptorAndDecoratorStackMethodHandler.invoke(CombinedInterceptorAndDecoratorStackMethodHandler.java:68)
+	at com.FlightLogix.Service.apis.BookingResource$Proxy$_$$_WeldSubclass.createBooking(Unknown Source)
+	at com.FlightLogix.Service.apis.BookingResource$Proxy$_$$_WeldClientProxy.createBooking(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor1302.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.ibm.ws.jaxrs20.cdi.component.JaxRsFactoryImplicitBeanCDICustomizer.serviceInvoke(JaxRsFactoryImplicitBeanCDICustomizer.java:342)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.performInvocation(LibertyJaxRsServerFactoryBean.java:641)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.performInvocation(LibertyJaxRsInvoker.java:160)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:101)
+	... 42 more
+Caused by: javax.persistence.PersistenceException: Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.7.8.v20201217-ecdf3c32c4): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: Table 'db1.segment' doesn't exist
+Error Code: 1146
+Call: INSERT INTO SEGMENT (ID) VALUES (?)
+	bind => [1 parameter bound]
+Query: InsertObjectQuery(com.FlightLogix.Core.Flight.Segment@4febdb9b)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl$1.handleException(EntityManagerSetupImpl.java:787)
+	at org.eclipse.persistence.transaction.AbstractSynchronizationListener.handleException(AbstractSynchronizationListener.java:277)
+	at org.eclipse.persistence.transaction.AbstractSynchronizationListener.beforeCompletion(AbstractSynchronizationListener.java:172)
+	at org.eclipse.persistence.transaction.JTASynchronizationListener.beforeCompletion(JTASynchronizationListener.java:70)
+	at com.ibm.tx.jta.impl.RegisteredSyncs.coreDistributeBefore(RegisteredSyncs.java:247)
+	at com.ibm.tx.jta.impl.RegisteredSyncs.distributeBefore(RegisteredSyncs.java:148)
+	at com.ibm.tx.jta.impl.TransactionImpl.prePrepare(TransactionImpl.java:1402)
+	at com.ibm.tx.jta.impl.TransactionImpl.stage1CommitProcessing(TransactionImpl.java:793)
+	at com.ibm.tx.jta.impl.TransactionImpl.processCommit(TransactionImpl.java:768)
+	... 67 more
+Caused by: Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.7.8.v20201217-ecdf3c32c4): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: Table 'db1.segment' doesn't exist
+Error Code: 1146
+Call: INSERT INTO SEGMENT (ID) VALUES (?)
+	bind => [1 parameter bound]
+Query: InsertObjectQuery(com.FlightLogix.Core.Flight.Segment@4febdb9b)
+	at org.eclipse.persistence.exceptions.DatabaseException.sqlException(DatabaseException.java:333)
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeDirectNoSelect(DatabaseAccessor.java:908)
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeNoSelect(DatabaseAccessor.java:970)
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.basicExecuteCall(DatabaseAccessor.java:640)
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeCall(DatabaseAccessor.java:567)
+	at org.eclipse.persistence.internal.sessions.AbstractSession.basicExecuteCall(AbstractSession.java:2099)
+	at org.eclipse.persistence.sessions.server.ClientSession.executeCall(ClientSession.java:313)
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.executeCall(DatasourceCallQueryMechanism.java:277)
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.executeCall(DatasourceCallQueryMechanism.java:263)
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.insertObject(DatasourceCallQueryMechanism.java:413)
+	at org.eclipse.persistence.internal.queries.StatementQueryMechanism.insertObject(StatementQueryMechanism.java:167)
+	at org.eclipse.persistence.internal.queries.StatementQueryMechanism.insertObject(StatementQueryMechanism.java:182)
+	at org.eclipse.persistence.internal.queries.DatabaseQueryMechanism.insertObjectForWrite(DatabaseQueryMechanism.java:504)
+	at org.eclipse.persistence.queries.InsertObjectQuery.executeCommit(InsertObjectQuery.java:82)
+	at org.eclipse.persistence.queries.InsertObjectQuery.executeCommitWithChangeSet(InsertObjectQuery.java:92)
+	at org.eclipse.persistence.internal.queries.DatabaseQueryMechanism.executeWriteWithChangeSet(DatabaseQueryMechanism.java:316)
+	at org.eclipse.persistence.queries.WriteObjectQuery.executeDatabaseQuery(WriteObjectQuery.java:60)
+	at org.eclipse.persistence.queries.DatabaseQuery.execute(DatabaseQuery.java:911)
+	at org.eclipse.persistence.queries.DatabaseQuery.executeInUnitOfWork(DatabaseQuery.java:810)
+	at org.eclipse.persistence.queries.ObjectLevelModifyQuery.executeInUnitOfWorkObjectLevelModifyQuery(ObjectLevelModifyQuery.java:110)
+	at org.eclipse.persistence.queries.ObjectLevelModifyQuery.executeInUnitOfWork(ObjectLevelModifyQuery.java:87)
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.internalExecuteQuery(UnitOfWorkImpl.java:2983)
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1898)
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1880)
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1830)
+	at org.eclipse.persistence.internal.sessions.CommitManager.commitNewObjectsForClassWithChangeSet(CommitManager.java:229)
+	at org.eclipse.persistence.internal.sessions.CommitManager.commitAllObjectsForClassWithChangeSet(CommitManager.java:196)
+	at org.eclipse.persistence.internal.sessions.CommitManager.commitAllObjectsWithChangeSet(CommitManager.java:141)
+	at org.eclipse.persistence.internal.sessions.AbstractSession.writeAllObjectsWithChangeSet(AbstractSession.java:4398)
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.commitToDatabase(UnitOfWorkImpl.java:1495)
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.commitToDatabaseWithChangeSet(UnitOfWorkImpl.java:1585)
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.issueSQLbeforeCompletion(UnitOfWorkImpl.java:3260)
+	at org.eclipse.persistence.internal.sessions.RepeatableWriteUnitOfWork.issueSQLbeforeCompletion(RepeatableWriteUnitOfWork.java:357)
+	at org.eclipse.persistence.transaction.AbstractSynchronizationListener.beforeCompletion(AbstractSynchronizationListener.java:160)
+	... 73 more
+Caused by: java.sql.SQLSyntaxErrorException: Table 'db1.segment' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1092)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1040)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1347)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1025)
+	at com.mysql.cj.jdbc.PreparedStatementWrapper.executeUpdate(PreparedStatementWrapper.java:595)
+	at com.ibm.ws.rsadapter.jdbc.WSJdbcPreparedStatement.executeUpdate(WSJdbcPreparedStatement.java:525)
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeDirectNoSelect(DatabaseAccessor.java:898)
+	... 105 more
+
+[4/7/21 22:29:20:309 EDT] 00000628 .apache.cxf.cxf.core.3.2:1.0.50.cl210320210309-1101(id=139)] W Exception in handleFault on interceptor org.apache.cxf.jaxrs.interceptor.JAXRSDefaultFaultOutInterceptor@a4068c4
+org.apache.cxf.interceptor.Fault
+	at org.apache.cxf.service.invoker.AbstractInvoker.createFault(AbstractInvoker.java:167)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:133)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.invoke(LibertyJaxRsInvoker.java:273)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:205)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.invoke(LibertyJaxRsInvoker.java:444)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:111)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor$1.run(ServiceInvokerInterceptor.java:59)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor.handleMessage(ServiceInvokerInterceptor.java:96)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:308)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:123)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:275)
+	at com.ibm.ws.jaxrs20.endpoint.AbstractJaxRsWebEndpoint.invoke(AbstractJaxRsWebEndpoint.java:137)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.handleRequest(IBMRestServlet.java:146)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.doPost(IBMRestServlet.java:104)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.service(IBMRestServlet.java:96)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1257)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:745)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:442)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1226)
+	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:5057)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:314)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:1006)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1146)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:427)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:386)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:566)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:500)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:360)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:327)
+	at com.ibm.ws.channel.ssl.internal.SSLConnectionLink.determineNextChannel(SSLConnectionLink.java:1100)
+	at com.ibm.ws.channel.ssl.internal.SSLConnectionLink.readyInboundPostHandshake(SSLConnectionLink.java:757)
+	at com.ibm.ws.channel.ssl.internal.SSLConnectionLink$MyHandshakeCompletedCallback.complete(SSLConnectionLink.java:427)
+	at com.ibm.ws.channel.ssl.internal.SSLUtils.handleHandshake(SSLUtils.java:954)
+	at com.ibm.ws.channel.ssl.internal.SSLHandshakeIOCallback.complete(SSLHandshakeIOCallback.java:85)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:958)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1047)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:238)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.transaction.RollbackException
+	at com.ibm.tx.jta.impl.TransactionImpl.stage3CommitProcessing(TransactionImpl.java:980)
+	at com.ibm.tx.jta.impl.TransactionImpl.processCommit(TransactionImpl.java:778)
+	at com.ibm.tx.jta.impl.TransactionImpl.commit(TransactionImpl.java:711)
+	at com.ibm.tx.jta.impl.TranManagerImpl.commit(TranManagerImpl.java:165)
+	at com.ibm.tx.jta.impl.TranManagerSet.commit(TranManagerSet.java:113)
+	at com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl.uowCommit(EmbeddableUOWManagerImpl.java:834)
+	at com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl.uowEnd(EmbeddableUOWManagerImpl.java:812)
+	at com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl.runUnderNewUOW(EmbeddableUOWManagerImpl.java:1043)
+	at com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl.runUnderUOW(EmbeddableUOWManagerImpl.java:1013)
+	at com.ibm.tx.jta.cdi.interceptors.TransactionalInterceptor.runUnderUOWManagingEnablement(TransactionalInterceptor.java:151)
+	at com.ibm.tx.jta.cdi.interceptors.Required.required(Required.java:40)
+	at sun.reflect.GeneratedMethodAccessor550.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.jboss.weld.interceptor.reader.SimpleInterceptorInvocation$SimpleMethodInvocation.invoke(SimpleInterceptorInvocation.java:73)
+	at org.jboss.weld.interceptor.proxy.InterceptorMethodHandler.executeAroundInvoke(InterceptorMethodHandler.java:84)
+	at org.jboss.weld.interceptor.proxy.InterceptorMethodHandler.executeInterception(InterceptorMethodHandler.java:72)
+	at org.jboss.weld.interceptor.proxy.InterceptorMethodHandler.invoke(InterceptorMethodHandler.java:56)
+	at org.jboss.weld.bean.proxy.CombinedInterceptorAndDecoratorStackMethodHandler.invoke(CombinedInterceptorAndDecoratorStackMethodHandler.java:79)
+	at org.jboss.weld.bean.proxy.CombinedInterceptorAndDecoratorStackMethodHandler.invoke(CombinedInterceptorAndDecoratorStackMethodHandler.java:68)
+	at com.FlightLogix.Service.apis.BookingResource$Proxy$_$$_WeldSubclass.createBooking(Unknown Source)
+	at com.FlightLogix.Service.apis.BookingResource$Proxy$_$$_WeldClientProxy.createBooking(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor1302.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.ibm.ws.jaxrs20.cdi.component.JaxRsFactoryImplicitBeanCDICustomizer.serviceInvoke(JaxRsFactoryImplicitBeanCDICustomizer.java:342)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.performInvocation(LibertyJaxRsServerFactoryBean.java:641)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.performInvocation(LibertyJaxRsInvoker.java:160)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:101)
+	... 42 more
+Caused by: javax.persistence.PersistenceException: Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.7.8.v20201217-ecdf3c32c4): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: Table 'db1.segment' doesn't exist
+Error Code: 1146
+Call: INSERT INTO SEGMENT (ID) VALUES (?)
+	bind => [1 parameter bound]
+Query: InsertObjectQuery(com.FlightLogix.Core.Flight.Segment@4febdb9b)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl$1.handleException(EntityManagerSetupImpl.java:787)
+	at org.eclipse.persistence.transaction.AbstractSynchronizationListener.handleException(AbstractSynchronizationListener.java:277)
+	at org.eclipse.persistence.transaction.AbstractSynchronizationListener.beforeCompletion(AbstractSynchronizationListener.java:172)
+	at org.eclipse.persistence.transaction.JTASynchronizationListener.beforeCompletion(JTASynchronizationListener.java:70)
+	at com.ibm.tx.jta.impl.RegisteredSyncs.coreDistributeBefore(RegisteredSyncs.java:247)
+	at com.ibm.tx.jta.impl.RegisteredSyncs.distributeBefore(RegisteredSyncs.java:148)
+	at com.ibm.tx.jta.impl.TransactionImpl.prePrepare(TransactionImpl.java:1402)
+	at com.ibm.tx.jta.impl.TransactionImpl.stage1CommitProcessing(TransactionImpl.java:793)
+	at com.ibm.tx.jta.impl.TransactionImpl.processCommit(TransactionImpl.java:768)
+	... 67 more
+Caused by: Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.7.8.v20201217-ecdf3c32c4): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: Table 'db1.segment' doesn't exist
+Error Code: 1146
+Call: INSERT INTO SEGMENT (ID) VALUES (?)
+	bind => [1 parameter bound]
+Query: InsertObjectQuery(com.FlightLogix.Core.Flight.Segment@4febdb9b)
+	at org.eclipse.persistence.exceptions.DatabaseException.sqlException(DatabaseException.java:333)
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeDirectNoSelect(DatabaseAccessor.java:908)
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeNoSelect(DatabaseAccessor.java:970)
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.basicExecuteCall(DatabaseAccessor.java:640)
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeCall(DatabaseAccessor.java:567)
+	at org.eclipse.persistence.internal.sessions.AbstractSession.basicExecuteCall(AbstractSession.java:2099)
+	at org.eclipse.persistence.sessions.server.ClientSession.executeCall(ClientSession.java:313)
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.executeCall(DatasourceCallQueryMechanism.java:277)
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.executeCall(DatasourceCallQueryMechanism.java:263)
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.insertObject(DatasourceCallQueryMechanism.java:413)
+	at org.eclipse.persistence.internal.queries.StatementQueryMechanism.insertObject(StatementQueryMechanism.java:167)
+	at org.eclipse.persistence.internal.queries.StatementQueryMechanism.insertObject(StatementQueryMechanism.java:182)
+	at org.eclipse.persistence.internal.queries.DatabaseQueryMechanism.insertObjectForWrite(DatabaseQueryMechanism.java:504)
+	at org.eclipse.persistence.queries.InsertObjectQuery.executeCommit(InsertObjectQuery.java:82)
+	at org.eclipse.persistence.queries.InsertObjectQuery.executeCommitWithChangeSet(InsertObjectQuery.java:92)
+	at org.eclipse.persistence.internal.queries.DatabaseQueryMechanism.executeWriteWithChangeSet(DatabaseQueryMechanism.java:316)
+	at org.eclipse.persistence.queries.WriteObjectQuery.executeDatabaseQuery(WriteObjectQuery.java:60)
+	at org.eclipse.persistence.queries.DatabaseQuery.execute(DatabaseQuery.java:911)
+	at org.eclipse.persistence.queries.DatabaseQuery.executeInUnitOfWork(DatabaseQuery.java:810)
+	at org.eclipse.persistence.queries.ObjectLevelModifyQuery.executeInUnitOfWorkObjectLevelModifyQuery(ObjectLevelModifyQuery.java:110)
+	at org.eclipse.persistence.queries.ObjectLevelModifyQuery.executeInUnitOfWork(ObjectLevelModifyQuery.java:87)
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.internalExecuteQuery(UnitOfWorkImpl.java:2983)
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1898)
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1880)
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1830)
+	at org.eclipse.persistence.internal.sessions.CommitManager.commitNewObjectsForClassWithChangeSet(CommitManager.java:229)
+	at org.eclipse.persistence.internal.sessions.CommitManager.commitAllObjectsForClassWithChangeSet(CommitManager.java:196)
+	at org.eclipse.persistence.internal.sessions.CommitManager.commitAllObjectsWithChangeSet(CommitManager.java:141)
+	at org.eclipse.persistence.internal.sessions.AbstractSession.writeAllObjectsWithChangeSet(AbstractSession.java:4398)
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.commitToDatabase(UnitOfWorkImpl.java:1495)
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.commitToDatabaseWithChangeSet(UnitOfWorkImpl.java:1585)
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.issueSQLbeforeCompletion(UnitOfWorkImpl.java:3260)
+	at org.eclipse.persistence.internal.sessions.RepeatableWriteUnitOfWork.issueSQLbeforeCompletion(RepeatableWriteUnitOfWork.java:357)
+	at org.eclipse.persistence.transaction.AbstractSynchronizationListener.beforeCompletion(AbstractSynchronizationListener.java:160)
+	... 73 more
+Caused by: java.sql.SQLSyntaxErrorException: Table 'db1.segment' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1092)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1040)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1347)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1025)
+	at com.mysql.cj.jdbc.PreparedStatementWrapper.executeUpdate(PreparedStatementWrapper.java:595)
+	at com.ibm.ws.rsadapter.jdbc.WSJdbcPreparedStatement.executeUpdate(WSJdbcPreparedStatement.java:525)
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeDirectNoSelect(DatabaseAccessor.java:898)
+	... 105 more
+
+[4/7/21 22:29:20:310 EDT] 00000628 .apache.cxf.cxf.core.3.2:1.0.50.cl210320210309-1101(id=139)] E An unexpected error occurred during error handling. No further error processing will occur.
+org.apache.cxf.interceptor.Fault
+	at org.apache.cxf.service.invoker.AbstractInvoker.createFault(AbstractInvoker.java:167)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:133)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.invoke(LibertyJaxRsInvoker.java:273)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:205)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.invoke(LibertyJaxRsInvoker.java:444)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:111)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor$1.run(ServiceInvokerInterceptor.java:59)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor.handleMessage(ServiceInvokerInterceptor.java:96)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:308)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:123)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:275)
+	at com.ibm.ws.jaxrs20.endpoint.AbstractJaxRsWebEndpoint.invoke(AbstractJaxRsWebEndpoint.java:137)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.handleRequest(IBMRestServlet.java:146)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.doPost(IBMRestServlet.java:104)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.service(IBMRestServlet.java:96)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1257)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:745)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:442)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1226)
+	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:5057)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:314)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:1006)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1146)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:427)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:386)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:566)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:500)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:360)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:327)
+	at com.ibm.ws.channel.ssl.internal.SSLConnectionLink.determineNextChannel(SSLConnectionLink.java:1100)
+	at com.ibm.ws.channel.ssl.internal.SSLConnectionLink.readyInboundPostHandshake(SSLConnectionLink.java:757)
+	at com.ibm.ws.channel.ssl.internal.SSLConnectionLink$MyHandshakeCompletedCallback.complete(SSLConnectionLink.java:427)
+	at com.ibm.ws.channel.ssl.internal.SSLUtils.handleHandshake(SSLUtils.java:954)
+	at com.ibm.ws.channel.ssl.internal.SSLHandshakeIOCallback.complete(SSLHandshakeIOCallback.java:85)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:958)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1047)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:238)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.transaction.RollbackException
+	at com.ibm.tx.jta.impl.TransactionImpl.stage3CommitProcessing(TransactionImpl.java:980)
+	at com.ibm.tx.jta.impl.TransactionImpl.processCommit(TransactionImpl.java:778)
+	at com.ibm.tx.jta.impl.TransactionImpl.commit(TransactionImpl.java:711)
+	at com.ibm.tx.jta.impl.TranManagerImpl.commit(TranManagerImpl.java:165)
+	at com.ibm.tx.jta.impl.TranManagerSet.commit(TranManagerSet.java:113)
+	at com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl.uowCommit(EmbeddableUOWManagerImpl.java:834)
+	at com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl.uowEnd(EmbeddableUOWManagerImpl.java:812)
+	at com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl.runUnderNewUOW(EmbeddableUOWManagerImpl.java:1043)
+	at com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl.runUnderUOW(EmbeddableUOWManagerImpl.java:1013)
+	at com.ibm.tx.jta.cdi.interceptors.TransactionalInterceptor.runUnderUOWManagingEnablement(TransactionalInterceptor.java:151)
+	at com.ibm.tx.jta.cdi.interceptors.Required.required(Required.java:40)
+	at sun.reflect.GeneratedMethodAccessor550.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.jboss.weld.interceptor.reader.SimpleInterceptorInvocation$SimpleMethodInvocation.invoke(SimpleInterceptorInvocation.java:73)
+	at org.jboss.weld.interceptor.proxy.InterceptorMethodHandler.executeAroundInvoke(InterceptorMethodHandler.java:84)
+	at org.jboss.weld.interceptor.proxy.InterceptorMethodHandler.executeInterception(InterceptorMethodHandler.java:72)
+	at org.jboss.weld.interceptor.proxy.InterceptorMethodHandler.invoke(InterceptorMethodHandler.java:56)
+	at org.jboss.weld.bean.proxy.CombinedInterceptorAndDecoratorStackMethodHandler.invoke(CombinedInterceptorAndDecoratorStackMethodHandler.java:79)
+	at org.jboss.weld.bean.proxy.CombinedInterceptorAndDecoratorStackMethodHandler.invoke(CombinedInterceptorAndDecoratorStackMethodHandler.java:68)
+	at com.FlightLogix.Service.apis.BookingResource$Proxy$_$$_WeldSubclass.createBooking(Unknown Source)
+	at com.FlightLogix.Service.apis.BookingResource$Proxy$_$$_WeldClientProxy.createBooking(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor1302.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.ibm.ws.jaxrs20.cdi.component.JaxRsFactoryImplicitBeanCDICustomizer.serviceInvoke(JaxRsFactoryImplicitBeanCDICustomizer.java:342)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.performInvocation(LibertyJaxRsServerFactoryBean.java:641)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.performInvocation(LibertyJaxRsInvoker.java:160)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:101)
+	... 42 more
+Caused by: javax.persistence.PersistenceException: Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.7.8.v20201217-ecdf3c32c4): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: Table 'db1.segment' doesn't exist
+Error Code: 1146
+Call: INSERT INTO SEGMENT (ID) VALUES (?)
+	bind => [1 parameter bound]
+Query: InsertObjectQuery(com.FlightLogix.Core.Flight.Segment@4febdb9b)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl$1.handleException(EntityManagerSetupImpl.java:787)
+	at org.eclipse.persistence.transaction.AbstractSynchronizationListener.handleException(AbstractSynchronizationListener.java:277)
+	at org.eclipse.persistence.transaction.AbstractSynchronizationListener.beforeCompletion(AbstractSynchronizationListener.java:172)
+	at org.eclipse.persistence.transaction.JTASynchronizationListener.beforeCompletion(JTASynchronizationListener.java:70)
+	at com.ibm.tx.jta.impl.RegisteredSyncs.coreDistributeBefore(RegisteredSyncs.java:247)
+	at com.ibm.tx.jta.impl.RegisteredSyncs.distributeBefore(RegisteredSyncs.java:148)
+	at com.ibm.tx.jta.impl.TransactionImpl.prePrepare(TransactionImpl.java:1402)
+	at com.ibm.tx.jta.impl.TransactionImpl.stage1CommitProcessing(TransactionImpl.java:793)
+	at com.ibm.tx.jta.impl.TransactionImpl.processCommit(TransactionImpl.java:768)
+	... 67 more
+Caused by: Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.7.8.v20201217-ecdf3c32c4): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: Table 'db1.segment' doesn't exist
+Error Code: 1146
+Call: INSERT INTO SEGMENT (ID) VALUES (?)
+	bind => [1 parameter bound]
+Query: InsertObjectQuery(com.FlightLogix.Core.Flight.Segment@4febdb9b)
+	at org.eclipse.persistence.exceptions.DatabaseException.sqlException(DatabaseException.java:333)
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeDirectNoSelect(DatabaseAccessor.java:908)
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeNoSelect(DatabaseAccessor.java:970)
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.basicExecuteCall(DatabaseAccessor.java:640)
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeCall(DatabaseAccessor.java:567)
+	at org.eclipse.persistence.internal.sessions.AbstractSession.basicExecuteCall(AbstractSession.java:2099)
+	at org.eclipse.persistence.sessions.server.ClientSession.executeCall(ClientSession.java:313)
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.executeCall(DatasourceCallQueryMechanism.java:277)
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.executeCall(DatasourceCallQueryMechanism.java:263)
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.insertObject(DatasourceCallQueryMechanism.java:413)
+	at org.eclipse.persistence.internal.queries.StatementQueryMechanism.insertObject(StatementQueryMechanism.java:167)
+	at org.eclipse.persistence.internal.queries.StatementQueryMechanism.insertObject(StatementQueryMechanism.java:182)
+	at org.eclipse.persistence.internal.queries.DatabaseQueryMechanism.insertObjectForWrite(DatabaseQueryMechanism.java:504)
+	at org.eclipse.persistence.queries.InsertObjectQuery.executeCommit(InsertObjectQuery.java:82)
+	at org.eclipse.persistence.queries.InsertObjectQuery.executeCommitWithChangeSet(InsertObjectQuery.java:92)
+	at org.eclipse.persistence.internal.queries.DatabaseQueryMechanism.executeWriteWithChangeSet(DatabaseQueryMechanism.java:316)
+	at org.eclipse.persistence.queries.WriteObjectQuery.executeDatabaseQuery(WriteObjectQuery.java:60)
+	at org.eclipse.persistence.queries.DatabaseQuery.execute(DatabaseQuery.java:911)
+	at org.eclipse.persistence.queries.DatabaseQuery.executeInUnitOfWork(DatabaseQuery.java:810)
+	at org.eclipse.persistence.queries.ObjectLevelModifyQuery.executeInUnitOfWorkObjectLevelModifyQuery(ObjectLevelModifyQuery.java:110)
+	at org.eclipse.persistence.queries.ObjectLevelModifyQuery.executeInUnitOfWork(ObjectLevelModifyQuery.java:87)
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.internalExecuteQuery(UnitOfWorkImpl.java:2983)
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1898)
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1880)
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1830)
+	at org.eclipse.persistence.internal.sessions.CommitManager.commitNewObjectsForClassWithChangeSet(CommitManager.java:229)
+	at org.eclipse.persistence.internal.sessions.CommitManager.commitAllObjectsForClassWithChangeSet(CommitManager.java:196)
+	at org.eclipse.persistence.internal.sessions.CommitManager.commitAllObjectsWithChangeSet(CommitManager.java:141)
+	at org.eclipse.persistence.internal.sessions.AbstractSession.writeAllObjectsWithChangeSet(AbstractSession.java:4398)
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.commitToDatabase(UnitOfWorkImpl.java:1495)
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.commitToDatabaseWithChangeSet(UnitOfWorkImpl.java:1585)
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.issueSQLbeforeCompletion(UnitOfWorkImpl.java:3260)
+	at org.eclipse.persistence.internal.sessions.RepeatableWriteUnitOfWork.issueSQLbeforeCompletion(RepeatableWriteUnitOfWork.java:357)
+	at org.eclipse.persistence.transaction.AbstractSynchronizationListener.beforeCompletion(AbstractSynchronizationListener.java:160)
+	... 73 more
+Caused by: java.sql.SQLSyntaxErrorException: Table 'db1.segment' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1092)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1040)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1347)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1025)
+	at com.mysql.cj.jdbc.PreparedStatementWrapper.executeUpdate(PreparedStatementWrapper.java:595)
+	at com.ibm.ws.rsadapter.jdbc.WSJdbcPreparedStatement.executeUpdate(WSJdbcPreparedStatement.java:525)
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeDirectNoSelect(DatabaseAccessor.java:898)
+	... 105 more
+
+[4/7/21 22:29:20:312 EDT] 00000628 com.ibm.ws.webcontainer.util.ApplicationErrorUtils           E SRVE0777E: Exception thrown by application class 'org.apache.cxf.service.invoker.AbstractInvoker.createFault:167'
+org.apache.cxf.interceptor.Fault
+	at org.apache.cxf.service.invoker.AbstractInvoker.createFault(AbstractInvoker.java:167)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:133)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.invoke(LibertyJaxRsInvoker.java:273)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:205)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.invoke(LibertyJaxRsInvoker.java:444)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:111)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor$1.run(ServiceInvokerInterceptor.java:59)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor.handleMessage(ServiceInvokerInterceptor.java:96)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:308)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:123)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:275)
+	at com.ibm.ws.jaxrs20.endpoint.AbstractJaxRsWebEndpoint.invoke(AbstractJaxRsWebEndpoint.java:137)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.handleRequest(IBMRestServlet.java:146)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.doPost(IBMRestServlet.java:104)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.service(IBMRestServlet.java:96)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1257)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:745)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:442)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1226)
+	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:5057)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:314)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:1006)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1146)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:427)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:386)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:566)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:500)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:360)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:327)
+	at com.ibm.ws.channel.ssl.internal.SSLConnectionLink.determineNextChannel(SSLConnectionLink.java:1100)
+	at com.ibm.ws.channel.ssl.internal.SSLConnectionLink.readyInboundPostHandshake(SSLConnectionLink.java:757)
+	at com.ibm.ws.channel.ssl.internal.SSLConnectionLink$MyHandshakeCompletedCallback.complete(SSLConnectionLink.java:427)
+	at com.ibm.ws.channel.ssl.internal.SSLUtils.handleHandshake(SSLUtils.java:954)
+	at com.ibm.ws.channel.ssl.internal.SSLHandshakeIOCallback.complete(SSLHandshakeIOCallback.java:85)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:958)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1047)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:238)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.transaction.RollbackException
+	at com.ibm.tx.jta.impl.TransactionImpl.stage3CommitProcessing(TransactionImpl.java:980)
+	at com.ibm.tx.jta.impl.TransactionImpl.processCommit(TransactionImpl.java:778)
+	at com.ibm.tx.jta.impl.TransactionImpl.commit(TransactionImpl.java:711)
+	at com.ibm.tx.jta.impl.TranManagerImpl.commit(TranManagerImpl.java:165)
+	at com.ibm.tx.jta.impl.TranManagerSet.commit(TranManagerSet.java:113)
+	at com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl.uowCommit(EmbeddableUOWManagerImpl.java:834)
+	at com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl.uowEnd(EmbeddableUOWManagerImpl.java:812)
+	at com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl.runUnderNewUOW(EmbeddableUOWManagerImpl.java:1043)
+	at com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl.runUnderUOW(EmbeddableUOWManagerImpl.java:1013)
+	at com.ibm.tx.jta.cdi.interceptors.TransactionalInterceptor.runUnderUOWManagingEnablement(TransactionalInterceptor.java:151)
+	at com.ibm.tx.jta.cdi.interceptors.Required.required(Required.java:40)
+	at sun.reflect.GeneratedMethodAccessor550.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.jboss.weld.interceptor.reader.SimpleInterceptorInvocation$SimpleMethodInvocation.invoke(SimpleInterceptorInvocation.java:73)
+	at org.jboss.weld.interceptor.proxy.InterceptorMethodHandler.executeAroundInvoke(InterceptorMethodHandler.java:84)
+	at org.jboss.weld.interceptor.proxy.InterceptorMethodHandler.executeInterception(InterceptorMethodHandler.java:72)
+	at org.jboss.weld.interceptor.proxy.InterceptorMethodHandler.invoke(InterceptorMethodHandler.java:56)
+	at org.jboss.weld.bean.proxy.CombinedInterceptorAndDecoratorStackMethodHandler.invoke(CombinedInterceptorAndDecoratorStackMethodHandler.java:79)
+	at org.jboss.weld.bean.proxy.CombinedInterceptorAndDecoratorStackMethodHandler.invoke(CombinedInterceptorAndDecoratorStackMethodHandler.java:68)
+	at com.FlightLogix.Service.apis.BookingResource$Proxy$_$$_WeldSubclass.createBooking(Unknown Source)
+	at com.FlightLogix.Service.apis.BookingResource$Proxy$_$$_WeldClientProxy.createBooking(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor1302.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.ibm.ws.jaxrs20.cdi.component.JaxRsFactoryImplicitBeanCDICustomizer.serviceInvoke(JaxRsFactoryImplicitBeanCDICustomizer.java:342)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.performInvocation(LibertyJaxRsServerFactoryBean.java:641)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.performInvocation(LibertyJaxRsInvoker.java:160)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:101)
+	... 42 more
+Caused by: javax.persistence.PersistenceException: Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.7.8.v20201217-ecdf3c32c4): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: Table 'db1.segment' doesn't exist
+Error Code: 1146
+Call: INSERT INTO SEGMENT (ID) VALUES (?)
+	bind => [1 parameter bound]
+Query: InsertObjectQuery(com.FlightLogix.Core.Flight.Segment@4febdb9b)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl$1.handleException(EntityManagerSetupImpl.java:787)
+	at org.eclipse.persistence.transaction.AbstractSynchronizationListener.handleException(AbstractSynchronizationListener.java:277)
+	at org.eclipse.persistence.transaction.AbstractSynchronizationListener.beforeCompletion(AbstractSynchronizationListener.java:172)
+	at org.eclipse.persistence.transaction.JTASynchronizationListener.beforeCompletion(JTASynchronizationListener.java:70)
+	at com.ibm.tx.jta.impl.RegisteredSyncs.coreDistributeBefore(RegisteredSyncs.java:247)
+	at com.ibm.tx.jta.impl.RegisteredSyncs.distributeBefore(RegisteredSyncs.java:148)
+	at com.ibm.tx.jta.impl.TransactionImpl.prePrepare(TransactionImpl.java:1402)
+	at com.ibm.tx.jta.impl.TransactionImpl.stage1CommitProcessing(TransactionImpl.java:793)
+	at com.ibm.tx.jta.impl.TransactionImpl.processCommit(TransactionImpl.java:768)
+	... 67 more
+Caused by: Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.7.8.v20201217-ecdf3c32c4): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: Table 'db1.segment' doesn't exist
+Error Code: 1146
+Call: INSERT INTO SEGMENT (ID) VALUES (?)
+	bind => [1 parameter bound]
+Query: InsertObjectQuery(com.FlightLogix.Core.Flight.Segment@4febdb9b)
+	at org.eclipse.persistence.exceptions.DatabaseException.sqlException(DatabaseException.java:333)
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeDirectNoSelect(DatabaseAccessor.java:908)
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeNoSelect(DatabaseAccessor.java:970)
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.basicExecuteCall(DatabaseAccessor.java:640)
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeCall(DatabaseAccessor.java:567)
+	at org.eclipse.persistence.internal.sessions.AbstractSession.basicExecuteCall(AbstractSession.java:2099)
+	at org.eclipse.persistence.sessions.server.ClientSession.executeCall(ClientSession.java:313)
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.executeCall(DatasourceCallQueryMechanism.java:277)
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.executeCall(DatasourceCallQueryMechanism.java:263)
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.insertObject(DatasourceCallQueryMechanism.java:413)
+	at org.eclipse.persistence.internal.queries.StatementQueryMechanism.insertObject(StatementQueryMechanism.java:167)
+	at org.eclipse.persistence.internal.queries.StatementQueryMechanism.insertObject(StatementQueryMechanism.java:182)
+	at org.eclipse.persistence.internal.queries.DatabaseQueryMechanism.insertObjectForWrite(DatabaseQueryMechanism.java:504)
+	at org.eclipse.persistence.queries.InsertObjectQuery.executeCommit(InsertObjectQuery.java:82)
+	at org.eclipse.persistence.queries.InsertObjectQuery.executeCommitWithChangeSet(InsertObjectQuery.java:92)
+	at org.eclipse.persistence.internal.queries.DatabaseQueryMechanism.executeWriteWithChangeSet(DatabaseQueryMechanism.java:316)
+	at org.eclipse.persistence.queries.WriteObjectQuery.executeDatabaseQuery(WriteObjectQuery.java:60)
+	at org.eclipse.persistence.queries.DatabaseQuery.execute(DatabaseQuery.java:911)
+	at org.eclipse.persistence.queries.DatabaseQuery.executeInUnitOfWork(DatabaseQuery.java:810)
+	at org.eclipse.persistence.queries.ObjectLevelModifyQuery.executeInUnitOfWorkObjectLevelModifyQuery(ObjectLevelModifyQuery.java:110)
+	at org.eclipse.persistence.queries.ObjectLevelModifyQuery.executeInUnitOfWork(ObjectLevelModifyQuery.java:87)
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.internalExecuteQuery(UnitOfWorkImpl.java:2983)
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1898)
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1880)
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1830)
+	at org.eclipse.persistence.internal.sessions.CommitManager.commitNewObjectsForClassWithChangeSet(CommitManager.java:229)
+	at org.eclipse.persistence.internal.sessions.CommitManager.commitAllObjectsForClassWithChangeSet(CommitManager.java:196)
+	at org.eclipse.persistence.internal.sessions.CommitManager.commitAllObjectsWithChangeSet(CommitManager.java:141)
+	at org.eclipse.persistence.internal.sessions.AbstractSession.writeAllObjectsWithChangeSet(AbstractSession.java:4398)
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.commitToDatabase(UnitOfWorkImpl.java:1495)
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.commitToDatabaseWithChangeSet(UnitOfWorkImpl.java:1585)
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.issueSQLbeforeCompletion(UnitOfWorkImpl.java:3260)
+	at org.eclipse.persistence.internal.sessions.RepeatableWriteUnitOfWork.issueSQLbeforeCompletion(RepeatableWriteUnitOfWork.java:357)
+	at org.eclipse.persistence.transaction.AbstractSynchronizationListener.beforeCompletion(AbstractSynchronizationListener.java:160)
+	... 73 more
+Caused by: java.sql.SQLSyntaxErrorException: Table 'db1.segment' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1092)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1040)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1347)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1025)
+	at com.mysql.cj.jdbc.PreparedStatementWrapper.executeUpdate(PreparedStatementWrapper.java:595)
+	at com.ibm.ws.rsadapter.jdbc.WSJdbcPreparedStatement.executeUpdate(WSJdbcPreparedStatement.java:525)
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeDirectNoSelect(DatabaseAccessor.java:898)
+	... 105 more
+
+[4/7/21 22:29:21:037 EDT] 00000628 com.ibm.ws.webcontainer.webapp                               E SRVE0315E: An exception occurred: java.lang.Throwable: org.apache.cxf.interceptor.Fault
+	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:5115)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:314)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:1006)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1146)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:427)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:386)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:566)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:500)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:360)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:327)
+	at com.ibm.ws.channel.ssl.internal.SSLConnectionLink.determineNextChannel(SSLConnectionLink.java:1100)
+	at com.ibm.ws.channel.ssl.internal.SSLConnectionLink.readyInboundPostHandshake(SSLConnectionLink.java:757)
+	at com.ibm.ws.channel.ssl.internal.SSLConnectionLink$MyHandshakeCompletedCallback.complete(SSLConnectionLink.java:427)
+	at com.ibm.ws.channel.ssl.internal.SSLUtils.handleHandshake(SSLUtils.java:954)
+	at com.ibm.ws.channel.ssl.internal.SSLHandshakeIOCallback.complete(SSLHandshakeIOCallback.java:85)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:958)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1047)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:238)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.cxf.interceptor.Fault
+	at org.apache.cxf.service.invoker.AbstractInvoker.createFault(AbstractInvoker.java:167)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:133)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.invoke(LibertyJaxRsInvoker.java:273)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:205)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.invoke(LibertyJaxRsInvoker.java:444)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:111)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor$1.run(ServiceInvokerInterceptor.java:59)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor.handleMessage(ServiceInvokerInterceptor.java:96)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:308)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:123)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:275)
+	at com.ibm.ws.jaxrs20.endpoint.AbstractJaxRsWebEndpoint.invoke(AbstractJaxRsWebEndpoint.java:137)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.handleRequest(IBMRestServlet.java:146)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.doPost(IBMRestServlet.java:104)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.service(IBMRestServlet.java:96)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1257)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:745)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:442)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1226)
+	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:5057)
+	... 23 more
+Caused by: javax.transaction.RollbackException
+	at com.ibm.tx.jta.impl.TransactionImpl.stage3CommitProcessing(TransactionImpl.java:980)
+	at com.ibm.tx.jta.impl.TransactionImpl.processCommit(TransactionImpl.java:778)
+	at com.ibm.tx.jta.impl.TransactionImpl.commit(TransactionImpl.java:711)
+	at com.ibm.tx.jta.impl.TranManagerImpl.commit(TranManagerImpl.java:165)
+	at com.ibm.tx.jta.impl.TranManagerSet.commit(TranManagerSet.java:113)
+	at com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl.uowCommit(EmbeddableUOWManagerImpl.java:834)
+	at com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl.uowEnd(EmbeddableUOWManagerImpl.java:812)
+	at com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl.runUnderNewUOW(EmbeddableUOWManagerImpl.java:1043)
+	at com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl.runUnderUOW(EmbeddableUOWManagerImpl.java:1013)
+	at com.ibm.tx.jta.cdi.interceptors.TransactionalInterceptor.runUnderUOWManagingEnablement(TransactionalInterceptor.java:151)
+	at com.ibm.tx.jta.cdi.interceptors.Required.required(Required.java:40)
+	at sun.reflect.GeneratedMethodAccessor550.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.jboss.weld.interceptor.reader.SimpleInterceptorInvocation$SimpleMethodInvocation.invoke(SimpleInterceptorInvocation.java:73)
+	at org.jboss.weld.interceptor.proxy.InterceptorMethodHandler.executeAroundInvoke(InterceptorMethodHandler.java:84)
+	at org.jboss.weld.interceptor.proxy.InterceptorMethodHandler.executeInterception(InterceptorMethodHandler.java:72)
+	at org.jboss.weld.interceptor.proxy.InterceptorMethodHandler.invoke(InterceptorMethodHandler.java:56)
+	at org.jboss.weld.bean.proxy.CombinedInterceptorAndDecoratorStackMethodHandler.invoke(CombinedInterceptorAndDecoratorStackMethodHandler.java:79)
+	at org.jboss.weld.bean.proxy.CombinedInterceptorAndDecoratorStackMethodHandler.invoke(CombinedInterceptorAndDecoratorStackMethodHandler.java:68)
+	at com.FlightLogix.Service.apis.BookingResource$Proxy$_$$_WeldSubclass.createBooking(Unknown Source)
+	at com.FlightLogix.Service.apis.BookingResource$Proxy$_$$_WeldClientProxy.createBooking(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor1302.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.ibm.ws.jaxrs20.cdi.component.JaxRsFactoryImplicitBeanCDICustomizer.serviceInvoke(JaxRsFactoryImplicitBeanCDICustomizer.java:342)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.performInvocation(LibertyJaxRsServerFactoryBean.java:641)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.performInvocation(LibertyJaxRsInvoker.java:160)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:101)
+	... 42 more
+Caused by: javax.persistence.PersistenceException: Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.7.8.v20201217-ecdf3c32c4): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: Table 'db1.segment' doesn't exist
+Error Code: 1146
+Call: INSERT INTO SEGMENT (ID) VALUES (?)
+	bind => [1 parameter bound]
+Query: InsertObjectQuery(com.FlightLogix.Core.Flight.Segment@4febdb9b)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl$1.handleException(EntityManagerSetupImpl.java:787)
+	at org.eclipse.persistence.transaction.AbstractSynchronizationListener.handleException(AbstractSynchronizationListener.java:277)
+	at org.eclipse.persistence.transaction.AbstractSynchronizationListener.beforeCompletion(AbstractSynchronizationListener.java:172)
+	at org.eclipse.persistence.transaction.JTASynchronizationListener.beforeCompletion(JTASynchronizationListener.java:70)
+	at com.ibm.tx.jta.impl.RegisteredSyncs.coreDistributeBefore(RegisteredSyncs.java:247)
+	at com.ibm.tx.jta.impl.RegisteredSyncs.distributeBefore(RegisteredSyncs.java:148)
+	at com.ibm.tx.jta.impl.TransactionImpl.prePrepare(TransactionImpl.java:1402)
+	at com.ibm.tx.jta.impl.TransactionImpl.stage1CommitProcessing(TransactionImpl.java:793)
+	at com.ibm.tx.jta.impl.TransactionImpl.processCommit(TransactionImpl.java:768)
+	... 67 more
+Caused by: Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.7.8.v20201217-ecdf3c32c4): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: Table 'db1.segment' doesn't exist
+Error Code: 1146
+Call: INSERT INTO SEGMENT (ID) VALUES (?)
+	bind => [1 parameter bound]
+Query: InsertObjectQuery(com.FlightLogix.Core.Flight.Segment@4febdb9b)
+	at org.eclipse.persistence.exceptions.DatabaseException.sqlException(DatabaseException.java:333)
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeDirectNoSelect(DatabaseAccessor.java:908)
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeNoSelect(DatabaseAccessor.java:970)
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.basicExecuteCall(DatabaseAccessor.java:640)
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeCall(DatabaseAccessor.java:567)
+	at org.eclipse.persistence.internal.sessions.AbstractSession.basicExecuteCall(AbstractSession.java:2099)
+	at org.eclipse.persistence.sessions.server.ClientSession.executeCall(ClientSession.java:313)
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.executeCall(DatasourceCallQueryMechanism.java:277)
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.executeCall(DatasourceCallQueryMechanism.java:263)
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.insertObject(DatasourceCallQueryMechanism.java:413)
+	at org.eclipse.persistence.internal.queries.StatementQueryMechanism.insertObject(StatementQueryMechanism.java:167)
+	at org.eclipse.persistence.internal.queries.StatementQueryMechanism.insertObject(StatementQueryMechanism.java:182)
+	at org.eclipse.persistence.internal.queries.DatabaseQueryMechanism.insertObjectForWrite(DatabaseQueryMechanism.java:504)
+	at org.eclipse.persistence.queries.InsertObjectQuery.executeCommit(InsertObjectQuery.java:82)
+	at org.eclipse.persistence.queries.InsertObjectQuery.executeCommitWithChangeSet(InsertObjectQuery.java:92)
+	at org.eclipse.persistence.internal.queries.DatabaseQueryMechanism.executeWriteWithChangeSet(DatabaseQueryMechanism.java:316)
+	at org.eclipse.persistence.queries.WriteObjectQuery.executeDatabaseQuery(WriteObjectQuery.java:60)
+	at org.eclipse.persistence.queries.DatabaseQuery.execute(DatabaseQuery.java:911)
+	at org.eclipse.persistence.queries.DatabaseQuery.executeInUnitOfWork(DatabaseQuery.java:810)
+	at org.eclipse.persistence.queries.ObjectLevelModifyQuery.executeInUnitOfWorkObjectLevelModifyQuery(ObjectLevelModifyQuery.java:110)
+	at org.eclipse.persistence.queries.ObjectLevelModifyQuery.executeInUnitOfWork(ObjectLevelModifyQuery.java:87)
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.internalExecuteQuery(UnitOfWorkImpl.java:2983)
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1898)
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1880)
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1830)
+	at org.eclipse.persistence.internal.sessions.CommitManager.commitNewObjectsForClassWithChangeSet(CommitManager.java:229)
+	at org.eclipse.persistence.internal.sessions.CommitManager.commitAllObjectsForClassWithChangeSet(CommitManager.java:196)
+	at org.eclipse.persistence.internal.sessions.CommitManager.commitAllObjectsWithChangeSet(CommitManager.java:141)
+	at org.eclipse.persistence.internal.sessions.AbstractSession.writeAllObjectsWithChangeSet(AbstractSession.java:4398)
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.commitToDatabase(UnitOfWorkImpl.java:1495)
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.commitToDatabaseWithChangeSet(UnitOfWorkImpl.java:1585)
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.issueSQLbeforeCompletion(UnitOfWorkImpl.java:3260)
+	at org.eclipse.persistence.internal.sessions.RepeatableWriteUnitOfWork.issueSQLbeforeCompletion(RepeatableWriteUnitOfWork.java:357)
+	at org.eclipse.persistence.transaction.AbstractSynchronizationListener.beforeCompletion(AbstractSynchronizationListener.java:160)
+	... 73 more
+Caused by: java.sql.SQLSyntaxErrorException: Table 'db1.segment' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1092)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1040)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1347)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1025)
+	at com.mysql.cj.jdbc.PreparedStatementWrapper.executeUpdate(PreparedStatementWrapper.java:595)
+	at com.ibm.ws.rsadapter.jdbc.WSJdbcPreparedStatement.executeUpdate(WSJdbcPreparedStatement.java:525)
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeDirectNoSelect(DatabaseAccessor.java:898)
+	... 105 more
+
+[4/7/21 22:29:52:969 EDT] 00000663 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://johanson:8080/
+[4/7/21 22:29:52:971 EDT] 00000663 com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [FlightLogix] [/] [com.FlightLogix.Service.FlightLogixApplicatioon]: Destroy successful.
+[4/7/21 22:29:52:983 EDT] 00000663 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application FlightLogix has stopped successfully.
+[4/7/21 22:29:53:000 EDT] 00000663 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application FlightLogix.
+[4/7/21 22:29:53:000 EDT] 00000663 bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The FlightLogix application is using the loose application definition at the C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\apps\FlightLogix.war.xml location.
+[4/7/21 22:29:54:189 EDT] 0000065c com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:29:55:936 EDT] 00000663 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Liberty Project.
+[4/7/21 22:29:55:937 EDT] 00000663 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Liberty Project has been bound to default_host.
+[4/7/21 22:29:55:937 EDT] 00000663 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://johanson:8080/
+[4/7/21 22:29:55:941 EDT] 000004b6 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/
+[4/7/21 22:29:55:942 EDT] 000004b6 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[4/7/21 22:29:55:950 EDT] 000004b6 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application FlightLogix updated in 2.950 seconds.
+[4/7/21 22:29:57:015 EDT] 00000628 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:30:01:434 EDT] 00000679 .jaxrs20.cdi.component.JaxRsFactoryImplicitBeanCDICustomizer W CWWKW1002W: The CDI scope of JAXRS Provider AuthenticationFilter is javax.enterprise.context.Dependent. Liberty gets the provider instance from CDI.
+[4/7/21 22:30:01:435 EDT] 00000679 .jaxrs20.cdi.component.JaxRsFactoryImplicitBeanCDICustomizer W CWWKW1002W: The CDI scope of JAXRS Provider AuthorizationFilter is javax.enterprise.context.Dependent. Liberty gets the provider instance from CDI.
+[4/7/21 22:30:01:438 EDT] 00000679 .apache.cxf.cxf.core.3.2:1.0.50.cl210320210309-1101(id=139)] I Setting the server's publish address to be /app/
+[4/7/21 22:30:01:445 EDT] 00000679 com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [FlightLogix] [/] [com.FlightLogix.Service.FlightLogixApplicatioon]: Initialization successful.
+[4/7/21 22:30:02:255 EDT] 00000679 eclipselink                                                  I CWWJP9990I: [eclipselink] EclipseLink, version: Eclipse Persistence Services - 2.7.8.v20201217-ecdf3c32c4
+[4/7/21 22:30:05:314 EDT] 00000679 SystemOut                                                    O TOKEN->AwVLHhXPM9v3RTGb11hHnIxFX8M2
+[4/7/21 22:30:27:707 EDT] 0000063a com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://johanson:8080/
+[4/7/21 22:30:27:710 EDT] 0000063a com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [FlightLogix] [/] [com.FlightLogix.Service.FlightLogixApplicatioon]: Destroy successful.
+[4/7/21 22:30:27:720 EDT] 0000063a com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application FlightLogix has stopped successfully.
+[4/7/21 22:30:27:730 EDT] 0000063a com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application FlightLogix.
+[4/7/21 22:30:27:731 EDT] 0000063a bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The FlightLogix application is using the loose application definition at the C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\apps\FlightLogix.war.xml location.
+[4/7/21 22:30:28:705 EDT] 00000674 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:30:29:623 EDT] 0000063a com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Liberty Project.
+[4/7/21 22:30:29:623 EDT] 0000063a com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Liberty Project has been bound to default_host.
+[4/7/21 22:30:29:624 EDT] 0000063a com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://johanson:8080/
+[4/7/21 22:30:29:626 EDT] 0000069a com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/
+[4/7/21 22:30:29:627 EDT] 0000069a com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[4/7/21 22:30:29:630 EDT] 0000069a com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application FlightLogix updated in 1.900 seconds.
+[4/7/21 22:30:30:282 EDT] 0000063a com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:30:41:435 EDT] 0000065c .jaxrs20.cdi.component.JaxRsFactoryImplicitBeanCDICustomizer W CWWKW1002W: The CDI scope of JAXRS Provider AuthenticationFilter is javax.enterprise.context.Dependent. Liberty gets the provider instance from CDI.
+[4/7/21 22:30:41:437 EDT] 0000065c .jaxrs20.cdi.component.JaxRsFactoryImplicitBeanCDICustomizer W CWWKW1002W: The CDI scope of JAXRS Provider AuthorizationFilter is javax.enterprise.context.Dependent. Liberty gets the provider instance from CDI.
+[4/7/21 22:30:41:440 EDT] 0000065c .apache.cxf.cxf.core.3.2:1.0.50.cl210320210309-1101(id=139)] I Setting the server's publish address to be /app/
+[4/7/21 22:30:41:445 EDT] 0000065c com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [FlightLogix] [/] [com.FlightLogix.Service.FlightLogixApplicatioon]: Initialization successful.
+[4/7/21 22:30:42:220 EDT] 0000065c eclipselink                                                  I CWWJP9990I: [eclipselink] EclipseLink, version: Eclipse Persistence Services - 2.7.8.v20201217-ecdf3c32c4
+[4/7/21 22:30:43:244 EDT] 0000065c SystemOut                                                    O TOKEN->Q3a7WRr1Do1Afrh1IrAUdFXVfhjI
+[4/7/21 22:31:28:993 EDT] 00000647 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://johanson:8080/
+[4/7/21 22:31:28:996 EDT] 00000647 com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [FlightLogix] [/] [com.FlightLogix.Service.FlightLogixApplicatioon]: Destroy successful.
+[4/7/21 22:31:29:005 EDT] 00000647 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application FlightLogix has stopped successfully.
+[4/7/21 22:31:29:016 EDT] 00000647 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application FlightLogix.
+[4/7/21 22:31:29:016 EDT] 00000647 bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The FlightLogix application is using the loose application definition at the C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\apps\FlightLogix.war.xml location.
+[4/7/21 22:31:29:755 EDT] 00000698 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:31:30:849 EDT] 00000647 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Liberty Project.
+[4/7/21 22:31:30:849 EDT] 00000647 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Liberty Project has been bound to default_host.
+[4/7/21 22:31:30:849 EDT] 00000647 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://johanson:8080/
+[4/7/21 22:31:30:852 EDT] 0000066f com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/
+[4/7/21 22:31:30:852 EDT] 0000066f com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[4/7/21 22:31:30:857 EDT] 0000066f com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application FlightLogix updated in 1.840 seconds.
+[4/7/21 22:31:31:526 EDT] 0000065c com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:31:33:722 EDT] 0000065c .jaxrs20.cdi.component.JaxRsFactoryImplicitBeanCDICustomizer W CWWKW1002W: The CDI scope of JAXRS Provider AuthenticationFilter is javax.enterprise.context.Dependent. Liberty gets the provider instance from CDI.
+[4/7/21 22:31:33:722 EDT] 0000065c .jaxrs20.cdi.component.JaxRsFactoryImplicitBeanCDICustomizer W CWWKW1002W: The CDI scope of JAXRS Provider AuthorizationFilter is javax.enterprise.context.Dependent. Liberty gets the provider instance from CDI.
+[4/7/21 22:31:33:728 EDT] 0000065c .apache.cxf.cxf.core.3.2:1.0.50.cl210320210309-1101(id=139)] I Setting the server's publish address to be /app/
+[4/7/21 22:31:33:738 EDT] 0000065c com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [FlightLogix] [/] [com.FlightLogix.Service.FlightLogixApplicatioon]: Initialization successful.
+[4/7/21 22:31:34:990 EDT] 0000065c eclipselink                                                  I CWWJP9990I: [eclipselink] EclipseLink, version: Eclipse Persistence Services - 2.7.8.v20201217-ecdf3c32c4
+[4/7/21 22:31:35:962 EDT] 0000065c SystemOut                                                    O TOKEN->fM9BmC0K25mVrIE0XJF6f1LZ78Wt
+[4/7/21 22:36:03:164 EDT] 000006cd com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://johanson:8080/
+[4/7/21 22:36:03:166 EDT] 000006cd com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [FlightLogix] [/] [com.FlightLogix.Service.FlightLogixApplicatioon]: Destroy successful.
+[4/7/21 22:36:03:177 EDT] 000006cd com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application FlightLogix has stopped successfully.
+[4/7/21 22:36:03:188 EDT] 000006cd com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application FlightLogix.
+[4/7/21 22:36:03:188 EDT] 000006cd bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The FlightLogix application is using the loose application definition at the C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\apps\FlightLogix.war.xml location.
+[4/7/21 22:36:03:846 EDT] 00000647 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:36:04:539 EDT] 000006cd com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Liberty Project.
+[4/7/21 22:36:04:539 EDT] 000006cd com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Liberty Project has been bound to default_host.
+[4/7/21 22:36:04:539 EDT] 000006cd com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://johanson:8080/
+[4/7/21 22:36:04:541 EDT] 000006c9 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/
+[4/7/21 22:36:04:542 EDT] 000006c9 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[4/7/21 22:36:04:546 EDT] 000006c9 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application FlightLogix updated in 1.358 seconds.
+[4/7/21 22:36:05:264 EDT] 000006be com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:37:52:392 EDT] 000006d8 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://johanson:8080/
+[4/7/21 22:37:52:401 EDT] 000006d8 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application FlightLogix has stopped successfully.
+[4/7/21 22:37:52:411 EDT] 000006d8 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application FlightLogix.
+[4/7/21 22:37:52:412 EDT] 000006d8 bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The FlightLogix application is using the loose application definition at the C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\apps\FlightLogix.war.xml location.
+[4/7/21 22:37:53:233 EDT] 000006cd com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:37:54:387 EDT] 000006d8 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Liberty Project.
+[4/7/21 22:37:54:388 EDT] 000006d8 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Liberty Project has been bound to default_host.
+[4/7/21 22:37:54:388 EDT] 000006d8 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://johanson:8080/
+[4/7/21 22:37:54:391 EDT] 00000647 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/
+[4/7/21 22:37:54:391 EDT] 00000647 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[4/7/21 22:37:54:396 EDT] 00000647 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application FlightLogix updated in 1.985 seconds.
+[4/7/21 22:37:55:140 EDT] 000006d8 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:38:00:877 EDT] 00000647 .jaxrs20.cdi.component.JaxRsFactoryImplicitBeanCDICustomizer W CWWKW1002W: The CDI scope of JAXRS Provider AuthenticationFilter is javax.enterprise.context.Dependent. Liberty gets the provider instance from CDI.
+[4/7/21 22:38:00:877 EDT] 00000647 .jaxrs20.cdi.component.JaxRsFactoryImplicitBeanCDICustomizer W CWWKW1002W: The CDI scope of JAXRS Provider AuthorizationFilter is javax.enterprise.context.Dependent. Liberty gets the provider instance from CDI.
+[4/7/21 22:38:00:879 EDT] 00000647 .apache.cxf.cxf.core.3.2:1.0.50.cl210320210309-1101(id=139)] I Setting the server's publish address to be /app/
+[4/7/21 22:38:00:885 EDT] 00000647 com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [FlightLogix] [/] [com.FlightLogix.Service.FlightLogixApplicatioon]: Initialization successful.
+[4/7/21 22:38:01:769 EDT] 00000647 eclipselink                                                  I CWWJP9990I: [eclipselink] EclipseLink, version: Eclipse Persistence Services - 2.7.8.v20201217-ecdf3c32c4
+[4/7/21 22:38:02:854 EDT] 00000647 SystemOut                                                    O TOKEN->60qAjdG3VpN1V4GnAHxx31aMMGe9
+[4/7/21 22:38:31:238 EDT] 000006f0 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://johanson:8080/
+[4/7/21 22:38:31:240 EDT] 000006f0 com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [FlightLogix] [/] [com.FlightLogix.Service.FlightLogixApplicatioon]: Destroy successful.
+[4/7/21 22:38:31:250 EDT] 000006f0 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application FlightLogix has stopped successfully.
+[4/7/21 22:38:31:259 EDT] 000006f0 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application FlightLogix.
+[4/7/21 22:38:31:260 EDT] 000006f0 bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The FlightLogix application is using the loose application definition at the C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\apps\FlightLogix.war.xml location.
+[4/7/21 22:38:31:941 EDT] 000006e3 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:38:32:877 EDT] 000006f0 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Liberty Project.
+[4/7/21 22:38:32:878 EDT] 000006f0 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Liberty Project has been bound to default_host.
+[4/7/21 22:38:32:878 EDT] 000006f0 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://johanson:8080/
+[4/7/21 22:38:32:880 EDT] 000006a1 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/
+[4/7/21 22:38:32:880 EDT] 000006a1 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[4/7/21 22:38:32:884 EDT] 000006a1 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application FlightLogix updated in 1.625 seconds.
+[4/7/21 22:38:33:547 EDT] 00000647 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:38:38:714 EDT] 00000701 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://johanson:8080/
+[4/7/21 22:38:38:723 EDT] 00000701 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application FlightLogix has stopped successfully.
+[4/7/21 22:38:38:731 EDT] 00000701 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application FlightLogix.
+[4/7/21 22:38:38:732 EDT] 00000701 bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The FlightLogix application is using the loose application definition at the C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\apps\FlightLogix.war.xml location.
+[4/7/21 22:38:39:650 EDT] 000006c3 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:38:40:560 EDT] 00000701 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Liberty Project.
+[4/7/21 22:38:40:560 EDT] 00000701 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Liberty Project has been bound to default_host.
+[4/7/21 22:38:40:560 EDT] 00000701 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://johanson:8080/
+[4/7/21 22:38:40:562 EDT] 000006d5 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/
+[4/7/21 22:38:40:563 EDT] 000006d5 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[4/7/21 22:38:40:566 EDT] 000006d5 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application FlightLogix updated in 1.835 seconds.
+[4/7/21 22:38:41:151 EDT] 00000701 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:39:51:193 EDT] 00000714 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://johanson:8080/
+[4/7/21 22:39:51:203 EDT] 00000714 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application FlightLogix has stopped successfully.
+[4/7/21 22:39:51:213 EDT] 00000714 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application FlightLogix.
+[4/7/21 22:39:51:214 EDT] 00000714 bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The FlightLogix application is using the loose application definition at the C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\apps\FlightLogix.war.xml location.
+[4/7/21 22:39:52:077 EDT] 00000715 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:39:53:131 EDT] 00000714 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Liberty Project.
+[4/7/21 22:39:53:131 EDT] 00000714 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Liberty Project has been bound to default_host.
+[4/7/21 22:39:53:131 EDT] 00000714 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://johanson:8080/
+[4/7/21 22:39:53:134 EDT] 000006f9 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/
+[4/7/21 22:39:53:134 EDT] 000006f9 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[4/7/21 22:39:53:138 EDT] 000006f9 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application FlightLogix updated in 1.925 seconds.
+[4/7/21 22:39:53:900 EDT] 00000704 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:43:19:395 EDT] 000006ee com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://johanson:8080/
+[4/7/21 22:43:19:405 EDT] 000006ee com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application FlightLogix has stopped successfully.
+[4/7/21 22:43:19:418 EDT] 000006ee com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application FlightLogix.
+[4/7/21 22:43:19:419 EDT] 000006ee bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The FlightLogix application is using the loose application definition at the C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\apps\FlightLogix.war.xml location.
+[4/7/21 22:43:20:251 EDT] 0000070f com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:43:21:197 EDT] 000006ee com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Liberty Project.
+[4/7/21 22:43:21:198 EDT] 000006ee com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Liberty Project has been bound to default_host.
+[4/7/21 22:43:21:198 EDT] 000006ee com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://johanson:8080/
+[4/7/21 22:43:21:202 EDT] 0000074f com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/
+[4/7/21 22:43:21:202 EDT] 0000074f com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[4/7/21 22:43:21:206 EDT] 0000074f com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application FlightLogix updated in 1.788 seconds.
+[4/7/21 22:43:21:945 EDT] 00000743 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:43:32:469 EDT] 0000070f com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://johanson:8080/
+[4/7/21 22:43:32:477 EDT] 0000070f com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application FlightLogix has stopped successfully.
+[4/7/21 22:43:32:488 EDT] 0000070f com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application FlightLogix.
+[4/7/21 22:43:32:488 EDT] 0000070f bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The FlightLogix application is using the loose application definition at the C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\apps\FlightLogix.war.xml location.
+[4/7/21 22:43:33:711 EDT] 00000748 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:43:34:703 EDT] 0000070f com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Liberty Project.
+[4/7/21 22:43:34:703 EDT] 0000070f com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Liberty Project has been bound to default_host.
+[4/7/21 22:43:34:703 EDT] 0000070f com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://johanson:8080/
+[4/7/21 22:43:34:707 EDT] 00000647 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/
+[4/7/21 22:43:34:707 EDT] 00000647 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[4/7/21 22:43:34:712 EDT] 00000647 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application FlightLogix updated in 2.223 seconds.
+[4/7/21 22:43:35:473 EDT] 0000070f com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:53:02:483 EDT] 00000796 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://johanson:8080/
+[4/7/21 22:53:02:491 EDT] 00000796 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application FlightLogix has stopped successfully.
+[4/7/21 22:53:02:503 EDT] 00000796 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application FlightLogix.
+[4/7/21 22:53:02:503 EDT] 00000796 bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The FlightLogix application is using the loose application definition at the C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\apps\FlightLogix.war.xml location.
+[4/7/21 22:53:03:145 EDT] 000007b6 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:53:03:738 EDT] 00000796 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Liberty Project.
+[4/7/21 22:53:03:738 EDT] 00000796 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Liberty Project has been bound to default_host.
+[4/7/21 22:53:03:738 EDT] 00000796 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://johanson:8080/
+[4/7/21 22:53:03:738 EDT] 00000743 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/
+[4/7/21 22:53:03:738 EDT] 00000743 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[4/7/21 22:53:03:742 EDT] 00000743 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application FlightLogix updated in 1.239 seconds.
+[4/7/21 22:53:04:287 EDT] 00000796 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:53:18:180 EDT] 000007bc .jaxrs20.cdi.component.JaxRsFactoryImplicitBeanCDICustomizer W CWWKW1002W: The CDI scope of JAXRS Provider AuthenticationFilter is javax.enterprise.context.Dependent. Liberty gets the provider instance from CDI.
+[4/7/21 22:53:18:184 EDT] 000007bc .jaxrs20.cdi.component.JaxRsFactoryImplicitBeanCDICustomizer W CWWKW1002W: The CDI scope of JAXRS Provider AuthorizationFilter is javax.enterprise.context.Dependent. Liberty gets the provider instance from CDI.
+[4/7/21 22:53:18:184 EDT] 000007bc .apache.cxf.cxf.core.3.2:1.0.50.cl210320210309-1101(id=139)] I Setting the server's publish address to be /app/
+[4/7/21 22:53:18:192 EDT] 000007bc com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [FlightLogix] [/] [com.FlightLogix.Service.FlightLogixApplicatioon]: Initialization successful.
+[4/7/21 22:53:18:872 EDT] 000007bc eclipselink                                                  I CWWJP9990I: [eclipselink] EclipseLink, version: Eclipse Persistence Services - 2.7.8.v20201217-ecdf3c32c4
+[4/7/21 22:53:20:273 EDT] 000007bc SystemOut                                                    O TOKEN->UrAAexWiWJc8FW46w1GItabJFJCW
+[4/7/21 22:54:47:575 EDT] 000007ad com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://johanson:8080/
+[4/7/21 22:54:47:579 EDT] 000007ad com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [FlightLogix] [/] [com.FlightLogix.Service.FlightLogixApplicatioon]: Destroy successful.
+[4/7/21 22:54:47:587 EDT] 000007ad com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application FlightLogix has stopped successfully.
+[4/7/21 22:54:47:599 EDT] 000007ad com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application FlightLogix.
+[4/7/21 22:54:47:599 EDT] 000007ad bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The FlightLogix application is using the loose application definition at the C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\apps\FlightLogix.war.xml location.
+[4/7/21 22:54:48:265 EDT] 000007eb com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:54:48:882 EDT] 000007ad com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: An FFDC Incident has been created: "org.jboss.weld.exceptions.DefinitionException: WELD-000046: At most one scope may be specified on [EnhancedAnnotatedTypeImpl] public @Dependent @ApplicationScoped @Provider @Priority class com.FlightLogix.Service.filters.AuthenticationFilter com.ibm.ws.container.service.state.internal.ApplicationStateManager 54" at ffdc_21.04.07_22.54.48.0.log
+[4/7/21 22:54:49:061 EDT] 000007ad com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: An FFDC Incident has been created: "com.ibm.ws.container.service.state.StateChangeException: org.jboss.weld.exceptions.DefinitionException: WELD-000046: At most one scope may be specified on [EnhancedAnnotatedTypeImpl] public @Dependent @ApplicationScoped @Provider @Priority class com.FlightLogix.Service.filters.AuthenticationFilter com.ibm.ws.app.manager.module.internal.SimpleDeployedAppInfoBase 548" at ffdc_21.04.07_22.54.48.1.log
+[4/7/21 22:54:49:065 EDT] 000007ad com.ibm.ws.app.manager.AppMessageHelper                      E CWWKZ0004E: An exception occurred while starting the application FlightLogix. The exception message was: com.ibm.ws.container.service.state.StateChangeException: org.jboss.weld.exceptions.DefinitionException: WELD-000046: At most one scope may be specified on [EnhancedAnnotatedTypeImpl] public @Dependent @ApplicationScoped @Provider @Priority class com.FlightLogix.Service.filters.AuthenticationFilter
+[4/7/21 22:56:01:115 EDT] 000007ef com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application FlightLogix.
+[4/7/21 22:56:01:115 EDT] 000007ef bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The FlightLogix application is using the loose application definition at the C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\apps\FlightLogix.war.xml location.
+[4/7/21 22:56:02:463 EDT] 000007ef com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Liberty Project.
+[4/7/21 22:56:02:463 EDT] 000007ef com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Liberty Project has been bound to default_host.
+[4/7/21 22:56:02:463 EDT] 000007ef com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://johanson:8080/
+[4/7/21 22:56:02:467 EDT] 000007e4 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/
+[4/7/21 22:56:02:467 EDT] 000007e4 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[4/7/21 22:56:02:471 EDT] 000007e4 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application FlightLogix updated in 1.356 seconds.
+[4/7/21 22:56:03:053 EDT] 000007ef com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:58:22:604 EDT] 000007f5 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://johanson:8080/
+[4/7/21 22:58:22:615 EDT] 000007f5 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application FlightLogix has stopped successfully.
+[4/7/21 22:58:22:637 EDT] 000007f5 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application FlightLogix.
+[4/7/21 22:58:22:638 EDT] 000007f5 bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The FlightLogix application is using the loose application definition at the C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\apps\FlightLogix.war.xml location.
+[4/7/21 22:58:25:025 EDT] 00000803 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:58:26:314 EDT] 000007f5 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Liberty Project.
+[4/7/21 22:58:26:314 EDT] 000007f5 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Liberty Project has been bound to default_host.
+[4/7/21 22:58:26:315 EDT] 000007f5 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://johanson:8080/
+[4/7/21 22:58:26:318 EDT] 00000746 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/
+[4/7/21 22:58:26:318 EDT] 00000746 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[4/7/21 22:58:26:326 EDT] 00000746 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application FlightLogix updated in 3.688 seconds.
+[4/7/21 22:58:27:230 EDT] 000007f5 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/7/21 22:58:41:190 EDT] 000007fe .jaxrs20.cdi.component.JaxRsFactoryImplicitBeanCDICustomizer W CWWKW1002W: The CDI scope of JAXRS Provider AuthenticationFilter is javax.enterprise.context.Dependent. Liberty gets the provider instance from CDI.
+[4/7/21 22:58:41:192 EDT] 000007fe .jaxrs20.cdi.component.JaxRsFactoryImplicitBeanCDICustomizer W CWWKW1002W: The CDI scope of JAXRS Provider AuthorizationFilter is javax.enterprise.context.Dependent. Liberty gets the provider instance from CDI.
+[4/7/21 22:58:41:197 EDT] 000007fe .apache.cxf.cxf.core.3.2:1.0.50.cl210320210309-1101(id=139)] I Setting the server's publish address to be /app/
+[4/7/21 22:58:41:206 EDT] 000007fe com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [FlightLogix] [/] [com.FlightLogix.Service.FlightLogixApplicatioon]: Initialization successful.
+[4/7/21 22:58:42:048 EDT] 000007fe eclipselink                                                  I CWWJP9990I: [eclipselink] EclipseLink, version: Eclipse Persistence Services - 2.7.8.v20201217-ecdf3c32c4
+[4/7/21 22:58:43:252 EDT] 000007fe SystemOut                                                    O TOKEN->TlnHnU2UqyRGYEGhmj6xLAuhvYbV

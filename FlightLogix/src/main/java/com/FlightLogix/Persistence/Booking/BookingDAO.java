@@ -25,6 +25,7 @@ public class BookingDAO {
     }
 
     public void updateBooking(Booking booking) {
+
         em.merge(booking);
     }
 

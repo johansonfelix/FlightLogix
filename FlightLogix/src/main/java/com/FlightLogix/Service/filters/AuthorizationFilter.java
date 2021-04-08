@@ -1,29 +1,23 @@
 package com.FlightLogix.Service.filters;
 
-import com.FlightLogix.Core.Security.TokenDetails;
 import com.FlightLogix.Repository.AuthenticationOperations.TokenService;
 import com.FlightLogix.Repository.Exceptions.AccessDeniedException;
-import com.FlightLogix.Repository.Utils.ResponseCode;
-import org.json.JSONObject;
 
 import javax.annotation.Priority;
 import javax.annotation.security.DenyAll;
 import javax.annotation.security.PermitAll;
 import javax.annotation.security.RolesAllowed;
+import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.context.Dependent;
 import javax.inject.Inject;
-import javax.json.JsonObject;
 import javax.ws.rs.Priorities;
 import javax.ws.rs.container.ContainerRequestContext;
 import javax.ws.rs.container.ContainerRequestFilter;
 import javax.ws.rs.container.ResourceInfo;
 import javax.ws.rs.core.Context;
-import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.ext.Provider;
-import java.io.*;
+import java.io.IOException;
 import java.lang.reflect.Method;
-import java.nio.charset.StandardCharsets;
-import java.util.stream.Collectors;
 
 
 @Provider

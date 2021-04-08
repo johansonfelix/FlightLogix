@@ -8,6 +8,7 @@ import com.FlightLogix.Repository.AuthenticationOperations.LoginManager;
 import com.FlightLogix.Repository.AuthenticationOperations.TokenService;
 
 import javax.annotation.Priority;
+import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.context.Dependent;
 import javax.inject.Inject;
 import javax.ws.rs.Priorities;
