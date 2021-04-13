@@ -1,11 +1,4 @@
-.icon img{   
-   
-        margin-bottom: 0 !important;
-        max-width: 30px;
-        width: 30px;
-        margin-left: 65rem;
-  
-
-        
-    
+.icon{
+    color:  #4285F4;
+    font-size: 30px;
 }
