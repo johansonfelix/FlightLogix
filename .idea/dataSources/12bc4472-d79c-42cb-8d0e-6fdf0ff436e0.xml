@@ -1180,7 +1180,7 @@ SELECT|sys.sys_config
     </column>
     <column id="353" parent="289" name="PAYMENTMETHOD">
       <Position>7</Position>
-      <DataType>int|0s</DataType>
+      <DataType>varchar(255)|0s</DataType>
     </column>
     <key id="354" parent="289" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
