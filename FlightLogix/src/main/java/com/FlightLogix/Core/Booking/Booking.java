@@ -1,6 +1,6 @@
 package com.FlightLogix.Core.Booking;
 
-
+ 
 import com.FlightLogix.Core.Flight.Flight;
 import com.FlightLogix.Core.User.User;
 import com.FlightLogix.Core.Helpers.Helpers;

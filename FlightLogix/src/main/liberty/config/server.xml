@@ -44,4 +44,11 @@
                 user="root"
                 password="password"/>
   </dataSource>
+
+  <cors domain="/app/login"
+        allowedOrigins="http://localhost:3000"
+        allowedMethods="GET, DELETE, POST, PUT"
+        allowedHeaders="origin, content-type, accept, authorization, cache-control, Access-Control-Allow-Origin"
+        exposeHeaders="Access-Control-Allow-Origin"
+        maxAge="3600" />
 </server>

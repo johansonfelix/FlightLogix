@@ -1,6 +1,6 @@
 import { Route, Switch, Redirect } from 'react-router-dom';
-import Home from './pages/Home';
-import Login from './pages/Login';
+import Dashboard from './pages/Dashboard';
+import Login from './pages/Login/Login';
 import Register from './pages/Register';
 import Flights from './pages/Flights';
 import Book from './pages/Book';
@@ -8,9 +8,26 @@ import Confirm from './pages/Confirmation';
 import Success from './pages/Success';
 import Bookings from './pages/Bookings';
 import Layout from './components/Layout/Layout';
+import { Fragment } from 'react';
+import useToken from './lib/hooks/useToken';
+
+
+
 
 function App() {
+
+const {setToken, token} = useToken();
+
+  if(!token) {
+    return <Login setToken={setToken} />
+  }
+
   return (
+
+
+<Fragment>
+    
+
     <Layout>
       <Switch>
         <Route path='/' exact>
@@ -18,12 +35,10 @@ function App() {
         </Route>
 
         <Route path='/home'>
-          <Home />
+          <Dashboard />
         </Route>
 
-        <Route path='/login'>
-          <Login />
-        </Route>
+       
 
         <Route path='/register'>
           <Register />
@@ -58,7 +73,7 @@ function App() {
         </Route>
       </Switch>
     </Layout>
-
+    </Fragment>
   );
 }
 
