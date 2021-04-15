@@ -2,14 +2,30 @@ import { Fragment } from "react";
 import Header from "../Header/Header";
 import classes from './Layout.module.css';
 import banner1 from '../../assets/banner1.png';
+import Sidebar from "../SideDrawer/SideDrawer";
+import { Container, Row } from "react-bootstrap";
+
 const Layout = (props) => {
-    return(
+    return (
         <Fragment>
-            <Header />
-            <div className= {classes.banner}><img src={banner1}alt='banner' /></div>
-            <main className={classes.main}>
-                {props.children}
-            </main>
+            <Sidebar />
+            <div class={classes.grid}>
+                <div class={classes.sidebar}></div>
+                <div class={classes.body}>
+                    <Header />                    
+                    <main className={classes.main}>
+                        {props.children}
+                    </main>
+
+                </div>
+            </div>
+
+
+
+
+
+
+
         </Fragment>
     )
 };
