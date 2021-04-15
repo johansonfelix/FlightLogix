@@ -3,6 +3,8 @@ package com.FlightLogix.Service.apis;
 import com.FlightLogix.Core.Security.AuthenticationToken;
 import com.FlightLogix.Core.Security.Credentials;
 import com.FlightLogix.Repository.AuthenticationOperations.LoginManager;
+import org.json.JSONObject;
+
 import javax.annotation.security.PermitAll;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
@@ -27,6 +29,7 @@ public class LoginResource {
     @Produces(MediaType.APPLICATION_JSON)
     @PermitAll
     public Response authenticate(Credentials credentials) {
+        System.out.println(credentials.getEmail()+" "+credentials.getPassword());
         String token = loginManager.logIn(credentials.getEmail(), credentials.getPassword());
 
         AuthenticationToken authenticationToken = new AuthenticationToken(token);

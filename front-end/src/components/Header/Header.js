@@ -1,16 +1,24 @@
+import { Col, Container, Row } from 'react-bootstrap';
 import classes from './Header.module.css';
-import DrawerToggle from './HeaderItems/DrawerToggle/DrawerToggle';
 import Logo from './HeaderItems/Logo/Logo';
 import UserIcon from './HeaderItems/UserIcon/UserIcon';
 
 const Header = () => {
     return (
-        <header className={classes.header}>
-            <DrawerToggle/>
-            <Logo className={classes.Logo} />
-            <UserIcon />
+        <Container>
+            <Row>
+                <Col>
+                    <Logo className={classes.Logo} />
+                </Col>
 
-        </header>
+                <Col>
+                    <UserIcon />
+                </Col>
+
+            </Row>
+
+        </Container>
+
 
 
     );

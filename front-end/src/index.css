@@ -2,10 +2,19 @@
   box-sizing: border-box;
 }
 
+
+html{
+  background: #fff;
+}
+
+.page{
+  background: lemonchiffon;
+}
+
 body {
   font-family: 'Noto Sans', sans-serif;
   margin: 0;
-  background-color: #fff;
+  background-color: fff;
 }
 
 .centered {

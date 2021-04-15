@@ -1,4 +1,3 @@
-/*
 package com.FlightLogix.Service.ExceptionMapper;
 
 import com.FlightLogix.Core.Exception.ApiErrorDetails;
@@ -35,4 +34,3 @@ public class ExceptionMapper implements javax.ws.rs.ext.ExceptionMapper<RuntimeE
         return Response.status(status).entity(errorDetails).type(MediaType.APPLICATION_JSON).build();
     }
 }
-*/
