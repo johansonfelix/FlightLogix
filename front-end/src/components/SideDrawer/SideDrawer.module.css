@@ -1,8 +1,0 @@
-.sidebar{
-    display: 'flex';
-    height: '100vh';
-    overflow: 'scroll initial';
-    background-color: blue;
-
-    padding: 0;
-}

@@ -33,7 +33,7 @@ public class RegistrationResource {
 
         userManager.register(user);
 
-        return Response.status(Response.Status.CREATED).build();
+        return Response.ok(Response.Status.CREATED).build();
 
     }
 
