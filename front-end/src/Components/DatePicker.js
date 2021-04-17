@@ -16,10 +16,10 @@ const handleDateChange = (date) => {
 
     return(
         <TextField
-        id="date"
+        id={props.id}
         label={props.label}
         type="date"
-        defaultValue="2017-05-24"
+        defaultValue={props.defaultDate}
         className={classes.textField}
         InputLabelProps={{
           shrink: true,

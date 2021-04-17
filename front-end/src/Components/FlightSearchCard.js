@@ -100,10 +100,10 @@ export default function SimpleCard() {
                     </Grid>
 
                     <Grid item xs={2} className ={classes.margin} >
-                    <DatePicker label="Arrival Date" />
+                    <DatePicker label="Departure Date" id="departureDate" defaultDate="2021-05-31"/>
                     </Grid>
                     <Grid item xs={3}  className ={classes.margin}>
-                       <DatePicker label="Departure Date" />
+                       <DatePicker label="Return Date" id="returnDate" defaultDate="2021-06-14"/>
                     </Grid>
 
                 </Grid>
