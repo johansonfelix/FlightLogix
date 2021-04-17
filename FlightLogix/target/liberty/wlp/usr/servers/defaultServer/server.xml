@@ -37,11 +37,19 @@
                 password="Cheese123"/>
   </dataSource>-->
 
-  <dataSource jndiName="jdbc/myDB">
+<!--  <dataSource jndiName="jdbc/myDB">
     <jdbcDriver libraryRef="jdbcLib" />
     <properties serverName="localhost" portNumber="3306"
                 databaseName="db1"
                 user="root"
+                password="password"/>
+  </dataSource>-->
+
+  <dataSource jndiName="jdbc/myDB">
+    <jdbcDriver libraryRef="jdbcLib" />
+    <properties serverName="database-1.ck3ynop4zvkk.ca-central-1.rds.amazonaws.com" portNumber="3306"
+                databaseName="database-1"
+                user="admin"
                 password="password"/>
   </dataSource>
 

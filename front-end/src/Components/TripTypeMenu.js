@@ -12,11 +12,14 @@ import ListItemText from '@material-ui/core/ListItemText';
 
 // Original design here: https://github.com/siriwatknp/mui-treasury/issues/541
 
-const BorderSelect = () => {
-  const [val, setVal] = useState(1);
+export default function TripType(props) {
+  const [val, setVal] = useState('Round Trip');
 
   const handleChange = (event) => {
-    setVal(event.target.value);
+    //setVal(event.target.value);
+    
+    props.setTripType(event.target.value);
+    
   };
 
   const borderSelectClasses = useBorderSelectStyles();
@@ -45,6 +48,7 @@ const BorderSelect = () => {
 
 
   return (
+    
     <FormControl>
 
       <Select style={{color:'#5f6368'}}
@@ -52,10 +56,10 @@ const BorderSelect = () => {
         labelId="inputLabel"
         IconComponent={iconComponent}
         MenuProps={menuProps}
-        value={val}
+        value={props.tripType}
         onChange={handleChange}
       >
-        <MenuItem value={0} style={{color:'#5f6368'}}>
+        <MenuItem value={'Round Trip'} style={{color:'#5f6368'}}>
           <ListItem button>
             <ListItemIcon>
               <SyncAltIcon />
@@ -64,7 +68,7 @@ const BorderSelect = () => {
           </ListItem>
         </MenuItem>
 
-        <MenuItem value={1} style={{color:'#5f6368'}}>
+        <MenuItem value={'One Way'} style={{color:'#5f6368'}}>
           <ListItem button>
             <ListItemIcon>
               <ArrowRightAltIcon />
@@ -78,6 +82,6 @@ const BorderSelect = () => {
 };
 
 
-export default BorderSelect;
+
 
 

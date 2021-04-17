@@ -3,26 +3,25 @@ import TextField from '@material-ui/core/TextField';
 import { useState } from 'react';
 
 
-export default function TravellersNumber() {
+export default function TravellersNumber(props) {
 
-    const [passengers, setPassengers] = useState(1);
-
+  
     const decrease = () => {
-        if (passengers >= 2)
-            setPassengers(passengers - 1)
+        if (props.passengers >= 2)
+            props.setPassengers(props.passengers - 1)
     }
 
     const increase = () => {
-        if (passengers <= 4)
-            setPassengers(passengers + 1)
+        if (props.passengers <= 4)
+            props.setPassengers(props.passengers + 1)
     }
     
     return (
 
         <div class="number-input">
-            {console.log(passengers)}
+     
             <button onClick={decrease} ></button>
-            <TextField InputProps={{ disableUnderline: true }} class="quantity" name="quantity" value={passengers} type="number" />
+            <TextField InputProps={{ disableUnderline: true }} class="quantity" name="quantity" value={props.passengers} type="number" />
             <button onClick={increase} class="plus"></button>
         </div>
     );

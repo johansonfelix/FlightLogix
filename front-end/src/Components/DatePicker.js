@@ -5,25 +5,27 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles({
 
 });
-export default  function DatePicker( props){
+export default  function DatePicker(props){
     const classes  = useStyles();
-    const [selectedDate, setSelectedDate] = useState(new Date('2014-08-18T21:11:54'));
+  
 
     
 const handleDateChange = (date) => {
-    setSelectedDate(date);
+  console.log('today date: '+new Date().getFullYear()+"-"+(new Date().getMonth()+1)+"-"+new Date().getDate())
+    console.log("DATE SELECTED: "+date.target.value);
+    props.setter(date);
   };
 
     return(
         <TextField
         id="date"
         label={props.label}
-        type="date"
-        defaultValue="2017-05-24"
+        type="date"      
         className={classes.textField}
         InputLabelProps={{
           shrink: true,
         }}
+        onChange={handleDateChange}
       />
 
 

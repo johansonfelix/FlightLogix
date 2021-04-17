@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: 12,
     },
     margin:{
-        marginTop: '20px'
+        marginTop: '5px'
        
         
     },
@@ -56,56 +56,50 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SimpleCard() {
     const classes = useStyles();
-
     const [whereFrom, setWhereFrom] = useState();
     const [whereTo, setWhereTo] = useState();
+    const [passengers, setPassengers] = useState (1);
+    const [tripType, setTripType] = useState('Round Trip');
+    const [arrivalDate, setArrivalDate] = useState(new Date().toISOString().substring(0, 10));
+    const [departureDate, setDepartureDate] = useState(new Date().toISOString().substring(0, 10));
 
-
-    const swapHandler = ()=> {
-
-        const temp = whereFrom;
-        setWhereFrom(whereTo);
-        setWhereTo(temp);
-
-    }
 
     return (
+        
         <Card className={classes.root} style={{raised: true}}>
+            {console.log("where from: "+whereFrom+" where to"+whereTo)}
             <CardContent>
                 <Grid container className={classes.root} spacing={3}>
 
                     <Grid item xs={3}>
-                        <TripTypeButton />
+                        <TripTypeButton setTripType={setTripType} tripType={tripType} />
                     </Grid>
 
                     <Grid item xs={3}>
-                        <IncrementPassengersButton />
+                        <IncrementPassengersButton  setPassengers={setPassengers} passengers={passengers}/>
                     </Grid>
 
                 </Grid>
                 <Grid container className={classes.root} spacing={3}>
 
-                    <Grid item xs={3}>
-                        <Location label="Where from?" location={setWhereFrom} />
+                    <Grid item xs={3.5}>
+                        <Location label="Where from?" location={setWhereFrom} val={whereFrom} />
                     </Grid>
 
-                    <Grid item xs={0}>
-                        <IconButton onClick={swapHandler} style ={{marginTop: '20px', marginLeft:'10px'}} >
-                            <SwapHorizIcon />
-                        </IconButton>
-                    </Grid>
+                  
 
                     <Grid item xs={3.75}>
-                        <Location label="Where to?" location={setWhereTo} />
+                        <Location label="Where to?" location={setWhereTo} val={whereTo}/>
                     </Grid>
 
                     <Grid item xs={2} className ={classes.margin} >
-                    <DatePicker label="Arrival Date" />
+                    <DatePicker label="Arrival Date" date={arrivalDate} setter={setArrivalDate}/>
                     </Grid>
-                    <Grid item xs={3}  className ={classes.margin}>
+                    {tripType==='Round Trip' &&
+                    <Grid item xs={3}  className ={classes.margin} date={departureDate} setter={setDepartureDate}>
                        <DatePicker label="Departure Date" />
                     </Grid>
-
+}
                 </Grid>
 
 
