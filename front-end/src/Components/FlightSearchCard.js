@@ -60,8 +60,8 @@ export default function SimpleCard() {
     const [whereTo, setWhereTo] = useState();
     const [passengers, setPassengers] = useState (1);
     const [tripType, setTripType] = useState('Round Trip');
-    const [arrivalDate, setArrivalDate] = useState(new Date().toISOString().substring(0, 10));
-    const [departureDate, setDepartureDate] = useState(new Date().toISOString().substring(0, 10));
+    const [arrivalDate, setArrivalDate] = useState();
+    const [departureDate, setDepartureDate] = useState();
 
 
     return (

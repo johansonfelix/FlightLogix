@@ -21,23 +21,12 @@ import Backdrop from '@material-ui/core/Backdrop';
 import { useSpring, animated } from 'react-spring/web.cjs';
 import Registration from '../Components/Registration';
 
+var httpRequestMaker = require("./../Utils/httpRequestMaker.js")
+
 
 async function loginUser(Credentials) {
-    const response = await fetch('https://localhost:8081/app/login', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(Credentials)
-
-    });
-
-    if (!response.ok) {
-        throw new Error('Something went wrong here');
-    }
-    const data = await response.json();
-    console.log(JSON.stringify(data));
-    return data;
+    var responseJson =  httpRequestMaker.sendRequest("POST", "https://localhost:8081/app/login", null, JSON.stringify(Credentials))
+    return responseJson;
 }
 
 
@@ -143,6 +132,7 @@ export default function SignIn({ setToken }) {
     };
 
     const handleSubmit = async e => {
+        console.log("Clicked login.")
         e.preventDefault();
         setIsAuthenticating(true);
         setError(null);
