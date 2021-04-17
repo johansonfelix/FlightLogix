@@ -93,11 +93,11 @@ export default function SimpleCard() {
                     </Grid>
 
                     <Grid item xs={2} className ={classes.margin} >
-                    <DatePicker label="Arrival Date" date={arrivalDate} setter={setArrivalDate}/>
+                    <DatePicker label="Arrival Date" id="Arrival Date" setter={setArrivalDate}/>
                     </Grid>
                     {tripType==='Round Trip' &&
-                    <Grid item xs={3}  className ={classes.margin} date={departureDate} setter={setDepartureDate}>
-                       <DatePicker label="Departure Date" />
+                    <Grid item xs={3}  className ={classes.margin} >
+                       <DatePicker label="Departure Date" id="Departure Date"  setter={setDepartureDate}/>
                     </Grid>
 }
                 </Grid>
