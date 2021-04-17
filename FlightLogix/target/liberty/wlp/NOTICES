@@ -1,7 +1,7 @@
-Begin NOTICES AND INFORMATION FOR Open Liberty 21.0.0.3
+Begin NOTICES AND INFORMATION FOR Open Liberty 21.0.0.4
 Copyright 1999-2021 IBM Corporation and others
 This product includes software developed at
-The Open Liberty 21.0.0.3 Project (https://openliberty.io/).
+The Open Liberty 21.0.0.4 Project (https://openliberty.io/).
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 TABLE OF CONTENTS
@@ -3054,10 +3054,10 @@ END OF W3C SOFTWARE LICENSE NOTICES AND INFORMATION
 END OF OPEN LIBERTY NOTICES AND INFORMATION 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-END OF OPEN LIBERTY 21.0.0.3 NOTICES AND INFORMATION 
+END OF OPEN LIBERTY 21.0.0.4 NOTICES AND INFORMATION 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-OPEN LIBERTY DOCKER 21.0.0.3 NOTICES AND INFORMATION FOR EXCLUDED COMPONENTS
+OPEN LIBERTY DOCKER 21.0.0.4 NOTICES AND INFORMATION FOR EXCLUDED COMPONENTS
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 TABLE OF CONTENTS
@@ -3194,7 +3194,7 @@ IN THE FONT SOFTWARE.
 END OF SIL OPEN FONT LICENSE 1.1 LICENSE NOTICES AND INFORMATION
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-END OF OPEN LIBERTY DOCKER 21.0.0.3 NOTICES AND INFORMATION FOR EXCLUDED COMPONENTS
+END OF OPEN LIBERTY DOCKER 21.0.0.4 NOTICES AND INFORMATION FOR EXCLUDED COMPONENTS
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 END OF NOTICE FILE

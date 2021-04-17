@@ -36,8 +36,8 @@ const useStyles = makeStyles((theme) => ({
     pos: {
         marginBottom: 12,
     },
-    swapper:{
-        display: 'flex'
+    margin:{
+        marginTop: '20px'
        
         
     },
@@ -86,33 +86,24 @@ export default function SimpleCard() {
                 <Grid container className={classes.root} spacing={3}>
 
                     <Grid item xs={3}>
-                        <Location  location={setWhereFrom} />
+                        <Location label="Where from?" location={setWhereFrom} />
                     </Grid>
 
                     <Grid item xs={0}>
-                        <IconButton onClick={swapHandler} >
+                        <IconButton onClick={swapHandler} style ={{marginTop: '20px', marginLeft:'10px'}} >
                             <SwapHorizIcon />
                         </IconButton>
                     </Grid>
 
-                    <Grid item xs={3.5}>
-                        <Location location={setWhereTo} />
+                    <Grid item xs={3.75}>
+                        <Location label="Where to?" location={setWhereTo} />
                     </Grid>
 
-                    <Grid item xs={2}>
-                    <TextField
-    id="date"
-    label="Birthday"
-    type="date"
-    defaultValue="2017-05-24"
-    className={classes.textField}
-    InputLabelProps={{
-      shrink: true,
-    }}
-  />
+                    <Grid item xs={2} className ={classes.margin} >
+                    <DatePicker label="Arrival Date" />
                     </Grid>
-                    <Grid item xs={3}>
-                       <DatePicker />
+                    <Grid item xs={3}  className ={classes.margin}>
+                       <DatePicker label="Departure Date" />
                     </Grid>
 
                 </Grid>
