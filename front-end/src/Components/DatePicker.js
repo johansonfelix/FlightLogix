@@ -7,13 +7,14 @@ const useStyles = makeStyles({
 });
 export default  function DatePicker(props){
     const classes  = useStyles();
+    props.setter(props.defaultDate)
   
 
     
 const handleDateChange = (date) => {
   console.log('today date: '+new Date().getFullYear()+"-"+(new Date().getMonth()+1)+"-"+new Date().getDate())
     console.log("DATE SELECTED: "+date.target.value);
-    props.setter(date);
+    props.setter(date.target.value);
   };
 
     return(

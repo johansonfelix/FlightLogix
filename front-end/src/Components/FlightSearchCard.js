@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
@@ -18,6 +18,8 @@ import IconButton from '@material-ui/core/IconButton';
 import DatePicker from './DatePicker';
 import TextField from '@material-ui/core/TextField';
 import SearchIcon from '@material-ui/icons/Search';
+
+var httpRequestMaker = require("./../Utils/httpRequestMaker.js")
 
 
 const useStyles = makeStyles((theme) => ({
@@ -54,69 +56,86 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-export default function SimpleCard() {
+export default function SimpleCard(props) {
     const classes = useStyles();
     const [whereFrom, setWhereFrom] = useState();
     const [whereTo, setWhereTo] = useState();
     const [passengers, setPassengers] = useState (1);
     const [tripType, setTripType] = useState('Round Trip');
-    const [arrivalDate, setArrivalDate] = useState();
-    const [departureDate, setDepartureDate] = useState();
+    const [departureDate, setDepartureDate] = useState("2021-05-31");
+    const [returnDate, setReturnDate] = useState("2021-06-14");
+    const [searchResults, setSearchResults] = useState();
+    const searchHandler = () => {
+
+        var search = {
+            originLocationCode: whereFrom,
+            destinationLocationCode: whereTo,
+            departureDate: departureDate,
+            returnDate: returnDate,
+            numAdults: passengers,
+            maxResults: 10
+        }
+        var searchJsonString = JSON.stringify(search);
+        var flights = httpRequestMaker.sendRequest("POST", "https://localhost:8081/app/search",props.token, searchJsonString)
+        setSearchResults("");
+        for(var flight in flights){
+            if(flights.hasOwnProperty(flight)){
+                setSearchResults(searchResults + flight);
+            }
+        }
+    }
+
+    const SearchResults = () => {
+        if(searchResults !== null){
+            return <div>{searchResults}</div>
+        }
+    }
 
 
     return (
-        
-        <Card className={classes.root} style={{raised: true}}>
-            {console.log("where from: "+whereFrom+" where to"+whereTo)}
-            <CardContent>
-                <Grid container className={classes.root} spacing={3}>
+        <Fragment>
+            <Card className={classes.root} style={{raised: true}}>
+                {console.log("where from: "+whereFrom+" where to"+whereTo)}
+                <CardContent>
+                    <Grid container className={classes.root} spacing={3}>
 
-                    <Grid item xs={3}>
-                        <TripTypeButton setTripType={setTripType} tripType={tripType} />
+                        <Grid item xs={3}>
+                            <TripTypeButton setTripType={setTripType} tripType={tripType} />
+                        </Grid>
+
+                        <Grid item xs={3}>
+                            <IncrementPassengersButton  setPassengers={setPassengers} passengers={passengers}/>
+                        </Grid>
+
+                        </Grid>
+                        <Grid container className={classes.root} spacing={3}>
+
+                        <Grid item xs={3.5}>
+                            <Location label="Where from?" location={setWhereFrom} val={whereFrom} />
+                        </Grid>
+                        <Grid item xs={3.75}>
+                            <Location label="Where to?" location={setWhereTo} val={whereTo}/>
+                        </Grid>
+
+                        <Grid item xs={2} className ={classes.margin} >
+                        <DatePicker label="Departure date" id="departureDate" defaultDate={departureDate} setter={setDepartureDate}/>
+                        </Grid>
+                        {tripType==='Round Trip' &&
+                        <Grid item xs={3}  className ={classes.margin} >
+                        <DatePicker label="Return Date" id="returnDate"  defaultDate={returnDate} setter={setReturnDate}/>
+                        </Grid>
+                         }
                     </Grid>
-
-                    <Grid item xs={3}>
-                        <IncrementPassengersButton  setPassengers={setPassengers} passengers={passengers}/>
-                    </Grid>
-
-                </Grid>
-                <Grid container className={classes.root} spacing={3}>
-
-                    <Grid item xs={3.5}>
-                        <Location label="Where from?" location={setWhereFrom} val={whereFrom} />
-                    </Grid>
-
-                  
-
-                    <Grid item xs={3.75}>
-                        <Location label="Where to?" location={setWhereTo} val={whereTo}/>
-                    </Grid>
-
-                    <Grid item xs={2} className ={classes.margin} >
-                    <DatePicker label="Arrival Date" id="Arrival Date" setter={setArrivalDate}/>
-                    </Grid>
-                    {tripType==='Round Trip' &&
-                    <Grid item xs={3}  className ={classes.margin} >
-                       <DatePicker label="Departure Date" id="Departure Date"  setter={setDepartureDate}/>
-                    </Grid>
-}
-                </Grid>
-
-
-                <Button
-       
-        
-        className={classes.button}
-        endIcon={<SearchIcon/>}
-      >
-          Search
-          
-        
-      </Button>
-
-     
-            </CardContent>
-     
-        </Card>
+                    <Button    
+                        className={classes.button}
+                        endIcon={<SearchIcon/>}
+                        onClick={searchHandler}
+                    >
+                      Search
+                    </Button>
+                </CardContent>
+            </Card>
+            <SearchResults/>
+        </Fragment>
     );
 }

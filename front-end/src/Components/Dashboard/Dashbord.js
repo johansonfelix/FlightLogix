@@ -237,8 +237,8 @@ export default function Dashboard(props) {
                     
                     <MainBanner image={image} className={classes.banner} />
                     <Container maxWidth="lg" className={classes.container}>
-                        <FlightSearchCard />
-                                       </Container>
+                        <FlightSearchCard token={props.token} />
+                    </Container>
                 </main>
 
             </div>
