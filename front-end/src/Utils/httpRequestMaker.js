@@ -22,7 +22,7 @@ module.exports = {
     try{
       var response = await fetch(url, request)
       var responseJsonPromise = await response.json()
-      var responseJson = Promise.resolve(responseJsonPromise)
+      var responseJson = await responseJsonPromise;
       console.log("Received reply: " + JSON.stringify(responseJson))
       return responseJson
     }
