@@ -36,10 +36,13 @@ public class TokenParser {
                     .build();
 
         } catch (UnsupportedJwtException | MalformedJwtException | IllegalArgumentException | SignatureException e) {
+            System.out.println("invalid token");
             throw new InvalidAuthenticationTokenException("Invalid token", e);
         } catch (ExpiredJwtException e) {
+            System.out.println("expired token");
             throw new InvalidAuthenticationTokenException("Expired token", e);
         } catch (InvalidClaimException e) {
+            System.out.println("invalid value for claim");
             throw new InvalidAuthenticationTokenException("Invalid value for claim \"" + e.getClaimName() + "\"", e);
         } catch (Exception e) {
 

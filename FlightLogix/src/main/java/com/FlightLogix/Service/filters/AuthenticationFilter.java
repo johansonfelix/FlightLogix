@@ -39,9 +39,11 @@ public class AuthenticationFilter implements ContainerRequestFilter {
     public void filter(ContainerRequestContext containerRequestContext) throws IOException {
 
         String authorizationHeader = containerRequestContext.getHeaderString(HttpHeaders.AUTHORIZATION);
+        System.out.println(authorizationHeader);
         if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
             String authenticationToken = authorizationHeader.substring(7);
             handleTokenBasedAuthentication(authenticationToken, containerRequestContext);
+            System.out.println("here");
             return;
         }
 

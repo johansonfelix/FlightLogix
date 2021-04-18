@@ -76,7 +76,7 @@ export default function SimpleCard(props) {
             maxResults: 10
         }
         var searchJsonString = JSON.stringify(search);
-        var flights = httpRequestMaker.sendRequest("POST", "https://localhost:8081/app/search",props.token, searchJsonString)
+        var flights = httpRequestMaker.sendRequest("POST", "https://localhost:8081/app/booking/search",props.token, searchJsonString)
         setSearchResults("");
         for(var flight in flights){
             if(flights.hasOwnProperty(flight)){

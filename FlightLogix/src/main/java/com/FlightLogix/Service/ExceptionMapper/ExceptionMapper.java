@@ -19,7 +19,7 @@ public class ExceptionMapper implements javax.ws.rs.ext.ExceptionMapper<RuntimeE
     @Override
     public Response toResponse(RuntimeException e) {
 
-        Response.Status status = Response.Status.FORBIDDEN;
+        Response.Status status = Response.Status.INTERNAL_SERVER_ERROR;
 
         return getResponse(status, e.getMessage(), uriInfo, e);
     }
