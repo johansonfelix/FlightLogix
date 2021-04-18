@@ -24,7 +24,7 @@ module.exports = {
       var responseJsonPromise = await response.json()
       var responseJson = await responseJsonPromise;
       console.log("Received reply: " + JSON.stringify(responseJson))
-      return responseJson
+      return responseJson //json object (non-string)
     }
     catch(error){
       console.log(error.message)

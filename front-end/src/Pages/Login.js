@@ -19,7 +19,7 @@ import PropTypes from 'prop-types';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import { useSpring, animated } from 'react-spring/web.cjs';
-import Registration from '../Components/Registration';
+import Registration from '../Pages/Registration';
 
 var httpRequestMaker = require("./../Utils/httpRequestMaker.js")
 

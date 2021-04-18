@@ -27,31 +27,13 @@ function Copyright() {
     );
 }
 
-async function registerUser(UserRegistration) {
-    const response = await fetch('https://localhost:8081/app/register', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            
-        },
-        body: JSON.stringify(UserRegistration),
-        
 
-    });
-
-    if (!response.ok) {
-        throw new Error('Something went wrong here');
-    }
+var httpRequestMaker = require("./../Utils/httpRequestMaker.js")
 
 
-
-    const status = await response.ok;
-    console.log(response.json);
-    return status;
-
-
-
-
+async function registerUser(User) {
+    var responseJson =  httpRequestMaker.sendRequest("POST", "https://localhost:8081/app/register", null, JSON.stringify(User))
+    return responseJson;
 }
 
 const useStyles = makeStyles((theme) => ({
