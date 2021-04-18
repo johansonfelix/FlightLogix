@@ -5,6 +5,8 @@ package com.FlightLogix.Service.apis;
 import com.FlightLogix.Core.User.User;
 import com.FlightLogix.Core.User.UserRegistration;
 import com.FlightLogix.Repository.UserOperations.UserManager;
+import org.json.JSONObject;
+
 import javax.annotation.security.PermitAll;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
@@ -29,11 +31,12 @@ public class RegistrationResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     @PermitAll
-    public Response register (UserRegistration user){
+    public String register (UserRegistration user){
 
         userManager.register(user);
-
-        return Response.status(Response.Status.CREATED).build();
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("responseCode:", Response.status(Response.Status.CREATED).build().getStatus());
+        return jsonObject.toString();
 
     }
 

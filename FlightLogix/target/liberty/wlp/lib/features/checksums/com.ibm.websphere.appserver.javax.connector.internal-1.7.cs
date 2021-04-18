@@ -1,3 +1,3 @@
-#Wed Apr 07 20:10:28 EDT 2021
-lib/features/com.ibm.websphere.appserver.javax.connector.internal-1.7.mf=465770889a63d54edd19a32431898e98
-dev/api/spec/com.ibm.websphere.javaee.connector.1.7_1.0.50.jar=8c80fdef70ac52f76a7ca4ffb7c390bb
+#Fri Apr 16 15:43:07 EDT 2021
+dev/api/spec/com.ibm.websphere.javaee.connector.1.7_1.0.51.jar=18d8b7446c04a2f7f33d9be1a936ea26
+lib/features/com.ibm.websphere.appserver.javax.connector.internal-1.7.mf=4015f9896c5d01b21ad2f365e16ac8f2

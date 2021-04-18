@@ -40,12 +40,19 @@
   <dataSource jndiName="jdbc/myDB">
     <jdbcDriver libraryRef="jdbcLib" />
     <properties serverName="localhost" portNumber="3306"
-                databaseName="db1"
+                databaseName="db"
                 user="root"
                 password="password"/>
   </dataSource>
 
   <cors domain="/app/register"
+        allowedOrigins="http://localhost:3000"
+        allowedMethods="GET, DELETE, POST, PUT"
+        allowedHeaders="origin, content-type, accept, authorization, cache-control, Access-Control-Allow-Origin"
+        exposeHeaders="Access-Control-Allow-Origin"
+        maxAge="3600" />
+
+  <cors domain="/app/search"
         allowedOrigins="http://localhost:3000"
         allowedMethods="GET, DELETE, POST, PUT"
         allowedHeaders="origin, content-type, accept, authorization, cache-control, Access-Control-Allow-Origin"

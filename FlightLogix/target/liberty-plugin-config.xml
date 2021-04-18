@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <liberty-plugin-config>
-    <installDirectory>C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp</installDirectory>
-    <serverDirectory>C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer</serverDirectory>
-    <userDirectory>C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr</userDirectory>
-    <serverOutputDirectory>C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer</serverOutputDirectory>
+    <installDirectory>C:\Users\koran\IdeaProjects\FlightLogix\FlightLogix\target\liberty\wlp</installDirectory>
+    <serverDirectory>C:\Users\koran\IdeaProjects\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer</serverDirectory>
+    <userDirectory>C:\Users\koran\IdeaProjects\FlightLogix\FlightLogix\target\liberty\wlp\usr</userDirectory>
+    <serverOutputDirectory>C:\Users\koran\IdeaProjects\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer</serverOutputDirectory>
     <serverName>defaultServer</serverName>
-    <configDirectory>C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\liberty\config</configDirectory>
-    <configFile>C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\liberty\config\server.xml</configFile>
+    <configDirectory>C:\Users\koran\IdeaProjects\FlightLogix\FlightLogix\src\main\liberty\config</configDirectory>
+    <configFile>C:\Users\koran\IdeaProjects\FlightLogix\FlightLogix\src\main\liberty\config\server.xml</configFile>
     <appsDirectory>apps</appsDirectory>
     <looseApplication>true</looseApplication>
     <stripVersion>false</stripVersion>
@@ -15,13 +15,13 @@
     <assemblyArtifact>
         <groupId>io.openliberty</groupId>
         <artifactId>openliberty-kernel</artifactId>
-        <version>21.0.0.3</version>
+        <version>21.0.0.4</version>
         <type>zip</type>
     </assemblyArtifact>
-    <assemblyArchive>C:\Users\felix\.m2\repository\io\openliberty\openliberty-kernel\21.0.0.3\openliberty-kernel-21.0.0.3.zip</assemblyArchive>
-    <assemblyInstallDirectory>C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty</assemblyInstallDirectory>
+    <assemblyArchive>C:\Users\koran\.m2\repository\io\openliberty\openliberty-kernel\21.0.0.4\openliberty-kernel-21.0.0.4.zip</assemblyArchive>
+    <assemblyInstallDirectory>C:\Users\koran\IdeaProjects\FlightLogix\FlightLogix\target\liberty</assemblyInstallDirectory>
     <refresh>false</refresh>
-    <installAppsConfigDropins>C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\configDropins\defaults\install_apps_configuration_1491924271.xml</installAppsConfigDropins>
+    <installAppsConfigDropins>C:\Users\koran\IdeaProjects\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\configDropins\defaults\install_apps_configuration_1491924271.xml</installAppsConfigDropins>
     <projectType>war</projectType>
     <projectCompileDependency>jakarta.platform:jakarta.jakartaee-api:8.0.0</projectCompileDependency>
     <projectCompileDependency>com.google.guava:guava:30.1.1-jre</projectCompileDependency>
