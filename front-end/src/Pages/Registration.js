@@ -13,6 +13,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { Fragment, useState } from 'react';
 import CircularProgress from '@material-ui/core/CircularProgress'
+import { useRadioGroup } from '@material-ui/core';
 
 function Copyright() {
     return (
@@ -30,6 +31,29 @@ function Copyright() {
 
 var httpRequestMaker = require("./../Utils/httpRequestMaker.js")
 
+async function registerUser(User) {
+
+    return httpRequestMaker.sendRequest("POST", "https://localhost:8081/app/register", null, JSON.stringify(User))
+        .then((response) => response.json())
+        .then((responseJson) => {
+
+            /* console.log("Received: " + JSON.stringify(responseJson))
+           let tokenReceived = responseJson['token']
+           console.log("Using token: " + tokenReceived)
+           console.log("STATE TOKEN:" + props.token)
+ 
+           if (tokenReceived){
+               props.setToken(tokenReceived) */
+
+            return responseJson
+
+
+        })
+
+        .catch(err => {
+            console.error("Failed to Register user => " + err)
+        })
+}
 
 
 const useStyles = makeStyles((theme) => ({
@@ -59,145 +83,166 @@ export default function SignUp(props) {
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
     const [isRegistering, setIsRegistering] = useState(false);
-    const [error, setError] = useState(null);
     const [isRegistered, setIsRegistered] = useState(false);
+    const [error, setError] = useState(null);
 
-    const registerUser = async RegistrationInfo => {
-        httpRequestMaker.sendRequest("POST", "https://localhost:8081/app/register", null, JSON.stringify(RegistrationInfo))
-        .then(response => response.json())
-        .then(responseJson =>{
-            setIsRegistering(false);
-            console.log('RESPONSE: ' + JSON.stringify(responseJson));
-            if (responseJson)
-                setIsRegistered(true);
-        })
-        .catch (err => {
-            console.error(err);
-        })      
-    }
+
     const handleRegister = async e => {
         e.preventDefault();
         setIsRegistering(true);
         setError(null);
-        let response;
-        try {
-            registerUser({
-                firstName,
-                lastName,
-                email,
-                password
-            })
-        }
-        catch (error) {
-            setError(error.message);
-        }      
-    }
-    return (
+        const response = await registerUser({
+            firstName,
+            lastName,
+            email,
+            password
 
+        });
+
+        setIsRegistering(false);
+
+        if (!response) {
+            console.log("Server unavailable");
+            setError("Server unavailable. Try again later.");
+        }
+        else if (response['message']) {
+            console.log(response['message']);
+            setError(response['message']);
+        }
+        //nulll out setters
+        else if(response === "CREATED") {
+            console.log("Registration successful ");                      
+            setIsRegistered(true)
+
+        }
+        else{
+            console.log(response)
+            console.log(response['title']);
+            setError(response['title']);
+        }
+
+            setEmail()
+            setFirstName()
+            setLastname()
+            setPassword()      
+
+        
+
+    }
+
+
+
+    return (
+       
         <Fragment>
+            
             <Container maxWidth="xs" fixed disableGutters={true}>
                 {
-                    isRegistering &&  <div className={classes.paper}>
-                    <CircularProgress />
-                    <p>Authenticating</p>
+                    isRegistering && <div className={classes.paper}>
+                        <CircularProgress />
+                        <p>Authenticating</p>
 
-                </div>
+                    </div>
                 }
 
-{!isRegistering &&
-                <div>
-                    <CssBaseline />
-                    <div className={classes.paper}>
-                        <Avatar className={classes.avatar}>
-                            <LockOutlinedIcon />
-                        </Avatar>
-                        <Typography component="h1" variant="h5">
-                            Sign up
+                {!isRegistering &&
+                    <div>
+                        <CssBaseline />
+                        <div className={classes.paper}>
+                            <Avatar className={classes.avatar}>
+                                <LockOutlinedIcon />
+                            </Avatar>
+                            <Typography component="h1" variant="h5">
+                                Sign up
         </Typography>
-                        <form className={classes.form} noValidate onSubmit={handleRegister}>
-                            <Grid container spacing={2}>
-                                <Grid item xs={12} sm={6}>
-                                    <TextField
-                                        autoComplete="fname"
-                                        name="firstName"
-                                        variant="outlined"
-                                        required
-                                        fullWidth
-                                        id="firstName"
-                                        label="First Name"
-                                        autoFocus
-                                        onChange={e => setFirstName(e.target.value)}
-                                    />
-                                </Grid>
-                                <Grid item xs={12} sm={6}>
-                                    <TextField
-                                        variant="outlined"
-                                        required
-                                        fullWidth
-                                        id="lastName"
-                                        label="Last Name"
-                                        name="lastName"
-                                        autoComplete="lname"
-                                        onChange={e => setLastname(e.target.value)}
-                                    />
-                                </Grid>
-                                <Grid item xs={12}>
-                                    <TextField
-                                        variant="outlined"
-                                        required
-                                        fullWidth
-                                        id="email"
-                                        label="Email Address"
-                                        name="email"
-                                        autoComplete="email"
-                                        onChange={e => setEmail(e.target.value)}
-                                    />
-                                </Grid>
-                                <Grid item xs={12}>
-                                    <TextField
-                                        variant="outlined"
-                                        required
-                                        fullWidth
-                                        name="password"
-                                        label="Password"
-                                        type="password"
-                                        id="password"
-                                        autoComplete="current-password"
-                                        onChange={e => setPassword(e.target.value)}
-                                    />
-                                </Grid>
-                                <Grid item xs={12}>
-                                    <FormControlLabel
-                                        control={<Checkbox value="allowExtraEmails" color="primary" />}
-                                        label="I want to receive inspiration, marketing promotions and updates via email."
-                                    />
-                                </Grid>
-                            </Grid>
-                            <Button
-                                type="submit"
-                                fullWidth
-                                variant="contained"
-                                color="primary"
-                                className={classes.submit}
-                            >
-                                Sign Up
-          </Button>
-                            <Grid container justify="flex-end">
-                                <Grid item>
-                                    <Link href="#" variant="body2" onClick={props.closeHandler}>
-                                        Already have an account? Sign in
-              </Link>
-                                </Grid>
-                            </Grid>
-                        </form>
-                    </div>
-                    <Box mt={5}>
-                        <Copyright />
-                    </Box>
-</div>
-}
-    </Container>
+        {error && <Typography component="body2" style={{ color: 'red' }} variant="body2"><br />{error}</Typography>}
 
-    </Fragment>
-  );
+                            <form className={classes.form} noValidate onSubmit={handleRegister}>
+                                <Grid container spacing={2}>
+                                    <Grid item xs={12} sm={6}>
+                                        <TextField
+                                            autoComplete="fname"
+                                            name="firstName"
+                                            variant="outlined"
+                                            required
+                                            fullWidth
+                                            id="firstName"
+                                            label="First Name"
+                                            autoFocus
+                                            onChange={e => setFirstName(e.target.value)}
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12} sm={6}>
+                                        <TextField
+                                            variant="outlined"
+                                            required
+                                            fullWidth
+                                            id="lastName"
+                                            label="Last Name"
+                                            name="lastName"
+                                            autoComplete="lname"
+                                            onChange={e => setLastname(e.target.value)}
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12}>
+                                        <TextField
+                                            variant="outlined"
+                                            required
+                                            fullWidth
+                                            id="email"
+                                            label="Email Address"
+                                            name="email"
+                                            autoComplete="email"
+                                            onChange={e => setEmail(e.target.value)}
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12}>
+                                        <TextField
+                                            variant="outlined"
+                                            required
+                                            fullWidth
+                                            name="password"
+                                            label="Password"
+                                            type="password"
+                                            id="password"
+                                            autoComplete="current-password"
+                                            onChange={e => setPassword(e.target.value)}
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12}>
+                                        <FormControlLabel
+                                            control={<Checkbox value="allowExtraEmails" color="primary" />}
+                                            label="I want to receive inspiration, marketing promotions and updates via email."
+                                        />
+                                    </Grid>
+                                </Grid>
+                                <Button
+                                    type="submit"
+                                    fullWidth
+                                    variant="contained"
+                                    color="primary"
+                                    className={classes.submit}
+                                >
+                                    Sign Up
+          </Button>
+                                <Grid container justify="flex-end">
+                                    <Grid item>
+                                        <Link href="#" variant="body2" onClick={props.closeHandler}>
+                                            Already have an account? Sign in
+              </Link>
+                                    </Grid>
+                                </Grid>
+                            </form>
+                        </div>
+                        <Box mt={5}>
+                            <Copyright />
+                        </Box>
+                    </div>
+                }
+
+                {isRegistered && props.handleIsRegistered('success')}
+            </Container>
+
+        </Fragment>
+    );
 }

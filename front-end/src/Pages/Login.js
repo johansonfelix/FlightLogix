@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, Fragment } from 'react';
+import React, { useCallback, useEffect, Fragment } from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -20,13 +20,37 @@ import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import { useSpring, animated } from 'react-spring/web.cjs';
 import Registration from '../Pages/Registration';
+import { SnackbarProvider, useSnackbar } from 'notistack';
+import Snackbar from '@material-ui/core/Snackbar';
+import MuiAlert from '@material-ui/lab/Alert';
 
 var httpRequestMaker = require("./../Utils/httpRequestMaker.js")
 
 
 
+async function loginUser(Credentials) {
+
+    return httpRequestMaker.sendRequest("POST", "https://localhost:8081/app/login", null, JSON.stringify(Credentials))
+        .then((response) => response.json())
+        .then((responseJson) => {
+
+            /* console.log("Received: " + JSON.stringify(responseJson))
+           let tokenReceived = responseJson['token']
+           console.log("Using token: " + tokenReceived)
+           console.log("STATE TOKEN:" + props.token)
+ 
+           if (tokenReceived){
+               props.setToken(tokenReceived) */
+
+            return responseJson
 
 
+        })
+
+        .catch(err => {
+            console.error("Failed to log in user => " + err)
+        })
+}
 
 const Fade = React.forwardRef(function Fade(props, ref) {
     const { in: open, children, onEnter, onExited, ...other } = props;
@@ -103,22 +127,30 @@ const useStyles = makeStyles((theme) => ({
         boxShadow: theme.shadows[5],
         padding: theme.spacing(2, 4, 3),
         alignItems: 'center',
-        justifyContent: 'center',     
+        justifyContent: 'center',
     },
-    
 
-    }
+
+}
 
 ));
+
+function Alert(props) {
+    return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
+
 
 export default function SignIn(props) {
     const classes = useStyles();
 
     const [email, setEmail] = useState();
-    const [password, setPassword] = useState();   
-    const [isAuthenticating, setIsAuthenticating] = useState(false);    
+    const [password, setPassword] = useState();
+    const [isAuthenticating, setIsAuthenticating] = useState(false);
     const [error, setError] = useState(null);
-    const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = useState(false);
+    const [snackBarOpen, setSnackBarOpen] = useState(false);
+  
+
 
     const handleRegistrationOpen = () => {
         setOpen(true);
@@ -127,157 +159,177 @@ export default function SignIn(props) {
     const handleClose = () => {
         setOpen(false);
     };
-    const loginUser = async Credentials => {
-        httpRequestMaker.sendRequest("POST", "https://localhost:8081/app/login", null, JSON.stringify(Credentials))
-       .then((response)=> response.json())
-       .then((responseJson)=>{
-           if(responseJson !== undefined){
-               console.log("Received: " + JSON.stringify(responseJson))
-               let tokenReceived = responseJson['token']
-               console.log("Using token: " + tokenReceived)
-               setIsAuthenticating(false)
-               console.log("STATE TOKEN:" + props.token)
-               if (tokenReceived){
-                   props.setToken(tokenReceived)
-               }
-               
 
-           }
-           else{
-               console.log("Response is undefined.")
-           }})
-        .catch(err => {
-            console.error("Failed to log in user => " + err)
-        })
-    }
-     
+    const handleSnackBarClose = (event, reason) => {
+        if (reason === 'clickaway') {
+            return;
+          }
+      
+          setSnackBarOpen(false);
+        };
+      
+        const handleIsRegistered = variant => {
+            console.log('in handle is registered')
+            setSnackBarOpen(true);
+            handleClose();
 
-    const handleSubmit = e => {
-        console.log("Clicked login.")
-        e.preventDefault();
-        setIsAuthenticating(true);
-        setError(null);
-        let tokenReceived;
-        
-        try {
-            loginUser({
+
+        }
+
+
+        const handleSubmit = async e => {
+            console.log("Clicked login.")
+            e.preventDefault();
+
+            setIsAuthenticating(true);
+            setError(null);
+            const response = await loginUser({
                 email,
                 password,
                 setIsAuthenticating
-            })
-                           console.log(props.setToken)
-               console.log("STATE TOKEN:" + props.token)
+            });
+
+            if (!response) {
+                console.log("Server unavailable");
+                setError("Server unavailable. Try again later.");
+            }
+            else if (response['message']) {
+                console.log(response['message']);
+                setError(response['message']);
+            }
+            else if (response['token']) {
+                console.log(response)
+                props.setToken(response);
+            }
+
+            setIsAuthenticating(false);
+
+
+
+
         }
-            
-        catch (error) {
-            setError(error.message);
-        }
 
-    }
 
-    return (
-        <Fragment>
-            <Container component="main" maxWidth="xs">
-                <CssBaseline />
-                {!isAuthenticating &&
-                    <div className={classes.paper}>
 
-                        <Avatar className={classes.avatar}>
-                            <LockOutlinedIcon />
-                        </Avatar>
-                        <Typography component="h1" variant="h5">
-                            Sign in
+
+
+
+        return (
+        
+                <Fragment>
+                    <Container component="main" maxWidth="xs">
+                        <CssBaseline />
+
+                        {!isAuthenticating &&
+                            <div className={classes.paper}>
+
+                                <Avatar className={classes.avatar}>
+                                    <LockOutlinedIcon />
+                                </Avatar>
+                                <Typography component="h1" variant="h5">
+                                    Sign in
         </Typography>
-                        <form className={classes.form} noValidate onSubmit={handleSubmit}>
-                            <TextField
-                                variant="outlined"
-                                margin="normal"
-                                required
-                                fullWidth
-                                id="email"
-                                type="email"
-                                label="Email Address"
-                                name="email"
-                                autoComplete="email"
-                                onChange={e => setEmail(e.target.value)}
-                                autoFocus
-                            />
-                            <TextField
-                                variant="outlined"
-                                margin="normal"
-                                required
-                                fullWidth
-                                name="password"
-                                label="Password"
-                                type="password"
-                                id="password"
-                                autoComplete="current-password"
-                                onChange={e => setPassword(e.target.value)}
-                            />
-                            <FormControlLabel
-                                control={<Checkbox value="remember" color="primary" />}
-                                label="Remember me"
-                            />
-                            <Button
-                                type="submit"
-                                fullWidth
-                                variant="contained"
-                                color="primary"
-                                className={classes.submit}
-                            >
-                                Sign In
+                                {error && <Typography component="body2" style={{ color: 'red' }} variant="body2"><br />{error}</Typography>}
+
+                                <form className={classes.form} noValidate onSubmit={handleSubmit}>
+                                    <TextField
+                                        variant="outlined"
+                                        margin="normal"
+                                        required
+                                        fullWidth
+                                        id="email"
+                                        type="email"
+                                        label="Email Address"
+                                        name="email"
+                                        autoComplete="email"
+                                        onChange={e => setEmail(e.target.value)}
+                                        autoFocus
+                                    />
+                                    <TextField
+                                        variant="outlined"
+                                        margin="normal"
+                                        required
+                                        fullWidth
+                                        name="password"
+                                        label="Password"
+                                        type="password"
+                                        id="password"
+                                        autoComplete="current-password"
+                                        onChange={e => setPassword(e.target.value)}
+                                    />
+                                    <FormControlLabel
+                                        control={<Checkbox value="remember" color="primary" />}
+                                        label="Remember me"
+                                    />
+                                    <Button
+                                        type="submit"
+                                        fullWidth
+                                        variant="contained"
+                                        color="primary"
+                                        className={classes.submit}
+                                    >
+                                        Sign In
           </Button>
-                            <Grid container>
+                                    <Grid container>
 
-                                <Grid>
-                                    <Link href="#" variant="body2" onClick={handleRegistrationOpen}>
-                                        <Typography >
-                                            Don't have an account? Sign Up
+                                        <Grid>
+                                            <Link href="#" variant="body2" onClick={handleRegistrationOpen}>
+                                                <Typography >
+                                                    Don't have an account? Sign Up
         </Typography>
 
-                                    </Link>
-                                </Grid>
-                            </Grid>
-                        </form>
+                                            </Link>
+                                        </Grid>
+                                    </Grid>
+                                </form>
 
-                        <Box mt={8}>
-                            <Copyright />
-                        </Box>
-                    </div>
-                }
-                {isAuthenticating &&
-                    <div className={classes.paper}>
-                        <CircularProgress />
-                        <p>Authenticating</p>
+                                <Box mt={8}>
+                                    <Copyright />
+                                </Box>
+                            </div>
+                        }
+                        {isAuthenticating &&
+                            <div className={classes.paper}>
+                                <CircularProgress />
+                                <p>Authenticating</p>
 
-                    </div>
-                }
+                            </div>
+                        }
 
-            </Container>
+                    </Container>
 
-            <Container maxWidth="xs" fixed disableGutters={true}>
-                <Modal
-                    aria-labelledby="spring-modal-title"
-                    aria-describedby="spring-modal-description"
-                    className={classes.modalPaper}
-                    open={open}
-                    onClose={handleClose}
-                    closeAfterTransition
-                    BackdropComponent={Backdrop}
-                    BackdropProps={{
-                        timeout: 600,
-                    }}
-                >
-                    <Fade in={open}>
-                        <div className={classes.modalPaper}>
+                    <Container maxWidth="xs" fixed disableGutters={true}>
+                        <Modal
+                            aria-labelledby="spring-modal-title"
+                            aria-describedby="spring-modal-description"
+                            className={classes.modalPaper}
+                            open={open}
+                            onClose={handleClose}
+                            closeAfterTransition
+                            BackdropComponent={Backdrop}
+                            BackdropProps={{
+                                timeout: 600,
+                            }}
+                        >
+                            <Fade in={open}>
+                                <div className={classes.modalPaper}>
 
-                            <Registration closeHandler={handleClose} />
-                        </div>
-                    </Fade>
-                </Modal>
+                                    <Registration handleIsRegistered={handleIsRegistered} closeHandler={handleClose} />
 
-            </Container>
+                                </div>
+                            </Fade>
+                        </Modal>
 
-        </Fragment>
-    );
-}
+                        <Snackbar open={snackBarOpen} autoHideDuration={5000} onClose={handleSnackBarClose}>
+                            <Alert onClose={handleSnackBarClose} severity="success">
+                                User Account Created!
+        </Alert>
+                        </Snackbar>
+
+                    </Container>
+
+
+                </Fragment>
+
+               );
+    }

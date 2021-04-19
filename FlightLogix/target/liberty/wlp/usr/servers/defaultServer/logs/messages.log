@@ -1,81 +1,86 @@
 ********************************************************************************
 product = Open Liberty 21.0.0.4 (wlp-1.0.51.cl210420210407-0944)
-wlp.install.dir = C:/Users/koran/IdeaProjects/FlightLogix5/FlightLogix/target/liberty/wlp/
-java.home = C:\Program Files (x86)\Java\jdk1.8.0_171\jre
-java.version = 1.8.0_171
-java.runtime = Java(TM) SE Runtime Environment (1.8.0_171-b11)
-os = Windows 10 (10.0; x86) (en_US)
-process = 165420@DESKTOP-410CKR7
+wlp.install.dir = C:/Users/felix/Desktop/FlightLogix/FlightLogix/target/liberty/wlp/
+java.home = C:\Program Files\Java\jdk1.8.0_281\jre
+java.version = 1.8.0_281
+java.runtime = Java(TM) SE Runtime Environment (1.8.0_281-b09)
+os = Windows 10 (10.0; amd64) (en_029)
+process = 12256@Johanson
 ********************************************************************************
-[4/18/21 20:45:46:571 EDT] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0001I: The server defaultServer has been launched.
-[4/18/21 20:45:47:743 EDT] 00000014 com.ibm.ws.config.xml.internal.ServerXMLConfiguration        A CWWKG0093A: Processing configuration drop-ins resource: C:\Users\koran\IdeaProjects\FlightLogix5\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\configDropins\overrides\liberty-plugin-variable-config.xml
-[4/18/21 20:45:47:865 EDT] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           I CWWKE0002I: The kernel started after 5.956 seconds
-[4/18/21 20:45:47:881 EDT] 0000001f com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0007I: Feature update started.
-[4/18/21 20:45:47:971 EDT] 00000017 .apache.cxf.cxf.core.3.2:1.0.51.cl210420210407-0944(id=139)] I Aries Blueprint packages not available. So namespaces will not be registered
-[4/18/21 20:45:48:066 EDT] 00000015 com.ibm.ws.app.manager.internal.monitor.DropinMonitor        A CWWKZ0058I: Monitoring dropins for applications.
-[4/18/21 20:45:54:609 EDT] 0000001b com.ibm.ws.ssl.config.WSKeyStore                             I Successfully loaded default keystore: C:/Users/koran/IdeaProjects/FlightLogix5/FlightLogix/target/liberty/wlp/usr/servers/defaultServer/resources/security/key.p12 of type: PKCS12
-[4/18/21 20:45:59:142 EDT] 0000002a com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application FlightLogix.
-[4/18/21 20:45:59:143 EDT] 0000002a bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The FlightLogix application is using the loose application definition at the C:\Users\koran\IdeaProjects\FlightLogix5\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\apps\FlightLogix.war.xml location.
-[4/18/21 20:45:59:929 EDT] 0000002a com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: An FFDC Incident has been created: "java.lang.Exception: Found duplicated servlet mapping url, /app/*, with endpoint infos com.ibm.ws.jaxrs20.metadata.EndpointInfo@6ec428 and com.ibm.ws.jaxrs20.metadata.EndpointInfo@1cf0d3a, throw exception to fail application starting. com.ibm.ws.jaxrs20.server.component.JaxRsWebModuleInfoBuilder 292" at ffdc_21.04.18_20.45.59.0.log
-[4/18/21 20:46:00:097 EDT] 0000002a com.ibm.ws.jca.cm.ConnectorService                           I J2CA8050I: An authentication alias should be used instead of defining a user name and password on dataSource[default-0].
-[4/18/21 20:46:00:237 EDT] 0000002a com.ibm.ws.recoverylog.spi.RecoveryDirectorImpl              I CWRLS0010I: Performing recovery processing for local WebSphere server (defaultServer).
-[4/18/21 20:46:00:289 EDT] 0000002a com.ibm.ws.recoverylog.spi.RecoveryDirectorImpl              I CWRLS0012I: All persistent services have been directed to perform recovery processing for this WebSphere server (defaultServer).
-[4/18/21 20:46:00:289 EDT] 0000003c com.ibm.tx.jta.impl.RecoveryManager                          I WTRN0135I: Transaction service recovering no transactions.
-[4/18/21 20:46:00:798 EDT] 0000002a com.ibm.ws.session.WASSessionCore                            I SESN8501I: The session manager did not find a persistent storage location; HttpSession objects will be stored in the local application server's memory.
-[4/18/21 20:46:00:828 EDT] 0000002a org.jboss.weld.Version                                       I WELD-000900: 3.1.4 (Final)
-[4/18/21 20:46:02:352 EDT] 0000002a com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Liberty Project.
-[4/18/21 20:46:02:356 EDT] 0000002a com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Liberty Project has been bound to default_host.
-[4/18/21 20:46:02:357 EDT] 0000002a com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://desktop-410ckr7:8080/
-[4/18/21 20:46:02:375 EDT] 00000024 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/
-[4/18/21 20:46:02:386 EDT] 00000024 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
-[4/18/21 20:46:02:452 EDT] 00000024 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0001I: Application FlightLogix started in 3.310 seconds.
-[4/18/21 20:46:02:471 EDT] 0000001f com.ibm.ws.tcpchannel.internal.TCPPort                       I CWWKO0219I: TCP Channel defaultHttpEndpoint has been started and is now listening for requests on host *  (IPv6) port 8080.
-[4/18/21 20:46:02:472 EDT] 0000001f com.ibm.ws.tcpchannel.internal.TCPPort                       I CWWKO0219I: TCP Channel defaultHttpEndpoint-ssl has been started and is now listening for requests on host *  (IPv6) port 8081.
-[4/18/21 20:46:02:478 EDT] 0000001f com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0012I: The server installed the following features: [cdi-2.0, jaxrs-2.1, jaxrsClient-2.1, jdbc-4.2, jndi-1.0, jpa-2.2, jpaContainer-2.2, jsonp-1.1, servlet-4.0, ssl-1.0, transportSecurity-1.0].
-[4/18/21 20:46:02:478 EDT] 0000001f com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0008I: Feature update completed in 14.612 seconds.
-[4/18/21 20:46:02:479 EDT] 0000001f com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0011I: The defaultServer server is ready to run a smarter planet. The defaultServer server started in 20.569 seconds.
-[4/18/21 20:46:05:217 EDT] 00000029 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://desktop-410ckr7:8080/
-[4/18/21 20:46:05:245 EDT] 00000029 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application FlightLogix has stopped successfully.
-[4/18/21 20:46:05:254 EDT] 00000029 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application FlightLogix.
-[4/18/21 20:46:05:255 EDT] 00000029 bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The FlightLogix application is using the loose application definition at the C:\Users\koran\IdeaProjects\FlightLogix5\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\apps\FlightLogix.war.xml location.
-[4/18/21 20:46:05:647 EDT] 00000029 com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: An FFDC Incident has been created: "java.lang.Exception: Found duplicated servlet mapping url, /app/*, with endpoint infos com.ibm.ws.jaxrs20.metadata.EndpointInfo@11d94d and com.ibm.ws.jaxrs20.metadata.EndpointInfo@d13f82, throw exception to fail application starting. com.ibm.ws.jaxrs20.server.component.JaxRsWebModuleInfoBuilder 292" at ffdc_21.04.18_20.46.05.0.log
-[4/18/21 20:46:06:198 EDT] 00000029 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Liberty Project.
-[4/18/21 20:46:06:199 EDT] 00000029 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Liberty Project has been bound to default_host.
-[4/18/21 20:46:06:199 EDT] 00000029 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://desktop-410ckr7:8080/
-[4/18/21 20:46:06:200 EDT] 0000002b com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/
-[4/18/21 20:46:06:200 EDT] 0000002b com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
-[4/18/21 20:46:06:202 EDT] 0000002b com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application FlightLogix updated in 0.948 seconds.
-[4/18/21 20:46:08:278 EDT] 0000002a com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\koran\IdeaProjects\FlightLogix5\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
-[4/18/21 20:46:13:726 EDT] 0000001f com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\koran\IdeaProjects\FlightLogix5\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
-[4/18/21 20:46:31:261 EDT] 0000002f .jaxrs20.cdi.component.JaxRsFactoryImplicitBeanCDICustomizer W CWWKW1002W: The CDI scope of JAXRS Provider AuthorizationFilter is javax.enterprise.context.Dependent. Liberty gets the provider instance from CDI.
-[4/18/21 20:46:31:263 EDT] 0000002f .jaxrs20.cdi.component.JaxRsFactoryImplicitBeanCDICustomizer W CWWKW1002W: The CDI scope of JAXRS Provider AuthenticationFilter is javax.enterprise.context.Dependent. Liberty gets the provider instance from CDI.
-[4/18/21 20:46:31:304 EDT] 0000002f .apache.cxf.cxf.core.3.2:1.0.51.cl210420210407-0944(id=139)] I Setting the server's publish address to be /app/
-[4/18/21 20:46:31:345 EDT] 0000002f com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [FlightLogix] [/] [com.FlightLogix.Service.FlightLogixApplicatioon]: Initialization successful.
-[4/18/21 20:49:00:770 EDT] 00000050 com.ibm.ws.config.xml.internal.ConfigRefresher               A CWWKG0016I: Starting server configuration update.
-[4/18/21 20:49:00:775 EDT] 00000050 com.ibm.ws.config.xml.internal.ServerXMLConfiguration        A CWWKG0093A: Processing configuration drop-ins resource: C:\Users\koran\IdeaProjects\FlightLogix5\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\configDropins\overrides\liberty-plugin-variable-config.xml
-[4/18/21 20:49:00:794 EDT] 00000050 com.ibm.ws.config.xml.internal.ConfigRefresher               A CWWKG0017I: The server configuration was successfully updated in 0.025 seconds.
-[4/18/21 20:49:07:999 EDT] 00000029 SystemOut                                                    O 1 1
-[4/18/21 20:49:08:085 EDT] 00000029 eclipselink                                                  I CWWJP9990I: [eclipselink] EclipseLink, version: Eclipse Persistence Services - 2.7.8.v20201217-ecdf3c32c4
-[4/18/21 20:49:08:584 EDT] 00000029 com.ibm.ws.rsadapter.impl.DatabaseHelper                     I DSRA8203I: Database product name : MySQL
-[4/18/21 20:49:08:585 EDT] 00000029 com.ibm.ws.rsadapter.impl.DatabaseHelper                     I DSRA8204I: Database product version : 8.0.20
-[4/18/21 20:49:08:585 EDT] 00000029 com.ibm.ws.rsadapter.impl.DatabaseHelper                     I DSRA8205I: JDBC driver name  : MySQL Connector/J
-[4/18/21 20:49:08:585 EDT] 00000029 com.ibm.ws.rsadapter.impl.DatabaseHelper                     I DSRA8206I: JDBC driver version  : mysql-connector-java-8.0.23 (Revision: 18bbd5e68195d0da083cbd5bd0d05d76320df7cd)
-[4/18/21 20:49:08:742 EDT] 00000029 eclipselink.server                                           W CWWJP9991W: [eclipselink.server] Failed to find MBean Server: null or empty List returned from MBeanServerFactory.findMBeanServer(null)
-[4/18/21 20:49:13:695 EDT] 0000004f SystemOut                                                    O Token: eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIzZDAyZWUwM2Q4YWU4NzBmNjJhMWUyN2VmMmJmZjQ0NWFlODI2MTkxNDJmYzg2M2MzMTEyNGM2YjJjYzA3NWFjIiwiaXNzIjoiaHR0cHM6Ly9GbGlnaHRMb2dpeC5jb20iLCJhdWQiOiJodHRwczovL0ZsaWdodExvZ2l4LmNvbSIsInN1YiI6IjEiLCJpYXQiOjE2MTg3OTMzNDksImV4cCI6MTYxODgyOTM0OSwicm9sZSI6IkNVU1RPTUVSIiwicmVmcmVzaENvdW50IjowLCJyZWZyZXNoTGltaXQiOjF9.LamNJk09hZqziNBXsnJY8LfZ4H9tIyj8yDzq9_xadCQ
-[4/18/21 20:49:13:696 EDT] 0000004f SystemOut                                                    O Removing token from repo
-[4/18/21 20:49:40:358 EDT] 00000057 SystemOut                                                    O 1 1
-[4/18/21 20:49:49:166 EDT] 00000054 SystemOut                                                    O Token: eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhMTY3Yjg2N2FhYTE4ZjhkY2NhNGIwZjIxZGE2NjY0NDIyMmU3MmNiODMwOTU2YThhMjlmY2IwZjYwYjFiM2Q3IiwiaXNzIjoiaHR0cHM6Ly9GbGlnaHRMb2dpeC5jb20iLCJhdWQiOiJodHRwczovL0ZsaWdodExvZ2l4LmNvbSIsInN1YiI6IjEiLCJpYXQiOjE2MTg3OTMzODAsImV4cCI6MTYxODgyOTM4MCwicm9sZSI6IkNVU1RPTUVSIiwicmVmcmVzaENvdW50IjowLCJyZWZyZXNoTGltaXQiOjF9.A8H8jCKjYy-_qbjAmV0UFkl3sWN4vANRl7v-tKZkyeM
-[4/18/21 20:49:49:168 EDT] 00000054 SystemOut                                                    O Removing token from repo
-[4/18/21 20:51:32:861 EDT] 0000005e SystemOut                                                    O 3 4
-[4/18/21 20:51:36:746 EDT] 0000006d SystemOut                                                    O Token: eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxNWZjYjk1ZjgyYTY2YTVhYzdhODMzYTAyNTU3ZDIxMzRlMjcyMzdlZGE2NDBjMzQ1NmFhNTI1NmI1YWFiNDI1IiwiaXNzIjoiaHR0cHM6Ly9GbGlnaHRMb2dpeC5jb20iLCJhdWQiOiJodHRwczovL0ZsaWdodExvZ2l4LmNvbSIsInN1YiI6IjMiLCJpYXQiOjE2MTg3OTM0OTIsImV4cCI6MTYxODgyOTQ5Miwicm9sZSI6IkNVU1RPTUVSIiwicmVmcmVzaENvdW50IjowLCJyZWZyZXNoTGltaXQiOjF9.UIjYioZt7X4FUZMOZ_H4RE_pWwBg1dJd6iAuEa7CDn0
-[4/18/21 20:51:36:747 EDT] 0000006d SystemOut                                                    O Removing token from repo
-[4/18/21 20:52:30:236 EDT] 0000007d SystemOut                                                    O 1 1
-[4/18/21 20:52:37:820 EDT] 0000002d SystemOut                                                    O TOKEN->2MmbShSBEAs0MC8IAXA7qoQ97c2m
-[4/18/21 20:52:37:829 EDT] 0000002d SystemOut                                                    O Hello from bookingSearch
-[4/18/21 20:52:44:837 EDT] 0000002d SystemOut                                                    O com.FlightLogix.Core.Booking.FlightData@cb60b7
-[4/18/21 20:53:00:127 EDT] 000000a1 SystemOut                                                    O Token: eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJjMjRmZDUzZDZiZmEyMmQ5Zjg1YjIyNGFhNzUxZjQwMDExYWQxOGMzY2IzZGVjZDgyMjlmYTE2ZjA3NmY2N2IxIiwiaXNzIjoiaHR0cHM6Ly9GbGlnaHRMb2dpeC5jb20iLCJhdWQiOiJodHRwczovL0ZsaWdodExvZ2l4LmNvbSIsInN1YiI6IjEiLCJpYXQiOjE2MTg3OTM1NTAsImV4cCI6MTYxODgyOTU1MCwicm9sZSI6IkNVU1RPTUVSIiwicmVmcmVzaENvdW50IjowLCJyZWZyZXNoTGltaXQiOjF9.5T1ngEDm73PMWzd4uJRvtyu_LKItv6awYgXJaHS0dVw
-[4/18/21 20:53:00:130 EDT] 000000a1 SystemOut                                                    O Removing token from repo
-[4/18/21 20:54:09:356 EDT] 0000008d SystemOut                                                    O invalid token
-[4/18/21 20:54:26:160 EDT] 000000a1 SystemOut                                                    O 2 2
-[4/18/21 20:54:26:195 EDT] 000000a1 com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: An FFDC Incident has been created: "com.FlightLogix.Repository.Exceptions.AuthenticationException: INVALID_CREDENTIALS com.ibm.ws.uow.UOWManagerImpl.runUnderCurrentUOW 1130" at ffdc_21.04.18_20.54.26.0.log
-[4/18/21 20:54:30:018 EDT] 00000050 SystemOut                                                    O 1 1
+[4/19/21 11:41:42:883 EDT] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0001I: The server defaultServer has been launched.
+[4/19/21 11:41:44:088 EDT] 00000017 com.ibm.ws.config.xml.internal.ServerXMLConfiguration        A CWWKG0093A: Processing configuration drop-ins resource: C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\configDropins\overrides\liberty-plugin-variable-config.xml
+[4/19/21 11:41:44:280 EDT] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           I CWWKE0002I: The kernel started after 1.742 seconds
+[4/19/21 11:41:44:312 EDT] 00000022 com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0007I: Feature update started.
+[4/19/21 11:41:44:504 EDT] 00000019 .apache.cxf.cxf.core.3.2:1.0.51.cl210420210407-0944(id=139)] I Aries Blueprint packages not available. So namespaces will not be registered
+[4/19/21 11:41:44:704 EDT] 00000017 com.ibm.ws.app.manager.internal.monitor.DropinMonitor        A CWWKZ0058I: Monitoring dropins for applications.
+[4/19/21 11:41:46:670 EDT] 0000001e com.ibm.ws.ssl.config.WSKeyStore                             I Successfully loaded default keystore: C:/Users/felix/Desktop/FlightLogix/FlightLogix/target/liberty/wlp/usr/servers/defaultServer/resources/security/key.p12 of type: PKCS12
+[4/19/21 11:41:46:758 EDT] 00000038 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application FlightLogix.
+[4/19/21 11:41:46:758 EDT] 00000038 bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The FlightLogix application is using the loose application definition at the C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\apps\FlightLogix.war.xml location.
+[4/19/21 11:41:48:200 EDT] 00000038 com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: An FFDC Incident has been created: "java.lang.Exception: Found duplicated servlet mapping url, /app/*, with endpoint infos com.ibm.ws.jaxrs20.metadata.EndpointInfo@5e948de8 and com.ibm.ws.jaxrs20.metadata.EndpointInfo@6da89347, throw exception to fail application starting. com.ibm.ws.jaxrs20.server.component.JaxRsWebModuleInfoBuilder 292" at ffdc_21.04.19_11.41.48.0.log
+[4/19/21 11:41:48:497 EDT] 00000038 com.ibm.ws.jca.cm.ConnectorService                           I J2CA8050I: An authentication alias should be used instead of defining a user name and password on dataSource[default-0].
+[4/19/21 11:41:48:786 EDT] 00000038 com.ibm.ws.recoverylog.spi.RecoveryDirectorImpl              I CWRLS0010I: Performing recovery processing for local WebSphere server (defaultServer).
+[4/19/21 11:41:48:914 EDT] 00000038 com.ibm.ws.recoverylog.spi.RecoveryDirectorImpl              I CWRLS0012I: All persistent services have been directed to perform recovery processing for this WebSphere server (defaultServer).
+[4/19/21 11:41:48:914 EDT] 0000003d com.ibm.tx.jta.impl.RecoveryManager                          I WTRN0135I: Transaction service recovering no transactions.
+[4/19/21 11:41:49:969 EDT] 00000038 com.ibm.ws.session.WASSessionCore                            I SESN8501I: The session manager did not find a persistent storage location; HttpSession objects will be stored in the local application server's memory.
+[4/19/21 11:41:50:026 EDT] 00000038 org.jboss.weld.Version                                       I WELD-000900: 3.1.4 (Final)
+[4/19/21 11:41:52:126 EDT] 00000038 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Liberty Project.
+[4/19/21 11:41:52:126 EDT] 00000038 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Liberty Project has been bound to default_host.
+[4/19/21 11:41:52:134 EDT] 00000038 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://johanson:8080/
+[4/19/21 11:41:52:158 EDT] 0000002e com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/
+[4/19/21 11:41:52:166 EDT] 0000002e com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[4/19/21 11:41:52:230 EDT] 0000002e com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0001I: Application FlightLogix started in 5.472 seconds.
+[4/19/21 11:41:52:254 EDT] 00000022 com.ibm.ws.tcpchannel.internal.TCPPort                       I CWWKO0219I: TCP Channel defaultHttpEndpoint has been started and is now listening for requests on host *  (IPv6) port 8080.
+[4/19/21 11:41:52:254 EDT] 00000022 com.ibm.ws.tcpchannel.internal.TCPPort                       I CWWKO0219I: TCP Channel defaultHttpEndpoint-ssl has been started and is now listening for requests on host *  (IPv6) port 8081.
+[4/19/21 11:41:52:270 EDT] 00000022 com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0012I: The server installed the following features: [cdi-2.0, jaxrs-2.1, jaxrsClient-2.1, jdbc-4.2, jndi-1.0, jpa-2.2, jpaContainer-2.2, jsonp-1.1, servlet-4.0, ssl-1.0, transportSecurity-1.0].
+[4/19/21 11:41:52:270 EDT] 00000022 com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0008I: Feature update completed in 7.989 seconds.
+[4/19/21 11:41:52:270 EDT] 00000022 com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0011I: The defaultServer server is ready to run a smarter planet. The defaultServer server started in 9.746 seconds.
+[4/19/21 11:41:52:703 EDT] 00000026 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/19/21 11:41:56:445 EDT] 00000032 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://johanson:8080/
+[4/19/21 11:41:56:517 EDT] 00000032 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application FlightLogix has stopped successfully.
+[4/19/21 11:41:56:533 EDT] 00000032 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application FlightLogix.
+[4/19/21 11:41:56:533 EDT] 00000032 bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The FlightLogix application is using the loose application definition at the C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\apps\FlightLogix.war.xml location.
+[4/19/21 11:41:57:508 EDT] 00000032 com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: An FFDC Incident has been created: "java.lang.Exception: Found duplicated servlet mapping url, /app/*, with endpoint infos com.ibm.ws.jaxrs20.metadata.EndpointInfo@467968a2 and com.ibm.ws.jaxrs20.metadata.EndpointInfo@6d3bbf7e, throw exception to fail application starting. com.ibm.ws.jaxrs20.server.component.JaxRsWebModuleInfoBuilder 292" at ffdc_21.04.19_11.41.57.0.log
+[4/19/21 11:41:57:853 EDT] 00000029 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/19/21 11:41:58:750 EDT] 00000032 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Liberty Project.
+[4/19/21 11:41:58:750 EDT] 00000032 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Liberty Project has been bound to default_host.
+[4/19/21 11:41:58:750 EDT] 00000032 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://johanson:8080/
+[4/19/21 11:41:58:750 EDT] 0000002f com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/
+[4/19/21 11:41:58:750 EDT] 0000002f com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[4/19/21 11:41:58:758 EDT] 0000002f com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application FlightLogix updated in 2.225 seconds.
+[4/19/21 11:41:59:369 EDT] 00000035 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/19/21 11:42:09:574 EDT] 00000026 .jaxrs20.cdi.component.JaxRsFactoryImplicitBeanCDICustomizer W CWWKW1002W: The CDI scope of JAXRS Provider AuthenticationFilter is javax.enterprise.context.Dependent. Liberty gets the provider instance from CDI.
+[4/19/21 11:42:09:574 EDT] 00000026 .jaxrs20.cdi.component.JaxRsFactoryImplicitBeanCDICustomizer W CWWKW1002W: The CDI scope of JAXRS Provider AuthorizationFilter is javax.enterprise.context.Dependent. Liberty gets the provider instance from CDI.
+[4/19/21 11:42:09:654 EDT] 00000026 .apache.cxf.cxf.core.3.2:1.0.51.cl210420210407-0944(id=139)] I Setting the server's publish address to be /app/
+[4/19/21 11:42:09:739 EDT] 00000026 com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [FlightLogix] [/] [com.FlightLogix.Service.FlightLogixApplicatioon]: Initialization successful.
+[4/19/21 11:42:10:044 EDT] 00000026 SystemOut                                                    O null null
+[4/19/21 11:42:10:156 EDT] 00000026 eclipselink                                                  I CWWJP9990I: [eclipselink] EclipseLink, version: Eclipse Persistence Services - 2.7.8.v20201217-ecdf3c32c4
+[4/19/21 11:42:13:389 EDT] 00000026 com.ibm.ws.rsadapter.impl.DatabaseHelper                     I DSRA8203I: Database product name : MySQL
+[4/19/21 11:42:13:389 EDT] 00000026 com.ibm.ws.rsadapter.impl.DatabaseHelper                     I DSRA8204I: Database product version : 8.0.20
+[4/19/21 11:42:13:389 EDT] 00000026 com.ibm.ws.rsadapter.impl.DatabaseHelper                     I DSRA8205I: JDBC driver name  : MySQL Connector/J
+[4/19/21 11:42:13:389 EDT] 00000026 com.ibm.ws.rsadapter.impl.DatabaseHelper                     I DSRA8206I: JDBC driver version  : mysql-connector-java-8.0.23 (Revision: 18bbd5e68195d0da083cbd5bd0d05d76320df7cd)
+[4/19/21 11:42:14:324 EDT] 00000026 eclipselink.server                                           W CWWJP9991W: [eclipselink.server] Failed to find MBean Server: null or empty List returned from MBeanServerFactory.findMBeanServer(null)
+[4/19/21 11:42:17:898 EDT] 00000026 com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: An FFDC Incident has been created: "com.FlightLogix.Repository.Exceptions.AuthenticationException: INVALID_CREDENTIALS com.ibm.ws.uow.UOWManagerImpl.runUnderCurrentUOW 1130" at ffdc_21.04.19_11.42.17.0.log
+[4/19/21 11:42:22:606 EDT] 00000026 SystemOut                                                    O jdjdfj jsdkjsdfk
+[4/19/21 11:42:27:993 EDT] 00000044 SystemOut                                                    O felix.johanson@gmail.com password
+[4/19/21 11:43:04:586 EDT] 0000004a SystemOut                                                    O Token: eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI1MjlhZDA5ODc3ZGNjZWMyMzI1ZmM0MDFjMzllNjYxNjQyYzcwNGExYzQ2MjUzNGY4OTJiZmQyZTFmYzZhNmQyIiwiaXNzIjoiaHR0cHM6Ly9GbGlnaHRMb2dpeC5jb20iLCJhdWQiOiJodHRwczovL0ZsaWdodExvZ2l4LmNvbSIsInN1YiI6ImZlbGl4LmpvaGFuc29uQGdtYWlsLmNvbSIsImlhdCI6MTYxODg0Njk0OCwiZXhwIjoxNjE4ODgyOTQ4LCJyb2xlIjoiQ1VTVE9NRVIiLCJyZWZyZXNoQ291bnQiOjAsInJlZnJlc2hMaW1pdCI6MX0.q1SyBSXo8Q09PwZXpn85-rOWrpwjmr0el4yLunPCZw0
+[4/19/21 11:43:04:586 EDT] 0000004a SystemOut                                                    O Removing token from repo
+[4/19/21 11:43:11:094 EDT] 00000026 SystemOut                                                    O felix.johanson@gmail.com password
+[4/19/21 11:43:49:706 EDT] 0000004a SystemOut                                                    O felix.johanson@gmail.com pass
+[4/19/21 11:43:54:982 EDT] 0000002f SystemOut                                                    O felix.johanson@gmail.com password
+[4/19/21 11:44:01:342 EDT] 0000005a SystemOut                                                    O invalid token
+[4/19/21 11:44:35:529 EDT] 00000063 com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: An FFDC Incident has been created: "com.FlightLogix.Repository.Exceptions.RegistrationException: EMAIL_ALREADY_EXISTS com.ibm.ws.uow.UOWManagerImpl.runUnderCurrentUOW 1130" at ffdc_21.04.19_11.44.35.0.log
+[4/19/21 11:49:01:099 EDT] 000000a6 org.eclipse.yasson.internal.Unmarshaller                     E Invalid token=EOF at (line no=1, column no=0, offset=-1). Expected tokens are: [CURLYOPEN, SQUAREOPEN, STRING, NUMBER, TRUE, FALSE, NULL]
+[4/19/21 11:49:31:689 EDT] 00000074 org.eclipse.yasson.internal.Unmarshaller                     E Invalid token=EOF at (line no=1, column no=0, offset=-1). Expected tokens are: [CURLYOPEN, SQUAREOPEN, STRING, NUMBER, TRUE, FALSE, NULL]
+[4/19/21 12:13:40:230 EDT] 0000021d com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: An FFDC Incident has been created: "java.lang.NullPointerException com.ibm.ws.uow.UOWManagerImpl.runUnderCurrentUOW 1130" at ffdc_21.04.19_12.13.40.0.log
+[4/19/21 12:28:20:475 EDT] 000002e0 SystemOut                                                    O null null
+[4/19/21 13:33:51:183 EDT] 0000070e SystemOut                                                    O null null
+[4/19/21 13:34:45:120 EDT] 00000013 com.ibm.ws.kernel.launch.internal.ServerCommandListener      A CWWKE0055I: Server shutdown requested on Monday, April 19, 2021 at 1:34 PM. The server defaultServer is shutting down.
+[4/19/21 13:34:45:141 EDT] 0000073a com.ibm.ws.runtime.update.internal.RuntimeUpdateManagerImpl  A CWWKE1100I: Waiting for up to 30 seconds for the server to quiesce.
+[4/19/21 13:34:45:160 EDT] 00000729 com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0220I: TCP Channel defaultHttpEndpoint-ssl has stopped listening for requests on host *  (IPv6) port 8081.
+[4/19/21 13:34:45:166 EDT] 00000729 com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0220I: TCP Channel defaultHttpEndpoint has stopped listening for requests on host *  (IPv6) port 8080.
+[4/19/21 13:34:45:167 EDT] 00000729 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://johanson:8080/
+[4/19/21 13:34:46:182 EDT] 0000073a com.ibm.ws.runtime.update.internal.RuntimeUpdateManagerImpl  I CWWKE1101I: Server quiesce complete.
+[4/19/21 13:34:46:296 EDT] 0000072e com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [FlightLogix] [/] [com.FlightLogix.Service.FlightLogixApplicatioon]: Destroy successful.
+[4/19/21 13:34:46:323 EDT] 0000072e com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application FlightLogix has stopped successfully.
+[4/19/21 13:34:46:663 EDT] 0000073a com.ibm.tx.jta.impl.FailureScopeController                   A WTRN0105I: The transaction service has shutdown successfully with no transactions requiring recovery.
+[4/19/21 13:34:47:121 EDT] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0036I: The server defaultServer stopped after 1 hours, 53 minutes, 4.594 seconds.
