@@ -31,10 +31,6 @@ function Copyright() {
 var httpRequestMaker = require("./../Utils/httpRequestMaker.js")
 
 
-async function registerUser(User) {
-    var responseJson =  httpRequestMaker.sendRequest("POST", "https://localhost:8081/app/register", null, JSON.stringify(User))
-    return responseJson;
-}
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -66,32 +62,36 @@ export default function SignUp(props) {
     const [error, setError] = useState(null);
     const [isRegistered, setIsRegistered] = useState(false);
 
+    const registerUser = async RegistrationInfo => {
+        httpRequestMaker.sendRequest("POST", "https://localhost:8081/app/register", null, JSON.stringify(RegistrationInfo))
+        .then(response => response.json())
+        .then(responseJson =>{
+            setIsRegistering(false);
+            console.log('RESPONSE: ' + JSON.stringify(responseJson));
+            if (responseJson)
+                setIsRegistered(true);
+        })
+        .catch (err => {
+            console.error(err);
+        })      
+    }
     const handleRegister = async e => {
         e.preventDefault();
         setIsRegistering(true);
         setError(null);
         let response;
         try {
-            response = await registerUser({
+            registerUser({
                 firstName,
                 lastName,
                 email,
                 password
-
-            });
+            })
         }
         catch (error) {
             setError(error.message);
-        }
-        setIsRegistering(false);
-        console.log('RESPONSE: ' + response);
-
-        if (response)
-            setIsRegistered(true);
+        }      
     }
-
-
-
     return (
 
         <Fragment>

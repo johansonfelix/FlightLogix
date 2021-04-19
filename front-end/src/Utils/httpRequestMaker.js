@@ -20,11 +20,13 @@ module.exports = {
     console.log("Sending request: ")
     console.log(JSON.stringify(request))
     try{
-      var response = await fetch(url, request)
-      var responseJsonPromise = await response.json()
-      var responseJson = await responseJsonPromise;
-      console.log("Received reply: " + JSON.stringify(responseJson))
-      return responseJson //json object (non-string)
+      var promise = await fetch(url, request)
+      return promise
+      
+      // var responseJsonPromise = await response.json()
+      // var responseJson = await responseJsonPromise;
+      // console.log("Received reply: " + JSON.stringify(responseJson))
+      // return responseJson //json object (non-string)
     }
     catch(error){
       console.log(error.message)

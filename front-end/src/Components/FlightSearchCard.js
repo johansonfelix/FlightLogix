@@ -25,7 +25,6 @@ var httpRequestMaker = require("./../Utils/httpRequestMaker.js")
 const useStyles = makeStyles((theme) => ({
     root: {
         minWidth: 275,
-
   },
     bullet: {
         display: 'inline-block',
@@ -65,8 +64,22 @@ export default function SimpleCard(props) {
     const [departureDate, setDepartureDate] = useState("2021-05-31");
     const [returnDate, setReturnDate] = useState("2021-06-14");
     const [searchResults, setSearchResults] = useState();
+    const searchFlights = async (Search) => {
+        httpRequestMaker.sendRequest("POST", "https://localhost:8081/app/booking/search",props.token, JSON.stringify(Search))
+        .then(response => response.json())
+        .then(responseJson =>{
+            console.log("Received flight data: " + JSON.stringify(responseJson))
+            var flights = responseJson["flights"]
+            var searchResults = [];
+            if(flights !== undefined)
+            for(var i = 0; i < flights.length; i++){
+                searchResults.push(flights[i])
+            }
+            setSearchResults(searchResults);
+        })
+        .catch(err => {console.log(err)})
+    }
     const searchHandler = () => {
-
         var search = {
             originLocationCode: whereFrom,
             destinationLocationCode: whereTo,
@@ -75,20 +88,17 @@ export default function SimpleCard(props) {
             numAdults: passengers,
             maxResults: 10
         }
-        var searchJsonString = JSON.stringify(search);
-        var flights = httpRequestMaker.sendRequest("POST", "https://localhost:8081/app/booking/search",props.token, searchJsonString)
-        setSearchResults("");
-        for(var flight in flights){
-            if(flights.hasOwnProperty(flight)){
-                setSearchResults(searchResults + flight);
-            }
-        }
+        searchFlights(search) 
     }
 
     const SearchResults = () => {
-        if(searchResults !== null){
-            return <div>{searchResults}</div>
+        var resultsJSX = []
+        if(searchResults !== undefined){
+            for(var i = 0; i < searchResults.length; i++){
+                resultsJSX.push(<div>{JSON.stringify(searchResults[i])}</div>)
+            }
         }
+        return <div>{resultsJSX}</div>
     }
 
 

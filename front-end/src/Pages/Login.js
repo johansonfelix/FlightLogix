@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, {useCallback, useEffect, Fragment } from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -24,10 +24,7 @@ import Registration from '../Pages/Registration';
 var httpRequestMaker = require("./../Utils/httpRequestMaker.js")
 
 
-async function loginUser(Credentials) {
-    var responseJson =  httpRequestMaker.sendRequest("POST", "https://localhost:8081/app/login", null, JSON.stringify(Credentials))
-    return responseJson;
-}
+
 
 
 
@@ -114,7 +111,7 @@ const useStyles = makeStyles((theme) => ({
 
 ));
 
-export default function SignIn({ setToken }) {
+export default function SignIn(props) {
     const classes = useStyles();
 
     const [email, setEmail] = useState();
@@ -130,30 +127,53 @@ export default function SignIn({ setToken }) {
     const handleClose = () => {
         setOpen(false);
     };
+    const loginUser = async Credentials => {
+        httpRequestMaker.sendRequest("POST", "https://localhost:8081/app/login", null, JSON.stringify(Credentials))
+       .then((response)=> response.json())
+       .then((responseJson)=>{
+           if(responseJson !== undefined){
+               console.log("Received: " + JSON.stringify(responseJson))
+               let tokenReceived = responseJson['token']
+               console.log("Using token: " + tokenReceived)
+               setIsAuthenticating(false)
+               console.log("STATE TOKEN:" + props.token)
+               if (tokenReceived){
+                   props.setToken(tokenReceived)
+               }
+               
 
-    const handleSubmit = async e => {
+           }
+           else{
+               console.log("Response is undefined.")
+           }})
+        .catch(err => {
+            console.error("Failed to log in user => " + err)
+        })
+    }
+     
+
+    const handleSubmit = e => {
         console.log("Clicked login.")
         e.preventDefault();
         setIsAuthenticating(true);
         setError(null);
-        let token;
+        let tokenReceived;
+        
         try {
-            token = await loginUser({
+            loginUser({
                 email,
                 password,
                 setIsAuthenticating
-            });
+            })
+                           console.log(props.setToken)
+               console.log("STATE TOKEN:" + props.token)
         }
+            
         catch (error) {
             setError(error.message);
-
-
         }
-        setIsAuthenticating(false);
-        if (token)
-            setToken(token);
-    }
 
+    }
 
     return (
         <Fragment>

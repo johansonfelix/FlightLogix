@@ -31,12 +31,12 @@ public class BookingResource {
     @RolesAllowed({"ADMIN", "CUSTOMER"})
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response bookingSearch(Search search) {
+    public FlightData bookingSearch(Search search) {
 
         System.out.println("Hello from bookingSearch");
         FlightData data = apiCaller.getParsedData(search);
-
-        return Response.ok(data).build();
+        System.out.println(data.toString());
+        return data;
 
     }
 
