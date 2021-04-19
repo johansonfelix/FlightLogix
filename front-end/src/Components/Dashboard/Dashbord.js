@@ -25,6 +25,7 @@ import PropTypes from 'prop-types';
 import MainBanner from './MainBanner';
 import dashImage from '../../assets/flights_3.svg';
 import logo from '../../assets/logo.svg';
+import httpRequestMaker from '../../Utils/httpRequestMaker';
 
 
 
@@ -183,11 +184,40 @@ export default function Dashboard(props) {
     const handleDrawerClose = () => {
         setOpen(false);
     };
+    const clearTokenServerSide = async () => {
+        httpRequestMaker.sendRequest("POST", "https://localhost:8081/app/logout", props.token, null)
+        .then(response => response.json())
+        .then(responseJson => {
+            console.log("Server reply:" + JSON.stringify(responseJson))
+        })
+        .catch(err => {
+            console.error(err)
+        })
+    }
+    const clearTokenClientSide = () => {
+        localStorage.clear("token")
+    }
+    const handleLogout = () => {
+        let success;
+        try{
+            success = clearTokenServerSide();
+            // if(success){
+                props.setToken(undefined)
+                clearTokenClientSide();
+            // }
+
+        }
+        catch(err){
+            console.error(err)
+        }
+    };
 
 
     return (
         <Fragment>
+
             <div className={classes.root}>
+                <button onClick={handleLogout}></button>
                 <CssBaseline />
                 <ElevationScroll {...props}>
                     <AppBar position="fixed"

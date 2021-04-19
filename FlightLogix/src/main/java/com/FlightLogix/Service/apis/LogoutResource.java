@@ -23,8 +23,8 @@ public class LogoutResource {
     @Produces(MediaType.APPLICATION_JSON)
     @RolesAllowed({"ADMIN", "CUSTOMER"})
     @InvalidateToken
-    public Response invalidateToken(Credentials credentials) {
+    public Response invalidateToken() {
 
-        return Response.ok().build();
+        return Response.ok("INVALIDATED").build();
     }
 }

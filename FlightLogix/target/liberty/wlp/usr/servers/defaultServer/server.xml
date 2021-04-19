@@ -74,5 +74,11 @@
         allowedHeaders="origin, content-type, accept, authorization, cache-control, Access-Control-Allow-Origin"
         exposeHeaders="Access-Control-Allow-Origin"
         maxAge="3600" />
+  <cors domain="/app/logout"
+        allowedOrigins="http://localhost:3000"
+        allowedMethods="GET, DELETE, POST, PUT"
+        allowedHeaders="origin, content-type, accept, authorization, cache-control, Access-Control-Allow-Origin"
+        exposeHeaders="Access-Control-Allow-Origin"
+        maxAge="3600" />
 </server>
 

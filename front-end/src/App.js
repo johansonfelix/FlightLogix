@@ -32,7 +32,7 @@ function App() {
   };
 
 
-  return <Dashboard token={token}/>
+  return <Dashboard token={token} setToken={setToken}/>
 
 
 
