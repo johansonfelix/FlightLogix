@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, {useState, Fragment } from 'react';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -27,7 +27,7 @@ import dashImage from '../../assets/flights_3.svg';
 import logo from '../../assets/logo.svg';
 import httpRequestMaker from '../../Utils/httpRequestMaker';
 import Button from '@material-ui/core/Button';
-import FlightSearchResult from '../FlightResult';
+import FlightResults from '../FlightResults';
 import { useParams, Route, useRouteMatch } from 'react-router-dom';
 
 
@@ -183,6 +183,8 @@ const useStyles = makeStyles((theme) => ({
 export default function Dashboard(props) {
     const classes = useStyles();
     const [open, setOpen] = React.useState(false);
+    const [searchResults, setSearchResults] = useState();
+
     const handleDrawerOpen = () => {
         setOpen(true);
     };
@@ -285,22 +287,19 @@ export default function Dashboard(props) {
 
 
                     <Container maxWidth="lg" className={classes.container}>
-                        <FlightSearchCard token={props.token} />
+                        <FlightSearchCard token={props.token} searchResultSetter={setSearchResults}/>
 
 
                         <Route path="/search">
                             <div className={classes.container}>
 
-                                <FlightSearchResult />
+                                {searchResults!==undefined && <FlightResults flights={searchResults}/>}
 
                             </div>
 
                         </Route>
-
                     </Container>
-
                 </main>
-
             </div>
         </Fragment>
     );

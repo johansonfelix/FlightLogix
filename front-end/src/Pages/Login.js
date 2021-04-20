@@ -199,7 +199,7 @@ export default function SignIn(props) {
             }
             else if (response['token']) {
                 console.log(response)
-                props.setToken(response);
+                props.setToken(response.token);
             }
 
             setIsAuthenticating(false);

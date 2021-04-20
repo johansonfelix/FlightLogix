@@ -19,7 +19,9 @@ export default function TripType(props) {
     //setVal(event.target.value);
     
     props.setTripType(event.target.value);
-    
+    if(event.target.value === "One Way"){
+      props.setReturnDate(null)
+    }
   };
 
   const borderSelectClasses = useBorderSelectStyles();

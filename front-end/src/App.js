@@ -1,7 +1,7 @@
 import './App.css';
 import Login from './Pages/Login';
 import HeaderBar from './Components/HeaderBar';
-import Dashboard from './Components/Dashboard/Dashbord';
+import Dashboard from './Components/Dashboard/Dashboard';
 import useToken from './Hooks/useToken';
 import { Fragment, useEffect } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';

@@ -18,6 +18,7 @@ import IconButton from '@material-ui/core/IconButton';
 import DatePicker from './DatePicker';
 import TextField from '@material-ui/core/TextField';
 import SearchIcon from '@material-ui/icons/Search';
+import FlightResults from "./FlightResults"
 
 var httpRequestMaker = require("./../Utils/httpRequestMaker.js")
 
@@ -39,8 +40,6 @@ const useStyles = makeStyles((theme) => ({
     },
     margin:{
         marginTop: '5px'
-       
-        
     },
 
     arrow:{
@@ -63,19 +62,21 @@ export default function SimpleCard(props) {
     const [tripType, setTripType] = useState('Round Trip');
     const [departureDate, setDepartureDate] = useState("2021-05-31");
     const [returnDate, setReturnDate] = useState("2021-06-14");
-    const [searchResults, setSearchResults] = useState();
+    
+
     const searchFlights = async (Search) => {
         httpRequestMaker.sendRequest("POST", "https://localhost:8081/app/booking/search",props.token, JSON.stringify(Search))
         .then(response => response.json())
         .then(responseJson =>{
             console.log("Received flight data: " + JSON.stringify(responseJson))
             var flights = responseJson["flights"]
-            var searchResults = [];
-            if(flights !== undefined)
-            for(var i = 0; i < flights.length; i++){
-                searchResults.push(flights[i])
+            if(flights.length > 0){
+                var searchResults = [];
+                for(var i = 0; i < flights.length; i++){
+                    searchResults.push(flights[i])
+                }
+                props.searchResultSetter(searchResults);
             }
-            setSearchResults(searchResults);
         })
         .catch(err => {console.log(err)})
     }
@@ -90,18 +91,6 @@ export default function SimpleCard(props) {
         }
         searchFlights(search) 
     }
-
-    const SearchResults = () => {
-        var resultsJSX = []
-        if(searchResults !== undefined){
-            for(var i = 0; i < searchResults.length; i++){
-                resultsJSX.push(<div>{JSON.stringify(searchResults[i])}</div>)
-            }
-        }
-        return <div>{resultsJSX}</div>
-    }
-
-
     return (
         <Fragment>
             <Card className={classes.root} style={{raised: true}}>
@@ -110,7 +99,7 @@ export default function SimpleCard(props) {
                     <Grid container className={classes.root} spacing={3}>
 
                         <Grid item xs={3}>
-                            <TripTypeButton setTripType={setTripType} tripType={tripType} />
+                            <TripTypeButton setTripType={setTripType} setReturnDate={setReturnDate} tripType={tripType} />
                         </Grid>
 
                         <Grid item xs={3}>
@@ -145,7 +134,7 @@ export default function SimpleCard(props) {
                     </Button>
                 </CardContent>
             </Card>
-            <SearchResults/>
+            
         </Fragment>
     );
 }
