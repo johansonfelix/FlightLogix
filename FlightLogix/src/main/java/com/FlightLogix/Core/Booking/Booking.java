@@ -11,7 +11,7 @@ import javax.persistence.*;
 @Table(name = "booking")
 @NamedQuery(name="Booking.findAll", query="SELECT e from Booking e")
 @NamedQuery(name="Booking.findBooking", query="SELECT E from Booking e WHERE e.bookingID = :bookingID")
-public class Booking {
+public class    Booking {
 
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
