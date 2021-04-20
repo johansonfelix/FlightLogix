@@ -26,8 +26,9 @@ import MainBanner from './MainBanner';
 import dashImage from '../../assets/flights_3.svg';
 import logo from '../../assets/logo.svg';
 import httpRequestMaker from '../../Utils/httpRequestMaker';
-
-
+import Button from '@material-ui/core/Button';
+import FlightSearchResult from '../FlightResult';
+import { useParams, Route, useRouteMatch } from 'react-router-dom';
 
 
 function ElevationScroll(props) {
@@ -127,6 +128,9 @@ const useStyles = makeStyles((theme) => ({
             easing: theme.transitions.easing.sharp,
             duration: theme.transitions.duration.enteringScreen,
         }),
+        height: '100vh',
+        overflow: 'hidden'
+
     },
     drawerPaperClose: {
         overflowX: 'hidden',
@@ -138,12 +142,14 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.up('sm')]: {
             width: theme.spacing(9),
         },
+        height: '100vh'
+
     },
     appBarSpacer: theme.mixins.toolbar,
     content: {
         flexGrow: 1,
-        height: '100vh',
-        // overflow: 'auto',
+        height: 'auto',
+        overflow: 'auto',
         marginTop: '60px'
     },
     container: {
@@ -186,28 +192,28 @@ export default function Dashboard(props) {
     };
     const clearTokenServerSide = async () => {
         httpRequestMaker.sendRequest("POST", "https://localhost:8081/app/logout", props.token, null)
-        .then(response => response.json())
-        .then(responseJson => {
-            console.log("Server reply:" + JSON.stringify(responseJson))
-        })
-        .catch(err => {
-            console.error(err)
-        })
+            .then(response => response.json())
+            .then(responseJson => {
+                console.log("Server reply:" + JSON.stringify(responseJson))
+            })
+            .catch(err => {
+                console.error(err)
+            })
     }
     const clearTokenClientSide = () => {
         localStorage.clear("token")
     }
     const handleLogout = () => {
         let success;
-        try{
+        try {
             success = clearTokenServerSide();
             // if(success){
-                props.setToken(undefined)
-                clearTokenClientSide();
+            props.setToken(undefined)
+            clearTokenClientSide();
             // }
 
         }
-        catch(err){
+        catch (err) {
             console.error(err)
         }
     };
@@ -217,11 +223,11 @@ export default function Dashboard(props) {
         <Fragment>
 
             <div className={classes.root}>
-                <button onClick={handleLogout}></button>
+
                 <CssBaseline />
                 <ElevationScroll {...props}>
                     <AppBar position="fixed"
-                        className={clsx(classes.appBar, {[classes.appBarShift]: open,})}>
+                        className={clsx(classes.appBar, { [classes.appBarShift]: open, })}>
                         <Toolbar className={classes.toolbar}>
                             <IconButton
                                 edge="start"
@@ -232,8 +238,16 @@ export default function Dashboard(props) {
                             >
                                 <MenuIcon marginRight={0} />
                             </IconButton>
-                            <Divider orientation="vertical" flexItem className={clsx(classes.menuButton, open && classes.menuButtonHidden)}/>
-                            <img src={logo} alt="FlightLogixLogo" noWrap className={classes.logo} />
+                            <Divider orientation="vertical" flexItem className={clsx(classes.menuButton, open && classes.menuButtonHidden)} />
+                            <Grid container spacing={3}>
+                                <Grid item xs={6}>
+                                    <img src={logo} alt="FlightLogixLogo" noWrap className={classes.logo} />
+                                </Grid>
+                                <Grid item xs={6}>
+                                    <Button style={{ color: '#4285F4', margin: '15px', float: 'right' }} href="/login" onClick={handleLogout}>Logout</Button>
+                                </Grid>
+                            </Grid>
+
 
                             {/*   <IconButton color="#5f6368" className={classes.avatar}>
             <Badge badgeContent={4} color="secondary">
@@ -248,7 +262,8 @@ export default function Dashboard(props) {
                 <Drawer
                     variant="permanent"
                     classes={{
-                        paper: clsx(classes.drawerPaper, !open && classes.drawerPaperClose),}}
+                        paper: clsx(classes.drawerPaper, !open && classes.drawerPaperClose),
+                    }}
                     open={open}>
 
                     <div className={classes.toolbarIcon}>
@@ -264,11 +279,26 @@ export default function Dashboard(props) {
                 </Drawer>
 
                 <main className={classes.content}>
-                    
-                    <MainBanner image={image} className={classes.banner} />
+                    <Route path="/home">
+                        <MainBanner image={image} className={classes.banner} />
+                    </Route>
+
+
                     <Container maxWidth="lg" className={classes.container}>
                         <FlightSearchCard token={props.token} />
+
+
+                        <Route path="/search">
+                            <div className={classes.container}>
+
+                                <FlightSearchResult />
+
+                            </div>
+
+                        </Route>
+
                     </Container>
+
                 </main>
 
             </div>

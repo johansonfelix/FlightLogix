@@ -14,17 +14,20 @@ function App() {
   if (!token) {
     return (
       <Fragment>
-         
+
         <HeaderBar />
         <Switch>
           <Route path='/login' exact>
             <Login setToken={setToken} token={token} />
           </Route>
           <Route path='/' exact>
-           <Redirect to='/login'/>
+            <Redirect to='/login' />
           </Route>
         </Switch>
-     
+        <Route path='*'>
+         <Redirect to='/login' />
+      </Route>
+
 
       </Fragment>
 
@@ -34,9 +37,27 @@ function App() {
   };
 
 
-  return <Dashboard token={token} setToken={setToken}/>
+  return (
+    <Switch>
+       <Route path='/login' exact>
+       <Redirect to='/home' />
+    </Route>
+      <Route path='/home' exact>
+        <Dashboard token={token} setToken={setToken} />)
+    </Route>
+      <Route path='/search' exact>
+        <Dashboard token={token} setToken={setToken} />)
+    </Route>
+    <Route path='*' exact>
+       <Redirect to='/home' />
+    </Route>
+    
 
 
+    </Switch>
+
+
+  )
 
 
 
