@@ -31,6 +31,7 @@ import FlightResults from '../FlightResults';
 import { Route, useHistory } from 'react-router-dom';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import LinearProgress from '@material-ui/core/LinearProgress';
+import MakeBooking from '../MakeBooking';
 
 function ElevationScroll(props) {
     const { children, window } = props;
@@ -197,6 +198,7 @@ export default function Dashboard(props) {
     const [progress, setProgress] = React.useState(0);
     const [isSearching, setIsSearching] = useState(false);
     const [error, setError] = useState();
+    const [isMakingBooking, setIsMakingBooking] = useState(false);
     let history = useHistory();
 
     React.useEffect(() => {
@@ -326,7 +328,17 @@ export default function Dashboard(props) {
                             {!isSearching && !error &&
                                 <div className={classes.container}>
 
-                                    {searchResults !== undefined && <FlightResults flights={searchResults} />}
+                                    {searchResults !== undefined && 
+                                    <div>
+                                    <FlightResults flights={searchResults} makeBookingSetter={setIsMakingBooking}/>
+                               
+                                    {
+                                        isMakingBooking && <MakeBooking  stateSetter={setIsMakingBooking} state={isMakingBooking}/>
+                                    }
+                                    
+                                    </div>
+                                    
+                                    }
 
                                 </div>
                             }

@@ -283,7 +283,7 @@ export default function SignIn(props) {
 
                                         <Grid>
                                             <Link href="#" variant="body2" onClick={handleRegistrationOpen}>
-                                                <Typography color="primary">
+                                                <Typography>
                                                     Don't have an account? Sign Up
         </Typography>
 

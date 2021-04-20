@@ -4,11 +4,12 @@ import HeaderBar from './Components/HeaderBar';
 import Dashboard from './Components/Dashboard/Dashboard';
 import useToken from './Hooks/useToken';
 import { Fragment, useEffect } from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch, Redirect, useHistory } from 'react-router-dom';
 import MyBookings from './Pages/MyBookings';
 
 function App() {
-
+  let history = useHistory();
+  
   const { setToken, token } = useToken();
   console.log("......." + token)
 

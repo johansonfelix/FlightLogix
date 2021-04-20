@@ -14,6 +14,8 @@ import java.io.InputStreamReader;
 import java.net.*;
 import java.nio.charset.StandardCharsets;
 import java.sql.Timestamp;
+import java.time.Duration;
+import java.time.Instant;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -32,7 +34,7 @@ public class AmadeusAPICaller {
 
     private URL tokenGenerationURL, flightSearchURL;
     private String authToken;
-
+    private Instant tokenTime;
     public enum ResponseCode {
         UNKNOWN_ERROR
     }
@@ -69,45 +71,62 @@ public class AmadeusAPICaller {
     }
 
     public String getAccessToken() {
-        Map<String, String> requestParams = new HashMap<>();
-        requestParams.put("client_id", "h0W7qgvuYTEaybUw9hqxqnJOoxqTlXr4");
-        requestParams.put("client_secret", "CJ5mRqbZ6TrxsjJm");
-        requestParams.put("grant_type", "client_credentials");
-        String encodingString = encode(requestParams);
+        if(!tokenGood()) {
 
-        HttpURLConnection conn = null;
-        try {
-            conn = (HttpURLConnection) tokenGenerationURL.openConnection();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        if (conn != null) {
-            conn.setDoOutput(true);
+            Map<String, String> requestParams = new HashMap<>();
+            requestParams.put("client_id", "h0W7qgvuYTEaybUw9hqxqnJOoxqTlXr4");
+            requestParams.put("client_secret", "CJ5mRqbZ6TrxsjJm");
+            requestParams.put("grant_type", "client_credentials");
+            String encodingString = encode(requestParams);
+
+            HttpURLConnection conn = null;
             try {
-                conn.setRequestMethod("POST");
-            } catch (ProtocolException e) {
-                e.printStackTrace();
-            }
-            conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
-            conn.setRequestProperty("charset", "utf-8");
-            conn.setRequestProperty("Content-Length", Integer.toString(encodingString.length()));
-            conn.setUseCaches(false);
-            try (DataOutputStream wr = new DataOutputStream(conn.getOutputStream())) {
-                wr.write(encodingString.getBytes(StandardCharsets.UTF_8));
+                conn = (HttpURLConnection) tokenGenerationURL.openConnection();
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            try {
-                String json = getResponseBody(conn);
-                JSONObject jsonObject = new JSONObject(json);
-                return jsonObject.getString("access_token");
-            } catch (IOException e) {
-                e.printStackTrace();
+            if (conn != null) {
+                conn.setDoOutput(true);
+                try {
+                    conn.setRequestMethod("POST");
+                } catch (ProtocolException e) {
+                    e.printStackTrace();
+                }
+                conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+                conn.setRequestProperty("charset", "utf-8");
+                conn.setRequestProperty("Content-Length", Integer.toString(encodingString.length()));
+                conn.setUseCaches(false);
+                try (DataOutputStream wr = new DataOutputStream(conn.getOutputStream())) {
+                    wr.write(encodingString.getBytes(StandardCharsets.UTF_8));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    String json = getResponseBody(conn);
+                    JSONObject jsonObject = new JSONObject(json);
+                    tokenTime = Instant.now();
+                    return jsonObject.getString("access_token");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
+            return ResponseCode.UNKNOWN_ERROR.toString();
         }
-        return ResponseCode.UNKNOWN_ERROR.toString();
+        return authToken;
     }
 
+
+    private boolean tokenGood(){
+        if(tokenTime == null)
+            return false;
+        else {
+            Instant now = Instant.now();
+            Duration elapsed = Duration.between(tokenTime, now);
+            return (elapsed.getSeconds()<=1799);
+
+
+        }
+    }
     private String getResponseBody(HttpURLConnection conn) throws IOException {
         BufferedReader br = null;
         String str = "";

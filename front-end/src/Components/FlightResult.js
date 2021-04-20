@@ -12,6 +12,7 @@ import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import { useHistory } from 'react-router';
 
 
 
@@ -57,7 +58,7 @@ function parseTime(timestamp){
     return garbage.split("Z")[0]
 }
 export default function FlightResult(props) {
-    
+    let history = useHistory();
     const classes = useStyles();
     let flight = props.flight;
     let oneWay = flight["flightType"]==="ONE_WAY"?true:false
@@ -94,6 +95,8 @@ export default function FlightResult(props) {
     let carrierInboundImageURL = "https://daisycon.io/images/airline/?width=300&height=150&color=ffffff&iata=" + carrierCodeInbound;
 
     const handleSelect = () => {
+        //props.setSchedule(flight);
+        props.makeBookingSetter(true);
         
     }
     return (
@@ -116,7 +119,7 @@ export default function FlightResult(props) {
                                         {fromTime} {fromIatacode} <ArrowForwardIcon /> {toTime} {toIatacode}
                                     </Typography>
                                     <Typography variant="body2" color="textSecondary">
-                                        {directFlightOutbound && "(direct flight)"}{!directFlightOutbound && "(connecting flight)"}
+                                        {directFlightOutbound && "(direct flight)"}{!directFlightOutbound && "(with connecting flights)"}
                                     </Typography>
 
                                 </Grid>
