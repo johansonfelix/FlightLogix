@@ -107,7 +107,7 @@ const useStyles = makeStyles((theme) => ({
     },
     avatar: {
         margin: theme.spacing(1),
-        backgroundColor: theme.palette.secondary.main,
+        backgroundColor:"#F4B400",
     },
     form: {
         width: '100%', // Fix IE 11 issue.
@@ -129,6 +129,13 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         justifyContent: 'center',
     },
+
+    textField:{
+        '&:focus':{
+            backgroundColor: 'red'
+
+        }
+    }
 
 
 }
@@ -231,7 +238,7 @@ export default function SignIn(props) {
         </Typography>
                                 {error && <Typography component="body2" style={{ color: 'red' }} variant="body2"><br />{error}</Typography>}
 
-                                <form className={classes.form} noValidate onSubmit={handleSubmit}>
+                                <form className={classes.form} Validate onSubmit={handleSubmit}>
                                     <TextField
                                         variant="outlined"
                                         margin="normal"
@@ -243,7 +250,8 @@ export default function SignIn(props) {
                                         name="email"
                                         autoComplete="email"
                                         onChange={e => setEmail(e.target.value)}
-                                        autoFocus
+                                        autoFocus                                
+                                        className={classes.textField}
                                     />
                                     <TextField
                                         variant="outlined"
@@ -265,7 +273,7 @@ export default function SignIn(props) {
                                         type="submit"
                                         fullWidth
                                         variant="contained"
-                                        color="primary"
+                                        style={{backgroundColor:"#F4B400", color:"#fff"}}
                                         className={classes.submit}
                                        
                                     >
@@ -275,7 +283,7 @@ export default function SignIn(props) {
 
                                         <Grid>
                                             <Link href="#" variant="body2" onClick={handleRegistrationOpen}>
-                                                <Typography >
+                                                <Typography color="primary">
                                                     Don't have an account? Sign Up
         </Typography>
 

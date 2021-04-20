@@ -9,62 +9,96 @@ import PeopleIcon from '@material-ui/icons/People';
 import BarChartIcon from '@material-ui/icons/BarChart';
 import LayersIcon from '@material-ui/icons/Layers';
 import AssignmentIcon from '@material-ui/icons/Assignment';
+import { NavLink } from 'react-router-dom';
+import AccountBoxIcon from '@material-ui/icons/AccountBox';
+import FlightTakeoffIcon from '@material-ui/icons/FlightTakeoff';
+import BallotIcon from '@material-ui/icons/Ballot';
+import SettingsIcon from '@material-ui/icons/Settings';
+import FeedbackIcon from '@material-ui/icons/Feedback';
+import HelpIcon from '@material-ui/icons/Help';
+import classes from './MainNavigation.module.css';
+
+
 
 export const mainListItems = (
+
   <div>
+   
+    <NavLink to='/home'  activeStyle={{
+    fontWeight: "bold",
+    color: "#F4B400",
+    textDecoration: 'none'
+  }}>
     <ListItem button>
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
       <ListItemText primary="Dashboard" />
     </ListItem>
+    </NavLink>
+
+    <NavLink to='/search'  activeStyle={{
+    fontWeight: "bold",
+    color: "#F4B400",
+    textDecoration: 'none'
+  }}>
     <ListItem button>
       <ListItemIcon>
-        <ShoppingCartIcon />
+        <AccountBoxIcon />
       </ListItemIcon>
-      <ListItemText primary="Orders" />
+      <ListItemText primary="My Account" />
     </ListItem>
+    </NavLink>
+
+    <NavLink to='/search' activeStyle={{
+    fontWeight: "bold",
+    color: "#F4B400",
+    textDecoration: 'none'
+  }}>
     <ListItem button>
       <ListItemIcon>
-        <PeopleIcon />
+        <FlightTakeoffIcon />
       </ListItemIcon>
-      <ListItemText primary="Customers" />
+      <ListItemText primary="Search" />
     </ListItem>
+    </NavLink>
+
+    <NavLink to='/mybookings' activeStyle={{
+    fontWeight: "bold",
+    color: "#F4B400",
+    textDecoration: 'none'
+  }}>
     <ListItem button>
       <ListItemIcon>
-        <BarChartIcon />
+        <BallotIcon />
       </ListItemIcon>
-      <ListItemText primary="Reports" />
+      <ListItemText primary="My Bookings" />
     </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <LayersIcon />
-      </ListItemIcon>
-      <ListItemText primary="Integrations" />
-    </ListItem>
+    </NavLink>
+   
   </div>
 );
 
 export const secondaryListItems = (
-  <div>
-    <ListSubheader inset>Saved reports</ListSubheader>
+  <div >
+   
     <ListItem button>
       <ListItemIcon>
-        <AssignmentIcon />
+        <SettingsIcon />
       </ListItemIcon>
-      <ListItemText primary="Current month" />
+      <ListItemText primary="Travel Settings" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
-        <AssignmentIcon />
+        <FeedbackIcon />
       </ListItemIcon>
-      <ListItemText primary="Last quarter" />
+      <ListItemText primary="Feedback" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
-        <AssignmentIcon />
+        <HelpIcon />
       </ListItemIcon>
-      <ListItemText primary="Year-end sale" />
+      <ListItemText primary="Help" />
     </ListItem>
   </div>
 );

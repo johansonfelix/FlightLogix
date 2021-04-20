@@ -19,6 +19,7 @@ import DatePicker from './DatePicker';
 import TextField from '@material-ui/core/TextField';
 import SearchIcon from '@material-ui/icons/Search';
 import FlightResults from "./FlightResults"
+import { useHistory } from 'react-router';
 
 var httpRequestMaker = require("./../Utils/httpRequestMaker.js")
 
@@ -62,21 +63,28 @@ export default function SimpleCard(props) {
     const [tripType, setTripType] = useState('Round Trip');
     const [departureDate, setDepartureDate] = useState("2021-05-31");
     const [returnDate, setReturnDate] = useState("2021-06-14");
-    
+    let history = useHistory()
 
     const searchFlights = async (Search) => {
+        props.setIsSearching(true);
+        props.setError();
         httpRequestMaker.sendRequest("POST", "https://localhost:8081/app/booking/search",props.token, JSON.stringify(Search))
         .then(response => response.json())
         .then(responseJson =>{
             console.log("Received flight data: " + JSON.stringify(responseJson))
             var flights = responseJson["flights"]
-            if(flights.length > 0){
+            if(flights){
                 var searchResults = [];
                 for(var i = 0; i < flights.length; i++){
                     searchResults.push(flights[i])
                 }
-                props.searchResultSetter(searchResults);
+                props.searchResultSetter(searchResults);                
             }
+            else{
+                props.setError('No results found.')
+            }
+            
+            props.setIsSearching(false);
         })
         .catch(err => {console.log(err)})
     }
@@ -89,7 +97,11 @@ export default function SimpleCard(props) {
             numAdults: passengers,
             maxResults: 10
         }
-        searchFlights(search) 
+        
+        history.push('/search');
+        searchFlights(search) ;
+  
+        
     }
     return (
         <Fragment>

@@ -44,10 +44,10 @@ function App() {
        <Redirect to='/home' />
     </Route>
       <Route path='/home' exact>
-        <Dashboard token={token} setToken={setToken} />)
+        <Dashboard token={token} setToken={setToken} />
     </Route>
       <Route path='/search' exact>
-        <Dashboard token={token} setToken={setToken} />)
+        <Dashboard token={token} setToken={setToken} />
     </Route>
     <Route path='/mybookings' exact>
       <MyBookings />

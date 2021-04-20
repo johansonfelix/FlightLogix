@@ -19,8 +19,8 @@ function Copyright() {
     return (
         <Typography variant="body2" color="textSecondary" align="center">
             {'Copyright © '}
-            <Link color="inherit" href="https://material-ui.com/">
-                Your Website
+            <Link color="inherit" href="/home">
+                FlightLogix
       </Link>{' '}
             {new Date().getFullYear()}
             {'.'}
@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
     },
     avatar: {
         margin: theme.spacing(1),
-        backgroundColor: theme.palette.secondary.main,
+        backgroundColor: "#F4B400",
     },
     form: {
         width: '100%', // Fix IE 11 issue.
@@ -140,7 +140,7 @@ export default function SignUp(props) {
                 {
                     isRegistering && <div className={classes.paper}>
                         <CircularProgress />
-                        <p>Authenticating</p>
+                        <p>Registering User</p>
 
                     </div>
                 }
@@ -157,7 +157,7 @@ export default function SignUp(props) {
         </Typography>
         {error && <Typography component="body2" style={{ color: 'red' }} variant="body2"><br />{error}</Typography>}
 
-                            <form className={classes.form} noValidate onSubmit={handleRegister}>
+                            <form className={classes.form} Validate onSubmit={handleRegister}>
                                 <Grid container spacing={2}>
                                     <Grid item xs={12} sm={6}>
                                         <TextField
@@ -189,6 +189,7 @@ export default function SignUp(props) {
                                             variant="outlined"
                                             required
                                             fullWidth
+                                            type="email"
                                             id="email"
                                             label="Email Address"
                                             name="email"
@@ -222,6 +223,7 @@ export default function SignUp(props) {
                                     variant="contained"
                                     color="primary"
                                     className={classes.submit}
+                                    style={{backgroundColor:"#F4B400"}}
                                 >
                                     Sign Up
           </Button>

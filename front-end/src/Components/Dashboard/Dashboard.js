@@ -1,4 +1,4 @@
-import React, {useState, Fragment } from 'react';
+import React, { useState, Fragment } from 'react';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -28,8 +28,9 @@ import logo from '../../assets/logo.svg';
 import httpRequestMaker from '../../Utils/httpRequestMaker';
 import Button from '@material-ui/core/Button';
 import FlightResults from '../FlightResults';
-import { useParams, Route, useRouteMatch } from 'react-router-dom';
-
+import { Route, useHistory } from 'react-router-dom';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import LinearProgress from '@material-ui/core/LinearProgress';
 
 function ElevationScroll(props) {
     const { children, window } = props;
@@ -176,6 +177,15 @@ const useStyles = makeStyles((theme) => ({
     avatar: {
         float: 'right',
     },
+    spinner: {
+        marginLeft: "500px",
+        marginTop: theme.spacing(8),
+        display: 'block',
+        alignSelf: 'center',
+        justifyContent:'center',
+        color: "#F4B400",
+       
+    }
 
 }));
 
@@ -184,6 +194,21 @@ export default function Dashboard(props) {
     const classes = useStyles();
     const [open, setOpen] = React.useState(false);
     const [searchResults, setSearchResults] = useState();
+    const [progress, setProgress] = React.useState(0);
+    const [isSearching, setIsSearching] = useState(false);
+    const [error, setError] = useState();
+    let history = useHistory();
+
+    React.useEffect(() => {
+        const timer = setInterval(() => {
+            setProgress((prevProgress) => (prevProgress >= 100 ? 0 : prevProgress + 10));
+        }, 800);
+
+        return () => {
+            clearInterval(timer);
+        };
+    }, []);
+
 
     const handleDrawerOpen = () => {
         setOpen(true);
@@ -251,11 +276,6 @@ export default function Dashboard(props) {
                             </Grid>
 
 
-                            {/*   <IconButton color="#5f6368" className={classes.avatar}>
-            <Badge badgeContent={4} color="secondary">
-              <NotificationsIcon />
-            </Badge>
-          </IconButton> */}
 
                         </Toolbar>
                     </AppBar>
@@ -276,8 +296,8 @@ export default function Dashboard(props) {
 
                     <Divider />
                     <List>{mainListItems}</List>
-                    <Divider />
-                    <List>{secondaryListItems}</List>
+                    <Divider style={{ marginTop: '100px' }} />
+                    <List >{secondaryListItems}</List>
                 </Drawer>
 
                 <main className={classes.content}>
@@ -287,15 +307,29 @@ export default function Dashboard(props) {
 
 
                     <Container maxWidth="lg" className={classes.container}>
-                        <FlightSearchCard token={props.token} searchResultSetter={setSearchResults}/>
+                        <FlightSearchCard token={props.token} searchResultSetter={setSearchResults} setIsSearching={setIsSearching} setError={setError}/>
+
+               {isSearching &&
+                        <div className={classes.container}>
+                        <LinearProgress style={{backgroundColor:"#DB4437"}}/>
+      <LinearProgress style={{backgroundColor:"#F4B400"}}/>
+                            <Typography variant="body1" color="textSecondary" align='center'>Searching </Typography>
+                            </div>
+                      } 
+                      {error && 
+                       <div className={classes.container}>  <Typography variant="body1" color="textSecondary" align='center'>{error} </Typography></div>
+                      }
+                    
 
 
                         <Route path="/search">
-                            <div className={classes.container}>
+                            {!isSearching && !error &&
+                                <div className={classes.container}>
 
-                                {searchResults!==undefined && <FlightResults flights={searchResults}/>}
+                                    {searchResults !== undefined && <FlightResults flights={searchResults} />}
 
-                            </div>
+                                </div>
+                            }
 
                         </Route>
                     </Container>
