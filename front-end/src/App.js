@@ -5,6 +5,7 @@ import Dashboard from './Components/Dashboard/Dashbord';
 import useToken from './Hooks/useToken';
 import { Fragment, useEffect } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
+import MyBookings from './Pages/MyBookings';
 
 function App() {
 
@@ -47,6 +48,9 @@ function App() {
     </Route>
       <Route path='/search' exact>
         <Dashboard token={token} setToken={setToken} />)
+    </Route>
+    <Route path='/mybookings' exact>
+      <MyBookings />
     </Route>
     <Route path='*' exact>
        <Redirect to='/home' />

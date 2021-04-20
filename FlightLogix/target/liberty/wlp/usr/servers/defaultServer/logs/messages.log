@@ -74,3 +74,26 @@ process = 11720@Johanson
 [4/19/21 20:06:13:830 EDT] 00000873 SystemOut                                                    O invalid token
 [4/19/21 20:06:31:729 EDT] 0000087b SystemOut                                                    O felix.johanson@gmail.com password
 [4/19/21 20:06:44:198 EDT] 0000084e SystemOut                                                    O invalid token
+[4/19/21 20:21:34:698 EDT] 000008fd SystemOut                                                    O felix.johanson@gmail.com password
+[4/19/21 20:22:07:822 EDT] 000008e6 SystemOut                                                    O invalid token
+[4/19/21 22:48:03:258 EDT] 00000f30 org.eclipse.yasson.internal.Unmarshaller                     E Unexpected char 39 at (line no=2, column no=5, offset=7)
+[4/19/21 22:49:33:030 EDT] 00000f4c SystemOut                                                    O felix.johanson@gmail.com password
+[4/19/21 22:53:39:264 EDT] 00000f2c SystemOut                                                    O TOKEN->fgVJrZ7kG2Ah106KAcK7W8XOaNIK
+[4/19/21 22:53:39:315 EDT] 00000f2c SystemOut                                                    O Hello from bookingSearch
+[4/19/21 22:53:47:531 EDT] 00000f2c SystemOut                                                    O com.FlightLogix.Core.Booking.FlightData@65d69404
+[4/19/21 22:56:02:072 EDT] 00000f84 SystemOut                                                    O Hello from bookingSearch
+[4/19/21 22:56:12:210 EDT] 00000f84 SystemOut                                                    O com.FlightLogix.Core.Booking.FlightData@1f6f651d
+[4/19/21 23:10:36:391 EDT] 00001011 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://johanson:8080/
+[4/19/21 23:10:36:492 EDT] 00001011 com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [FlightLogix] [/] [com.FlightLogix.Service.FlightLogixApplicatioon]: Destroy successful.
+[4/19/21 23:10:36:672 EDT] 00001011 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application FlightLogix has stopped successfully.
+[4/19/21 23:10:36:718 EDT] 00001011 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application FlightLogix.
+[4/19/21 23:10:36:719 EDT] 00001011 bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The FlightLogix application is using the loose application definition at the C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\apps\FlightLogix.war.xml location.
+[4/19/21 23:10:39:419 EDT] 00000f7d com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[4/19/21 23:10:39:971 EDT] 00001011 com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: An FFDC Incident has been created: "java.lang.Exception: Found duplicated servlet mapping url, /app/*, with endpoint infos com.ibm.ws.jaxrs20.metadata.EndpointInfo@3a4ee1b5 and com.ibm.ws.jaxrs20.metadata.EndpointInfo@1f22f75e, throw exception to fail application starting. com.ibm.ws.jaxrs20.server.component.JaxRsWebModuleInfoBuilder 292" at ffdc_21.04.19_23.10.38.0.log
+[4/19/21 23:10:44:879 EDT] 00001011 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Liberty Project.
+[4/19/21 23:10:44:880 EDT] 00001011 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Liberty Project has been bound to default_host.
+[4/19/21 23:10:44:880 EDT] 00001011 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://johanson:8080/
+[4/19/21 23:10:44:892 EDT] 00000fe8 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/
+[4/19/21 23:10:44:893 EDT] 00000fe8 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[4/19/21 23:10:44:910 EDT] 00000fe8 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application FlightLogix updated in 8.192 seconds.
+[4/19/21 23:10:46:259 EDT] 00001011 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
