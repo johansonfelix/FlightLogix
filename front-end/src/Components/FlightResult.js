@@ -15,7 +15,7 @@ import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import { useHistory } from 'react-router';
 
 
-
+var flightParser = require("./../Utils/flightParser")
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
@@ -58,13 +58,12 @@ function parseTime(timestamp){
     return garbage.split("Z")[0]
 }
 export default function FlightResult(props) {
-    let history = useHistory();
     const classes = useStyles();
     let flight = props.flight;
     let oneWay = flight["flightType"]==="ONE_WAY"?true:false
-    let directFlightOutbound = flight.itinerary.outbound.legs.length===1?true:false;
-    let from = flight.itinerary.outbound.legs[0].from;
-    let to = flight.itinerary.outbound.legs[flight.itinerary.outbound.legs.length - 1].to;
+    let directFlightOutbound = flightParser.getOutboundLegs(flight).length===1?true:false;
+    let from = flightParser.getFirstOutboundLeg(flight).from;
+    let to = flightParser.getLastOutboundLeg(flight).to;
     let fromIatacode = from.iatacode;
     let toIatacode = to.iatacode;
     let fromDate = parseDate(from.time)
@@ -78,19 +77,19 @@ export default function FlightResult(props) {
     let returnFromTime = null;
     let returnToTime = null;
     let returnToDate = null;
-    let carrierCodeOutbound = flight.itinerary.outbound.legs[0].carrierCode;
+    let carrierCodeOutbound = flightParser.getFirstOutboundLeg(flight).carrierCode;
     let carrierOutboundImageURL = "https://daisycon.io/images/airline/?width=300&height=150&color=ffffff&iata=" + carrierCodeOutbound;
     let directFlightInbound = null;
     let carrierCodeInbound = null;
     if(!oneWay){
-        returnFrom = flight.itinerary.inbound.legs[0].from
-        returnTo = flight.itinerary.inbound.legs[flight.itinerary.inbound.legs.length - 1].to
+        returnFrom = flightParser.getFirstInboundLeg(flight).from
+        returnTo = flightParser.getLastInboundLeg(flight).to
         returnFromDate = parseDate(returnFrom.time)
         returnFromTime = parseTime(returnFrom.time)
         returnToDate = parseDate(returnTo.time)
         returnToTime = parseTime(returnTo.time)
-        directFlightInbound = flight.itinerary.inbound.legs.length===1?true:false;
-        carrierCodeInbound = flight.itinerary.inbound.legs[0].carrierCode;;
+        directFlightInbound = flightParser.getInboundLegs(flight).length===1?true:false;
+        carrierCodeInbound = flightParser.getFirstInboundLeg(flight).carrierCode;
     }
     let carrierInboundImageURL = "https://daisycon.io/images/airline/?width=300&height=150&color=ffffff&iata=" + carrierCodeInbound;
 
