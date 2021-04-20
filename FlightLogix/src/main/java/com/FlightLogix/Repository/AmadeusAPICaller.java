@@ -273,7 +273,7 @@ public class AmadeusAPICaller {
             }
 
             try {
-                conn.setRequestProperty("Authorization", "Bearer " + authToken);
+                conn.setRequestProperty("Authorization", "Bearer " + getAccessToken());
                 return (getResponseBody(conn));
             } catch (IOException e) {
                 e.printStackTrace();
