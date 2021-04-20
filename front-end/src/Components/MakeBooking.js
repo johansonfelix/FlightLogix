@@ -46,7 +46,7 @@ export default function TransitionsModal(props) {
       >
         <Fade in={props.state}>
           
-          <MakeBookingManager />
+          <MakeBookingManager selectedFlight={props.selectedFlight} passengers={props.passengers} />
          
         </Fade>
       </Modal>

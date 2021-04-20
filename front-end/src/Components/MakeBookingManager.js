@@ -10,8 +10,9 @@ import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
 import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
-import BookingDetails from './ReviewBookingDetails';
+import BookingDetails from './BookingDetails';
 import OrderReview from './OrderReview';
+import PayPalButton from './PayPalButton';
 /* import AddressForm from './AddressForm';
 import PaymentForm from './PaymentForm';
 import Review from './Review';
@@ -56,20 +57,12 @@ const useStyles = makeStyles((theme) => ({
 
 const steps = ['Review Booking Details', 'Pay with Paypal'];
 
-function getStepContent(step) {
-  switch (step) {
-    case 0:
-      return <BookingDetails/>;
-    case 1:
-      return <OrderReview />;   
-    default:
-      throw new Error('Unknown step');
-  }
-}
 
-export default function Checkout() {
+
+export default function MakeBookingManager(props) {
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(0);
+
 
   const handleNext = () => {
     setActiveStep(activeStep + 1);
@@ -78,7 +71,16 @@ export default function Checkout() {
   const handleBack = () => {
     setActiveStep(activeStep - 1);
   };
-
+  function getStepContent(step) {
+    switch (step) {
+      case 0:
+        return <BookingDetails selectedFlight={props.selectedFlight} passengers={props.passengers}/>;
+      case 1:
+        return <OrderReview />;   
+      default:
+        throw new Error('Unknown step');
+    }
+  }
   return (
     <React.Fragment>
       
@@ -121,7 +123,7 @@ export default function Checkout() {
                     onClick={handleNext}
                     className={classes.button}
                   >
-                    {activeStep === steps.length - 1 ? 'PayPal Button' : 'Next'}
+                    {activeStep === steps.length - 1 ? <PayPalButton/> : 'Next'}
                   </Button>
                 </div>
               </React.Fragment>

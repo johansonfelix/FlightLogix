@@ -21,6 +21,13 @@ module.exports = {
     getLastInboundLeg: function(flight){
         let legs = this.getInboundLegs(flight)
         return legs[legs.length-1]
+    },
+    parseDate: function(timestamp){
+        return timestamp.split("T")[0]
+    },
+    parseTime: function(timestamp){
+        var garbage = timestamp.split("T")[1]
+        return garbage.split("Z")[0]
     }
   }
   

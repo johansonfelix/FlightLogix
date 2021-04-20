@@ -52,7 +52,7 @@ export default function FlightResults(props) {
     for(var i = 0; i < flights.length; i++){
         let flight = flights[i];
 
-        flightJSXs.push(<FlightResult makeBookingSetter={props.makeBookingSetter} flight={flight}/>)
+        flightJSXs.push(<FlightResult makeBookingSetter={props.makeBookingSetter} flight={flight} setSelectedFlight={props.setSelectedFlight}/>)
     }
 
     return (

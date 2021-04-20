@@ -96,6 +96,7 @@ export default function FlightResult(props) {
     const handleSelect = () => {
         //props.setSchedule(flight);
         props.makeBookingSetter(true);
+        props.setSelectedFlight(flight)
         
     }
     return (

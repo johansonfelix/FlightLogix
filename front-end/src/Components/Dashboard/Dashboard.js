@@ -199,6 +199,8 @@ export default function Dashboard(props) {
     const [isSearching, setIsSearching] = useState(false);
     const [error, setError] = useState();
     const [isMakingBooking, setIsMakingBooking] = useState(false);
+    const [selectedFlight, setSelectedFlight] = useState()
+    const [passengers, setPassengers] = useState (1);
     let history = useHistory();
 
     React.useEffect(() => {
@@ -309,7 +311,7 @@ export default function Dashboard(props) {
 
 
                     <Container maxWidth="lg" className={classes.container}>
-                        <FlightSearchCard token={props.token} searchResultSetter={setSearchResults} setIsSearching={setIsSearching} setError={setError}/>
+                        <FlightSearchCard token={props.token} searchResultSetter={setSearchResults} passngers={passengers} setPassengers={setPassengers} setIsSearching={setIsSearching} setError={setError}/>
 
                {isSearching &&
                         <div className={classes.container}>
@@ -330,10 +332,10 @@ export default function Dashboard(props) {
 
                                     {searchResults !== undefined && 
                                     <div>
-                                    <FlightResults flights={searchResults} makeBookingSetter={setIsMakingBooking}/>
+                                    <FlightResults flights={searchResults} makeBookingSetter={setIsMakingBooking} setSelectedFlight={setSelectedFlight}/>
                                
                                     {
-                                        isMakingBooking && <MakeBooking  stateSetter={setIsMakingBooking} state={isMakingBooking}/>
+                                        isMakingBooking && <MakeBooking  stateSetter={setIsMakingBooking} state={isMakingBooking} selectedFlight={selectedFlight} numPassengers={passengers}/>
                                     }
                                     
                                     </div>

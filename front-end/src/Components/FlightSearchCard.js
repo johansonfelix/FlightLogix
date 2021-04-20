@@ -59,7 +59,7 @@ export default function SimpleCard(props) {
     const classes = useStyles();
     const [whereFrom, setWhereFrom] = useState();
     const [whereTo, setWhereTo] = useState();
-    const [passengers, setPassengers] = useState (1);
+    
     const [tripType, setTripType] = useState('Round Trip');
     const [departureDate, setDepartureDate] = useState("2021-05-31");
     const [returnDate, setReturnDate] = useState("2021-06-14");
@@ -94,7 +94,7 @@ export default function SimpleCard(props) {
             destinationLocationCode: whereTo,
             departureDate: departureDate,
             returnDate: returnDate,
-            numAdults: passengers,
+            numAdults: props.passengers,
             maxResults: 10
         }
         
@@ -115,7 +115,7 @@ export default function SimpleCard(props) {
                         </Grid>
 
                         <Grid item xs={3}>
-                            <IncrementPassengersButton  setPassengers={setPassengers} passengers={passengers}/>
+                            <IncrementPassengersButton  setPassengers={props.setPassengers} passengers={props.passengers}/>
                         </Grid>
 
                         </Grid>
