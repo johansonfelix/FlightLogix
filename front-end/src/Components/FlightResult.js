@@ -57,9 +57,11 @@ function parseTime(timestamp){
     return garbage.split("Z")[0]
 }
 export default function FlightResult(props) {
+    
     const classes = useStyles();
     let flight = props.flight;
     let oneWay = flight["flightType"]==="ONE_WAY"?true:false
+    let directFlightOutbound = flight.itinerary.outbound.legs.length===1?true:false;
     let from = flight.itinerary.outbound.legs[0].from;
     let to = flight.itinerary.outbound.legs[flight.itinerary.outbound.legs.length - 1].to;
     let fromIatacode = from.iatacode;
@@ -75,8 +77,10 @@ export default function FlightResult(props) {
     let returnFromTime = null;
     let returnToTime = null;
     let returnToDate = null;
-    let carrierCode = flight.itinerary.outbound.legs[0].carrierCode;
-    let carrierImageURL = "https://daisycon.io/images/airline/?width=300&height=150&color=ffffff&iata=" + carrierCode
+    let carrierCodeOutbound = flight.itinerary.outbound.legs[0].carrierCode;
+    let carrierOutboundImageURL = "https://daisycon.io/images/airline/?width=300&height=150&color=ffffff&iata=" + carrierCodeOutbound;
+    let directFlightInbound = null;
+    let carrierCodeInbound = null;
     if(!oneWay){
         returnFrom = flight.itinerary.inbound.legs[0].from
         returnTo = flight.itinerary.inbound.legs[flight.itinerary.inbound.legs.length - 1].to
@@ -84,6 +88,13 @@ export default function FlightResult(props) {
         returnFromTime = parseTime(returnFrom.time)
         returnToDate = parseDate(returnTo.time)
         returnToTime = parseTime(returnTo.time)
+        directFlightInbound = flight.itinerary.inbound.legs.length===1?true:false;
+        carrierCodeInbound = flight.itinerary.inbound.legs[0].carrierCode;;
+    }
+    let carrierInboundImageURL = "https://daisycon.io/images/airline/?width=300&height=150&color=ffffff&iata=" + carrierCodeInbound;
+
+    const handleSelect = () => {
+        
     }
     return (
         <Paper className={classes.paper}>
@@ -92,7 +103,7 @@ export default function FlightResult(props) {
                     <Grid container spacing={2}>
                         <Grid item>
                             <ButtonBase className={classes.image}>
-                                <img className={classes.img} alt="complex" src={carrierImageURL}/>
+                                <img className={classes.img} alt="complex" src={carrierOutboundImageURL}/>
                             </ButtonBase>
                         </Grid>
                         <Grid item xs>
@@ -105,7 +116,7 @@ export default function FlightResult(props) {
                                         {fromTime} {fromIatacode} <ArrowForwardIcon /> {toTime} {toIatacode}
                                     </Typography>
                                     <Typography variant="body2" color="textSecondary">
-                                        (with connecting flights)
+                                        {directFlightOutbound && "(direct flight)"}{!directFlightOutbound && "(connecting flight)"}
                                     </Typography>
 
                                 </Grid>
@@ -119,7 +130,7 @@ export default function FlightResult(props) {
                     <Grid container spacing={2}>
                         <Grid item>
                             <ButtonBase className={classes.image}>
-                                <img className={classes.img} alt="complex" src="https://daisycon.io/images/airline/?width=300&height=150&color=ffffff&iata=BA" />
+                                <img className={classes.img} alt="complex" src={carrierInboundImageURL} />
                             </ButtonBase>
                             </Grid>
                         <Grid item xs>
@@ -132,7 +143,7 @@ export default function FlightResult(props) {
                                                  {returnFromTime} {toIatacode} <ArrowForwardIcon /> {returnToTime} {fromIatacode}
                                             </Typography>
                                             <Typography variant="body2" color="textSecondary">
-                                                    (with connecting flights)
+                                                    {directFlightInbound && "(direct flight)"}{!directFlightInbound && "(connecting flight)"}
                                             </Typography>
                                     </Grid>
                                 </Grid>
@@ -153,6 +164,7 @@ export default function FlightResult(props) {
                             className={classes.button}
                             endIcon={<ArrowForwardIosIcon />}
                             square
+                            onClick={handleSelect}
                         >
                             Select
                         </Button>
