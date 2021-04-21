@@ -85,7 +85,6 @@ public class AdminResource {
     @DELETE
     @Path("cancel/{bookingID}")
     @RolesAllowed({"ADMIN"})
-    @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response cancelBooking(@PathParam("bookingID") String bookingID) {
         bookingManager.deleteBooking(bookingID);

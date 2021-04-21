@@ -24,28 +24,21 @@ public class BookingManager {
     }
 
     public String createBooking(Booking booking){
-        User user = userDAO.findUserByEmail(booking.getUser().getEmail());
-        booking.setUser(user);
         bookingDAO.createBooking(booking);
         return ResponseCode.SUCCESS.toString();
     }
     public String deleteBooking(String bookingId){
 
-        Booking bookingToDelete = bookingDAO.findBooking(bookingId);
-        if(bookingToDelete == null){
-            throw new RuntimeException(ResponseCode.BOOKING_DOES_NOT_EXIST.toString());
-        }
-        bookingDAO.deleteBooking(bookingToDelete);
+//        Booking bookingToDelete = bookingDAO.findBooking(bookingId);
+//        if(bookingToDelete == null){
+//            throw new RuntimeException(ResponseCode.BOOKING_DOES_NOT_EXIST.toString());
+//        }
+        bookingDAO.deleteBooking(bookingId);
         return ResponseCode.SUCCESS.toString();
     }
     public String modifyBooking(Booking newBooking){
-        User user = userDAO.findUserByEmail(newBooking.getUser().getEmail());
-        if(user!=null) {
-            newBooking.setUser(user);
-            bookingDAO.updateBooking(newBooking);
-            return ResponseCode.SUCCESS.toString();
-        }
-        return ResponseCode.USER_DOES_NOT_EXIST.toString();
+        bookingDAO.updateBooking(newBooking);
+        return ResponseCode.SUCCESS.toString();
     }
 
     public Booking getBooking(String bookingID){

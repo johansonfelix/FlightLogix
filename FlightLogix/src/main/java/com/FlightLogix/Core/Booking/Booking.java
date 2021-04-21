@@ -16,10 +16,7 @@ public class    Booking {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
     private String bookingID;
-
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn()
-    private User user;
+    private String userEmail;
 
     @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private Payment payment;
@@ -27,9 +24,9 @@ public class    Booking {
     @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private Flight flight;
 
-    public Booking(User user, Payment payment, Flight flight) {
+    public Booking(String userEmail, Payment payment, Flight flight) {
 
-        this.user = user;
+        this.userEmail = userEmail;
         this.payment = payment;
         this.flight = flight;
     }
@@ -58,12 +55,11 @@ public class    Booking {
         this.bookingID = bookingID;
     }
 
-    public User getUser() {
-        return user;
+    public String getUserEmail() {
+        return this.userEmail;
     }
-
-    public void setUser(User user) {
-        this.user = user;
+    public void setUserEmail(String userEmail) {
+        this.userEmail = userEmail;
     }
 
     public Payment getPayment() {

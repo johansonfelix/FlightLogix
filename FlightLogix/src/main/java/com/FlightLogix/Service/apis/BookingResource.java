@@ -91,8 +91,9 @@ public class BookingResource {
     @RolesAllowed({"CUSTOMER"})
     @Produces(MediaType.APPLICATION_JSON)
     public Response cancelBooking(@PathParam("bookingID") String bookingID) {
+        System.out.println("Cancelling booking " + bookingID);
         bookingManager.deleteBooking(bookingID);
-        return Response.status(Response.Status.OK).build();
+        return Response.ok(Response.Status.OK).build();
     }
 
 
