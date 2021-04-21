@@ -93,12 +93,6 @@ export default function FlightResult(props) {
     }
     let carrierInboundImageURL = "https://daisycon.io/images/airline/?width=300&height=150&color=ffffff&iata=" + carrierCodeInbound;
 
-    const handleSelect = () => {
-        //props.setSchedule(flight);
-        props.makeBookingSetter(true);
-        props.setSelectedFlight(flight)
-        
-    }
     return (
         <Paper className={classes.paper}>
             <Grid container spacing={20} >
@@ -170,7 +164,9 @@ export default function FlightResult(props) {
                             className={classes.button}
                             endIcon={<ArrowForwardIosIcon />}
                             square
-                            onClick={handleSelect}
+                            onClick={()=>{
+                                props.onSelect(flight)
+                            }}
                         >
                             Select
                         </Button>

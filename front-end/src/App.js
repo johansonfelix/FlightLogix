@@ -51,7 +51,7 @@ function App() {
         <Dashboard token={token} setToken={setToken} />
     </Route>
     <Route path='/mybookings' exact>
-    <Dashboard token={token} setToken={setToken} />
+      <Dashboard token={token} setToken={setToken} />
     </Route>
     <Route path='*' exact>
        <Redirect to='/home' />

@@ -215,6 +215,7 @@ export default function Dashboard(props) {
         };
     }, []);
 
+    
 
     const handleDrawerOpen = () => {
         setOpen(true);
@@ -334,7 +335,10 @@ export default function Dashboard(props) {
 
                                     {searchResults !== undefined && 
                                     <div>
-                                    <FlightResults flights={searchResults} makeBookingSetter={setIsMakingBooking} setSelectedFlight={setSelectedFlight}/>
+                                    <FlightResults flights={searchResults} onSelect={(flight)=>{
+                                        setIsMakingBooking(true)
+                                        setSelectedFlight(flight)
+                                    }}/>
                                
                                     {
                                         isMakingBooking && <MakeBooking  stateSetter={setIsMakingBooking} state={isMakingBooking} selectedFlight={selectedFlight} passengers={passengers} token={props.token}/>
@@ -350,7 +354,7 @@ export default function Dashboard(props) {
                         </Route>
 
                         <Route path = "/mybookings">
-                            <MyBookings />
+                            <MyBookings token={props.token}/>
                         </Route>
                     </Container>
                 </main>

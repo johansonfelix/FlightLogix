@@ -39,6 +39,6 @@ public class BookingDAO {
     }
 
     public List<Booking> findAllCustomerBookings(String email) {
-        return em.createQuery("SELECT e from Booking e WHERE e.user.email=:email", Booking.class).setParameter("email", email).setMaxResults(1).getResultList();
+        return em.createQuery("SELECT e from Booking e WHERE e.user.email=:email", Booking.class).setParameter("email", email).getResultList();
     }
 }
