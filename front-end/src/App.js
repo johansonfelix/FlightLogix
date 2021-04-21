@@ -73,21 +73,22 @@ if(user_role === 'CUSTOMER'){
 if(user_role === 'ADMIN'){
   return(
     <Switch>
-    <Route path='/login' exact>
-    <Redirect to='/home' />
- </Route>
-   <Route path='/home' exact>
+    <Route path='/home' exact>
      <AdminDashboard token={token} setToken={setToken} />
  </Route>
-   <Route path='/search' exact>
-     <Dashboard token={token} setToken={setToken} />
+
+   <Route path='/viewusers' exact>
+     <AdminDashboard token={token} setToken={setToken} />
  </Route>
+
  <Route path='/mybookings' exact>
    <Dashboard token={token} setToken={setToken} />
  </Route>
+
  <Route path='*' exact>
     <Redirect to='/home' />
  </Route>
+
      </Switch>
 
 

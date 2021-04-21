@@ -37,7 +37,7 @@ export const mainListItems = (
     </ListItem>
     </NavLink>
 
-    <NavLink to='/search'  activeStyle={{
+    <NavLink to='/viewusers'  activeStyle={{
     fontWeight: "bold",
     color: "#F4B400",
     textDecoration: 'none'
@@ -46,7 +46,7 @@ export const mainListItems = (
       <ListItemIcon>
         <AccountBoxIcon />
       </ListItemIcon>
-      <ListItemText primary="View Customers" />
+      <ListItemText primary="Customer Bookings" />
     </ListItem>
     </NavLink>
 
@@ -54,25 +54,13 @@ export const mainListItems = (
     fontWeight: "bold",
     color: "#F4B400",
     textDecoration: 'none'
-  }}>
-    <ListItem button>
-      <ListItemIcon>
-        <FlightTakeoffIcon />
-      </ListItemIcon>
-      <ListItemText primary="View All Bookings" />
-    </ListItem>
-    </NavLink>
+  }}>   
 
-    <NavLink to='/mybookings' activeStyle={{
-    fontWeight: "bold",
-    color: "#F4B400",
-    textDecoration: 'none'
-  }}>
     <ListItem button>
       <ListItemIcon>
         <BallotIcon />
       </ListItemIcon>
-      <ListItemText primary="Create Booking" />
+      <ListItemText primary="Flight Search" />
     </ListItem>
     </NavLink>
    

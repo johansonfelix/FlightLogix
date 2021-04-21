@@ -45,6 +45,8 @@ import Chart from './Chart';
 import Deposits from './Deposits';
 import Orders from './Orders';
 
+import BookingSearchBar from '../BookingSearch';
+
 
 function ElevationScroll(props) {
     const { children, window } = props;
@@ -222,6 +224,8 @@ export default function Dashboard(props) {
     const [isMakingBooking, setIsMakingBooking] = useState(false);
     const [selectedFlight, setSelectedFlight] = useState()
     const [passengers, setPassengers] = useState(1);
+    const [showBooking, setShowBooking] = useState(false);
+    const[booking, setBooking] = useState();
     let history = useHistory();
 
         const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
@@ -334,13 +338,25 @@ export default function Dashboard(props) {
             </Drawer>
 
             <main className={classes.content}>
-                
-                       
-        <Container maxWidth="lg" className={classes.container}>
+            <Container maxWidth="lg" className={classes.container}>
+        <Route path="/home">
+        
         <Typography variant="h4" color="#DB4437" paragraph className={classes.welcometext}>
                            Admin Dashboard
                         </Typography>
+       
           <Grid container spacing={3}>
+          <Grid item xs={12}>
+              <Paper style={{backgroundImage: 'linear-gradient(147deg, #fe8a39 0%, #fd3838 74%)', borderRadius: "spacing(2)",
+      opacity: 0.75,}}className={fixedHeightPaper}>
+              <Typography variant="h5" color="#DB4437" paragraph className={classes.welcometext}>
+                           Booking Search
+                        </Typography>
+                        
+              <BookingSearchBar setShowBooking={setShowBooking} setBooking={setBooking}/>
+              {showBooking && <p>{JSON.stringify(booking)}</p>}
+              </Paper>
+            </Grid>
             {/* Chart */}
             <Grid item xs={12} md={8} lg={9}>
               <Paper className={fixedHeightPaper}>
@@ -363,6 +379,14 @@ export default function Dashboard(props) {
           <Box pt={4}>
             <Copyright />
           </Box>
+       
+        </Route>
+
+        <Route path="/viewusers">
+        <Container maxWidth="lg" className={classes.container}>
+        <BookingSearchBar setShowBooking={setShowBooking} setBooking={setBooking}/>
+        </Container>
+        </Route>
         </Container>
             </main>
         </div>

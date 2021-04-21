@@ -11,9 +11,10 @@ export default function Location(props) {
   
   const handleSelect = (event, value) =>{
     if(value){
-      console.log(value.iata);      
+      console.log(value.iata);   
+      props.location(value.iata)   
     }
-    props.location(value.iata)
+   
   }
   
   return (
