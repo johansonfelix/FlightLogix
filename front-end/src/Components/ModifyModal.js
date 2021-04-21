@@ -26,7 +26,6 @@ export default function TransitionsModal(props) {
   const classes = useStyles();
   const [mode, setMode] = useState("fetching")
   const [searchResults, setSearchResults] = useState()
-
   
   useEffect(() => {
     let flight = props.booking.flight
@@ -95,7 +94,7 @@ export default function TransitionsModal(props) {
               onSelect={ newFlight => {
                 setMode("modifying_booking")
                 console.log("DATE:" + todaysDate())
-                sendRequest("PUT", "https://localhost:8081/app/booking/update", props.token, JSON.stringify({
+                sendRequest("PUT", props.isAdmin === undefined?"https://localhost:8081/app/booking/update":"https://localhost:8081/app/admin/update", props.token, JSON.stringify({
                   bookingID: props.booking.bookingID,
                   userEmail:props.booking.userEmail,
                   payment:{

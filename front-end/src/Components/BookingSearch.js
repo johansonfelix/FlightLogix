@@ -50,19 +50,20 @@ export default function Asynchronous(props) {
     }
   }, [open]);
 
-  const handleSelect = async (event, value) =>{
+  const handleSelect = (event, value) =>{
   
     
-    if(value){        
-        const response = await sendRequest("GET", "https://localhost:8081/app/admin/get/"+value, token, null)
-     
-        const booking = await response.json();
-        const thebooking = await booking;       
+    if(value){
+        sendRequest("GET", "https://localhost:8081/app/admin/get/"+value, token, null)
+        .then(response => response.json())
+        .then(responseJson=>{
+          const booking = responseJson
 
-        console.log('set show booking: '+JSON.stringify(booking))
-        props.setShowBooking(true) 
-        props.setBooking(booking) 
-        
+          console.log('set show booking: '+JSON.stringify(booking))
+          props.setBooking(booking) 
+          props.setShowBooking(true) 
+          
+        })
     }
     else{
         props.setShowBooking(false)

@@ -46,6 +46,10 @@ import Deposits from './Deposits';
 import Orders from './Orders';
 
 import BookingSearchBar from '../BookingSearch';
+import BookingCard from "./../BookingCard"
+
+import ModifyModal from "./../ModifyModal"
+import DeleteModal from "./../DeleteModal"
 
 
 function ElevationScroll(props) {
@@ -217,22 +221,13 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 export default function Dashboard(props) {
     const classes = useStyles();
     const [open, setOpen] = React.useState(false);
-    const [searchResults, setSearchResults] = useState();
-    const [progress, setProgress] = React.useState(0);
-    const [isSearching, setIsSearching] = useState(false);
-    const [error, setError] = useState();
-    const [isMakingBooking, setIsMakingBooking] = useState(false);
-    const [selectedFlight, setSelectedFlight] = useState()
-    const [passengers, setPassengers] = useState(1);
     const [showBooking, setShowBooking] = useState(false);
-    const[booking, setBooking] = useState();
+    const [showModifyModal, setShowModifyModal] = useState(false)
+    const [showDeleteModal, setShowDeleteModal] = useState(false)
+    const [booking, setBooking] = useState();
     let history = useHistory();
 
-        const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
-
-       
-
-
+    const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
     const handleDrawerOpen = () => {
         setOpen(true);
     };
@@ -261,13 +256,11 @@ export default function Dashboard(props) {
             props.setToken(undefined)
             clearTokenClientSide();
             // }
-
         }
         catch (err) {
             console.error(err)
         }
     };
-
 
     const [doOpen, setDoOpen] = React.useState(true);
 
@@ -279,8 +272,6 @@ export default function Dashboard(props) {
 
         history.push('/home');
     };
-
-
     return (
 
 
@@ -340,7 +331,20 @@ export default function Dashboard(props) {
             <main className={classes.content}>
             <Container maxWidth="lg" className={classes.container}>
         <Route path="/home">
-        
+        {showModifyModal && 
+      <div>
+        {console.log('in the condition')}
+        <ModifyModal token={props.token} booking={booking} showModal={showModifyModal} setShowModal={setShowModifyModal} isAdmin={true}/>
+
+      </div>
+      }
+      {
+        showDeleteModal &&
+        <div>
+           {console.log("Showing delete modal..")}
+           <DeleteModal token={props.token} booking={booking} showDeleteModal={showDeleteModal} setShowDeleteModal={setShowDeleteModal} isAdmin={true}/>
+        </div>
+      }
         <Typography variant="h4" color="#DB4437" paragraph className={classes.welcometext}>
                            Admin Dashboard
                         </Typography>
@@ -354,7 +358,8 @@ export default function Dashboard(props) {
                         </Typography>
                         
               <BookingSearchBar setShowBooking={setShowBooking} setBooking={setBooking}/>
-              {showBooking && <p>{JSON.stringify(booking)}</p>}
+              {showBooking &&  <div><p>{console.log("Showing booking.." + JSON.stringify(booking))} </p><BookingCard booking={booking} setSelectedBooking={setBooking} setShowModal={setShowModifyModal} setShowDeleteModal={setShowDeleteModal}/></div>}
+              {!showBooking && console.log("NOT showing booking..")}
               </Paper>
             </Grid>
             {/* Chart */}
