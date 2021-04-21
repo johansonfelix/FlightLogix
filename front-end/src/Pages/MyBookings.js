@@ -14,9 +14,11 @@ import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import EditIcon from '@material-ui/icons/Edit';
 import CancelIcon from '@material-ui/icons/Cancel';
 import {tokenDecoder, sendRequest} from "./../Utils/httpRequestMaker"
-import Booking from "./../Components/Booking"
+import Booking from "../Components/BookingCard"
 import CircularProgress from '@material-ui/core/CircularProgress';
 import ModifyModal from '../Components/ModifyModal';
+import BookingCard from "./../Components/BookingCard"
+import DeleteModal from "../Components/DeleteModal"
 
 
 const useStyles = makeStyles((theme) => ({
@@ -63,7 +65,10 @@ export default function DetailedAccordion(props) {
   const classes = useStyles();
   const [isLoading, setIsLoading] = useState(true)
   const [bookingCards, setBookingCards] = useState([]);
-  const[showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [showDeleteModal, setShowDeleteModal] = useState(false)
+  const [bookingToDelete, setBookingToDelete] = useState()
+  const [bookingToModify, setBookingToModify] = useState()
 
   useEffect(() => {
     let user = tokenDecoder(props.token)
@@ -75,22 +80,21 @@ export default function DetailedAccordion(props) {
       console.log(bookings.length + " is the length")
       for(let i = 0; i < bookings.length; i++){
         let booking = bookings[i]
-        bookingCards.push(<Booking setModify={modifyHandler} booking={booking} userEmail={user.sub} token={props.token}/>)
+        bookingCards.push(
+        <BookingCard 
+          booking={booking} 
+          setShowModal={setShowModal}
+          setShowDeleteModal={setShowDeleteModal}
+          setBookingToModify={setBookingToModify}
+          setBookingToDelete={setBookingToDelete}
+          token={props.token}
+          />)
       }
       setIsLoading(false)
     })
     .catch(err => {console.error(err)})
   }, []);
-
-
-  const modifyHandler =()=>{
-    console.log("im here");
-    setShowModal(true);
-
-  }
-
-
-  
+    
   return (
     <Fragment>
        <div className={classes.root}>
@@ -101,13 +105,17 @@ export default function DetailedAccordion(props) {
       {showModal && 
       <div>
         {console.log('in the condition')}
-      <ModifyModal setShowModal={setShowModal} showModal={showModal} token={props.token}/>
+        <ModifyModal token={props.token} booking={bookingToModify} showModal={showModal} setShowModal={setShowModal} />
 
       </div>
       }
-
-
-
+      {
+        showDeleteModal &&
+        <div>
+           {console.log("Showing delete modal..")}
+           <DeleteModal token={props.token} booking={bookingToDelete} showDeleteModal={showDeleteModal} setShowDeleteModal={setShowDeleteModal} />
+        </div>
+      }
       </div>
     </Fragment>
     

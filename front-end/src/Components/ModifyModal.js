@@ -5,6 +5,7 @@ import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import {tokenDecoder, sendRequest} from "./../Utils/httpRequestMaker"
 import FlightResults from './FlightResults';
+import {todaysDate} from "./../Utils/General"
 var flightParser = require("./../Utils/flightParser")
 
 const useStyles = makeStyles((theme) => ({
@@ -28,8 +29,6 @@ export default function TransitionsModal(props) {
 
   
   useEffect(() => {
-    let user = tokenDecoder(props.token)
-    let email = user.sub;
     let flight = props.booking.flight
     let search = {
       originLocationCode: flightParser.getFirstOutboundLeg(flight).from.iatacode,
@@ -49,13 +48,14 @@ export default function TransitionsModal(props) {
             for(var i = 0; i < flights.length; i++){
                 searchResults.push(flights[i])
             }
-            setSearchResults(searchResults);                
+            setSearchResults(searchResults);   
+            setMode("showing_results")             
         }
         else{
             // NO FLIGHTS FOUND.
         }
         
-        setMode("fetching");
+
     })
     .catch(err => {console.log(err)})
   }, []);
@@ -78,7 +78,7 @@ export default function TransitionsModal(props) {
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
         className={classes.modal}
-        open={props.modify}
+        open={props.showModal}
         onClose={handleClose}
         closeAfterTransition
         BackdropComponent={Backdrop}
@@ -92,19 +92,36 @@ export default function TransitionsModal(props) {
             {mode==="showing_results" && 
             <FlightResults 
               flights={searchResults} 
-              onSelect={ flight => {
-                props.setMode("modifying_booking")
-                sendRequest("PUT", "https://localhost:8081/app/booking/update", props.token, {
-                  bookingID: props.bookingID,
-                  user:{email:props.userEmail},
+              onSelect={ newFlight => {
+                setMode("modifying_booking")
+                console.log("DATE:" + todaysDate())
+                sendRequest("PUT", "https://localhost:8081/app/booking/update", props.token, JSON.stringify({
+                  bookingID: props.booking.bookingID,
+                  userEmail:props.booking.userEmail,
                   payment:{
-                    
+                    base:newFlight.price.base,
+                    total: newFlight.price.total,
+                    currency: "CAD",
+                    paymentDate: todaysDate(),
+                    PAYMENT_METHOD:"PAYPAL"
+                  },
+                  flight:newFlight
+                }))
+                .then(response => response.json())
+                .then(responseJson => {
+                  console.log(responseJson)
+                  if(responseJson === "OK"){
+                    setMode("booking_modified")
                   }
                 })
               }}/>
             }
             {mode==="modifying_booking" &&
               <div>Changing booking..</div>
+            }
+            {
+              mode==="booking_modified" && 
+              <div>Booking modified successfully.</div>
             }
           </div>
         </Fade>

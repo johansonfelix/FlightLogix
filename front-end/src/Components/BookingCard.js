@@ -13,7 +13,7 @@ import Divider from '@material-ui/core/Divider';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import EditIcon from '@material-ui/icons/Edit';
 import CancelIcon from '@material-ui/icons/Cancel';
-var flightParser = require("./../Utils/flightParser")
+var flightParser = require("../Utils/flightParser")
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -55,6 +55,18 @@ export default function DetailedAccordion(props) {
   const classes = useStyles();
   let booking = props.booking
 
+  const handleModify = () => {
+    console.log("User clicked Modify button.")
+    props.setBookingToModify(props.booking)
+    props.setShowModal(true);
+  }
+
+  const handleDelete = () =>{
+    console.log("User clicked the delete button.")
+    props.setBookingToDelete(props.booking)
+    props.setShowDeleteModal(true)
+  }
+
   return (
     <div className={classes.root}>
       <Accordion defaultExpanded>
@@ -90,8 +102,8 @@ export default function DetailedAccordion(props) {
         </AccordionDetails>
         <Divider />
         <AccordionActions>
-          <Button size="small" style={{color:'#4285F4'}}  onClick={props.setModify} startIcon={<EditIcon/>}>Modify Booking</Button>
-          <Button size="small" style={{color:'#DB4437'}} startIcon={<CancelIcon/>}>Cancel Booking</Button>
+          <Button size="small" style={{color:'#4285F4'}}  onClick={handleModify} startIcon={<EditIcon/>}>Modify Booking</Button>
+          <Button size="small" style={{color:'#DB4437'}} onClick={handleDelete} startIcon={<CancelIcon/>}>Cancel Booking</Button>
           
         </AccordionActions>
       </Accordion>
