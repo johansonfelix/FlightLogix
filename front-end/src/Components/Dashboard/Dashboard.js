@@ -33,7 +33,13 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import MakeBooking from '../MakeBooking';
 import MyBookings from '../../Pages/MyBookings';
-import {sendRequest} from "./../../Utils/httpRequestMaker"
+import {sendRequest} from "./../../Utils/httpRequestMaker";
+
+import Dialog from '@material-ui/core/Dialog';
+import ListItemText from '@material-ui/core/ListItemText';
+import CloseIcon from '@material-ui/icons/Close';
+import Slide from '@material-ui/core/Slide';
+import ListItem from '@material-ui/core/ListItem';
 
 function ElevationScroll(props) {
     const { children, window } = props;
@@ -188,10 +194,18 @@ const useStyles = makeStyles((theme) => ({
         justifyContent:'center',
         color: "#F4B400",
        
+    },
+    bar:{
+        position: 'relative',
+        backgroundColor: '#4285F4',
     }
 
 }));
 
+const Transition = React.forwardRef(function Transition(props, ref) {
+    return <Slide direction="up" ref={ref} {...props} />;
+  });
+  
 
 export default function Dashboard(props) {
     const classes = useStyles();
@@ -253,8 +267,20 @@ export default function Dashboard(props) {
     };
 
 
+  const [doOpen, setDoOpen] = React.useState(true);
+
+  const handleClickOpen = () => {
+    setDoOpen(true);
+  };
+
+  const handleClickClose = () => {
+    
+    history.push('/home');
+  };
+
+
     return (
-        <Fragment>
+
 
             <div className={classes.root}>
 
@@ -354,12 +380,33 @@ export default function Dashboard(props) {
                         </Route>
 
                         <Route path = "/mybookings">
-                            <MyBookings token={props.token}/>
+                      <div>
+                      <div>
+      <Button variant="outlined" color="primary" onClick={handleClickOpen}>
+        Open full-screen dialog
+      </Button>
+      <Dialog fullScreen open={doOpen} onClose={handleClickClose} TransitionComponent={Transition}>
+        <AppBar className={classes.bar}>
+          <Toolbar>
+            <IconButton edge="start" color="inherit" onClick={handleClickClose} aria-label="close">
+              <CloseIcon />
+            </IconButton>
+            <Typography variant="h6" className={classes.title}>
+            My Bookings
+            </Typography>
+           
+          </Toolbar>
+        </AppBar>
+        <MyBookings token={props.token}/>
+      </Dialog>
+    </div>
+                         
+                            </div>
                         </Route>
                     </Container>
                 </main>
             </div>
-        </Fragment>
+
     );
 }
 

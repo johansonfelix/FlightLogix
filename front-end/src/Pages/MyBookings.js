@@ -15,10 +15,14 @@ import EditIcon from '@material-ui/icons/Edit';
 import CancelIcon from '@material-ui/icons/Cancel';
 import {tokenDecoder, sendRequest} from "./../Utils/httpRequestMaker"
 import Booking from "./../Components/Booking"
-
+import CircularProgress from '@material-ui/core/CircularProgress';
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
+    marginTop: theme.spacing(8),
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
   },
   heading: {
     fontSize: theme.typography.pxToRem(15),
@@ -74,8 +78,11 @@ export default function DetailedAccordion(props) {
   
   return (
     <Fragment>
+       <div className={classes.root}>
+
       {!isLoading && <div>{bookingCards}</div>}
-      {isLoading && <div> Loading</div>}
+      {isLoading && <CircularProgress/>}
+      </div>
     </Fragment>
     
   );

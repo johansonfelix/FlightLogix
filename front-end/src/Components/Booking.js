@@ -18,6 +18,7 @@ var flightParser = require("./../Utils/flightParser")
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
+    marginTop: '10px'
   },
   heading: {
     fontSize: theme.typography.pxToRem(15),
