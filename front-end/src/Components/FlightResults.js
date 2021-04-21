@@ -49,10 +49,10 @@ export default function FlightResults(props) {
     const classes = useStyles();
     var flightJSXs = []
     var flights = props.flights
+
     for(var i = 0; i < flights.length; i++){
         let flight = flights[i];
-
-        flightJSXs.push(<FlightResult makeBookingSetter={props.makeBookingSetter} flight={flight} setSelectedFlight={props.setSelectedFlight}/>)
+        flightJSXs.push(<FlightResult flight={flight} onSelect={props.onSelect}/>)
     }
 
     return (

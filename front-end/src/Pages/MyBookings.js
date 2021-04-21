@@ -1,4 +1,4 @@
-import React from 'react';
+import {React, Fragment, useEffect, useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import Accordion from '@material-ui/core/Accordion';
@@ -13,6 +13,8 @@ import Divider from '@material-ui/core/Divider';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import EditIcon from '@material-ui/icons/Edit';
 import CancelIcon from '@material-ui/icons/Cancel';
+import {tokenDecoder, sendRequest} from "./../Utils/httpRequestMaker"
+import Booking from "./../Components/Booking"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -49,50 +51,34 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function DetailedAccordion() {   
+export default function DetailedAccordion(props) {   
   const classes = useStyles();
-
+  const [isLoading, setIsLoading] = useState(true)
+  const [bookingCards, setBookingCards] = useState([])
+  useEffect(() => {
+    let user = tokenDecoder(props.token)
+    sendRequest("GET", "https://localhost:8081/app/booking/get_bookings/" + user.sub, props.token, null)
+    .then(response => response.json())
+    .then(responseJson => {
+      console.log(JSON.stringify(responseJson))
+      let bookings = responseJson
+      console.log(bookings.length + " is the length")
+      for(let i = 0; i < bookings.length; i++){
+        let booking = bookings[i]
+        bookingCards.push(<Booking booking={booking}/>)
+      }
+      setIsLoading(false)
+    })
+    .catch(err => {console.error(err)})
+  }, []);
+  
   return (
-    <div className={classes.root}>
-      <Accordion defaultExpanded>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1c-content"
-          id="panel1c-header"
-        >
-          <div className={classes.column}>
-            <Typography variant="h6" className={classes.heading} >Booking# 401581</Typography>
-          </div>
-          <div className={classes.column}>
-            <Typography className={classes.secondaryHeading}>YUL <ArrowForwardIcon/> YYZ (Round Trip) </Typography>
-          </div>
-        </AccordionSummary>
-        <AccordionDetails className={classes.details}>
-          <div className={classes.column} />
-          <div className={classes.column}>
-          <Typography variant="caption">
-            Details of booking goes here
-            
-            
-              
-            </Typography>
-          </div>
-          <div className={clsx(classes.column, classes.helper)}>
-            <Typography variant="caption">
-            $Price goes here
-              <br />
-              
-            </Typography>
-          </div>
-        </AccordionDetails>
-        <Divider />
-        <AccordionActions>
-          <Button size="small" style={{color:'#4285F4'}}  startIcon={<EditIcon/>}>Modify Booking</Button>
-          <Button size="small" style={{color:'#DB4437'}} startIcon={<CancelIcon/>}>Cancel Booking</Button>
-          
-        </AccordionActions>
-      </Accordion>
-    </div>
+    <Fragment>
+      {!isLoading && <div>{bookingCards}</div>}
+      {isLoading && <div> Loading</div>}
+    </Fragment>
+    
   );
 }
+
 

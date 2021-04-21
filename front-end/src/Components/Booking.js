@@ -13,6 +13,7 @@ import Divider from '@material-ui/core/Divider';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import EditIcon from '@material-ui/icons/Edit';
 import CancelIcon from '@material-ui/icons/Cancel';
+var flightParser = require("./../Utils/flightParser")
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -49,8 +50,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function DetailedAccordion() {   
+export default function DetailedAccordion(props) {   
   const classes = useStyles();
+  let booking = props.booking
 
   return (
     <div className={classes.root}>
@@ -61,25 +63,25 @@ export default function DetailedAccordion() {
           id="panel1c-header"
         >
           <div className={classes.column}>
-            <Typography variant="h6" className={classes.heading} >Booking# 401581</Typography>
+            <Typography variant="h6" className={classes.heading} >Booking# {booking.id}</Typography>
           </div>
           <div className={classes.column}>
-            <Typography className={classes.secondaryHeading}>YUL <ArrowForwardIcon/> YYZ (Round Trip) </Typography>
+            <Typography className={classes.secondaryHeading}> {flightParser.getFirstOutboundLeg(booking.flight).from.iatacode} <ArrowForwardIcon/> {flightParser.getLastOutboundLeg(booking.flight).to.iatacode} {booking.flight.flightType==="ONE_WAY"?"(One way)":"(Round Trip)"} </Typography>
           </div>
         </AccordionSummary>
         <AccordionDetails className={classes.details}>
           <div className={classes.column} />
           <div className={classes.column}>
           <Typography variant="caption">
-            Details of booking goes here
-            
-            
-              
+            Carrier: IMAGE GOES HERE
+            Departure: {flightParser.getFirstOutboundLeg(booking.flight).from.time} | Terminal {flightParser.getFirstOutboundLeg(booking.flight).from.terminal}
+            Arrival: {flightParser.getLastOutboundLeg(booking.flight).to.time} | Terminal {flightParser.getLastOutboundLeg(booking.flight).to.terminal}
+
             </Typography>
           </div>
           <div className={clsx(classes.column, classes.helper)}>
             <Typography variant="caption">
-            $Price goes here
+              $ {booking.flight.price.total} (add number of tickets purchased)
               <br />
               
             </Typography>

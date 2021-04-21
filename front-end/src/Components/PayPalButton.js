@@ -29,7 +29,7 @@ export default function PayPalButton(props){
                 if(order.status==="COMPLETED"){
                     var bookingCreationStatus = sendRequest("POST", "https://localhost:8081/app/booking/book", props.token, JSON.stringify(
                         {
-                            user:tokenDecoder(props.token),
+                            user:{email: tokenDecoder(props.token).sub},
                             payment:{
                                 base:flight.price.base,
                                 currency:"CAD",
