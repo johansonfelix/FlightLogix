@@ -25,7 +25,7 @@ import PropTypes from 'prop-types';
 import MainBanner from './MainBanner';
 import dashImage from '../../assets/flights_3.svg';
 import logo from '../../assets/logo.svg';
-
+import Card from '@material-ui/core/Card';
 import Button from '@material-ui/core/Button';
 import FlightResults from '../FlightResults';
 import { Route, useHistory } from 'react-router-dom';
@@ -33,13 +33,16 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import MakeBooking from '../MakeBooking';
 import MyBookings from '../../Pages/MyBookings';
-import { sendRequest } from "./../../Utils/httpRequestMaker";
-
+import { sendRequest } from "../../Utils/httpRequestMaker";
+import CardContent from '@material-ui/core/CardContent';
+import Avatar from '@material-ui/core/Avatar';
 import Dialog from '@material-ui/core/Dialog';
 import ListItemText from '@material-ui/core/ListItemText';
 import CloseIcon from '@material-ui/icons/Close';
 import Slide from '@material-ui/core/Slide';
-import ListItem from '@material-ui/core/ListItem';
+
+
+import UserAccount from '../UserAccount';
 
 function ElevationScroll(props) {
     const { children, window } = props;
@@ -91,6 +94,7 @@ const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
+        
     },
     toolbar: {
         paddingRight: 24, // keep right padding when drawer closed
@@ -202,9 +206,12 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
+
+
 const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
 });
+  
 
 
 export default function Dashboard(props) {
@@ -217,6 +224,7 @@ export default function Dashboard(props) {
     const [isMakingBooking, setIsMakingBooking] = useState(false);
     const [selectedFlight, setSelectedFlight] = useState()
     const [passengers, setPassengers] = useState(1);
+    const [showSearch, setShowSearch] = useState();
     let history = useHistory();
 
     React.useEffect(() => {
@@ -268,6 +276,7 @@ export default function Dashboard(props) {
 
 
     const [doOpen, setDoOpen] = React.useState(true);
+    const[showUser, setShowUser] = useState(true);
 
     const handleClickOpen = () => {
         setDoOpen(true);
@@ -278,7 +287,8 @@ export default function Dashboard(props) {
         history.push('/home');
     };
 
-
+     
+let searchCard = <FlightSearchCard token={props.token} searchResultSetter={setSearchResults} passengers={passengers} setPassengers={setPassengers} setIsSearching={setIsSearching} setError={setError} />;
     return (
 
 
@@ -335,13 +345,25 @@ export default function Dashboard(props) {
 
             <main className={classes.content}>
                 <Route path="/home">
+                    
                     <MainBanner image={image} className={classes.banner} />
-                </Route>
+                
 
 
                 <Container maxWidth="lg" className={classes.container}>
-                    <FlightSearchCard token={props.token} searchResultSetter={setSearchResults} passengers={passengers} setPassengers={setPassengers} setIsSearching={setIsSearching} setError={setError} />
+                   
+                    {searchCard}
+</Container>
 
+</Route>
+
+<Container maxWidth="lg" className={classes.container}>
+
+
+
+                    <Route path="/search">
+
+                    {searchCard}
                     {isSearching &&
                         <div className={classes.container}>
                             <LinearProgress style={{ backgroundColor: "#DB4437" }} />
@@ -353,9 +375,6 @@ export default function Dashboard(props) {
                         <div className={classes.container}>  <Typography variant="body1" color="textSecondary" align='center'>{error} </Typography></div>
                     }
 
-
-
-                    <Route path="/search">
                         {!isSearching && !error &&
                             <div className={classes.container}>
 
@@ -381,10 +400,9 @@ export default function Dashboard(props) {
 
                     <Route path="/mybookings">
                         <div>
+                            
                             <div>
-                                <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-                                    Open full-screen dialog
-      </Button>
+                              
                                 <Dialog fullScreen open={doOpen} onClose={handleClickClose} TransitionComponent={Transition}>
                                     <AppBar className={classes.bar}>
                                         <Toolbar>
@@ -402,6 +420,14 @@ export default function Dashboard(props) {
                             </div>
 
                         </div>
+                    </Route>
+
+
+
+                    <Route path = "/myaccount">
+                    
+    
+    <UserAccount showUser={showUser} setShowUser={setShowUser}/>
                     </Route>
                 </Container>
             </main>

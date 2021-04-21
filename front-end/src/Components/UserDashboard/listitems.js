@@ -37,7 +37,7 @@ export const mainListItems = (
     </ListItem>
     </NavLink>
 
-    <NavLink to='/search'  activeStyle={{
+    <NavLink to='/myaccount'  activeStyle={{
     fontWeight: "bold",
     color: "#F4B400",
     textDecoration: 'none'
