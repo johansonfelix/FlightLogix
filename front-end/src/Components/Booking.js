@@ -90,7 +90,7 @@ export default function DetailedAccordion(props) {
         </AccordionDetails>
         <Divider />
         <AccordionActions>
-          <Button size="small" style={{color:'#4285F4'}}  startIcon={<EditIcon/>}>Modify Booking</Button>
+          <Button size="small" style={{color:'#4285F4'}}  onClick={props.setModify} startIcon={<EditIcon/>}>Modify Booking</Button>
           <Button size="small" style={{color:'#DB4437'}} startIcon={<CancelIcon/>}>Cancel Booking</Button>
           
         </AccordionActions>

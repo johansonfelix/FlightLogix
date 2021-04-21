@@ -33,7 +33,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import MakeBooking from '../MakeBooking';
 import MyBookings from '../../Pages/MyBookings';
-import {sendRequest} from "./../../Utils/httpRequestMaker";
+import { sendRequest } from "./../../Utils/httpRequestMaker";
 
 import Dialog from '@material-ui/core/Dialog';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -191,11 +191,11 @@ const useStyles = makeStyles((theme) => ({
         marginTop: theme.spacing(8),
         display: 'block',
         alignSelf: 'center',
-        justifyContent:'center',
+        justifyContent: 'center',
         color: "#F4B400",
-       
+
     },
-    bar:{
+    bar: {
         position: 'relative',
         backgroundColor: '#4285F4',
     }
@@ -204,8 +204,8 @@ const useStyles = makeStyles((theme) => ({
 
 const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
-  });
-  
+});
+
 
 export default function Dashboard(props) {
     const classes = useStyles();
@@ -216,7 +216,7 @@ export default function Dashboard(props) {
     const [error, setError] = useState();
     const [isMakingBooking, setIsMakingBooking] = useState(false);
     const [selectedFlight, setSelectedFlight] = useState()
-    const [passengers, setPassengers] = useState (1);
+    const [passengers, setPassengers] = useState(1);
     let history = useHistory();
 
     React.useEffect(() => {
@@ -229,7 +229,7 @@ export default function Dashboard(props) {
         };
     }, []);
 
-    
+
 
     const handleDrawerOpen = () => {
         setOpen(true);
@@ -267,145 +267,145 @@ export default function Dashboard(props) {
     };
 
 
-  const [doOpen, setDoOpen] = React.useState(true);
+    const [doOpen, setDoOpen] = React.useState(true);
 
-  const handleClickOpen = () => {
-    setDoOpen(true);
-  };
+    const handleClickOpen = () => {
+        setDoOpen(true);
+    };
 
-  const handleClickClose = () => {
-    
-    history.push('/home');
-  };
+    const handleClickClose = () => {
+
+        history.push('/home');
+    };
 
 
     return (
 
 
-            <div className={classes.root}>
+        <div className={classes.root}>
 
-                <CssBaseline />
-                <ElevationScroll {...props}>
-                    <AppBar position="fixed"
-                        className={clsx(classes.appBar, { [classes.appBarShift]: open, })}>
-                        <Toolbar className={classes.toolbar}>
-                            <IconButton
-                                edge="start"
-                                color="inherit"
-                                aria-label="open drawer"
-                                onClick={handleDrawerOpen}
-                                className={clsx(classes.menuButton, open && classes.menuButtonHidden)}
-                            >
-                                <MenuIcon marginRight={0} />
-                            </IconButton>
-                            <Divider orientation="vertical" flexItem className={clsx(classes.menuButton, open && classes.menuButtonHidden)} />
-                            <Grid container spacing={3}>
-                                <Grid item xs={6}>
-                                    <img src={logo} alt="FlightLogixLogo" noWrap className={classes.logo} />
-                                </Grid>
-                                <Grid item xs={6}>
-                                    <Button style={{ color: '#4285F4', margin: '15px', float: 'right' }} href="/login" onClick={handleLogout}>Logout</Button>
-                                </Grid>
-                            </Grid>
-
-
-
-                        </Toolbar>
-                    </AppBar>
-                </ElevationScroll>
-
-                <Drawer
-                    variant="permanent"
-                    classes={{
-                        paper: clsx(classes.drawerPaper, !open && classes.drawerPaperClose),
-                    }}
-                    open={open}>
-
-                    <div className={classes.toolbarIcon}>
-                        <IconButton onClick={handleDrawerClose}>
-                            <ChevronLeftIcon />
+            <CssBaseline />
+            <ElevationScroll {...props}>
+                <AppBar position="fixed"
+                    className={clsx(classes.appBar, { [classes.appBarShift]: open, })}>
+                    <Toolbar className={classes.toolbar}>
+                        <IconButton
+                            edge="start"
+                            color="inherit"
+                            aria-label="open drawer"
+                            onClick={handleDrawerOpen}
+                            className={clsx(classes.menuButton, open && classes.menuButtonHidden)}
+                        >
+                            <MenuIcon marginRight={0} />
                         </IconButton>
-                    </div>
+                        <Divider orientation="vertical" flexItem className={clsx(classes.menuButton, open && classes.menuButtonHidden)} />
+                        <Grid container spacing={3}>
+                            <Grid item xs={6}>
+                                <img src={logo} alt="FlightLogixLogo" noWrap className={classes.logo} />
+                            </Grid>
+                            <Grid item xs={6}>
+                                <Button style={{ color: '#4285F4', margin: '15px', float: 'right' }} href="/login" onClick={handleLogout}>Logout</Button>
+                            </Grid>
+                        </Grid>
 
-                    <Divider />
-                    <List>{mainListItems}</List>
-                    <Divider style={{ marginTop: '100px' }} />
-                    <List >{secondaryListItems}</List>
-                </Drawer>
 
-                <main className={classes.content}>
-                    <Route path="/home">
-                        <MainBanner image={image} className={classes.banner} />
+
+                    </Toolbar>
+                </AppBar>
+            </ElevationScroll>
+
+            <Drawer
+                variant="permanent"
+                classes={{
+                    paper: clsx(classes.drawerPaper, !open && classes.drawerPaperClose),
+                }}
+                open={open}>
+
+                <div className={classes.toolbarIcon}>
+                    <IconButton onClick={handleDrawerClose}>
+                        <ChevronLeftIcon />
+                    </IconButton>
+                </div>
+
+                <Divider />
+                <List>{mainListItems}</List>
+                <Divider style={{ marginTop: '100px' }} />
+                <List >{secondaryListItems}</List>
+            </Drawer>
+
+            <main className={classes.content}>
+                <Route path="/home">
+                    <MainBanner image={image} className={classes.banner} />
+                </Route>
+
+
+                <Container maxWidth="lg" className={classes.container}>
+                    <FlightSearchCard token={props.token} searchResultSetter={setSearchResults} passengers={passengers} setPassengers={setPassengers} setIsSearching={setIsSearching} setError={setError} />
+
+                    {isSearching &&
+                        <div className={classes.container}>
+                            <LinearProgress style={{ backgroundColor: "#DB4437" }} />
+                            <LinearProgress style={{ backgroundColor: "#F4B400" }} />
+                            <Typography variant="body1" color="textSecondary" align='center'>Searching </Typography>
+                        </div>
+                    }
+                    {error &&
+                        <div className={classes.container}>  <Typography variant="body1" color="textSecondary" align='center'>{error} </Typography></div>
+                    }
+
+
+
+                    <Route path="/search">
+                        {!isSearching && !error &&
+                            <div className={classes.container}>
+
+                                {searchResults !== undefined &&
+                                    <div>
+                                        <FlightResults flights={searchResults} onSelect={(flight) => {
+                                            setIsMakingBooking(true)
+                                            setSelectedFlight(flight)
+                                        }} />
+
+                                        {
+                                            isMakingBooking && <MakeBooking stateSetter={setIsMakingBooking} state={isMakingBooking} selectedFlight={selectedFlight} passengers={passengers} token={props.token} />
+                                        }
+
+                                    </div>
+
+                                }
+
+                            </div>
+                        }
+
                     </Route>
 
-
-                    <Container maxWidth="lg" className={classes.container}>
-                        <FlightSearchCard token={props.token} searchResultSetter={setSearchResults} passengers={passengers} setPassengers={setPassengers} setIsSearching={setIsSearching} setError={setError}/>
-
-               {isSearching &&
-                        <div className={classes.container}>
-                        <LinearProgress style={{backgroundColor:"#DB4437"}}/>
-      <LinearProgress style={{backgroundColor:"#F4B400"}}/>
-                            <Typography variant="body1" color="textSecondary" align='center'>Searching </Typography>
-                            </div>
-                      } 
-                      {error && 
-                       <div className={classes.container}>  <Typography variant="body1" color="textSecondary" align='center'>{error} </Typography></div>
-                      }
-                    
-
-
-                        <Route path="/search">
-                            {!isSearching && !error &&
-                                <div className={classes.container}>
-
-                                    {searchResults !== undefined && 
-                                    <div>
-                                    <FlightResults flights={searchResults} onSelect={(flight)=>{
-                                        setIsMakingBooking(true)
-                                        setSelectedFlight(flight)
-                                    }}/>
-                               
-                                    {
-                                        isMakingBooking && <MakeBooking  stateSetter={setIsMakingBooking} state={isMakingBooking} selectedFlight={selectedFlight} passengers={passengers} token={props.token}/>
-                                    }
-                                    
-                                    </div>
-                                    
-                                    }
-
-                                </div>
-                            }
-
-                        </Route>
-
-                        <Route path = "/mybookings">
-                      <div>
-                      <div>
-      <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-        Open full-screen dialog
+                    <Route path="/mybookings">
+                        <div>
+                            <div>
+                                <Button variant="outlined" color="primary" onClick={handleClickOpen}>
+                                    Open full-screen dialog
       </Button>
-      <Dialog fullScreen open={doOpen} onClose={handleClickClose} TransitionComponent={Transition}>
-        <AppBar className={classes.bar}>
-          <Toolbar>
-            <IconButton edge="start" color="inherit" onClick={handleClickClose} aria-label="close">
-              <CloseIcon />
-            </IconButton>
-            <Typography variant="h6" className={classes.title}>
-            My Bookings
+                                <Dialog fullScreen open={doOpen} onClose={handleClickClose} TransitionComponent={Transition}>
+                                    <AppBar className={classes.bar}>
+                                        <Toolbar>
+                                            <IconButton edge="start" color="inherit" onClick={handleClickClose} aria-label="close">
+                                                <CloseIcon />
+                                            </IconButton>
+                                            <Typography variant="h6" className={classes.title}>
+                                                My Bookings
             </Typography>
-           
-          </Toolbar>
-        </AppBar>
-        <MyBookings token={props.token}/>
-      </Dialog>
-    </div>
-                         
+
+                                        </Toolbar>
+                                    </AppBar>
+                                    <MyBookings token={props.token} />
+                                </Dialog>
                             </div>
-                        </Route>
-                    </Container>
-                </main>
-            </div>
+
+                        </div>
+                    </Route>
+                </Container>
+            </main>
+        </div>
 
     );
 }

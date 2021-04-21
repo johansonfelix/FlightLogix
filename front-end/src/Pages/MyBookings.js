@@ -16,13 +16,17 @@ import CancelIcon from '@material-ui/icons/Cancel';
 import {tokenDecoder, sendRequest} from "./../Utils/httpRequestMaker"
 import Booking from "./../Components/Booking"
 import CircularProgress from '@material-ui/core/CircularProgress';
+import ModifyModal from '../Components/ModifyModal';
+
+
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
     marginTop: theme.spacing(8),
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center',
+    alignItems: 'center',  
+    
   },
   heading: {
     fontSize: theme.typography.pxToRem(15),
@@ -58,7 +62,9 @@ const useStyles = makeStyles((theme) => ({
 export default function DetailedAccordion(props) {   
   const classes = useStyles();
   const [isLoading, setIsLoading] = useState(true)
-  const [bookingCards, setBookingCards] = useState([])
+  const [bookingCards, setBookingCards] = useState([]);
+  const[showModal, setShowModal] = useState(false);
+
   useEffect(() => {
     let user = tokenDecoder(props.token)
     sendRequest("GET", "https://localhost:8081/app/booking/get_bookings/" + user.sub, props.token, null)
@@ -69,19 +75,39 @@ export default function DetailedAccordion(props) {
       console.log(bookings.length + " is the length")
       for(let i = 0; i < bookings.length; i++){
         let booking = bookings[i]
-        bookingCards.push(<Booking booking={booking}/>)
+        bookingCards.push(<Booking setModify={modifyHandler} booking={booking}/>)
       }
       setIsLoading(false)
     })
     .catch(err => {console.error(err)})
   }, []);
+
+
+  const modifyHandler =()=>{
+    console.log("im here");
+    setShowModal(true);
+
+  }
+
+
   
   return (
     <Fragment>
        <div className={classes.root}>
 
       {!isLoading && <div>{bookingCards}</div>}
-      {isLoading && <CircularProgress/>}
+      {isLoading && <div> <Typography variant="body1" color="textSecondary" align='center'>One Moment....fetching your bookings</Typography></div>}
+
+      {showModal && 
+      <div>
+        {console.log('in the condition')}
+      <ModifyModal setShowModal={setShowModal} showModal={showModal}/>
+
+      </div>
+      }
+
+
+
       </div>
     </Fragment>
     
