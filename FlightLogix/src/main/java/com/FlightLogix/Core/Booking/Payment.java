@@ -12,6 +12,9 @@ public class Payment extends Price {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     String id;
+    private Date paymentDate;
+    @Enumerated(EnumType.STRING)
+    private PAYMENT_METHOD paymentMethod;
 
     public Payment() {
 
@@ -21,9 +24,7 @@ public class Payment extends Price {
     public enum PAYMENT_METHOD{
         PAYPAL
     }
-    private Date paymentDate;
-    @Enumerated(EnumType.STRING)
-    private PAYMENT_METHOD paymentMethod;
+
 
     public Payment(Price price, Date paymentDate, PAYMENT_METHOD paymentMethod) {
         super(price.getBase(), price.getTotal(), price.getCurrency());

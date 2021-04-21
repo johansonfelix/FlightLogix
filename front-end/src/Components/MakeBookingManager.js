@@ -76,7 +76,7 @@ export default function MakeBookingManager(props) {
       case 0:
         return <BookingDetails selectedFlight={props.selectedFlight} passengers={props.passengers}/>;
       case 1:
-        return <OrderReview />;   
+        return <OrderReview selectedFlight={props.selectedFlight} passengers={props.passengers}/>;   
       default:
         throw new Error('Unknown step');
     }
@@ -123,7 +123,7 @@ export default function MakeBookingManager(props) {
                     onClick={handleNext}
                     className={classes.button}
                   >
-                    {activeStep === steps.length - 1 ? <PayPalButton/> : 'Next'}
+                    {activeStep === steps.length - 1 ? <PayPalButton selectedFlight={props.selectedFlight} priceTotal={props.selectedFlight.price.total} token={props.token}/> : 'Next'}
                   </Button>
                 </div>
               </React.Fragment>

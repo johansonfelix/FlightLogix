@@ -20,8 +20,7 @@ import TextField from '@material-ui/core/TextField';
 import SearchIcon from '@material-ui/icons/Search';
 import FlightResults from "./FlightResults"
 import { useHistory } from 'react-router';
-
-var httpRequestMaker = require("./../Utils/httpRequestMaker.js")
+import {sendRequest} from "./../Utils/httpRequestMaker.js"
 
 
 const useStyles = makeStyles((theme) => ({
@@ -68,7 +67,7 @@ export default function SimpleCard(props) {
     const searchFlights = async (Search) => {
         props.setIsSearching(true);
         props.setError();
-        httpRequestMaker.sendRequest("POST", "https://localhost:8081/app/booking/search",props.token, JSON.stringify(Search))
+        sendRequest("POST", "https://localhost:8081/app/booking/search",props.token, JSON.stringify(Search))
         .then(response => response.json())
         .then(responseJson =>{
             console.log("Received flight data: " + JSON.stringify(responseJson))

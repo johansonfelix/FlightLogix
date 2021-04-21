@@ -12,7 +12,7 @@ function getConnectingFlights(legs){
   for(var i = 0; i < legs.length; i++){
     var currentLeg = legs[i]
     connectingFlights.push(
-      <div>CARRIER {flightParser.parseTime(legs[0].from.time)} {legs[0].from.iatacode}<ArrowForwardIcon/>{flightParser.parseTime(legs[legs.length-1].from.time)} {legs[legs.length-1].to.iatacode}</div>
+      <div>CARRIER {flightParser.parseTime(legs[i].from.time)} {legs[i].from.iatacode}<ArrowForwardIcon/>{flightParser.parseTime(legs[i].to.time)} {legs[i].to.iatacode}</div>
     )
   }
   return connectingFlights

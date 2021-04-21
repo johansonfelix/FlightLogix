@@ -14,6 +14,7 @@ import Container from '@material-ui/core/Container';
 import { Fragment, useState } from 'react';
 import CircularProgress from '@material-ui/core/CircularProgress'
 import { useRadioGroup } from '@material-ui/core';
+import {sendRequest} from "./../Utils/httpRequestMaker.js"
 
 function Copyright() {
     return (
@@ -29,11 +30,11 @@ function Copyright() {
 }
 
 
-var httpRequestMaker = require("./../Utils/httpRequestMaker.js")
+
 
 async function registerUser(User) {
 
-    return httpRequestMaker.sendRequest("POST", "https://localhost:8081/app/register", null, JSON.stringify(User))
+    return sendRequest("POST", "https://localhost:8081/app/register", null, JSON.stringify(User))
         .then((response) => response.json())
         .then((responseJson) => {
 

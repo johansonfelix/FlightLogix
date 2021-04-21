@@ -24,13 +24,13 @@ import { SnackbarProvider, useSnackbar } from 'notistack';
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
 
-var httpRequestMaker = require("./../Utils/httpRequestMaker.js")
+import {sendRequest} from "./../Utils/httpRequestMaker.js"
 
 
 
 async function loginUser(Credentials) {
 
-    return httpRequestMaker.sendRequest("POST", "https://localhost:8081/app/login", null, JSON.stringify(Credentials))
+    return sendRequest("POST", "https://localhost:8081/app/login", null, JSON.stringify(Credentials))
         .then((response) => response.json())
         .then((responseJson) => {
 

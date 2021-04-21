@@ -25,13 +25,15 @@ import PropTypes from 'prop-types';
 import MainBanner from './MainBanner';
 import dashImage from '../../assets/flights_3.svg';
 import logo from '../../assets/logo.svg';
-import httpRequestMaker from '../../Utils/httpRequestMaker';
+
 import Button from '@material-ui/core/Button';
 import FlightResults from '../FlightResults';
 import { Route, useHistory } from 'react-router-dom';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import MakeBooking from '../MakeBooking';
+
+import {sendRequest} from "./../../Utils/httpRequestMaker"
 
 function ElevationScroll(props) {
     const { children, window } = props;
@@ -222,7 +224,7 @@ export default function Dashboard(props) {
         setOpen(false);
     };
     const clearTokenServerSide = async () => {
-        httpRequestMaker.sendRequest("POST", "https://localhost:8081/app/logout", props.token, null)
+        sendRequest("POST", "https://localhost:8081/app/logout", props.token, null)
             .then(response => response.json())
             .then(responseJson => {
                 console.log("Server reply:" + JSON.stringify(responseJson))
@@ -311,7 +313,7 @@ export default function Dashboard(props) {
 
 
                     <Container maxWidth="lg" className={classes.container}>
-                        <FlightSearchCard token={props.token} searchResultSetter={setSearchResults} passngers={passengers} setPassengers={setPassengers} setIsSearching={setIsSearching} setError={setError}/>
+                        <FlightSearchCard token={props.token} searchResultSetter={setSearchResults} passengers={passengers} setPassengers={setPassengers} setIsSearching={setIsSearching} setError={setError}/>
 
                {isSearching &&
                         <div className={classes.container}>
@@ -335,7 +337,7 @@ export default function Dashboard(props) {
                                     <FlightResults flights={searchResults} makeBookingSetter={setIsMakingBooking} setSelectedFlight={setSelectedFlight}/>
                                
                                     {
-                                        isMakingBooking && <MakeBooking  stateSetter={setIsMakingBooking} state={isMakingBooking} selectedFlight={selectedFlight} numPassengers={passengers}/>
+                                        isMakingBooking && <MakeBooking  stateSetter={setIsMakingBooking} state={isMakingBooking} selectedFlight={selectedFlight} passengers={passengers} token={props.token}/>
                                     }
                                     
                                     </div>

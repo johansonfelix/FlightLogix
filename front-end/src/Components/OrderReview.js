@@ -5,6 +5,9 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Grid from '@material-ui/core/Grid';
+import flightParser from '../Utils/flightParser';
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+
 
 //insert booking details here (modify)
 const booking =   { type: 'One ', desc: 'YUL to YYZ', price: '$9.99' };
@@ -23,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Review() {
+export default function Review(props) {
   const classes = useStyles();
 
   return (
@@ -34,8 +37,8 @@ export default function Review() {
       <List disablePadding>
      
           <ListItem className={classes.listItem} key={booking.name}>
-            <ListItemText primary={"One Way Flight"} secondary={booking.desc} />
-            <Typography variant="body2">{booking.price}</Typography>
+            <ListItemText primary={props.selectedFlight.flightType==="ONE_WAY"?"One Way":"Round trip"} secondary={flightParser.getFirstOutboundLeg(props.selectedFlight).from.iatacode + " to " + flightParser.getLastOutboundLeg(props.selectedFlight).to.iatacode} />
+            <Typography variant="body2">{props.selectedFlight.price.total * props.passengers}</Typography>
           </ListItem>
     
         <ListItem className={classes.listItem}>
@@ -43,7 +46,7 @@ export default function Review() {
    
             
           <Typography variant="subtitle1" className={classes.total}>
-            {booking.price}
+            {props.selectedFlight.price.total * props.passengers}
           </Typography>
         </ListItem>
       </List>
