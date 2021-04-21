@@ -60,7 +60,9 @@ public class AdminResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response getBooking(@PathParam("bookingID") String bookingID) {
+        System.out.println("Received booking request 1");
         Booking booking = bookingManager.getBooking(bookingID);
+        System.out.println("Received booking request 2");
         return Response.ok(booking).build();
     }
 
@@ -95,6 +97,9 @@ public class AdminResource {
         List<User> users = userManager.findAllCustomers();
 
         return Response.ok(users).build();
+    public Response cancelBooking(@PathParam("bookingID") String bookingID) {
+        bookingManager.deleteBooking(bookingID);
+        return Response.ok(Response.Status.OK).build();
     }
 
 

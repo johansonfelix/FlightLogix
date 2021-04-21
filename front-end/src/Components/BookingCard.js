@@ -54,16 +54,18 @@ const useStyles = makeStyles((theme) => ({
 export default function DetailedAccordion(props) {   
   const classes = useStyles();
   let booking = props.booking
+  console.log("BOOOKING:::" + JSON.stringify(booking))
 
   const handleModify = () => {
     console.log("User clicked Modify button.")
-    props.setBookingToModify(props.booking)
+    props.setSelectedBooking(booking)
     props.setShowModal(true);
   }
 
   const handleDelete = () =>{
     console.log("User clicked the delete button.")
-    props.setBookingToDelete(props.booking)
+    props.setSelectedBooking(booking)
+
     props.setShowDeleteModal(true)
   }
 
@@ -76,7 +78,7 @@ export default function DetailedAccordion(props) {
           id="panel1c-header"
         >
           <div className={classes.column}>
-            <Typography variant="h6" className={classes.heading} >Booking# {booking.id}</Typography>
+            <Typography variant="h6" className={classes.heading} >Booking# {booking.bookingID}</Typography>
           </div>
           <div className={classes.column}>
             <Typography className={classes.secondaryHeading}> {flightParser.getFirstOutboundLeg(booking.flight).from.iatacode} <ArrowForwardIcon/> {flightParser.getLastOutboundLeg(booking.flight).to.iatacode} {booking.flight.flightType==="ONE_WAY"?"(One way)":"(Round Trip)"} </Typography>

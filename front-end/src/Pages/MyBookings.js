@@ -67,8 +67,8 @@ export default function DetailedAccordion(props) {
   const [bookingCards, setBookingCards] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [showDeleteModal, setShowDeleteModal] = useState(false)
-  const [bookingToDelete, setBookingToDelete] = useState()
-  const [bookingToModify, setBookingToModify] = useState()
+  const [selectedBooking, setSelectedBooking] = useState()
+
 
   useEffect(() => {
     let user = tokenDecoder(props.token)
@@ -82,11 +82,10 @@ export default function DetailedAccordion(props) {
         let booking = bookings[i]
         bookingCards.push(
         <BookingCard 
-          booking={booking} 
+          booking={booking}
+          setSelectedBooking={setSelectedBooking}
           setShowModal={setShowModal}
           setShowDeleteModal={setShowDeleteModal}
-          setBookingToModify={setBookingToModify}
-          setBookingToDelete={setBookingToDelete}
           token={props.token}
           />)
       }
@@ -105,7 +104,7 @@ export default function DetailedAccordion(props) {
       {showModal && 
       <div>
         {console.log('in the condition')}
-        <ModifyModal token={props.token} booking={bookingToModify} showModal={showModal} setShowModal={setShowModal} />
+        <ModifyModal token={props.token} booking={selectedBooking} showModal={showModal} setShowModal={setShowModal} />
 
       </div>
       }
@@ -113,7 +112,7 @@ export default function DetailedAccordion(props) {
         showDeleteModal &&
         <div>
            {console.log("Showing delete modal..")}
-           <DeleteModal token={props.token} booking={bookingToDelete} showDeleteModal={showDeleteModal} setShowDeleteModal={setShowDeleteModal} />
+           <DeleteModal token={props.token} booking={selectedBooking} showDeleteModal={showDeleteModal} setShowDeleteModal={setShowDeleteModal} />
         </div>
       }
       </div>
