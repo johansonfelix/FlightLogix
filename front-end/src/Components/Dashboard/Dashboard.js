@@ -32,7 +32,7 @@ import { Route, useHistory } from 'react-router-dom';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import MakeBooking from '../MakeBooking';
-
+import MyBookings from '../../Pages/MyBookings';
 import {sendRequest} from "./../../Utils/httpRequestMaker"
 
 function ElevationScroll(props) {
@@ -347,6 +347,10 @@ export default function Dashboard(props) {
                                 </div>
                             }
 
+                        </Route>
+
+                        <Route path = "/mybookings">
+                            <MyBookings />
                         </Route>
                     </Container>
                 </main>
