@@ -57,19 +57,22 @@ export default function Asynchronous(props) {
       return;
     }
     
-    if(value){        
+    if(value){   
+      
+      
         const response = await sendRequest("GET", "https://localhost:8081/app/admin/get-all-bookings/"+value, token, null)
      
         const bookings = await response.json();
         const thebookings = await bookings;       
 
         console.log('set show booking: '+JSON.stringify(thebookings))
-        props.setShowBookings(true) 
         props.setBookings(bookings) 
+        props.setShowBookings(true) 
+       
         
     }
     else{
-        props.setShowBooking(false)
+        props.setShowBookings(false)  
     }
     
   }

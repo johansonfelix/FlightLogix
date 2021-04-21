@@ -408,7 +408,7 @@ export default function Dashboard(props) {
                            User Search
         </Typography>
         <UserSearchBar setShowBookings={setShowBookings} setBookings={setBookings}/>
-        <p>{JSON.stringify(bookings)}</p>
+        {showBookings &&  <p>{JSON.stringify(bookings)}</p>}
               </Paper>
         </Container>
         
