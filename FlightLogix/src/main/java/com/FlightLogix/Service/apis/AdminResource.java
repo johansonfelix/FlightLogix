@@ -97,6 +97,15 @@ public class AdminResource {
         List<User> users = userManager.findAllCustomers();
 
         return Response.ok(users).build();
+
+    }
+
+
+    @Transactional
+    @DELETE
+    @Path("cancel/{bookingID}")
+    @RolesAllowed({"ADMIN"})
+    @Produces(MediaType.APPLICATION_JSON)
     public Response cancelBooking(@PathParam("bookingID") String bookingID) {
         bookingManager.deleteBooking(bookingID);
         return Response.ok(Response.Status.OK).build();
