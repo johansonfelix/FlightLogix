@@ -46,6 +46,7 @@ import Deposits from './Deposits';
 import Orders from './Orders';
 
 import BookingSearchBar from '../BookingSearch';
+import UserSearchBar from '../UserSearchBar';
 
 
 function ElevationScroll(props) {
@@ -225,7 +226,9 @@ export default function Dashboard(props) {
     const [selectedFlight, setSelectedFlight] = useState()
     const [passengers, setPassengers] = useState(1);
     const [showBooking, setShowBooking] = useState(false);
+    const [showBookings, setShowBookings] = useState(false);
     const[booking, setBooking] = useState();
+    const[bookings, setBookings] = useState();
     let history = useHistory();
 
         const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
@@ -347,8 +350,8 @@ export default function Dashboard(props) {
        
           <Grid container spacing={3}>
           <Grid item xs={12}>
-              <Paper style={{backgroundImage: 'linear-gradient(147deg, #fe8a39 0%, #fd3838 74%)', borderRadius: "spacing(2)",
-      opacity: 0.75,}}className={fixedHeightPaper}>
+              <Paper style={{backgroundColor: '#F4B400', borderRadius: "spacing(4)",
+      boxShadow: '0 10px 15px #d0efef'}}className={fixedHeightPaper}>
               <Typography variant="h5" color="#DB4437" paragraph className={classes.welcometext}>
                            Booking Search
                         </Typography>
@@ -383,9 +386,55 @@ export default function Dashboard(props) {
         </Route>
 
         <Route path="/viewusers">
+
         <Container maxWidth="lg" className={classes.container}>
-        <BookingSearchBar setShowBooking={setShowBooking} setBooking={setBooking}/>
+      <Paper className={classes.paper}>
+      <Typography variant="h5" color="#DB4437" paragraph className={classes.welcometext}>
+                           User Search
+        </Typography>
+        <UserSearchBar setShowBookings={setShowBookings} setBookings={setBookings}/>
+        <p>{JSON.stringify(bookings)}</p>
+              </Paper>
         </Container>
+        
+        </Route>
+
+        <Route path="/search">
+       
+            <FlightSearchCard token={props.token} searchResultSetter={setSearchResults} passengers={passengers} setPassengers={setPassengers} setIsSearching={setIsSearching} setError={setError} />
+            {isSearching &&
+                        <div className={classes.container}>
+                            <LinearProgress style={{ backgroundColor: "#DB4437" }} />
+                            <LinearProgress style={{ backgroundColor: "#F4B400" }} />
+                            <Typography variant="body1" color="textSecondary" align='center'>Searching </Typography>
+                        </div>
+                    }
+                    {error &&
+                        <div className={classes.container}>  <Typography variant="body1" color="textSecondary" align='center'>{error} </Typography></div>
+                    }
+
+                        {!isSearching && !error &&
+                            <div className={classes.container}>
+
+                                {searchResults !== undefined &&
+                                    <div>
+                                        <FlightResults flights={searchResults} onSelect={(flight) => {
+                                            setIsMakingBooking(true)
+                                            setSelectedFlight(flight)
+                                        }} />
+
+                                        {
+                                            isMakingBooking && <MakeBooking admin={true} stateSetter={setIsMakingBooking} state={isMakingBooking} selectedFlight={selectedFlight} passengers={passengers} token={props.token} />
+                                        }
+
+                                    </div>
+
+                                }
+
+                            </div>
+                        }
+
+
         </Route>
         </Container>
             </main>

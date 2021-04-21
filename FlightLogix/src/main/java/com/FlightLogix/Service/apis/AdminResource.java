@@ -2,7 +2,9 @@ package com.FlightLogix.Service.apis;
 
 
 import com.FlightLogix.Core.Booking.Booking;
+import com.FlightLogix.Core.User.User;
 import com.FlightLogix.Repository.BookingOperations.BookingManager;
+import com.FlightLogix.Repository.UserOperations.UserManager;
 
 import javax.annotation.security.RolesAllowed;
 import javax.enterprise.context.RequestScoped;
@@ -20,6 +22,9 @@ public class AdminResource {
 
     @Inject
     BookingManager bookingManager;
+
+    @Inject
+    UserManager userManager;
 
 
     @GET
@@ -60,11 +65,11 @@ public class AdminResource {
     }
 
     @GET
-    @Path("get-all-bookings")
+    @Path("get-all-bookings/{email}")
     @RolesAllowed({"ADMIN"})
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getAllCustomerBookings(String email) {
+    public Response getAllCustomerBookings(@PathParam("email") String email) {
         List<Booking> bookings = bookingManager.getCustomerBookings(email);
         return Response.ok(bookings).build();
     }
@@ -81,15 +86,19 @@ public class AdminResource {
         return Response.ok(Response.Status.OK).build();
     }
 
-    @Transactional
-    @DELETE
-    @Path("cancel/{bookingID}")
+
+    @GET
+    @Path("allcustomers/")
     @RolesAllowed({"ADMIN"})
     @Produces(MediaType.APPLICATION_JSON)
-    public Response cancelBooking(@PathParam("bookingID") String bookingID) {
-        bookingManager.deleteBooking(bookingID);
-        return Response.status(Response.Status.OK).build();
+    public Response getAllCustomers() {
+        List<User> users = userManager.findAllCustomers();
+
+        return Response.ok(users).build();
     }
+
+
+
 
 
 

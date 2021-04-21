@@ -81,7 +81,7 @@ if(user_role === 'ADMIN'){
      <AdminDashboard token={token} setToken={setToken} />
  </Route>
 
- <Route path='/mybookings' exact>
+ <Route path='/search' exact>
    <Dashboard token={token} setToken={setToken} />
  </Route>
 

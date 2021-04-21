@@ -28,14 +28,14 @@ export default function Asynchronous(props) {
     }
 
     (async () => {
-      const response = await sendRequest("GET", "https://localhost:8081/app/admin/allbookings", token, null)
+      const response = await sendRequest("GET", "https://localhost:8081/app/admin/allcustomers", token, null)
      
-      const bookings = await response.json();
-      const allbookings = await bookings;
-     
+      const customers = await response.json();
+      const allcustomers = await customers;
+      console.log(allcustomers);
 
       if (active) {
-        setOptions(Object.keys(allbookings).map((key) => allbookings[key].bookingID));
+        setOptions(Object.keys(customers).map((key) => allcustomers[key].email));
       }
       
     })();
@@ -52,16 +52,20 @@ export default function Asynchronous(props) {
 
   const handleSelect = async (event, value) =>{
   
+    if(props.admin){
+      props.setCustomerEmail(value);
+      return;
+    }
     
     if(value){        
-        const response = await sendRequest("GET", "https://localhost:8081/app/admin/get/"+value, token, null)
+        const response = await sendRequest("GET", "https://localhost:8081/app/admin/get-all-bookings/"+value, token, null)
      
-        const booking = await response.json();
-        const thebooking = await booking;       
+        const bookings = await response.json();
+        const thebookings = await bookings;       
 
-        console.log('set show booking: '+JSON.stringify(thebooking))
-        props.setShowBooking(true) 
-        props.setBooking(booking) 
+        console.log('set show booking: '+JSON.stringify(thebookings))
+        props.setShowBookings(true) 
+        props.setBookings(bookings) 
         
     }
     else{
@@ -88,8 +92,8 @@ export default function Asynchronous(props) {
       renderInput={(params) => (
         <TextField
         
-          {...params}
-          label="Search by booking number"
+          {...params} 
+          label="Search by customer email"
           variant="outlined"
           InputProps={{
             ...params.InputProps,

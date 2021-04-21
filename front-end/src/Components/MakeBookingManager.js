@@ -15,7 +15,8 @@ import OrderReview from './OrderReview';
 import PayPalButton from './PayPalButton';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { useState } from 'react';
-
+import SelectCustomer from './SelectCustomer';
+import { tokenDecoder, sendRequest } from '../Utils/httpRequestMaker';
 
 /* import AddressForm from './AddressForm';
 import PaymentForm from './PaymentForm';
@@ -59,17 +60,20 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const steps = ['Review Booking Details', 'Pay with Paypal'];
+
 
 
 
 export default function MakeBookingManager(props) {
+  const user_role = tokenDecoder(localStorage.getItem('token')).role;
+  const steps = user_role === 'CUSTOMER' ? ['Review Booking Details', 'Pay with Paypal'] : ['Review Booking Details', 'Select Customer'];
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(0);
   const [paymentConfirmed, setPaymentConfirmed] = useState(false);
-
-
-
+  const [customerEmail, setCustomerEmail] = useState();
+  const confirmationMessage = (user_role === 'CUSTOMER') ? "Your booking has been made. We have emailed you your booking confirmation. You can view your booking in My Bookings." : "Booking has been made for the customer. ";
+  const [errorMessage, setErrorMessage] = useState();
+  const [isCreating, setIsCreating] = useState(false);
   const handleNext = () => {
     setActiveStep(activeStep + 1);
   };
@@ -80,78 +84,138 @@ export default function MakeBookingManager(props) {
   function getStepContent(step) {
     switch (step) {
       case 0:
-        return <BookingDetails selectedFlight={props.selectedFlight} passengers={props.passengers}/>;
-      case 1:
-        return <OrderReview selectedFlight={props.selectedFlight} passengers={props.passengers}/>;   
+        return <BookingDetails selectedFlight={props.selectedFlight} passengers={props.passengers} />;
+      case 1: {
+        if (user_role === 'ADMIN')
+          return <SelectCustomer setCustomerEmail={setCustomerEmail} />
+        else
+          return <OrderReview selectedFlight={props.selectedFlight} passengers={props.passengers} />;
+      }
       default:
         throw new Error('Unknown step');
     }
   }
+  const handleCreateBooking = async () => {
+    setIsCreating(true);
+    let flight = props.selectedFlight;
+    let response = await sendRequest("POST", "https://localhost:8081/app/admin/create_booking", props.token, JSON.stringify(
+      {
+        userEmail: customerEmail,
+        payment: {
+          base: flight.price.base,
+          currency: "CAD",
+          total: flight.price.total,
+          paymentDate: null,
+          PAYMENT_METHOD: "PAYPAL"
+        },
+        flight: flight
+      }
+    ));
+
+    if (response) {
+      const responseJson = await response.json();
+      response = await responseJson;
+      setIsCreating(false);
+      console.log("Response: " + response)
+      if (response === 'CREATED')
+        setPaymentConfirmed(true);
+      else
+      setErrorMessage("Something went wrong. Try again later");
+    }
+
+    else
+      setErrorMessage("Something went wrong. Try again later");
+
+
+  }
+
+
+  const finalButton = user_role === 'CUSTOMER' ? <PayPalButton onClick={handleNext} selectedFlight={props.selectedFlight} priceTotal={props.selectedFlight.price.total} token={props.token} paymentConfirmed={setPaymentConfirmed} /> : <Button
+    variant="contained"
+    color="primary"
+    onClick={handleCreateBooking}
+    className={classes.button}
+  >
+    Create Booking
+                   </Button>
+
+
+
   return (
     <React.Fragment>
-      
-       
-      
+
+
+
       <main className={classes.layout}>
-       {console.log('paymentConfirmed: '+ paymentConfirmed) }
+        {console.log('paymentConfirmed: ' + paymentConfirmed)}
         <Paper className={classes.paper}>
-
-  {!paymentConfirmed &&
-  <div>          <Typography component="h1" variant="h4" align="center">
-            Make Booking
+          {!isCreating && <div>
+          {!paymentConfirmed &&
+            <div>          <Typography component="h1" variant="h4" align="center">
+              Make Booking
           </Typography>
-          <Stepper activeStep={activeStep} className={classes.stepper}>
-            {steps.map((label) => (
-              <Step key={label}>
-                <StepLabel>{label}</StepLabel>
-              </Step>
-            ))}
-          </Stepper>
-          <React.Fragment>
-            {activeStep === steps.length ? (
+              <Stepper activeStep={activeStep} className={classes.stepper}>
+                {steps.map((label) => (
+                  <Step key={label}>
+                    <StepLabel>{label}</StepLabel>
+                  </Step>
+                ))}
+              </Stepper>
               <React.Fragment>
-                <Typography variant="subtitle1">
-                 Oops. Something went wrong. Try again later.
+                {activeStep === steps.length ? (
+                  <React.Fragment>
+                    <Typography variant="subtitle1">
+                      Oops. Something went wrong. Try again later.
                 </Typography>
-              </React.Fragment>
-            ) : (
-              <React.Fragment>
-                {getStepContent(activeStep)}
-                <div className={classes.buttons}>
-                  {activeStep !== 0 && (
-                    <Button  onClick={handleBack} className={classes.button}>
-                      Back
-                    </Button>
-                  )}
-                   {activeStep === steps.length - 1 ? <PayPalButton onClick={handleNext}selectedFlight={props.selectedFlight} priceTotal={props.selectedFlight.price.total} token={props.token} paymentConfirmed={setPaymentConfirmed}/>:
-                     <Button
-                     variant="contained"
-                     color="primary"
-                     onClick={handleNext}
-                     className={classes.button}
-                   >
-                   Next 
+                  </React.Fragment>
+                ) : (
+                  <React.Fragment>
+                    {getStepContent(activeStep)}
+                    <div className={classes.buttons}>
+                      {activeStep !== 0 && (
+                        <Button onClick={handleBack} className={classes.button}>
+                          Back
+                        </Button>
+                      )}
+                      {activeStep === steps.length - 1 ? finalButton :
+                        <Button
+                          variant="contained"
+                          color="primary"
+                          onClick={handleNext}
+                          className={classes.button}
+                        >
+                          Next
                    </Button>}
-                  
-            
-                </div>
-              </React.Fragment>
-            )}
-          </React.Fragment>
-          </div>
-}
-{paymentConfirmed &&
-  <div className={classes.paper}>
- 
- <Typography variant="h5" gutterBottom>
-                 Confirmation
-                </Typography>
-                <Typography variant="subtitle1">
-                  Your booking has been made. We have emailed you your booking confirmation. You can view your booking in My Bookings.
-                </Typography>
 
-</div>
-}
+
+                    </div>
+                  </React.Fragment>
+                )}
+              </React.Fragment>
+            </div>
+          }
+          </div>}
+
+          {isCreating &&  <div className={classes.paper}>
+                                <CircularProgress />
+                                <p>Creating booking...</p>
+
+                            </div>}
+          {paymentConfirmed &&
+            <div className={classes.paper}>
+
+              <Typography variant="h5" gutterBottom>
+                Confirmation
+                </Typography>
+              <Typography variant="subtitle1">
+                {confirmationMessage}                </Typography>
+
+              {errorMessage && <Typography variant="subtitle1">
+                {errorMessage}             </Typography>
+
+              }
+            </div>
+          }
         </Paper>
 
       </main>
