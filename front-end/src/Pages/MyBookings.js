@@ -75,7 +75,7 @@ export default function DetailedAccordion(props) {
       console.log(bookings.length + " is the length")
       for(let i = 0; i < bookings.length; i++){
         let booking = bookings[i]
-        bookingCards.push(<Booking setModify={modifyHandler} booking={booking}/>)
+        bookingCards.push(<Booking setModify={modifyHandler} booking={booking} userEmail={user.sub} token={props.token}/>)
       }
       setIsLoading(false)
     })
@@ -96,12 +96,12 @@ export default function DetailedAccordion(props) {
        <div className={classes.root}>
 
       {!isLoading && <div>{bookingCards}</div>}
-      {isLoading && <div> <Typography variant="body1" color="textSecondary" align='center'>One Moment....fetching your bookings</Typography></div>}
+      {isLoading && <div> <Typography variant="body1" color="textSecondary" align='center'>One Moment, fetching your bookings.</Typography></div>}
 
       {showModal && 
       <div>
         {console.log('in the condition')}
-      <ModifyModal setShowModal={setShowModal} showModal={showModal}/>
+      <ModifyModal setShowModal={setShowModal} showModal={showModal} token={props.token}/>
 
       </div>
       }
