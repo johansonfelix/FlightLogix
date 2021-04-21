@@ -2,10 +2,20 @@ import React, { useRef, useEffect } from 'react'
 import {sendRequest, tokenDecoder} from "./../Utils/httpRequestMaker.js"
 
 export default function PayPalButton(props){
+
+
+  
     const paypal = useRef()
 
     useEffect(() => {
         window.paypal.Buttons({
+            style: {
+                layout:  'horizontal',
+                color:   'gold',
+                shape:   'rect',
+                label:   'pay',
+                tagline: false
+              },
             createOrder:(data, actions, err) => {
                 return actions.order.create({
                     intent:"CAPTURE",
@@ -43,11 +53,11 @@ export default function PayPalButton(props){
                     .then(response => response.json())
                     .then(responseJson => {
                         console.log(JSON.stringify(responseJson))
+                        if(responseJson === "CREATED")
+                            props.paymentConfirmed(true);
                     })
                     .catch(err => console.error(err))
-                    if(bookingCreationStatus === "CREATED"){
-                        // The booking was created successfully on the server-side. 
-                    }
+                   
                 }
             },
             onError: (err) => {
@@ -56,8 +66,8 @@ export default function PayPalButton(props){
         }).render(paypal.current)
     },[])
     return (
-        <div>
-            <div ref={paypal}></div>
+        <div >
+            <div style={{marginTop: '30px'}}ref={paypal}></div>
         </div>
     )
 }

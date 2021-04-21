@@ -26,26 +26,35 @@ export default function BookingDetails(props) {
   let firstOutboundLeg = flightParser.getFirstOutboundLeg(flight)
   let lastOutboundLeg = flightParser.getLastOutboundLeg(flight)
   let firstInboundLeg;
+  let outboundCarrierCode = firstOutboundLeg.carrierCode;
+  let inboundCarrierCode = null;
+
   let oneWay = flight.flightType==="ONE_WAY"?true:false
   if(!oneWay){
     firstInboundLeg = flightParser.getFirstInboundLeg(flight)
     inboundLegs = flightParser.getInboundLegs(flight)
+    inboundCarrierCode = firstInboundLeg.carrierCode;
   }
   return (
     <React.Fragment>
+    
       <Typography variant="h6" gutterBottom>
        Booking Details
       </Typography>
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6}>
-          Passengers: 
+        <Typography variant="button" gutterBottom>
+       Passengers
+      </Typography>
 
         </Grid>
         <Grid item xs={12} sm={6}>
           {props.passengers}
         </Grid>
         <Grid item xs={12} sm={6}>
-        Departure
+        <Typography variant="button" gutterBottom>
+       Departure
+      </Typography> <img  alt="complex" style={{ margin: "20px", width:"100px"}} src={"https://daisycon.io/images/airline/?width=300&height=150&color=ffffff&iata="+outboundCarrierCode}/>
         </Grid>
         <Grid item xs={12}  sm={6}>
         {firstOutboundLeg.from.iatacode}<br/>
@@ -54,7 +63,9 @@ export default function BookingDetails(props) {
         {!oneWay &&
 
             <Grid item xs={12} sm={6}>
-            Return
+            <Typography variant="button" gutterBottom>
+       Return
+      </Typography> <img  alt="complex" style={{ margin: "20px", width:"100px"}} src={"https://daisycon.io/images/airline/?width=300&height=150&color=ffffff&iata="+inboundCarrierCode}/>
             </Grid>
         }
         {!oneWay &&
@@ -64,7 +75,9 @@ export default function BookingDetails(props) {
             </Grid>
         }
         {outboundLegs.length > 1 && <Grid item xs={12} sm={6}>
-          Outbound connecting flights: 
+        <Typography variant="button" gutterBottom>
+       Outbound Connecting Flights 
+      </Typography>
         </Grid>
         }
         {outboundLegs.length > 1 && 
@@ -74,7 +87,9 @@ export default function BookingDetails(props) {
         }
         {(!oneWay && inboundLegs.length > 1) && 
         <Grid item xs={12} sm={6}>
-          Inbound connecting flights: 
+         <Typography variant="button" gutterBottom>
+       Inbound Connecting Flights
+      </Typography>
           </Grid>
         }
         {(!oneWay && inboundLegs.length > 1) && <Grid item xs={12} sm={6}>
@@ -82,11 +97,15 @@ export default function BookingDetails(props) {
         </Grid>
         }
         <Grid item xs={12} sm={6}>
-          Cost: 
+        <Typography variant="button" gutterBottom>
+       Cost
+      </Typography>
 
         </Grid>
         <Grid item xs={12} sm={6}>
-          CA${props.passengers * flight.price.total}
+        <Typography variant="button" gutterBottom>
+
+          CA${props.passengers * flight.price.total} </Typography>
         </Grid>
         {/* <Grid item xs={12}>
           

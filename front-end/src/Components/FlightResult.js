@@ -158,9 +158,12 @@ export default function FlightResult(props) {
                     <Grid alignContent="center" justify="center" className={classes.priceSection} item xs container direction="column">
                         <Grid item>
                             <Typography gutterBottom variant="h4">
-                                $ {price}
+                                $ {price}  <Typography  align= 'center' variant="body2" color="textSecondary">
+                               (per passenger)
                             </Typography>
 
+                            </Typography>
+                            
                         <Button
                             variant="contained"
                             style={{ backgroundColor: '#ff4600', color: '#fff' }}

@@ -13,6 +13,10 @@ import Typography from '@material-ui/core/Typography';
 import BookingDetails from './BookingDetails';
 import OrderReview from './OrderReview';
 import PayPalButton from './PayPalButton';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import { useState } from 'react';
+
+
 /* import AddressForm from './AddressForm';
 import PaymentForm from './PaymentForm';
 import Review from './Review';
@@ -62,6 +66,8 @@ const steps = ['Review Booking Details', 'Pay with Paypal'];
 export default function MakeBookingManager(props) {
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(0);
+  const [paymentConfirmed, setPaymentConfirmed] = useState(false);
+
 
 
   const handleNext = () => {
@@ -85,10 +91,13 @@ export default function MakeBookingManager(props) {
     <React.Fragment>
       
        
-
+      
       <main className={classes.layout}>
+       {console.log('paymentConfirmed: '+ paymentConfirmed) }
         <Paper className={classes.paper}>
-          <Typography component="h1" variant="h4" align="center">
+
+  {!paymentConfirmed &&
+  <div>          <Typography component="h1" variant="h4" align="center">
             Make Booking
           </Typography>
           <Stepper activeStep={activeStep} className={classes.stepper}>
@@ -101,11 +110,8 @@ export default function MakeBookingManager(props) {
           <React.Fragment>
             {activeStep === steps.length ? (
               <React.Fragment>
-                <Typography variant="h5" gutterBottom>
-                 Confirmation
-                </Typography>
                 <Typography variant="subtitle1">
-                  Your booking has been made. We have emailed you your booking confirmation. You can view your booking in My Bookings.
+                 Oops. Something went wrong. Try again later.
                 </Typography>
               </React.Fragment>
             ) : (
@@ -113,22 +119,39 @@ export default function MakeBookingManager(props) {
                 {getStepContent(activeStep)}
                 <div className={classes.buttons}>
                   {activeStep !== 0 && (
-                    <Button onClick={handleBack} className={classes.button}>
+                    <Button  onClick={handleBack} className={classes.button}>
                       Back
                     </Button>
                   )}
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    onClick={handleNext}
-                    className={classes.button}
-                  >
-                    {activeStep === steps.length - 1 ? <PayPalButton selectedFlight={props.selectedFlight} priceTotal={props.selectedFlight.price.total} token={props.token}/> : 'Next'}
-                  </Button>
+                   {activeStep === steps.length - 1 ? <PayPalButton onClick={handleNext}selectedFlight={props.selectedFlight} priceTotal={props.selectedFlight.price.total} token={props.token} paymentConfirmed={setPaymentConfirmed}/>:
+                     <Button
+                     variant="contained"
+                     color="primary"
+                     onClick={handleNext}
+                     className={classes.button}
+                   >
+                   Next 
+                   </Button>}
+                  
+            
                 </div>
               </React.Fragment>
             )}
           </React.Fragment>
+          </div>
+}
+{paymentConfirmed &&
+  <div className={classes.paper}>
+ 
+ <Typography variant="h5" gutterBottom>
+                 Confirmation
+                </Typography>
+                <Typography variant="subtitle1">
+                  Your booking has been made. We have emailed you your booking confirmation. You can view your booking in My Bookings.
+                </Typography>
+
+</div>
+}
         </Paper>
 
       </main>
