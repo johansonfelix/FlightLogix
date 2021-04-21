@@ -19,7 +19,8 @@ public class BookingManager {
     UserDAO userDAO;
     public enum ResponseCode{
         SUCCESS,
-        BOOKING_DOES_NOT_EXIST
+        BOOKING_DOES_NOT_EXIST,
+        USER_DOES_NOT_EXIST
     }
 
     public String createBooking(Booking booking){
@@ -38,8 +39,13 @@ public class BookingManager {
         return ResponseCode.SUCCESS.toString();
     }
     public String modifyBooking(Booking newBooking){
-        bookingDAO.updateBooking(newBooking);
-        return ResponseCode.SUCCESS.toString();
+        User user = userDAO.findUserByEmail(newBooking.getUser().getEmail());
+        if(user!=null) {
+            newBooking.setUser(user);
+            bookingDAO.updateBooking(newBooking);
+            return ResponseCode.SUCCESS.toString();
+        }
+        return ResponseCode.USER_DOES_NOT_EXIST.toString();
     }
 
     public Booking getBooking(String bookingID){

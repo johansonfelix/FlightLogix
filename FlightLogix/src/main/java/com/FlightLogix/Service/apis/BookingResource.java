@@ -37,8 +37,8 @@ public class BookingResource {
         FlightData data = apiCaller.getParsedData(search);
         System.out.println(data.toString());
         return data;
-
     }
+
 
     @Transactional
     @POST
