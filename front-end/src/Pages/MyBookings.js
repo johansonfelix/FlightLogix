@@ -72,7 +72,7 @@ export default function DetailedAccordion(props) {
 
   useEffect(() => {
     let user = tokenDecoder(props.token)
-    sendRequest("GET", "https://localhost:8081/app/booking/get_bookings/" + user.sub, props.token, null)
+    sendRequest("GET", props.onBehalfOfUserEmail===undefined?"https://localhost:8081/app/booking/get_bookings/" + user.sub:"https://localhost:8081/app/admin/get-all-bookings/" +  props.onBehalfOfUserEmail, props.token, null)
     .then(response => response.json())
     .then(responseJson => {
       console.log(JSON.stringify(responseJson))
@@ -86,7 +86,6 @@ export default function DetailedAccordion(props) {
           setSelectedBooking={setSelectedBooking}
           setShowModal={setShowModal}
           setShowDeleteModal={setShowDeleteModal}
-          token={props.token}
           />)
       }
       setIsLoading(false)
@@ -104,7 +103,7 @@ export default function DetailedAccordion(props) {
       {showModal && 
       <div>
         {console.log('in the condition')}
-        <ModifyModal token={props.token} booking={selectedBooking} showModal={showModal} setShowModal={setShowModal} />
+        <ModifyModal token={props.token} booking={selectedBooking} showModal={showModal} setShowModal={setShowModal} isAdmin={props.onBehalfOfUserEmail!==undefined} />
 
       </div>
       }
@@ -112,7 +111,7 @@ export default function DetailedAccordion(props) {
         showDeleteModal &&
         <div>
            {console.log("Showing delete modal..")}
-           <DeleteModal token={props.token} booking={selectedBooking} showDeleteModal={showDeleteModal} setShowDeleteModal={setShowDeleteModal} />
+           <DeleteModal token={props.token} booking={selectedBooking} showDeleteModal={showDeleteModal} setShowDeleteModal={setShowDeleteModal} isAdmin={props.onBehalfOfUserEmail!==undefined}/>
         </div>
       }
       </div>
