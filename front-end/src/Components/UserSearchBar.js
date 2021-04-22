@@ -51,13 +51,15 @@ export default function Asynchronous(props) {
   }, [open]);
 
   const handleSelect = async (event, value) =>{
+    let email;
   
-    if(props.admin){
-      props.setCustomerEmail(value);
-      return;
-    }
+
+    console.log("EMAIL TO SET: " + value)
+    props.setOnBehalfOfUserEmail(value);
+    email = value
+
     
-    if(value){   
+    if(email){   
       
       
         const response = await sendRequest("GET", "https://localhost:8081/app/admin/get-all-bookings/"+value, token, null)

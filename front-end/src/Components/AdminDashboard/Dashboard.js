@@ -236,8 +236,9 @@ export default function Dashboard(props) {
     const [isMakingBooking, setIsMakingBooking] = useState(false);
     const [selectedFlight, setSelectedFlight] = useState()
     const [passengers, setPassengers] = useState(1);
+    const [onBehalfOfUserEmail, setOnBehalfOfUserEmail] = useState(undefined)
 
-    
+    console.log(showBookings + " AND " + (onBehalfOfUserEmail!==undefined))
     let history = useHistory();
 
     const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
@@ -407,8 +408,9 @@ export default function Dashboard(props) {
       <Typography variant="h5" color="#DB4437" paragraph className={classes.welcometext}>
                            User Search
         </Typography>
-        <UserSearchBar setShowBookings={setShowBookings} setBookings={setBookings}/>
-        {showBookings &&  <p>{JSON.stringify(bookings)}</p>}
+        <UserSearchBar setShowBookings={setShowBookings} setBookings={setBookings} setOnBehalfOfUserEmail={setOnBehalfOfUserEmail}/>
+        
+        {(showBookings && onBehalfOfUserEmail !== undefined)&&  <MyBookings bookings={bookings} onBehalfOfUserEmail={onBehalfOfUserEmail} token={props.token}/>}
               </Paper>
         </Container>
         
