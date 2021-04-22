@@ -105,7 +105,7 @@ export default function TransitionsModal(props) {
               onSelect={ newFlight => {
                 setMode("modifying_booking")
                 console.log("DATE:" + todaysDate())
-                sendRequest("PUT", props.isAdmin === undefined?"https://localhost:8081/app/booking/update":"https://localhost:8081/app/admin/update", props.token, JSON.stringify({
+                sendRequest("PUT", props.isAdmin === false?"https://localhost:8081/app/booking/update":"https://localhost:8081/app/admin/update", props.token, JSON.stringify({
                   bookingID: props.booking.bookingID,
                   userEmail:props.booking.userEmail,
                   payment:{

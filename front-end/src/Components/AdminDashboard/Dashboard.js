@@ -410,7 +410,7 @@ export default function Dashboard(props) {
         </Typography>
         <UserSearchBar setShowBookings={setShowBookings} setBookings={setBookings} setOnBehalfOfUserEmail={setOnBehalfOfUserEmail}/>
         
-        {(showBookings && onBehalfOfUserEmail !== undefined)&&  <MyBookings bookings={bookings} onBehalfOfUserEmail={onBehalfOfUserEmail} token={props.token}/>}
+        {(showBookings && onBehalfOfUserEmail !== undefined)&&  <MyBookings bookings={bookings} onBehalfOfUserEmail={onBehalfOfUserEmail} isAdmin={true} token={props.token}/>}
               </Paper>
         </Container>
         

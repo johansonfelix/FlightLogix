@@ -415,7 +415,7 @@ let searchCard = <FlightSearchCard token={props.token} searchResultSetter={setSe
 
                                         </Toolbar>
                                     </AppBar>
-                                    <MyBookings token={props.token} />
+                                    <MyBookings token={props.token} isAdmin={false} />
                                 </Dialog>
                             </div>
 

@@ -33,7 +33,7 @@ export default function TransitionsModal(props) {
   const [mode, setMode] = useState("deleting")
 
   useEffect(() => {
-    sendRequest("DELETE", props.isAdmin===undefined?"https://localhost:8081/app/booking/cancel/"+ props.booking.bookingID:"https://localhost:8081/app/admin/cancel/" + props.booking.bookingID,props.token, null)
+    sendRequest("DELETE", props.isAdmin===false?"https://localhost:8081/app/booking/cancel/"+ props.booking.bookingID:"https://localhost:8081/app/admin/cancel/" + props.booking.bookingID,props.token, null)
     .then(response => response.json())
     .then(responseJson=>{
         console.log("Delete result response:" + JSON.stringify(responseJson))
