@@ -364,8 +364,8 @@ export default function Dashboard(props) {
        
           <Grid container spacing={3}>
           <Grid item xs={12}>
-              <Paper style={{backgroundColor: '#F4B400', borderRadius: "spacing(4)",
-      boxShadow: '0 10px 15px #d0efef'}}className={fixedHeightPaper}>
+              <Paper className={classes.paper} style={{backgroundColor: '#F4B400', borderRadius: "spacing(4)",
+      boxShadow: '0 10px 15px #d0efef'}}>
               <Typography variant="h5" color="#DB4437" paragraph className={classes.welcometext}>
                            Booking Search
                         </Typography>

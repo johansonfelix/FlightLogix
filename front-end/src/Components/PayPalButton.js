@@ -37,6 +37,7 @@ export default function PayPalButton(props){
                 console.log(order)
                 let flight = props.selectedFlight
                 if(order.status==="COMPLETED"){
+                   
                     sendRequest("POST", "https://localhost:8081/app/booking/book", props.token, JSON.stringify(
                         {
                             userEmail:tokenDecoder(props.token).sub,
@@ -53,8 +54,11 @@ export default function PayPalButton(props){
                     .then(response => response.json())
                     .then(responseJson => {
                         console.log(JSON.stringify(responseJson))
-                        if(responseJson === "CREATED")
+                        if(responseJson === "CREATED"){
                             props.paymentConfirmed(true);
+                            
+                        }
+                            
                     })
                     .catch(err => console.error(err))
                    

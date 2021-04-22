@@ -74,6 +74,7 @@ export default function MakeBookingManager(props) {
   const confirmationMessage = (user_role === 'CUSTOMER') ? "Your booking has been made. We have emailed you your booking confirmation. You can view your booking in My Bookings." : "Booking has been made for the customer. ";
   const [errorMessage, setErrorMessage] = useState();
   const [isCreating, setIsCreating] = useState(false);
+  
   const handleNext = () => {
     setActiveStep(activeStep + 1);
   };
@@ -130,7 +131,7 @@ export default function MakeBookingManager(props) {
   }
 
 
-  const finalButton = user_role === 'CUSTOMER' ? <PayPalButton onClick={handleNext} selectedFlight={props.selectedFlight} priceTotal={props.selectedFlight.price.total} token={props.token} paymentConfirmed={setPaymentConfirmed} /> : <Button
+  const finalButton = user_role === 'CUSTOMER' ? <PayPalButton  onClick={handleNext} selectedFlight={props.selectedFlight} priceTotal={props.selectedFlight.price.total} token={props.token} paymentConfirmed={setPaymentConfirmed} /> : <Button
     variant="contained"
     color="primary"
     onClick={handleCreateBooking}
@@ -148,7 +149,9 @@ export default function MakeBookingManager(props) {
 
       <main className={classes.layout}>
         {console.log('paymentConfirmed: ' + paymentConfirmed)}
+        
         <Paper className={classes.paper}>
+         
           {!isCreating && <div>
           {!paymentConfirmed &&
             <div>          <Typography component="h1" variant="h4" align="center">
@@ -216,7 +219,11 @@ export default function MakeBookingManager(props) {
               }
             </div>
           }
+
+   
         </Paper>
+
+      }
 
       </main>
     </React.Fragment>

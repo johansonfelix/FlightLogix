@@ -88,6 +88,10 @@ export default function SimpleCard(props) {
         .catch(err => {console.log(err)})
     }
     const searchHandler = () => {
+        if(!whereFrom || !whereTo || !props.passengers){
+            props.setError("Please fill in all search criteria before searching.");
+            return;
+        }
         var search = {
             originLocationCode: whereFrom,
             destinationLocationCode: whereTo,

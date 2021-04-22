@@ -21,10 +21,11 @@ import { useFadedShadowStyles } from '@mui-treasury/styles/shadow/faded';
 import { useGutterBorderedGridStyles } from '@mui-treasury/styles/grid/gutterBordered';
 import { useHistory } from 'react-router';
 import cx from 'clsx';
+import {tokenDecoder} from '../Utils/httpRequestMaker';
 
-const user = {
-    email: 'test@email.com', firstName: 'John', lastName: 'Doe'
-}
+
+
+
 const useStyles = makeStyles(({ palette }) => ({
     card: {
       borderRadius: 12,
@@ -66,6 +67,7 @@ const useStyles = makeStyles(({ palette }) => ({
 
 
 function SimpleDialog(props) {
+  const email = tokenDecoder(localStorage.getItem('token')).sub;
   const classes = useStyles();
   const { onClose, selectedValue, open } = props;
 
@@ -84,6 +86,9 @@ function SimpleDialog(props) {
     height: '50%',
   });
 
+
+  
+
   return (
     <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
       <DialogTitle id="simple-dialog-title">My Account</DialogTitle>
@@ -91,8 +96,8 @@ function SimpleDialog(props) {
       <Card className={cx(styles.card, shadowStyles.root)}>
       <CardContent>
         <Avatar className={styles.avatar} src={'https://i.pravatar.cc/300'} />
-        <h3 className={styles.heading}>{user.firstName+" "+user.lastName}</h3>
-        <span className={styles.subheader}>{user.email}</span>
+        <h3 className={styles.heading}>{email}</h3>
+        <span className={styles.subheader}>USER</span>
       </CardContent>
       <Divider light />
       <Box display={'flex'}>
@@ -105,8 +110,7 @@ function SimpleDialog(props) {
           <p className={styles.statValue}>Active</p>
         </Box>
       </Box>
-    </Card>
-         
+    </Card>        
       
 
     </Dialog>
