@@ -6,23 +6,33 @@ import Fade from '@material-ui/core/Fade';
 import {tokenDecoder, sendRequest} from "./../Utils/httpRequestMaker"
 import FlightResults from './FlightResults';
 import {todaysDate} from "./../Utils/General"
+import { BorderColor } from '@material-ui/icons';
+
+import Dialog from '@material-ui/core/Dialog';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import { useHistory } from 'react-router';
+
+
+
 var flightParser = require("./../Utils/flightParser")
 
 const useStyles = makeStyles((theme) => ({
-  modal: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+  root: {
+    margin: 0,
+    padding: theme.spacing(2),
   },
-  paper: {
-    backgroundColor: theme.palette.background.paper,
-    border: '2px solid #000',
-    boxShadow: theme.shadows[5],
-    padding: theme.spacing(2, 4, 3),
+  closeButton: {
+    position: 'absolute',
+    right: theme.spacing(1),
+    top: theme.spacing(1),
+    color: theme.palette.grey[500],
   },
 }));
 
+
 export default function TransitionsModal(props) {
+  const history = useHistory();
   const classes = useStyles();
   const [mode, setMode] = useState("fetching")
   const [searchResults, setSearchResults] = useState()
@@ -66,6 +76,8 @@ export default function TransitionsModal(props) {
   const handleClose = () => {
     props.setShowModal(false);
   };
+ 
+
 
   return (
     
@@ -73,23 +85,22 @@ export default function TransitionsModal(props) {
     
     <div>
     {console.log("what is showmodal: "+props.showModal)}
-      <Modal
-        aria-labelledby="transition-modal-title"
-        aria-describedby="transition-modal-description"
-        className={classes.modal}
+  
+<Dialog
         open={props.showModal}
+       
+        keepMounted
         onClose={handleClose}
-        closeAfterTransition
-        BackdropComponent={Backdrop}
-        BackdropProps={{
-          timeout: 500,
-        }}
+        aria-labelledby="alert-dialog-slide-title"
+        aria-describedby="alert-dialog-slide-description"
       >
-        <Fade in={props.showModal}>
-          <div className={classes.paper}>
-            {mode==="fetching" && <p>Fetching related flights..</p>}
+
+<DialogContent>
+          <DialogContentText id="alert-dialog-slide-description">
+          {mode==="fetching" && <p>Fetching related flights..</p>}
             {mode==="showing_results" && 
-            <FlightResults 
+          <FlightResults 
+            style={{ justify: 'center'}}
               flights={searchResults} 
               onSelect={ newFlight => {
                 setMode("modifying_booking")
@@ -114,17 +125,22 @@ export default function TransitionsModal(props) {
                   }
                 })
               }}/>
+
             }
             {mode==="modifying_booking" &&
               <div>Changing booking..</div>
             }
             {
               mode==="booking_modified" && 
-              <div>Booking modified successfully.</div>
+              <div>Booking modified successfully. {history.push("/")}</div>
             }
-          </div>
-        </Fade>
-      </Modal>
+           </DialogContentText>
+        </DialogContent>
+
+
+          </Dialog>
+             
+            
     </div>
   );
 }

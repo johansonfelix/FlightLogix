@@ -5,24 +5,30 @@ import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import {tokenDecoder, sendRequest} from "./../Utils/httpRequestMaker"
 import FlightResults from './FlightResults';
-import {todaysDate} from "./../Utils/General"
+import {todaysDate} from "./../Utils/General";
+import Dialog from '@material-ui/core/Dialog';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import { useHistory } from 'react-router';
+
+
 var flightParser = require("./../Utils/flightParser")
 
 const useStyles = makeStyles((theme) => ({
-  modal: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+  root: {
+    margin: 0,
+    padding: theme.spacing(2),
   },
-  paper: {
-    backgroundColor: theme.palette.background.paper,
-    border: '2px solid #000',
-    boxShadow: theme.shadows[5],
-    padding: theme.spacing(2, 4, 3),
+  closeButton: {
+    position: 'absolute',
+    right: theme.spacing(1),
+    top: theme.spacing(1),
+    color: theme.palette.grey[500],
   },
 }));
 
 export default function TransitionsModal(props) {
+  const history = useHistory();
   const classes = useStyles();
   const [mode, setMode] = useState("deleting")
 
@@ -50,25 +56,28 @@ export default function TransitionsModal(props) {
   return (
     <div>
     {console.log("what is showmodal DELETE: "+props.showDeleteModal)}
-      <Modal
-        aria-labelledby="transition-modal-title"
-        aria-describedby="transition-modal-description"
-        className={classes.modal}
+     
+<Dialog
         open={props.showDeleteModal}
+       
+        keepMounted
         onClose={handleClose}
-        closeAfterTransition
-        BackdropComponent={Backdrop}
-        BackdropProps={{
-          timeout: 500,
-        }}
+        aria-labelledby="alert-dialog-slide-title"
+        aria-describedby="alert-dialog-slide-description"
       >
-        <Fade in={props.showDeleteModal}>
-          <div className={classes.paper}>
+<DialogContent>
+          <DialogContentText id="alert-dialog-slide-description">
+        
             {mode==="deleting" && <p>Deleting booking..</p>}
-            {mode==="delete_successful" && <p>Delete successful.</p>}
-          </div>
-        </Fade>
-      </Modal>
+            {mode==="delete_successful" && <div><p>Delete successful.</p> {history.push("/")}</div>}
+            </DialogContentText>
+
+</DialogContent>
+
+</Dialog>
+  
+      
+    
     </div>
   );
 }
