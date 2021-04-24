@@ -3,7 +3,7 @@
     <installDirectory>C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp</installDirectory>
     <serverDirectory>C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer</serverDirectory>
     <userDirectory>C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr</userDirectory>
-    <serverOutputDirectory>C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\defaultServer</serverOutputDirectory>
+    <serverOutputDirectory>C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\shared\resources\defaultServer</serverOutputDirectory>
     <serverName>defaultServer</serverName>
     <configDirectory>C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\liberty\config</configDirectory>
     <configFile>C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\liberty\config\server.xml</configFile>
@@ -36,4 +36,6 @@
     <projectCompileDependency>com.fasterxml.jackson.core:jackson-annotations:2.9.0</projectCompileDependency>
     <projectCompileDependency>com.fasterxml.jackson.core:jackson-core:2.9.6</projectCompileDependency>
     <projectCompileDependency>org.json:json:20201115</projectCompileDependency>
+    <projectCompileDependency>mysql:mysql-connector-java:8.0.24</projectCompileDependency>
+    <projectCompileDependency>com.google.protobuf:protobuf-java:3.11.4</projectCompileDependency>
 </liberty-plugin-config>

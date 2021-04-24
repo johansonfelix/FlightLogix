@@ -84,6 +84,12 @@
             <version>20201115</version>
         </dependency>
 
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.24</version>
+        </dependency>
+
 
     </dependencies>
 
@@ -111,8 +117,24 @@
                 <artifactId>liberty-maven-plugin</artifactId>
                 <version>3.3.1</version>
                 <configuration>
+                    <outputDirectory>${project.build.directory}/liberty/wlp/usr/shared/resources</outputDirectory>
                     <copyDependencies>
-                        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+                        <dependency>
+                            <groupId>mysql</groupId>
+                            <artifactId>mysql-connector-java</artifactId>
+                            <version>8.0.24</version>
+                        </dependency>
+                    </copyDependencies>
+                </configuration>
+            </plugin>
+
+         <!--   <plugin>
+                <groupId>io.openliberty.tools</groupId>
+                <artifactId>liberty-maven-plugin</artifactId>
+                <version>3.3.1</version>
+                <configuration>
+                    <copyDependencies>
+                        &lt;!&ndash; https://mvnrepository.com/artifact/mysql/mysql-connector-java &ndash;&gt;
                         <location>${project.build.directory}/liberty/wlp/usr/shared/resources</location>
                         <dependency>
                             <groupId>mysql</groupId>
@@ -121,7 +143,7 @@
                         </dependency>
                     </copyDependencies>
                 </configuration>
-            </plugin>
+            </plugin>-->
         </plugins>
 
     </build>

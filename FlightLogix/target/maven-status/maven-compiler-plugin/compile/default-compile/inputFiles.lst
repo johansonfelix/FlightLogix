@@ -40,11 +40,11 @@ C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Ser
 C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Persistence\Logs\UserLogsDAO.java
 C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Persistence\Flight\ItineraryDAO.java
 C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Core\Security\TokenDetails.java
-C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Repository\AmadeusAPICaller.java
 C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Repository\Exceptions\AuthenticationTokenRefreshmentException.java
 C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Service\filters\VerificationFilter.java
 C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Service\filters\InvalidateToken.java
 C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Core\Flight\Itinerary.java
+C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Repository\ExternalServicesOperations\AmadeusAPICaller.java
 C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Core\Exception\ApiErrorDetails.java
 C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Persistence\Booking\BookingDAO.java
 C:\Users\felix\Desktop\FlightLogix\FlightLogix\src\main\java\com\FlightLogix\Persistence\User\UserDAO.java

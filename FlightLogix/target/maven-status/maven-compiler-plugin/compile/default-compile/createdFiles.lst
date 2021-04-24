@@ -3,7 +3,6 @@ com\FlightLogix\Repository\BookingOperations\FlightManager.class
 com\FlightLogix\Service\apis\AdminResource.class
 com\FlightLogix\Service\Application\FlightLogixApplicatioon.class
 com\FlightLogix\Persistence\Flight\SegmentDAO.class
-com\FlightLogix\Repository\AmadeusAPICaller$ResponseCode.class
 com\FlightLogix\Repository\AuthenticationOperations\TokenParser.class
 com\FlightLogix\Core\Flight\Price.class
 com\FlightLogix\Service\apis\LoginResource.class
@@ -21,7 +20,6 @@ com\FlightLogix\Repository\BookingOperations\BookingManager.class
 com\FlightLogix\Service\filters\VerificationFilter.class
 com\FlightLogix\Repository\BookingOperations\FlightManager$ResponseCode.class
 com\FlightLogix\Core\Flight\Leg.class
-com\FlightLogix\Repository\AmadeusAPICaller.class
 com\FlightLogix\Repository\AuthenticationOperations\UsernamePasswordValidator.class
 com\FlightLogix\Repository\Exceptions\AccessDeniedException.class
 com\FlightLogix\Repository\Exceptions\InvalidAuthenticationTokenException.class
