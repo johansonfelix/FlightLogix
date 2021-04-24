@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><!--HTTP server plugin config file for defaultServer generated on 2021.04.21 at 00:26:23 EDT-->
-<Config ASDisableNagle="false" AcceptAllContent="false" AppServerPortPreference="HostHeader" ChunkedResponse="false" ConfigHash="234537401" FIPSEnable="false" IISDisableNagle="false" IISPluginPriority="High" IgnoreDNSFailures="false" RefreshInterval="60" ResponseChunkSize="64" SSLConsolidate="false" TrustedProxyEnable="false" VHostMatchingCompat="false">
+<?xml version="1.0" encoding="UTF-8"?><!--HTTP server plugin config file for defaultServer generated on 2021.04.23 at 19:43:29 EDT-->
+<Config ASDisableNagle="false" AcceptAllContent="false" AppServerPortPreference="HostHeader" ChunkedResponse="false" ConfigHash="1662446433" FIPSEnable="false" IISDisableNagle="false" IISPluginPriority="High" IgnoreDNSFailures="false" RefreshInterval="60" ResponseChunkSize="64" SSLConsolidate="false" TrustedProxyEnable="false" VHostMatchingCompat="false">
    <Log LogLevel="Error" Name="/opt/IBM/WebSphere/Plugins/logs/webserver1/http_plugin.log"/>
    <Property Name="ESIEnable" Value="true"/>
    <Property Name="ESIMaxCacheSize" Value="1024"/>
@@ -16,9 +16,9 @@
       <VirtualHost Name="*:443"/>
    </VirtualHostGroup>
    <ServerCluster CloneSeparatorChange="false" GetDWLMTable="false" IgnoreAffinityRequests="true" LoadBalance="Round Robin" Name="defaultServer_default_node_Cluster" PostBufferSize="0" PostSizeLimit="-1" RemoveSpecialHeaders="true" RetryInterval="60" ServerIOTimeoutRetry="-1">
-      <Server CloneID="4b8ae8c2-e15c-43fc-90b2-bed55376e573" ConnectTimeout="5" ExtendedHandshake="false" LoadBalanceWeight="20" MaxConnections="-1" Name="default_node_defaultServer" ServerIOTimeout="900" WaitForContinue="false">
-         <Transport Hostname="desktop-410ckr7" Port="8080" Protocol="http"/>
-         <Transport Hostname="desktop-410ckr7" Port="8081" Protocol="https">
+      <Server CloneID="52833feb-50c2-4da1-b086-f3aa7f5ea2aa" ConnectTimeout="5" ExtendedHandshake="false" LoadBalanceWeight="20" MaxConnections="-1" Name="default_node_defaultServer" ServerIOTimeout="900" WaitForContinue="false">
+         <Transport Hostname="johanson" Port="8080" Protocol="http"/>
+         <Transport Hostname="johanson" Port="8081" Protocol="https">
             <Property Name="keyring" Value="/opt/IBM/WebSphere/Plugins/config/webserver1/plugin-key.kdb"/>
             <Property Name="stashfile" Value="/opt/IBM/WebSphere/Plugins/config/webserver1/plugin-key.sth"/>
          </Transport>
@@ -28,6 +28,7 @@
       </PrimaryServers>
    </ServerCluster>
    <UriGroup Name="default_host_defaultServer_default_node_Cluster_URIs">
+      <Uri AffinityCookie="JSESSIONID" AffinityURLIdentifier="jsessionid" Name="/flightlogix/*"/>
       <Uri AffinityCookie="JSESSIONID" AffinityURLIdentifier="jsessionid" Name="/*"/>
    </UriGroup>
    <Route ServerCluster="defaultServer_default_node_Cluster" UriGroup="default_host_defaultServer_default_node_Cluster_URIs" VirtualHostGroup="default_host"/>

@@ -38,7 +38,7 @@ export default function PayPalButton(props){
                 let flight = props.selectedFlight
                 if(order.status==="COMPLETED"){
                    
-                    sendRequest("POST", "https://localhost:8081/app/booking/book", props.token, JSON.stringify(
+                    sendRequest("POST", "/app/booking/book", props.token, JSON.stringify(
                         {
                             userEmail:tokenDecoder(props.token).sub,
                             payment:{

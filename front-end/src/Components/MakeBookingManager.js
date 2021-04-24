@@ -1,14 +1,10 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
 import Paper from '@material-ui/core/Paper';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
-import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 import BookingDetails from './BookingDetails';
 import OrderReview from './OrderReview';
@@ -70,7 +66,7 @@ export default function MakeBookingManager(props) {
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(0);
   const [paymentConfirmed, setPaymentConfirmed] = useState(false);
-  const [customerEmail, setCustomerEmail] = useState();
+  const [onBehalfOfUserEmail, setOnBehalfOfUserEmail] = useState();
   const confirmationMessage = (user_role === 'CUSTOMER') ? "Your booking has been made. We have emailed you your booking confirmation. You can view your booking in My Bookings." : "Booking has been made for the customer. ";
   const [errorMessage, setErrorMessage] = useState();
   const [isCreating, setIsCreating] = useState(false);
@@ -88,7 +84,7 @@ export default function MakeBookingManager(props) {
         return <BookingDetails selectedFlight={props.selectedFlight} passengers={props.passengers} />;
       case 1: {
         if (user_role === 'ADMIN')
-          return <SelectCustomer setCustomerEmail={setCustomerEmail} />
+          return <SelectCustomer setOnBehalfOfUserEmail={setOnBehalfOfUserEmail} />
         else
           return <OrderReview selectedFlight={props.selectedFlight} passengers={props.passengers} />;
       }
@@ -99,9 +95,9 @@ export default function MakeBookingManager(props) {
   const handleCreateBooking = async () => {
     setIsCreating(true);
     let flight = props.selectedFlight;
-    let response = await sendRequest("POST", "https://localhost:8081/app/admin/create_booking", props.token, JSON.stringify(
+    let response = await sendRequest("POST", "/app/admin/create_booking", props.token, JSON.stringify(
       {
-        userEmail: customerEmail,
+        userEmail: onBehalfOfUserEmail,
         payment: {
           base: flight.price.base,
           currency: "CAD",

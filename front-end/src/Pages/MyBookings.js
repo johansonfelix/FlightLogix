@@ -1,21 +1,7 @@
 import {React, Fragment, useEffect, useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import clsx from 'clsx';
-import Accordion from '@material-ui/core/Accordion';
-import AccordionDetails from '@material-ui/core/AccordionDetails';
-import AccordionSummary from '@material-ui/core/AccordionSummary';
-import AccordionActions from '@material-ui/core/AccordionActions';
 import Typography from '@material-ui/core/Typography';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import Chip from '@material-ui/core/Chip';
-import Button from '@material-ui/core/Button';
-import Divider from '@material-ui/core/Divider';
-import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
-import EditIcon from '@material-ui/icons/Edit';
-import CancelIcon from '@material-ui/icons/Cancel';
 import {tokenDecoder, sendRequest} from "./../Utils/httpRequestMaker"
-import Booking from "../Components/BookingCard"
-import CircularProgress from '@material-ui/core/CircularProgress';
 import ModifyModal from '../Components/ModifyModal';
 import BookingCard from "./../Components/BookingCard"
 import DeleteModal from "../Components/DeleteModal"
@@ -72,26 +58,33 @@ export default function DetailedAccordion(props) {
 
   useEffect(() => {
     let user = tokenDecoder(props.token)
-    sendRequest("GET", props.isAdmin===false?"https://localhost:8081/app/booking/get_bookings/" + user.sub:"https://localhost:8081/app/admin/get-all-bookings/" +  props.onBehalfOfUserEmail, props.token, null)
+    sendRequest("GET", props.isAdmin===false?"/app/booking/get_bookings/" + user.sub:"/app/admin/get-all-bookings/" +  props.onBehalfOfUserEmail, props.token, null)
     .then(response => response.json())
     .then(responseJson => {
       console.log(JSON.stringify(responseJson))
       let bookings = responseJson
       console.log(bookings.length + " is the length")
+     
+      let cards = [];
       for(let i = 0; i < bookings.length; i++){
         let booking = bookings[i]
-        bookingCards.push(
+        cards.push(
         <BookingCard 
           booking={booking}
           setSelectedBooking={setSelectedBooking}
           setShowModal={setShowModal}
           setShowDeleteModal={setShowDeleteModal}
           />)
+          
       }
+       if(bookings.length === 0)
+          setBookingCards("No Bookings to show...");
+          else
+                setBookingCards(cards);
       setIsLoading(false)
     })
     .catch(err => {console.error(err)})
-  }, []);
+  }, [bookingCards, props.isAdmin, props.onBehalfOfUserEmail, props.token]);
     
   return (
     <Fragment>

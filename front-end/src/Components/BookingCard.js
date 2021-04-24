@@ -7,7 +7,6 @@ import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionActions from '@material-ui/core/AccordionActions';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import Chip from '@material-ui/core/Chip';
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
@@ -88,7 +87,7 @@ export default function DetailedAccordion(props) {
           <div className={classes.column} />
           <div className={classes.column}>
           <Typography variant="caption">
-            Carrier: IMAGE GOES HERE
+          <img  alt="complex" style={{ margin: "20px", width:"100px"}} src={"https://daisycon.io/images/airline/?width=300&height=150&color=ffffff&iata="+flightParser.getFirstOutboundLeg(booking.flight).carrierCode}/>
             Departure: {flightParser.getFirstOutboundLeg(booking.flight).from.time} | Terminal {flightParser.getFirstOutboundLeg(booking.flight).from.terminal}
             Arrival: {flightParser.getLastOutboundLeg(booking.flight).to.time} | Terminal {flightParser.getLastOutboundLeg(booking.flight).to.terminal}
 
@@ -96,7 +95,7 @@ export default function DetailedAccordion(props) {
           </div>
           <div className={clsx(classes.column, classes.helper)}>
             <Typography variant="caption">
-              $ {booking.flight.price.total} (add number of tickets purchased)
+             PAID $ {booking.flight.price.total} 
               <br />
               
             </Typography>

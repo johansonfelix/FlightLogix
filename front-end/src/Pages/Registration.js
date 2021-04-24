@@ -13,7 +13,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { Fragment, useState } from 'react';
 import CircularProgress from '@material-ui/core/CircularProgress'
-import { useRadioGroup } from '@material-ui/core';
 import {sendRequest} from "./../Utils/httpRequestMaker.js"
 
 function Copyright() {
@@ -34,7 +33,7 @@ function Copyright() {
 
 async function registerUser(User) {
 
-    return sendRequest("POST", "https://localhost:8081/app/register", null, JSON.stringify(User))
+    return sendRequest("POST", "/app/register", null, JSON.stringify(User))
         .then((response) => response.json())
         .then((responseJson) => {
 
@@ -158,7 +157,7 @@ export default function SignUp(props) {
         </Typography>
         {error && <Typography component="body2" style={{ color: 'red' }} variant="body2"><br />{error}</Typography>}
 
-                            <form className={classes.form} Validate onSubmit={handleRegister}>
+                            <form className={classes.form} onSubmit={handleRegister}>
                                 <Grid container spacing={2}>
                                     <Grid item xs={12} sm={6}>
                                         <TextField

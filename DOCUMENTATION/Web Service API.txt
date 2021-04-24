@@ -1,0 +1,157 @@
+*All web services have the header "Accepts: application/json"
+*All web services use the URL: https://localhost:8081/app
+
+ADMIN RESOURCES:
+
+*All admin resources require an Admin bearer auth token. Insert into <token>
+
+--------------------------------------------------
+
+URL: admin/allbookings
+HEADERS: Method: GET, Authorization: Bearer <token>
+BODY: null
+
+DESCRIPTION: Retrieves every booking in the database
+
+--------------------------------------------------
+URL: admin/create_booking
+HEADERS: Method: POST, Authorization: Bearer <token>, Content-Type: application/json
+BODY: Booking (as JSON 
+
+DESCRIPTION: Creates a new booking for a customer.
+
+--------------------------------------------------
+
+URL: admin/get/{bookingID}
+HEADERS: Method: GET, Authorization: Bearer <token>
+BODY: null
+
+DESCRIPTION: Retrieves a specific booking by its booking ID.
+
+--------------------------------------------------
+
+URL: admin/get-all-bookings/{email}
+HEADERS: Method: GET, Authorization: Bearer <token>
+BODY: null
+
+DESCRIPTION: Retrieves all bookings made by a specific user by their email address
+
+--------------------------------------------------
+
+URL: admin/update
+HEADERS: Method:PUT, Authorization: Bearer <token>, Content-Type: application/json
+BODY: Booking (as JSON )
+
+DESCRIPTION: Updates a particular booking, by taking a booking object with the same ID as the old booking, and with new values.
+
+--------------------------------------------------
+
+URL: admin/allcustomers
+HEADERS: Method: GET, Authorization: Bearer <token>
+BODY: null
+
+DESCRIPTION: Retrieves a list of all users in the database.
+
+--------------------------------------------------
+
+URL: admin/cancel/{bookingID}
+HEADERS: Method: DELETE, Authorization: Bearer <token>
+BODY: null
+
+DESCRIPTION: Deletes a particular booking based on the ID provided.
+
+=================================================================
+
+CUSTOMER BOOKING RESOURCES:
+
+* All customer booking resources require a USER bearer auth token to access the services.
+
+
+--------------------------------------------------
+
+URL: booking/book
+HEADERS: Method: POST, Authorization: Bearer <token>, Content-Type: application/json
+BODY: Search object (as JSON)
+
+DESCRIPTION: Retrieves a JSON array of Flight objects based on the criteria provided by Search object in the body.
+
+--------------------------------------------------
+
+URL: booking/get/{bookingID}
+HEADERS: Method: GET, Authorization: Bearer <token> 
+BODY: null
+
+DESCRIPTION: Retrieves user's booking by ID
+
+--------------------------------------------------
+
+URL: booking/get_bookings/{email]
+HEADERS: Method:GET, Authorization: Bearer <token>
+BODY: null
+
+DESCRIPTION: Retrieves all bookings belonging to the user
+
+--------------------------------------------------
+
+URL: booking/update
+HEADERS: Method:PUT, Authorization: Bearer <token>, Content-Type: application/json
+BODY: null
+
+DESCRIPTION: Updates a booking for the user
+
+--------------------------------------------------
+
+URL: booking/cancel/{bookingID}
+HEADERS: Method:DELETE, Authorization: Bearer <token>
+BODY: null
+
+DESCRIPTION: Deletes a booking by its ID
+
+--------------------------------------------------
+
+=================================================================
+
+SHARED RESOURCES
+
+These shared resources require either an admin or customer auth token.
+
+--------------------------------------------------
+URL: booking/search
+HEADERS: Method: POST, Authorization: Bearer <token>, Content-Type: application/json
+BODY: Search object (as JSON)
+
+DESCRIPTION: Retrieves a JSON array of Flight objects based on the criteria provided by Search object in the body.
+--------------------------------------------------
+
+URL: logout
+HEADERS: Method: POST, Authorization: Bearer <token>
+BODY: null
+
+DESCRIPTION: Invalidates the current auth token on the server, and tells the client to delete the invalidated token from local storage. 
+
+--------------------------------------------------
+
+================================================================
+
+FREE RESOURCES
+
+* No auth token needed
+
+---------------------------------------------------
+
+URL: login
+HEADERS: Method: POST, Content-Type: application/json
+BODY: Credentials object (as JSON)
+
+DESCRIPTION: Sends a log in request to the server, which,on success, creates a token server-side and returns
+it to the client. The client stores the token in local storage. 
+
+---------------------------------------------------
+
+URL: register
+HEADERS: Method: POST, Content-Type: application/json
+BODY: UserRegistration object (as JSON)
+
+DESCRIPTION: Sends a register request which takes UserRegistration object as a parameter, which contains their
+registration information, and creates an account for them on successful input.
+

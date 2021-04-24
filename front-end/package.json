@@ -53,5 +53,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "proxy": "http://johanson:8080",
+  "devDependencies": {
+    "webpack-manifest-plugin": "^2.2.0",
+    "webpack-nano": "^1.1.1"
   }
 }

@@ -1,39 +1,15 @@
 import {React, useState, useEffect} from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Modal from '@material-ui/core/Modal';
-import Backdrop from '@material-ui/core/Backdrop';
-import Fade from '@material-ui/core/Fade';
-import {tokenDecoder, sendRequest} from "./../Utils/httpRequestMaker"
+import {sendRequest} from "./../Utils/httpRequestMaker"
 import FlightResults from './FlightResults';
 import {todaysDate} from "./../Utils/General"
-import { BorderColor } from '@material-ui/icons';
-
 import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
-import { useHistory } from 'react-router';
-
 
 
 var flightParser = require("./../Utils/flightParser")
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    margin: 0,
-    padding: theme.spacing(2),
-  },
-  closeButton: {
-    position: 'absolute',
-    right: theme.spacing(1),
-    top: theme.spacing(1),
-    color: theme.palette.grey[500],
-  },
-}));
-
-
 export default function TransitionsModal(props) {
-  const history = useHistory();
-  const classes = useStyles();
   const [mode, setMode] = useState("fetching")
   const [searchResults, setSearchResults] = useState()
   
@@ -47,7 +23,7 @@ export default function TransitionsModal(props) {
       numAdults: 1, //to be changed
       maxResults: 10
     }
-    sendRequest("POST", "https://localhost:8081/app/booking/search",props.token, JSON.stringify(search))
+    sendRequest("POST", "/app/booking/search",props.token, JSON.stringify(search))
     .then(response => response.json())
     .then(responseJson =>{
         console.log("Received flight data: " + JSON.stringify(responseJson))
@@ -61,17 +37,15 @@ export default function TransitionsModal(props) {
             setMode("showing_results")             
         }
         else{
-            // NO FLIGHTS FOUND.
+           setMode("error")
         }
         
 
     })
     .catch(err => {console.log(err)})
-  }, []);
+  }, [props.booking.flight, props.token]);
  
-  const handleOpen = () => {
-    props.setShowModal(true);
-  };
+
 
   const handleClose = () => {
     props.setShowModal(false);
@@ -105,7 +79,7 @@ export default function TransitionsModal(props) {
               onSelect={ newFlight => {
                 setMode("modifying_booking")
                 console.log("DATE:" + todaysDate())
-                sendRequest("PUT", props.isAdmin === false?"https://localhost:8081/app/booking/update":"https://localhost:8081/app/admin/update", props.token, JSON.stringify({
+                sendRequest("PUT", props.isAdmin === false?"/app/booking/update":"/app/admin/update", props.token, JSON.stringify({
                   bookingID: props.booking.bookingID,
                   userEmail:props.booking.userEmail,
                   payment:{
@@ -127,12 +101,16 @@ export default function TransitionsModal(props) {
               }}/>
 
             }
+             {mode==="error" &&
+              <div>No flights to show at this time..</div>
+            }
             {mode==="modifying_booking" &&
               <div>Changing booking..</div>
             }
             {
               mode==="booking_modified" && 
-              <div>Booking modified successfully. {history.push("/")}</div>
+              <div>Booking modified successfully. {window.location.reload(false)}</div>
+             
             }
            </DialogContentText>
         </DialogContent>

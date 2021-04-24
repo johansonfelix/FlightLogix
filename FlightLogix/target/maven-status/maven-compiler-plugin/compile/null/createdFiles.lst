@@ -1,1 +1,2 @@
-com\FlightLogix\Core\Booking\FlightData.class
+com\FlightLogix\Repository\ExternalServicesOperations\AmadeusAPICaller.class
+com\FlightLogix\Repository\ExternalServicesOperations\AmadeusAPICaller$ResponseCode.class

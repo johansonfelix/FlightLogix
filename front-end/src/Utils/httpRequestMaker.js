@@ -46,6 +46,7 @@ export async function sendRequest(type, url,token, json){
   console.log(JSON.stringify(request))
   try{
     var promise = await fetch(url, request)
+    console.log(promise);
     return promise
     
     // var responseJsonPromise = await response.json()

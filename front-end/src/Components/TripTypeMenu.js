@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useBorderSelectStyles } from '@mui-treasury/styles/select/border';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -13,8 +13,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 // Original design here: https://github.com/siriwatknp/mui-treasury/issues/541
 
 export default function TripType(props) {
-  const [val, setVal] = useState('Round Trip');
-
+ 
   const handleChange = (event) => {
     //setVal(event.target.value);
     

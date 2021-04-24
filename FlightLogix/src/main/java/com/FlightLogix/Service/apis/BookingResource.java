@@ -3,7 +3,7 @@ package com.FlightLogix.Service.apis;
 import com.FlightLogix.Core.Booking.Booking;
 import com.FlightLogix.Core.Booking.FlightData;
 import com.FlightLogix.Core.Booking.Search;
-import com.FlightLogix.Repository.AmadeusAPICaller;
+import com.FlightLogix.Repository.ExternalServicesOperations.AmadeusAPICaller;
 import com.FlightLogix.Repository.BookingOperations.BookingManager;
 
 import javax.annotation.security.RolesAllowed;

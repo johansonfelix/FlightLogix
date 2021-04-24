@@ -2,13 +2,7 @@ import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import {sendRequest, tokenDecoder } from '../Utils/httpRequestMaker';
-
-function sleep(delay = 0) {
-  return new Promise((resolve) => {
-    setTimeout(resolve, delay);
-  });
-}
+import {sendRequest } from '../Utils/httpRequestMaker';
 
 export default function Asynchronous(props) {
   const [open, setOpen] = React.useState(false);
@@ -28,7 +22,7 @@ export default function Asynchronous(props) {
     }
 
     (async () => {
-      const response = await sendRequest("GET", "https://localhost:8081/app/admin/allcustomers", token, null)
+      const response = await sendRequest("GET", "/app/admin/allcustomers", token, null)
      
       const customers = await response.json();
       const allcustomers = await customers;
@@ -42,7 +36,7 @@ export default function Asynchronous(props) {
     return () => {
       active = false;
     };
-  }, [loading]);
+  }, [loading, token]);
 
   React.useEffect(() => {
     if (!open) {
@@ -56,18 +50,22 @@ export default function Asynchronous(props) {
 
     console.log("EMAIL TO SET: " + value)
     props.setOnBehalfOfUserEmail(value);
+    if(props.create)
+      return;
+      
     email = value
 
     
     if(email){   
       
       
-        const response = await sendRequest("GET", "https://localhost:8081/app/admin/get-all-bookings/"+value, token, null)
+        const response = await sendRequest("GET", "/app/admin/get-all-bookings/"+value, token, null)
      
         const bookings = await response.json();
         const thebookings = await bookings;       
 
         console.log('set show booking: '+JSON.stringify(thebookings))
+        if(bookings)
         props.setBookings(bookings) 
         props.setShowBookings(true) 
        

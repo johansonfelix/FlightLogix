@@ -7,7 +7,7 @@
         <packaging>war</packaging>
       </options>
     </properties>
-    <root id="archive" name="FlightLogix.war">
+    <root id="archive" name="flightlogix.war">
       <element id="artifact" artifact-name="FlightLogix:war exploded" />
     </root>
   </artifact>

@@ -1,4 +1,4 @@
-<server description="Sample Open Liberty server">
+<server description="FlightLogix Server">
 
   <featureManager>
     <feature>jaxrs-2.1</feature>
@@ -17,10 +17,10 @@
   <variable name="default.https.port" defaultValue="9443"/>
   <variable name="app.context.root" defaultValue="/"/>
 
-  <httpEndpoint host="*" httpsPort="${default.https.port}" httpPort="${default.http.port}" id="defaultHttpEndpoint"/>
+  <httpEndpoint host="*" httpsPort="${default.https.port}" httpPort="${default.http.port}" id="defaultHttpEndpoint" />
   <!--<keyStore id="defaultKeyStore" password="OpenLiberty" />-->
 
-  <webApplication location="FlightLogix.war" contextRoot="${app.context.root}"/>
+  <webApplication location="FlightLogix.war" type="war" contextRoot="${app.context.root}"/>
   <keyStore id="defaultKeyStore" password="PASSWORD" />
   <ssl id="defaultSSLConfig" keyStoreRef="defaultKeyStore" trustDefaultCerts="true"/>
 
@@ -28,22 +28,6 @@
   <library id="jdbcLib">
     <fileset dir="${shared.resource.dir}" includes="mysql-connector-java-8.0.23.jar"/>
   </library>
-
-<!--  <dataSource jndiName="jdbc/myDB">
-    <jdbcDriver libraryRef="jdbcLib" />
-    <properties serverName="soen.mysql.database.azure.com" portNumber="3306"
-                databaseName="db"
-                user="username@soen"
-                password="Cheese123"/>
-  </dataSource>-->
-
-<!--  <dataSource jndiName="jdbc/myDB">
-    <jdbcDriver libraryRef="jdbcLib" />
-    <properties serverName="localhost" portNumber="3306"
-                databaseName="db1"
-                user="root"
-                password="password"/>
-  </dataSource>-->
 
   <dataSource jndiName="jdbc/myDB">
     <jdbcDriver libraryRef="jdbcLib" />
@@ -54,7 +38,7 @@
   </dataSource>
 
   <cors domain="/app"
-        allowedOrigins="http://localhost:3000"
+        allowedOrigins="*"
         allowedMethods="GET, DELETE, POST, PUT"
         allowedHeaders="origin, content-type, accept, authorization, cache-control, Access-Control-Allow-Origin"
         exposeHeaders="Access-Control-Allow-Origin"

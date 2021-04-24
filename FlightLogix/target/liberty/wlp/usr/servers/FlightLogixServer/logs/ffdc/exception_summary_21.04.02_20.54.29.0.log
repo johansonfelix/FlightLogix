@@ -1,8 +1,0 @@
-
- Index  Count  Time of first Occurrence    Time of last Occurrence     Exception SourceId ProbeId
-------+------+---------------------------+---------------------------+---------------------------
-     0      2     4/2/21 20:54:29:556 EDT     4/2/21 20:54:37:133 EDT org.jboss.weld.exceptions.DeploymentException com.ibm.ws.container.service.state.internal.ApplicationStateManager 54
-                                                                            - C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\FlightLogixServer\logs\ffdc\ffdc_21.04.02_20.54.29.0.log
-     1      2     4/2/21 20:54:29:698 EDT     4/2/21 20:54:37:133 EDT com.ibm.ws.container.service.state.StateChangeException com.ibm.ws.app.manager.module.internal.SimpleDeployedAppInfoBase 548
-                                                                            - C:\Users\felix\Desktop\FlightLogix\FlightLogix\target\liberty\wlp\usr\servers\FlightLogixServer\logs\ffdc\ffdc_21.04.02_20.54.29.1.log
-------+------+---------------------------+---------------------------+---------------------------
