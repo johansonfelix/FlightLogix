@@ -66,4 +66,4 @@ As "Trusted root authority"
 
 
 ## Usages
-<img src="images/screely-1634650803936.png" width="30%">
+<img src="images/screely-1634650803936.png" width="50%">
