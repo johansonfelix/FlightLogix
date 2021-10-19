@@ -12,7 +12,7 @@
 
 
 
-## RELEASE: V1.0
+<h2> RELEASE: V1.0 </h2>
 ## AUTHORS: Andrew Kor & Johanson Felix
 
 
