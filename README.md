@@ -17,7 +17,7 @@ FlightLogix is a Flight Booking Web Application that finds the cheapest flights 
 
 ### Technical Overview
 FlightLogix is developed as a web application using the REST architecture in <a href="https://www.oracle.com/java/technologies/downloads/">Java™ </a> with <a href="https://maven.apache.org/">Maven</a>. The REST architecture is implemented with the <a href="https://docs.oracle.com/javaee/6/tutorial/doc/giepu.html"> Jakarta RESTful Web Services API specification (JAX-RS) </a> running in the backend as a service. External Public API service calls are made on this backend service side with Java. The <a href="https://developers.amadeus.com/">Amadeus Air APIs </a>are the main data source for offering flight schedule details to users of the FlightLogix application.
-The application is built on top of the  <a>Open Liberty </a> Java™ server runtime framework. On the client side, requests and front end components are managed and developed with the React JavaScript library.
+The application is built on top of the  <a>Open Liberty </a> Java™ server runtime framework. On the client side, requests and front end components are managed and developed with the <a href="https://reactjs.org/">React</a> JavaScript library.
 <div style="display: flex; flex-direction: column; justify-content:center">
  <a href="DOCUMENTATION/usecasediagram.png" target="_blank" rel="noreferrer">
  <img alt="use case diagram" src="DOCUMENTATION/usecasediagram.png" width="70%"/>  
