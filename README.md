@@ -3,17 +3,14 @@
  <div align="center">
  <a href="https://github.com/othneildrew/Best-README-Template">
     <img src="images/logo.616562ba.svg" alt="Logo" align="center" width="400" height="400">
-  </a>  
- 
+  </a>   
  <img src="images/screely-1634650803936.png" width="70%"/>
 
-
-</div>
-
-
+  <h1 align="center">RELEASE: V1.0</h1>
+ <h1 align="center">DEVELOPERS: <a href="https://github.com/johansonfelix" targef="_blank" rel="noreferrer">Johanson Felix Kor</a>  & <a href="https://github.com/angoram" targef="_blank" rel="noreferrer">Andrew Kor</a> </h1>
  
-### RELEASE: V1.0
-### AUTHORS: Andrew Kor & Johanson Felix 
+</div> 
+
 
 
 ## Project Overview
@@ -74,3 +71,5 @@ As "Trusted root authority"
 <img src="screely-1634651309728.png"/>
 <h3>Purchase Simulation Portal </h3>
 <img src="screely-1634651349202.png"/>
+
+
