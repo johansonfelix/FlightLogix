@@ -67,7 +67,7 @@ As "Trusted root authority"
 <h3>Flight Search Results </h3>
 <img src="images/screely-1634650948918.png"/>
 <h3>Flight Details </h3>
-<img src="images/screely-1634651309728.png"/>
+<img src="images/screely-1634651023421.png"/>
 <h3>Purchase Simulation Portal </h3>
 <img src="images/screely-1634651349202.png"/>
 
