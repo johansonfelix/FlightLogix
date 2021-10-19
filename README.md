@@ -5,14 +5,7 @@
     <img src="images/logo.616562ba.svg" alt="Logo" align="center" width="400" height="400">
   </a>  
  
-            ______
-            _\ _~-\___
-    =  = ==(____AA____D
-                \_____\___________________,-~~~~~~~`-.._
-                /     o O o o o o O O o o o o o o O o  |\_
-                `~-.__        ___..----..                  )
-                      `---~~\___________/------------`````
-                      =  ===(_________D
+ <img src="images/screely-1634650803936.png" width="70%"/>
 
 
 </div>
@@ -66,4 +59,17 @@ As "Trusted root authority"
 
 
 ## Usages
-<img src="images/screely-1634650803936.png" >
+<h3> User Login Page </h3>
+<img src="screely-1634650748856.png"/>
+<h3> User Dashboard </h3>
+<img src="screely-1634650803936.png"/>
+<h3> Admin Dashboard </h3>
+<img src="screely-1634651454380.png"/>
+<h3>Flight Search </h3>
+<img src="screely-1634650879288.png"/>
+<h3>Flight Search Results </h3>
+<img src="screely-1634650948918.png"/>
+<h3>Flight Details </h3>
+<img src="screely-1634651309728.png"/>
+<h3>Purchase Simulation Portal </h3>
+<img src="screely-1634651349202.png"/>
