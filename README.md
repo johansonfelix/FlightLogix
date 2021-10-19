@@ -12,8 +12,8 @@
 
 
 
-<h2> RELEASE: V1.0 </h2>
-## AUTHORS: Andrew Kor & Johanson Felix
+### RELEASE: V1.0
+### AUTHORS: Andrew Kor & Johanson Felix 
 
 
 
@@ -22,7 +22,7 @@
 
 ------------------------------------------------------------------------------------------------------------
 
-INSTALLATION AND CONFIGURATION
+## INSTALLATION AND CONFIGURATION
 
 Requirements:
 
