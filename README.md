@@ -57,18 +57,18 @@ As "Trusted root authority"
 
 ## Usages
 <h3> User Login Page </h3>
-<img src="screely-1634650748856.png"/>
+<img src="images/screely-1634650748856.png"/>
 <h3> User Dashboard </h3>
-<img src="screely-1634650803936.png"/>
+<img src="images/screely-1634650803936.png"/>
 <h3> Admin Dashboard </h3>
-<img src="screely-1634651454380.png"/>
+<img src="images/screely-1634651454380.png"/>
 <h3>Flight Search </h3>
-<img src="screely-1634650879288.png"/>
+<img src="images/screely-1634650879288.png"/>
 <h3>Flight Search Results </h3>
-<img src="screely-1634650948918.png"/>
+<img src="images/screely-1634650948918.png"/>
 <h3>Flight Details </h3>
-<img src="screely-1634651309728.png"/>
+<img src="images/screely-1634651309728.png"/>
 <h3>Purchase Simulation Portal </h3>
-<img src="screely-1634651349202.png"/>
+<img src="images/screely-1634651349202.png"/>
 
 
