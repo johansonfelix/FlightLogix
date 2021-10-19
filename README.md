@@ -18,7 +18,8 @@ FlightLogix is a Flight Booking Web Application that finds the cheapest flights 
 ### Technical Overview
 FlightLogix is developed as a web application using the REST architecture in Java™ with Maven. The REST architecture is implemented with the Jakarta RESTful Web Services API specification (JAX-RS) running in the backend as a service. External Public API service calls are made on this backend service side with Java. The application is built on top of the Open Liberty Java™ server runtime framework. On the client side, requests and front end components are managed and developed with the React JavaScript library.
 
-
+ <img src="DOCUMENTATION/usecasediagram.png" width="70%"/>
+ 
 ------------------------------------------------------------------------------------------------------------
 
 ## INSTALLATION AND CONFIGURATION
@@ -59,16 +60,16 @@ As "Trusted root authority"
 <h3 margin-top="5px"> User Login Page </h3>
 <img src="images/screely-1634650748856.png" width="80%"/>
 <h3 margin-top="5px"> User Dashboard </h3>
-<img src="images/screely-1634650803936.png"/>
+<img src="images/screely-1634650803936.png" width="80%"//>
 <h3 margin-top="5px"> Admin Dashboard </h3>
-<img src="images/screely-1634651454380.png"/>
+<img src="images/screely-1634651454380.png" width="80%"//>
 <h3 margin-top="5px">Flight Search </h3>
-<img src="images/screely-1634650879288.png"/>
+<img src="images/screely-1634650879288.png" width="80%"//>
 <h3 margin-top="5px">Flight Search Results </h3>
-<img src="images/screely-1634650948918.png"/>
+<img src="images/screely-1634650948918.png" width="80%"//>
 <h3 margin-top="5px">Flight Details </h3>
-<img src="images/screely-1634651023421.png"/>
+<img src="images/screely-1634651023421.png" width="80%"//>
 <h3 margin-top="5px">Purchase Simulation Portal </h3>
-<img src="images/screely-1634651349202.png"/>
+<img src="images/screely-1634651349202.png" width="80%"//>
 
 
