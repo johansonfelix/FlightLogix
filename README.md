@@ -3,9 +3,7 @@
  <div align="center">
  <a href="https://github.com/othneildrew/Best-README-Template">
     <img src="images/logo.616562ba.svg" alt="Logo" align="center" width="400" height="400">
-  </a>
-  
-  
+  </a>  
             ______
             _\ _~-\___
     =  = ==(____AA____D
