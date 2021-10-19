@@ -10,10 +10,11 @@
 
 </div>
 
- <div align="center">
+
+ 
 ### RELEASE: V1.0
 ### AUTHORS: Andrew Kor & Johanson Felix 
-</div>
+
 
 ## Project Overview
 FlightLogix is a Flight Booking Web Application that finds the cheapest flights based on a user search and allows the users to make bookings based on the available flights in the search results. The application is split into two control resources: The User Service which controls user registration, login and logout, and the Booking Engine which controls creating, viewing, modifying and canceling bookings. There are two types of users that can access these resources and perform operations: customers and administrators. Customers can search for flights and make a booking from the returned results, modify that booking or cancel. Administrators of the application can view all customers registered in the system and their existing bookings. The administrators can then modify/cancel existing customer bookings or create new bookings for customers. 
