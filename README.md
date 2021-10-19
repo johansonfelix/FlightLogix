@@ -5,9 +5,8 @@
     <img src="images/logo.616562ba.svg" alt="Logo" align="center" width="400" height="400">
   </a>   
  <img src="images/screely-1634650803936.png" width="70%"/>
-
-  <p align="center">RELEASE: V1.0</p>
- <p align="center">DEVELOPERS: <a href="https://github.com/johansonfelix" targef="_blank" rel="noreferrer">Johanson Felix Kor</a>  & <a href="https://github.com/angoram" targef="_blank" rel="noreferrer">Andrew Kor</a> </p>
+  <p align="center">Release: V1.0</p>
+ <p align="center">Developers: <a href="https://github.com/johansonfelix" targef="_blank" rel="noreferrer">Johanson Felix</a>  & <a href="https://github.com/angoram" targef="_blank" rel="noreferrer">Andrew Kor</a> </p>
  
 </div> 
 
