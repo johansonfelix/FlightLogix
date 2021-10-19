@@ -57,7 +57,7 @@ As "Trusted root authority"
 
 ## Usages
 <h3 margin-top="5px"> User Login Page </h3>
-<img src="images/screely-1634650748856.png"/>
+<img src="images/screely-1634650748856.png" width="80%"/>
 <h3 margin-top="5px"> User Dashboard </h3>
 <img src="images/screely-1634650803936.png"/>
 <h3 margin-top="5px"> Admin Dashboard </h3>
